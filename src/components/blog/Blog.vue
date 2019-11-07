@@ -10,13 +10,13 @@
                 <div class="head-right-div" style="float: right">
 
                     <!--搜索框，带提示效果-->
-                    <el-autocomplete
+                    <!--<el-autocomplete
                             class="inline-input"
                             v-model="inputText" :fetch-suggestions="querySearch"
                             placeholder="请输入内容" :trigger-on-focus="false"
                             @select="handleSelect">
                         <i slot="prefix" class="el-input__icon el-icon-search"></i>
-                    </el-autocomplete>
+                    </el-autocomplete>-->
 
                     <!--java类分类-->
                     <el-dropdown class="head-type-ele">
@@ -29,8 +29,8 @@
                             <el-dropdown-item>Java I/O知识体系</el-dropdown-item>
                             <el-dropdown-item>Java多线程与并发</el-dropdown-item>
                             <el-dropdown-item>Java虚拟机</el-dropdown-item>
-                            <el-dropdown-item>Java框架使用</el-dropdown-item>
-                            <el-dropdown-item>FQA</el-dropdown-item>
+                            <el-dropdown-item divided>Java框架使用</el-dropdown-item>
+                            <el-dropdown-item divided>FQA</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
 
@@ -42,8 +42,8 @@
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item>JavaScript</el-dropdown-item>
                             <el-dropdown-item>Vue.js</el-dropdown-item>
-                            <el-dropdown-item>框架工具</el-dropdown-item>
-                            <el-dropdown-item>FQA</el-dropdown-item>
+                            <el-dropdown-item divided>框架工具</el-dropdown-item>
+                            <el-dropdown-item divided>FQA</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
 
@@ -54,8 +54,8 @@
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item>数据库</el-dropdown-item>
-                            <el-dropdown-item>服务器</el-dropdown-item>
-                            <el-dropdown-item>FQA</el-dropdown-item>
+                            <el-dropdown-item divided>服务器</el-dropdown-item>
+                            <el-dropdown-item divided>FQA</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
 
@@ -88,38 +88,6 @@
                                 <span>关于</span> <!---->
                             </p>
                             <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                </ul>
-                <ul class="sidebar-ul-padding">
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                </ul>
-                <ul class="sidebar-ul-padding">
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
                                 <li><a href="/" class="sidebar-link active">关于 - 我</a></li>
                                 <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
                                 <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
@@ -128,8 +96,6 @@
                             </ul>
                         </section>
                     </li>
-                </ul>
-                <ul class="sidebar-ul-padding">
                     <li>
                         <section class="sidebar-group">
                             <p class="sidebar-heading">
@@ -144,8 +110,6 @@
                             </ul>
                         </section>
                     </li>
-                </ul>
-                <ul class="sidebar-ul-padding">
                     <li>
                         <section class="sidebar-group">
                             <p class="sidebar-heading">
@@ -160,40 +124,47 @@
                             </ul>
                         </section>
                     </li>
+                    <li>
+                        <section class="sidebar-group">
+                            <p class="sidebar-heading">
+                                <span>关于</span> <!---->
+                            </p>
+                            <ul class="sidebar-links sidebar-group-items">
+                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section class="sidebar-group">
+                            <p class="sidebar-heading">
+                                <span>关于</span> <!---->
+                            </p>
+                            <ul class="sidebar-links sidebar-group-items">
+                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
+                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
+                            </ul>
+                        </section>
+                    </li>
                 </ul>
-
             </el-aside>
             <el-main>
-                <div v-html="content"></div>
+                <!-- 主页面区 -->
             </el-main>
         </el-container>
     </div>
 </template>
 
 <script>
-    import marked from 'marked';
-    import hljs from 'highlight.js'
-
     export default {
         name: "Blog",
-        data() {
-            const item = {
-                date: '2016-05-02',
-                name: '王小虎',
-                address: '上海市普陀区金沙江路 1518 弄'
-            };
-            return {
-                content:"",
-                tableData: Array(5).fill(item)
-            }
-        },
         components: {
-            marked,
-            hljs
-        },
-        created:function () {
-            var test = "3. **关闭nginx，复制配置文件**";
-            this.content = marked(test);
         }
     }
 </script>

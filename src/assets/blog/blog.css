@@ -43,10 +43,11 @@
 }
 
 .blog .el-main{
-    left: 300px;
+    width: calc(100% - 300px);;
     display: block;
-    position:relative;
+    position:absolute;
     top: 60px;
+    left: 300px;
     padding: 0;
     bottom: 0;
     overflow-y: scroll;
