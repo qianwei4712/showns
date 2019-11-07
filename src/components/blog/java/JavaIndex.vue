@@ -11,11 +11,9 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link active">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
+                            <router-link :to="{ name: 'OverrideEquals20180706'}">
+                                <li><a href="javascript:void(0);" class="sidebar-link">重写equals方法</a></li>
+                            </router-link>
                         </ul>
                     </section>
                 </li>
@@ -25,11 +23,7 @@
                             <span>Java集合知识体系</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
                             <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -39,11 +33,7 @@
                             <span>Java I/O知识体系</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
                             <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系系系系系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -53,11 +43,7 @@
                             <span>Java多线程与并发</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
                             <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -68,10 +54,6 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -82,10 +64,6 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -96,10 +74,6 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>

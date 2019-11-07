@@ -75,6 +75,10 @@
     border-left: .25rem solid transparent;
 }
 
+.blog .sidebar-group {
+    margin-bottom: 12px;
+}
+
 .blog .sidebar-group-items {
     transition: height .1s ease-out;
     font-size: .95em;
@@ -115,6 +119,3 @@
     color: #7e7e80;
 }
 
-.blog .sidebar-ul-padding li{
-    margin-bottom: 10px;
-}
