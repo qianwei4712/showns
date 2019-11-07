@@ -1,0 +1,108 @@
+.head-fixed {
+    width: 100%;
+    line-height: 60px;
+    border: 1px solid #eaecef;
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+}
+
+.head-title {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #2c3e50;
+    position: relative;
+}
+
+.head-type-ele {
+    cursor: pointer;
+    height: 40px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #7e7e80;
+}
+
+.blog .head-right-div .el-input__inner{
+    border-radius: 100px;
+    height: 35px;
+}
+
+.blog .el-dropdown-menu{
+    z-index: 99999;
+}
+
+.blog .el-aside {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    overflow-y: scroll;
+    border-right: 1px solid #eaecef;
+}
+
+.blog .el-main{
+    left: 300px;
+    display: block;
+    position:relative;
+    top: 60px;
+    padding: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.blog .el-aside ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.blog .sidebar-ul-padding{
+    padding: 0;
+}
+
+.blog .sidebar-heading {
+    color: #2c3e50;
+    transition: color .15s ease;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: .35rem 1.5rem .35rem 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-left: .25rem solid transparent;
+}
+
+.blog .sidebar-group-items {
+    transition: height .1s ease-out;
+    font-size: .95em;
+    overflow: hidden;
+}
+
+.blog a.sidebar-link {
+    font-size: 1em;
+    font-weight: 400;
+    display: inline-block;
+    color: #2c3e50;
+    border-right: .25rem solid transparent;
+    padding: .35rem 1rem .35rem 1rem;
+    line-height: 1.4;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.blog a.sidebar-link.active {
+    font-weight: 600;
+    color: #3eaf7c;
+    border-right-color: #3eaf7c;
+}
+
+.blog a.sidebar-link:hover{
+    font-weight: 600;
+    color: #3eaf7c;
+    border-right-color: #3eaf7c;
+}
+
+
+
