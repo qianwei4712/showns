@@ -21,29 +21,51 @@
                     <!--java类分类-->
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                          Java<i class="el-icon-caret-bottom el-icon--right"></i>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">Java<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>Java面向对象基础</el-dropdown-item>
-                            <el-dropdown-item>Java集合知识体系</el-dropdown-item>
-                            <el-dropdown-item>Java I/O知识体系</el-dropdown-item>
-                            <el-dropdown-item>Java多线程与并发</el-dropdown-item>
-                            <el-dropdown-item>Java虚拟机</el-dropdown-item>
-                            <el-dropdown-item divided>Java框架使用</el-dropdown-item>
-                            <el-dropdown-item divided>FQA</el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">Java面向对象基础</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'collections' }}">Java集合知识体系</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'iokonwledge' }}">Java I/O知识体系</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'thread' }}">Java多线程与并发</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'jvm' }}">Java虚拟机</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'frame' }}">Java框架使用</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link :to="{ name: 'JavaType', params: { typeName: 'fqa' }}">FQA</router-link>
+                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
 
                     <!--前端知识分类-->
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                          前端<i class="el-icon-caret-bottom el-icon--right"></i>
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'javascript' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>JavaScript</el-dropdown-item>
-                            <el-dropdown-item>Vue.js</el-dropdown-item>
-                            <el-dropdown-item divided>框架工具</el-dropdown-item>
-                            <el-dropdown-item divided>FQA</el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'FrontType', params: { typeName: 'javascript' }}">JavaScript</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item>
+                                <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">Vue.js</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link :to="{ name: 'FrontType', params: { typeName: 'frame' }}">框架工具</router-link>
+                            </el-dropdown-item>
+                            <el-dropdown-item divided>
+                                <router-link :to="{ name: 'FrontType', params: { typeName: 'fqa' }}">FQA</router-link>
+                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
 
@@ -77,85 +99,11 @@
                     </el-dropdown>
                 </div>
             </el-header>
-            <el-aside width="300px">
-                <div style="height: 20px;">
-                    <!-- 空出一部分位置 -->
-                </div>
-                <ul class="sidebar-ul-padding">
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link active">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系系系系系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="sidebar-group">
-                            <p class="sidebar-heading">
-                                <span>关于</span> <!---->
-                            </p>
-                            <ul class="sidebar-links sidebar-group-items">
-                                <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 文档的排版</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                                <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                            </ul>
-                        </section>
-                    </li>
-                </ul>
-            </el-aside>
+            <!--博客页面侧边栏-->
+            <router-view></router-view>
+            <!-- 主页面区 -->
             <el-main>
-                <!-- 主页面区 -->
+                <router-view name="main_catiner"></router-view>
             </el-main>
         </el-container>
     </div>
@@ -170,8 +118,6 @@
 </script>
 
 <style scoped>
-    a {
-        text-decoration: none
-    }
+
 </style>
 

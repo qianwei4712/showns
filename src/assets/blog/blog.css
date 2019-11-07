@@ -105,5 +105,16 @@
     border-right-color: #3eaf7c;
 }
 
+.blog a {
+    text-decoration: none;
+    color: #7e7e80;
+}
 
+.el-dropdown-menu__item a{
+    text-decoration: none;
+    color: #7e7e80;
+}
 
+.blog .sidebar-ul-padding li{
+    margin-bottom: 10px;
+}
