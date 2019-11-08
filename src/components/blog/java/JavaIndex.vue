@@ -11,8 +11,8 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('OverrideEquals20180706')"><a href="javascript:void(0);" class="sidebar-link">重写equals方法</a></li>
-                            <li v-on:click="handleChangeView('OverrideHashCode20180709')"><a href="javascript:void(0);" class="sidebar-link">重写hashCode方法</a></li>
+                            <li v-on:click="handleChangeView('OverrideEquals20180706', $event)"><a href="javascript:void(0);" class="sidebar-link">重写equals方法</a></li>
+                            <li v-on:click="handleChangeView('OverrideHashCode20180709', $event)"><a href="javascript:void(0);" class="sidebar-link">重写hashCode方法</a></li>
                         </ul>
                     </section>
                 </li>
@@ -80,7 +80,10 @@
         </el-aside>
         <!-- 主页面区 -->
         <el-main>
-            <component :is="currentView"></component>
+            <div class="markdown-body main-md-body">
+                <h1 v-html="title">首页</h1>
+               <component :is="currentView"></component>
+            </div>
         </el-main>
     </div>
 </template>
@@ -88,8 +91,9 @@
 <script>
 
     import javaHome from './JavaHome';
-    import OverrideEquals20180706 from './oopbase/OverrideEquals20180706';
-    import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709';
+    import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
+    import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
+
 
     export default {
         name: "javaIndex",
@@ -100,12 +104,14 @@
         },
         data(){
             return {
-            currentView: javaHome
+                title:'首页',
+                currentView: javaHome
             }
         },
         methods:{
-            handleChangeView:function(component){
+            handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }
     }
