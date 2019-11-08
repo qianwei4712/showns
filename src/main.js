@@ -4,6 +4,7 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'github-markdown-css/github-markdown.css';
+import 'highlight.js/styles/googlecode.css';
 import './assets/blog/blog.css';
 
 Vue.config.productionTip = false;

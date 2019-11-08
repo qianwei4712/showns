@@ -43,11 +43,11 @@
 }
 
 .blog .el-main{
-    width: calc(100% - 300px);;
+    width: calc(100% - 330px);;
     display: block;
     position:absolute;
     top: 60px;
-    left: 300px;
+    left: 330px;
     padding: 0;
     bottom: 0;
     overflow-y: scroll;
@@ -104,7 +104,6 @@
 }
 
 .blog a.sidebar-link:hover{
-    font-weight: 600;
     color: #3eaf7c;
     border-right-color: #3eaf7c;
 }
@@ -121,7 +120,9 @@
 
 .blog .main-md-body {
     padding: 30px;
+    font-size: 16px;
 }
+
 
 
 

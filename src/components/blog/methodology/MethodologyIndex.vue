@@ -1,6 +1,6 @@
 <template>
     <div class="methodologyIndex">
-        <el-aside width="300px">
+        <el-aside width="330px">
             <div style="height: 20px;">
                 <!-- 空出一部分位置 -->
             </div>

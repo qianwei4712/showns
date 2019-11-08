@@ -51,12 +51,9 @@
                     <!--前端知识分类-->
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'javascript' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>
-                                <router-link :to="{ name: 'FrontType', params: { typeName: 'javascript' }}">JavaScript</router-link>
-                            </el-dropdown-item>
                             <el-dropdown-item>
                                 <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">Vue.js</router-link>
                             </el-dropdown-item>
