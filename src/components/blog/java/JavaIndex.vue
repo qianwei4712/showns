@@ -11,9 +11,8 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <router-link :to="{ name: 'OverrideEquals20180706'}">
-                                <li><a href="javascript:void(0);" class="sidebar-link">重写equals方法</a></li>
-                            </router-link>
+                            <li v-on:click="handleChangeView('OverrideEquals20180706')"><a href="javascript:void(0);" class="sidebar-link">重写equals方法</a></li>
+                            <li v-on:click="handleChangeView('OverrideHashCode20180709')"><a href="javascript:void(0);" class="sidebar-link">重写hashCode方法</a></li>
                         </ul>
                     </section>
                 </li>
@@ -79,12 +78,36 @@
                 </li>
             </ul>
         </el-aside>
+        <!-- 主页面区 -->
+        <el-main>
+            <component :is="currentView"></component>
+        </el-main>
     </div>
 </template>
 
 <script>
+
+    import javaHome from './JavaHome';
+    import OverrideEquals20180706 from './oopbase/OverrideEquals20180706';
+    import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709';
+
     export default {
-        name: "javaIndex"
+        name: "javaIndex",
+        components:{
+            javaHome,
+            OverrideEquals20180706,
+            OverrideHashCode20180709
+        },
+        data(){
+            return {
+            currentView: javaHome
+            }
+        },
+        methods:{
+            handleChangeView:function(component){
+                this.currentView = component;
+            }
+        }
     }
 </script>
 

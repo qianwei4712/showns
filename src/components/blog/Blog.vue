@@ -72,7 +72,7 @@
                     <!--安装部署类-->
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                          安装/部署<i class="el-icon-caret-bottom el-icon--right"></i>
+                            <router-link :to="{ name: 'DeployIndex', params: { typeName: 'database' }}">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item>数据库</el-dropdown-item>
@@ -84,7 +84,7 @@
                     <!--方法论-->
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                          方法论<i class="el-icon-caret-bottom el-icon--right"></i>
+                            <router-link :to="{ name: 'MethodologyIndex', params: { typeName: 'designpattern' }}">方法论<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item>设计模式</el-dropdown-item>
@@ -93,18 +93,17 @@
 
                     <!--静态资源介绍-->
                     <el-dropdown class="head-type-ele">
-                        <a>
-                            <span>关于</span>
-                        </a>
+                        <span class="el-dropdown-link">
+                          关于<i class="el-icon-caret-bottom el-icon--right"></i>
+                        </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item>我也不知道要写啥</el-dropdown-item>
+                        </el-dropdown-menu>
                     </el-dropdown>
                 </div>
             </el-header>
-            <!--博客页面侧边栏-->
+            <!--博客页面侧边栏、右侧主页面区-->
             <router-view></router-view>
-            <!-- 主页面区 -->
-            <el-main>
-                <router-view name="main_catiner"></router-view>
-            </el-main>
         </el-container>
     </div>
 </template>

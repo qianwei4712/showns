@@ -1,12 +1,12 @@
 <template>
-    <div class="重写equals方法">
+    <div class="OverrideEquals20180706">
         重写equals方法
     </div>
 </template>
 
 <script>
     export default {
-        name: "重写equals方法"
+        name: "OverrideEquals20180706"
     }
 </script>
 

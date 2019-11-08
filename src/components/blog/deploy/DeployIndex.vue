@@ -1,5 +1,5 @@
 <template>
-    <div class="frontIndex">
+    <div class="DeployIndex">
         <el-aside width="300px">
             <div style="height: 20px;">
                 <!-- 空出一部分位置 -->
@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="sidebar-heading">
-                            <span>JavaScript</span>
+                            <span>数据库</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li><a href="/" class="sidebar-link active">关于 - 我</a></li>
@@ -18,22 +18,11 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="sidebar-heading">
-                            <span>Vue.js</span>
+                            <span>服务器</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li><a href="/" class="sidebar-link">关于 - 我</a></li>
                             <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
-                        </ul>
-                    </section>
-                </li>
-                <li>
-                    <section class="sidebar-group">
-                        <p class="sidebar-heading">
-                            <span>框架工具</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 文档的内容</a></li>
                         </ul>
                     </section>
                 </li>
@@ -56,7 +45,7 @@
 
 <script>
     export default {
-        name: "frontIndex",
+        name: "deployIndex",
         components:{
         },
         data(){
