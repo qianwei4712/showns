@@ -11,28 +11,61 @@
                             <span>设计模式</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
+                            <li v-on:click="handleChangeView('StrategyMode', $event)">
+                                <a href="javascript:void(0);" class="sidebar-link">策略模式</a>
+                            </li>
+                            <li v-on:click="handleChangeView('ObserverMode', $event)">
+                                <a href="javascript:void(0);" class="sidebar-link">观察者模式</a>
+                            </li>
+                            <li v-on:click="handleChangeView('DecoratorMode', $event)">
+                                <a href="javascript:void(0);" class="sidebar-link">装饰者模式</a>
+                            </li>
+                            <li v-on:click="handleChangeView('FactoryAndSingletonsMode', $event)">
+                                <a href="javascript:void(0);" class="sidebar-link">工厂模式和单例模式</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
             </ul>
         </el-aside>
+        <!-- 主页面区 -->
+        <el-main>
+            <div class="markdown-body main-md-body">
+                <h1 v-html="title">首页</h1>
+                <component :is="currentView"></component>
+            </div>
+        </el-main>
     </div>
 </template>
 
 <script>
+
+    import MethodologyHome from './MethodologyHome'
+    import DecoratorMode from './designpattern/DecoratorMode.md';
+    import FactoryAndSingletonsMode from './designpattern/FactoryAndSingletonsMode.md';
+    import ObserverMode from './designpattern/ObserverMode.md';
+    import StrategyMode from './designpattern/StrategyMode.md';
+
+
     export default {
+        //TODO 切换组件默认记住了滚动条位置，需要置顶
+        //TODO 再添加一个返回顶部组件
+        //TODO 左侧菜单，顶部下拉菜单的选中效果
         name: "methodologyIndex",
         components:{
+            MethodologyHome,
+            DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode
         },
         data(){
             return {
-                currentView: ''
+                title:'首页',
+                currentView: MethodologyHome
             }
         },
         methods:{
-            handleChangeView:function(component){
+            handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }
     }

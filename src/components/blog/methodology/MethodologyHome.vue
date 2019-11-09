@@ -1,12 +1,12 @@
 <template>
-    <div class="deployHome">
+    <div class="methodologyHome">
         部署分类的首页
     </div>
 </template>
 
 <script>
     export default {
-        name: "deployHome"
+        name: "methodologyHome"
     }
 </script>
 
