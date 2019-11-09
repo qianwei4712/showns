@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
+const home = () => import('../components/Home');
 const blog = () => import('../components/blog/Blog');
 const javaIndex = () => import('../components/blog/java/JavaIndex');
 const frontIndex = () => import('../components/blog/front/FrontIndex');
@@ -12,10 +13,14 @@ const methodologyIndex = () => import('../components/blog/methodology/Methodolog
 const router = new Router({
     mode: 'history',
     routes: [{
-        path: '/blog',
-        name: 'blogHome',
-        component: blog,
-        children: [{
+            path: '/home',
+            name: 'home',
+            component: home,
+        }, {
+            path: '/blog',
+            name: 'blogHome',
+            component: blog,
+            children: [{
                 path: 'java/:typeName',
                 name: 'JavaType',
                 components: {default: javaIndex}
@@ -32,9 +37,9 @@ const router = new Router({
                 name: 'MethodologyType',
                 components: {default: methodologyIndex}
             }]
-    }, {
-        path: '*',
-        redirect: '/blog'
-    }]
-});
+        }, {
+            path: '*',
+            redirect: '/home'
+        }]
+    });
 export default router

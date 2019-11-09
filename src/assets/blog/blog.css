@@ -43,7 +43,7 @@
 }
 
 .blog .el-main{
-    width: calc(100% - 330px);;
+    width: calc(100% - 330px);
     display: block;
     position:absolute;
     top: 60px;
@@ -113,6 +113,11 @@
     color: #7e7e80;
 }
 
+.home a {
+    text-decoration: none;
+    color: #7e7e80;
+}
+
 .el-dropdown-menu a{
     text-decoration: none;
     color: #7e7e80;
@@ -123,6 +128,31 @@
     font-size: 16px;
 }
 
+.home .el-main{
+    width: 100%;
+    display: block;
+    position:absolute;
+    top: 60px;
+    padding: 0;
+    bottom: 0;
+}
+
+.home .el-main{
+    width: 100%;
+    display: block;
+    position:absolute;
+    top: 60px;
+    padding: 0;
+    bottom: 60px;
+}
+
+.home .el-footer{
+    width: 100%;
+    display: block;
+    position:absolute;
+    bottom:0;
+    padding: 0;
+}
 
 
 
