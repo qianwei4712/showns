@@ -21,7 +21,7 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('EChartsMapFlyLine', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">ECharts绘制地图飞线</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EChartsMapFlyLine'}">ECharts绘制地图飞线</a>
                             </li>
                         </ul>
                     </section>
@@ -32,9 +32,6 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li><a href="/" class="sidebar-link">关于 - 我</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何构建知识体系</a></li>
-                            <li><a href="/" class="sidebar-link">关于 - 如何自我驱动</a></li>
                         </ul>
                     </section>
                 </li>
@@ -62,12 +59,14 @@
         data(){
             return {
                 title:'首页',
+                activeIndex: '',
                 currentView: FrontHome
             }
         },
         methods:{
             handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }

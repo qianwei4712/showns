@@ -12,7 +12,7 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('MysqldumpBackupSql', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">使用mysqldump定时备份sql</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
                             </li>
                         </ul>
                     </section>
@@ -24,13 +24,13 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('LinuxRunJarBackground', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">Linux服务器后台运行jar包</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='LinuxRunJarBackground'}">Linux服务器后台运行jar包</a>
                             </li>
                             <li v-on:click="handleChangeView('NginxBindPortWithDomain', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">nginx将多个不同域名转发到不同端口</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxBindPortWithDomain'}">nginx将多个不同域名转发到不同端口</a>
                             </li>
                             <li v-on:click="handleChangeView('NginxAndTomcatConfigSSL', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">nginx+tomcat配置项目https加密</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxAndTomcatConfigSSL'}">nginx+tomcat配置项目https加密</a>
                             </li>
                         </ul>
                     </section>
@@ -42,7 +42,7 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('SomethingNotes', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">平时用到的一些细节记录</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
                             </li>
                         </ul>
                     </section>
@@ -78,12 +78,14 @@
         data(){
             return {
                 title:'首页',
+                activeIndex: '',
                 currentView: deployHome
             }
         },
         methods:{
             handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }

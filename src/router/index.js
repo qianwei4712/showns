@@ -18,27 +18,19 @@ const router = new Router({
         children: [{
                 path: 'java/:typeName',
                 name: 'JavaType',
-                components: {
-                    default: javaIndex
-                }
+                components: {default: javaIndex}
             }, {
                 path: 'front/:typeName',
                 name: 'FrontType',
-                components: {
-                    default: frontIndex
-                }
+                components: {default: frontIndex}
             }, {
                 path: 'deploy/:typeName',
-                name: 'DeployIndex',
-                components: {
-                    default: deployIndex
-                }
+                name: 'DeployType',
+                components: {default: deployIndex}
             }, {
                 path: 'methodology/:typeName',
-                name: 'MethodologyIndex',
-                components: {
-                    default: methodologyIndex
-                }
+                name: 'MethodologyType',
+                components: {default: methodologyIndex}
             }]
     }, {
         path: '*',

@@ -12,16 +12,16 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('StrategyMode', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">策略模式</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='StrategyMode'}">策略模式</a>
                             </li>
                             <li v-on:click="handleChangeView('ObserverMode', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">观察者模式</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ObserverMode'}">观察者模式</a>
                             </li>
                             <li v-on:click="handleChangeView('DecoratorMode', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">装饰者模式</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='DecoratorMode'}">装饰者模式</a>
                             </li>
                             <li v-on:click="handleChangeView('FactoryAndSingletonsMode', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">工厂模式和单例模式</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='FactoryAndSingletonsMode'}">工厂模式和单例模式</a>
                             </li>
                         </ul>
                     </section>
@@ -50,7 +50,6 @@
     export default {
         //TODO 切换组件默认记住了滚动条位置，需要置顶
         //TODO 再添加一个返回顶部组件
-        //TODO 左侧菜单，顶部下拉菜单的选中效果
         name: "methodologyIndex",
         components:{
             MethodologyHome,
@@ -59,12 +58,14 @@
         data(){
             return {
                 title:'首页',
+                activeIndex: '',
                 currentView: MethodologyHome
             }
         },
         methods:{
             handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }

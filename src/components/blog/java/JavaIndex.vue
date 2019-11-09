@@ -12,19 +12,19 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('OverrideEquals20180706', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">重写equals方法</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideEquals20180706'}">重写equals方法</a>
                             </li>
                             <li v-on:click="handleChangeView('OverrideHashCode20180709', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">重写hashCode方法</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideHashCode20180709'}">重写hashCode方法</a>
                             </li>
                             <li v-on:click="handleChangeView('UseEnumReplaceIntConst', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">用enum代替int常量</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='UseEnumReplaceIntConst'}">用enum代替int常量</a>
                             </li>
                             <li v-on:click="handleChangeView('JavaAnnotation', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">Java注解学习</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='JavaAnnotation'}">Java注解学习</a>
                             </li>
                             <li v-on:click="handleChangeView('HeapAndStack', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">操作系统中 heap 和 stack 的区别</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='HeapAndStack'}">操作系统中 heap 和 stack 的区别</a>
                             </li>
                         </ul>
                     </section>
@@ -54,13 +54,13 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('ThreadInterrupt', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">Thread学习之线程中断</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadInterrupt'}">Thread学习之线程中断</a>
                             </li>
                             <li v-on:click="handleChangeView('ThreadGuard', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">Thread学习之优先级及线程守护</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadGuard'}">Thread学习之优先级及线程守护</a>
                             </li>
                             <li v-on:click="handleChangeView('ThreadSynchronized', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">Thread学习之synchronized</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadSynchronized'}">Thread学习之synchronized</a>
                             </li>
                         </ul>
                     </section>
@@ -81,7 +81,7 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('SpringBootBindCustomPorps', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">SpringBoot配置文件自定义参数绑定失效</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SpringBootBindCustomPorps'}">SpringBoot配置文件自定义参数绑定失效</a>
                             </li>
                         </ul>
                     </section>
@@ -93,10 +93,10 @@
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView('SomethingNotes', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">平时用到的一些细节记录</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
                             </li>
                             <li v-on:click="handleChangeView('EclipseSVNPrevious20181104', $event)">
-                                <a href="javascript:void(0);" class="sidebar-link">SVN - Previous operation has not finished异常</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EclipseSVNPrevious20181104'}">SVN - Previous operation has not finished异常</a>
                             </li>
                         </ul>
                     </section>
@@ -140,12 +140,14 @@
         data(){
             return {
                 title:'首页',
+                activeIndex: '',
                 currentView: javaHome
             }
         },
         methods:{
             handleChangeView:function(component, $event){
                 this.currentView = component;
+                this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
             }
         }
