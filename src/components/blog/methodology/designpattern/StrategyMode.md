@@ -16,7 +16,7 @@
 
 
 
-- ![Image text](http://oss.huqianwei.com/data/StrategyMode1.png)
+<img src="@/assets/blog/img/StrategyMode1.png"/>
 
 
 

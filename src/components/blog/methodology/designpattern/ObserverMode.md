@@ -14,7 +14,7 @@
 
 ### 基本原理
 
-- ![Image text](http://oss.huqianwei.com/data/ObserverMode1.png)
+<img src="@/assets/blog/img/ObserverMode1.png"/>
 
 基本模型的代码实现。
 
@@ -127,7 +127,7 @@ class JavaSubject extends Observable{
 
 基本的使用方式上述main方法中都有涉及。下面讲接下`java.util`包的内部实现以及注意事项
 
-- ![Image text](http://oss.huqianwei.com/data/ObserverMode2.png)
+<img src="@/assets/blog/img/ObserverMode2.png"/>
 
 主题实现类中，用于存放观察者的容器是 Vector 。Vector是线程安全的，内部通过数组实现，所以是有序的，但是由于线程安全，开销较大，因此在观察者较多情况下，效率变低。
 

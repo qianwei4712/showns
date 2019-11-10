@@ -13,7 +13,7 @@ const methodologyIndex = () => import('../components/blog/methodology/Methodolog
 const router = new Router({
     mode: 'history',
     routes: [{
-            path: '/home',
+            path: '',
             name: 'home',
             component: home,
         }, {
@@ -39,7 +39,7 @@ const router = new Router({
             }]
         }, {
             path: '*',
-            redirect: '/home'
+            redirect: ''
         }]
     });
 export default router

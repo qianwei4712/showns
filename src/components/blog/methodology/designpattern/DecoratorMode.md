@@ -21,7 +21,7 @@ java.io 流是典型的装饰模式。
 - Decorator  是**装饰类**，实现了Component 接口，**通常用抽象类实现**。同时内部维护了一个ConcreteComponent 实例，一般通过构造函数初始化。最后的产品继承Decorator  ，并真正得到装饰产品。
 - ConcreteDecorator 是具体的**装饰产品类**，也就是装饰后的结果。重写Component 的方法，作为装饰添加功能。
 
-![Image text](http://oss.huqianwei.com/data/DecoratorMode.png)
+<img src="@/assets/blog/img/DecoratorMode.png"/>
 
 下面是摘自菜鸟教程的例子
 

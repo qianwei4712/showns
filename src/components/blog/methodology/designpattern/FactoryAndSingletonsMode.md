@@ -10,7 +10,7 @@
 
 个人理解：存在生产和产品两个接口，工厂实现生产接口，重写生产方法，并返回具体产品，不同工厂返回不同的产品实现类。
 
-![Image text](http://oss.huqianwei.com/data/FactoryAndSingletonsMode.png)
+<img src="@/assets/blog/img/FactoryAndSingletonsMode.png"/>
 
 产品：
 
