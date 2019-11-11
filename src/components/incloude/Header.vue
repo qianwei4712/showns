@@ -92,7 +92,8 @@
                           关于<i class="el-icon-caret-bottom el-icon--right"></i>
                         </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item>我也不知道要写啥</el-dropdown-item>
+                        <el-dropdown-item>网站介绍</el-dropdown-item>
+                        <el-dropdown-item>作者简历-2019</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>

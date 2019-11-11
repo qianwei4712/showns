@@ -48,6 +48,10 @@
         line-height: 57px;
         width: 50%;
         float: left;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
     }
     .footer-func-right{
         text-align: center;
