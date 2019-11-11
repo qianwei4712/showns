@@ -33,6 +33,7 @@
                             </div>
                         </div>
                     </div>
+                    <BackTop/>
                 </el-main>
                 <!-- 底部 -->
                 <Footer/>
@@ -44,10 +45,11 @@
 <script>
     import Header from './incloude/Header'
     import Footer from './incloude/Footer'
+    import BackTop from "./incloude/BackTop";
     export default {
         name: "home",
         components:{
-            Header, Footer
+            Header, Footer, BackTop
         },
         data(){
             return{

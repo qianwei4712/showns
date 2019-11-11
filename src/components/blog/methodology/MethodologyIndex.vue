@@ -48,8 +48,6 @@
 
 
     export default {
-        //TODO 切换组件默认记住了滚动条位置，需要置顶
-        //TODO 再添加一个返回顶部组件
         name: "methodologyIndex",
         components:{
             MethodologyHome,
