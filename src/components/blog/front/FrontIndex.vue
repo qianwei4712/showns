@@ -20,7 +20,7 @@
                             <span>框架工具</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('EChartsMapFlyLine', $event)">
+                            <li v-on:click="handleChangeView($event)" class="EChartsMapFlyLine" id="frame">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EChartsMapFlyLine'}">ECharts绘制地图飞线</a>
                             </li>
                         </ul>
@@ -48,26 +48,37 @@
 </template>
 
 <script>
-    import FrontHome from "./FrontHome";
+    import HomePage from "./FrontHome";
     import EChartsMapFlyLine from './frame/EChartsMapFlyLine.md';
 
     export default {
         name: "frontIndex",
         components:{
-            EChartsMapFlyLine
+            HomePage, EChartsMapFlyLine
         },
         data(){
             return {
                 title:'首页',
                 activeIndex: '',
-                currentView: FrontHome
+                currentView: HomePage
             }
         },
         methods:{
-            handleChangeView:function(component, $event){
+            handleChangeView:function($event){
+                const component = event.currentTarget.className;
                 this.currentView = component;
                 this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
+            }
+        },
+        mounted() {
+            const typeName = this.$route.params.typeName;//获取参数params typeName
+            if (typeName !== 'HomePage'){
+                const domLi = document.getElementById(typeName);
+                const component = domLi.className;
+                this.currentView = component;
+                this.activeIndex = component;
+                this.title = domLi.firstElementChild.innerHTML;
             }
         }
     }

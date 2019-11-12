@@ -11,7 +11,7 @@
                             <span>数据库</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('MysqldumpBackupSql', $event)">
+                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="darabase">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
                             </li>
                         </ul>
@@ -23,13 +23,13 @@
                             <span>服务器</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('LinuxRunJarBackground', $event)">
+                            <li v-on:click="handleChangeView($event)" class="LinuxRunJarBackground" id="server">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='LinuxRunJarBackground'}">Linux服务器后台运行jar包</a>
                             </li>
-                            <li v-on:click="handleChangeView('NginxBindPortWithDomain', $event)">
+                            <li v-on:click="handleChangeView($event)" class="NginxBindPortWithDomain">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxBindPortWithDomain'}">nginx将多个不同域名转发到不同端口</a>
                             </li>
-                            <li v-on:click="handleChangeView('NginxAndTomcatConfigSSL', $event)">
+                            <li v-on:click="handleChangeView($event)" class="NginxAndTomcatConfigSSL">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxAndTomcatConfigSSL'}">nginx+tomcat配置项目https加密</a>
                             </li>
                         </ul>
@@ -41,7 +41,7 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('SomethingNotes', $event)">
+                            <li v-on:click="handleChangeView($event)" class="SomethingNotes" id="fqa">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
                             </li>
                         </ul>
@@ -61,7 +61,7 @@
 
 <script>
 
-    import deployHome from "./DeployHome";
+    import HomePage from "./DeployHome";
     import SomethingNotes from './fqa/SomethingNotes.md';
     import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
@@ -71,7 +71,7 @@
     export default {
         name: "deployIndex",
         components:{
-            deployHome,
+            HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, NginxAndTomcatConfigSSL,
             MysqldumpBackupSql
         },
@@ -79,14 +79,25 @@
             return {
                 title:'首页',
                 activeIndex: '',
-                currentView: deployHome
+                currentView: HomePage
             }
         },
         methods:{
-            handleChangeView:function(component, $event){
+            handleChangeView:function($event){
+                const component = event.currentTarget.className;
                 this.currentView = component;
                 this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
+            }
+        },
+        mounted() {
+            const typeName = this.$route.params.typeName;//获取参数params typeName
+            if (typeName !== 'HomePage'){
+                const domLi = document.getElementById(typeName);
+                const component = domLi.className;
+                this.currentView = component;
+                this.activeIndex = component;
+                this.title = domLi.firstElementChild.innerHTML;
             }
         }
     }

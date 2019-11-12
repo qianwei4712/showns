@@ -11,19 +11,19 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('OverrideEquals20180706', $event)">
+                            <li v-on:click="handleChangeView($event)" class="OverrideEquals20180706" id="oopbase">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideEquals20180706'}">重写equals方法</a>
                             </li>
-                            <li v-on:click="handleChangeView('OverrideHashCode20180709', $event)">
+                            <li v-on:click="handleChangeView($event)" class="OverrideHashCode20180709">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideHashCode20180709'}">重写hashCode方法</a>
                             </li>
-                            <li v-on:click="handleChangeView('UseEnumReplaceIntConst', $event)">
+                            <li v-on:click="handleChangeView($event)" class="UseEnumReplaceIntConst">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='UseEnumReplaceIntConst'}">用enum代替int常量</a>
                             </li>
-                            <li v-on:click="handleChangeView('JavaAnnotation', $event)">
+                            <li v-on:click="handleChangeView($event)" class="JavaAnnotation">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='JavaAnnotation'}">Java注解学习</a>
                             </li>
-                            <li v-on:click="handleChangeView('HeapAndStack', $event)">
+                            <li v-on:click="handleChangeView($event)" class="HeapAndStack">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='HeapAndStack'}">操作系统中 heap 和 stack 的区别</a>
                             </li>
                         </ul>
@@ -53,13 +53,13 @@
                             <span>Java多线程与并发</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('ThreadInterrupt', $event)">
+                            <li v-on:click="handleChangeView($event)" class="ThreadInterrupt" id="thread">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadInterrupt'}">Thread学习之线程中断</a>
                             </li>
-                            <li v-on:click="handleChangeView('ThreadGuard', $event)">
+                            <li v-on:click="handleChangeView($event)" class="ThreadGuard">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadGuard'}">Thread学习之优先级及线程守护</a>
                             </li>
-                            <li v-on:click="handleChangeView('ThreadSynchronized', $event)">
+                            <li v-on:click="handleChangeView($event)" class="ThreadSynchronized">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadSynchronized'}">Thread学习之synchronized</a>
                             </li>
                         </ul>
@@ -80,7 +80,7 @@
                             <span>Java框架使用</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('SpringBootBindCustomPorps', $event)">
+                            <li v-on:click="handleChangeView($event)" class="SpringBootBindCustomPorps" id="frame">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SpringBootBindCustomPorps'}">SpringBoot配置文件自定义参数绑定失效</a>
                             </li>
                         </ul>
@@ -92,10 +92,10 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView('SomethingNotes', $event)">
+                            <li v-on:click="handleChangeView($event)" class="SomethingNotes" id="fqa">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
                             </li>
-                            <li v-on:click="handleChangeView('EclipseSVNPrevious20181104', $event)">
+                            <li v-on:click="handleChangeView($event)" class="EclipseSVNPrevious20181104">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EclipseSVNPrevious20181104'}">SVN - Previous operation has not finished异常</a>
                             </li>
                         </ul>
@@ -115,7 +115,7 @@
 
 <script>
 
-    import javaHome from './JavaHome';
+    import HomePage from './JavaHome';
     import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
     import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
     import UseEnumReplaceIntConst from './oopbase/UseEnumReplaceIntConst.md';
@@ -132,7 +132,7 @@
     export default {
         name: "javaIndex",
         components:{
-            javaHome,
+            HomePage,
             OverrideEquals20180706, OverrideHashCode20180709, EclipseSVNPrevious20181104, SomethingNotes,
             SpringBootBindCustomPorps, UseEnumReplaceIntConst, ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack
@@ -141,14 +141,25 @@
             return {
                 title:'首页',
                 activeIndex: '',
-                currentView: javaHome
+                currentView: HomePage
             }
         },
         methods:{
-            handleChangeView:function(component, $event){
+            handleChangeView:function($event){
+                const component = event.currentTarget.className;
                 this.currentView = component;
                 this.activeIndex = component;
                 this.title = event.currentTarget.firstElementChild.innerHTML;
+            }
+        },
+        mounted() {
+            const typeName = this.$route.params.typeName;//获取参数params typeName
+            if (typeName !== 'HomePage'){
+                const domLi = document.getElementById(typeName);
+                const component = domLi.className;
+                this.currentView = component;
+                this.activeIndex = component;
+                this.title = domLi.firstElementChild.innerHTML;
             }
         }
     }

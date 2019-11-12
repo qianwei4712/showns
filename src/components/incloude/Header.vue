@@ -11,7 +11,7 @@
                 <!--java类分类-->
                 <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">Java<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'HomePage' }}">Java<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                     <el-dropdown-menu slot="dropdown">
                         <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">
@@ -41,7 +41,7 @@
                 <!--前端知识分类-->
                 <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'HomePage' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                     <el-dropdown-menu slot="dropdown">
                         <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">
@@ -59,7 +59,7 @@
                 <!--安装部署类-->
                 <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                     <el-dropdown-menu slot="dropdown">
                         <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
@@ -77,7 +77,7 @@
                 <!--方法论-->
                 <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">方法论<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'HomePage' }}">方法论<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
                         </span>
                     <el-dropdown-menu slot="dropdown">
                         <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
