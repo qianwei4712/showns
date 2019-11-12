@@ -15,7 +15,7 @@
                             <div class="discr-pic">
                                 <img :src="src" alt=""/>
                             </div>
-                            <router-link :to="{ name: 'JavaType'}">
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'HomePage' }}">
                                 <el-button type="primary">快速开始<i class="el-icon-right el-icon--right"></i></el-button>
                             </router-link>
                         </div>
@@ -120,5 +120,9 @@
         font-weight: bold;
         color: deeppink;
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
     }
 </style>

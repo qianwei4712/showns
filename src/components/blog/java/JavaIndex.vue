@@ -106,7 +106,7 @@
         <!-- 主页面区 -->
         <el-main>
             <div class="markdown-body main-md-body">
-                <h1 v-html="title">首页</h1>
+                <h1 v-html="title"></h1>
                <component :is="currentView"></component>
             </div>
         </el-main>
@@ -139,7 +139,7 @@
         },
         data(){
             return {
-                title:'首页',
+                title:'Java学习结构图',
                 activeIndex: '',
                 currentView: HomePage
             }
