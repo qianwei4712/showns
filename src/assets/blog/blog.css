@@ -154,5 +154,11 @@
     padding: 0;
 }
 
+.read-only{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
 
 

@@ -1,6 +1,6 @@
 <template>
     <div class="Header">
-        <el-header class="head-fixed">
+        <el-header class="head-fixed read-only">
             <!--页头左侧大标题-->
             <router-link :to="{ name: 'home'}">
                 <span class="head-title">路的尽头在哪</span>
@@ -9,82 +9,84 @@
             <div class="head-right-div" style="float: right">
 
                 <!--java类分类-->
-                <el-dropdown class="head-type-ele">
-                        <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'JavaType', params: { typeName: 'HomePage' }}">Java<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
-                        </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">
-                            <el-dropdown-item>Java面向对象基础</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'collections' }}">
-                            <el-dropdown-item>Java集合知识体系</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'iokonwledge' }}">
-                            <el-dropdown-item>Java I/O知识体系</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'thread' }}">
-                            <el-dropdown-item>Java多线程与并发</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'jvm' }}">
-                            <el-dropdown-item>Java虚拟机</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'frame' }}">
-                            <el-dropdown-item divided>Java框架使用</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'JavaType', params: { typeName: 'fqa' }}">
-                            <el-dropdown-item divided>FQA</el-dropdown-item>
-                        </router-link>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <router-link :to="{ name: 'JavaType', params: { typeName: 'HomePage' }}">
+                    <el-dropdown class="head-type-ele">
+                            <span class="el-dropdown-link">Java<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                        <el-dropdown-menu slot="dropdown">
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'oopbase' }}">
+                                <el-dropdown-item>Java面向对象基础</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'collections' }}">
+                                <el-dropdown-item>Java集合知识体系</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'iokonwledge' }}">
+                                <el-dropdown-item>Java I/O知识体系</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'thread' }}">
+                                <el-dropdown-item>Java多线程与并发</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'jvm' }}">
+                                <el-dropdown-item>Java虚拟机</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'frame' }}">
+                                <el-dropdown-item divided>Java框架使用</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'JavaType', params: { typeName: 'fqa' }}">
+                                <el-dropdown-item divided>FQA</el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </router-link>
 
                 <!--前端知识分类-->
-                <el-dropdown class="head-type-ele">
-                        <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'HomePage' }}">前端<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
-                        </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">
-                            <el-dropdown-item>Vue.js</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'FrontType', params: { typeName: 'frame' }}">
-                            <el-dropdown-item divided>框架工具</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'FrontType', params: { typeName: 'fqa' }}">
-                            <el-dropdown-item divided>FQA</el-dropdown-item>
-                        </router-link>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <router-link :to="{ name: 'FrontType', params: { typeName: 'HomePage' }}">
+                    <el-dropdown class="head-type-ele">
+                            <span class="el-dropdown-link">前端<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                        <el-dropdown-menu slot="dropdown">
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">
+                                <el-dropdown-item>Vue.js</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'frame' }}">
+                                <el-dropdown-item divided>框架工具</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'FrontType', params: { typeName: 'fqa' }}">
+                                <el-dropdown-item divided>FQA</el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </router-link>
 
                 <!--安装部署类-->
-                <el-dropdown class="head-type-ele">
-                        <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
-                        </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
-                            <el-dropdown-item>数据库</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
-                            <el-dropdown-item divided>服务器</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'DeployType', params: { typeName: 'fqa' }}">
-                            <el-dropdown-item divided>FQA</el-dropdown-item>
-                        </router-link>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">
+                    <el-dropdown class="head-type-ele">
+                            <span class="el-dropdown-link">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                        <el-dropdown-menu slot="dropdown">
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
+                                <el-dropdown-item>数据库</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
+                                <el-dropdown-item divided>服务器</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'fqa' }}">
+                                <el-dropdown-item divided>FQA</el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </router-link>
 
                 <!--方法论-->
-                <el-dropdown class="head-type-ele">
-                        <span class="el-dropdown-link">
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'HomePage' }}">方法论<i class="el-icon-caret-bottom el-icon--right"></i></router-link>
-                        </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
-                            <el-dropdown-item>设计模式</el-dropdown-item>
-                        </router-link>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <router-link :to="{ name: 'MethodologyType', params: { typeName: 'HomePage' }}">
+                    <el-dropdown class="head-type-ele">
+                            <span class="el-dropdown-link">
+                                方法论<i class="el-icon-caret-bottom el-icon--right"></i>
+                            </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
+                                <el-dropdown-item>设计模式</el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </router-link>
 
                 <!--静态资源介绍-->
                 <el-dropdown class="head-type-ele">

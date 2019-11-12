@@ -2,7 +2,7 @@
     <div class="Footer">
         <el-footer>
             <div class="footer-div">
-                <div class="footer-record-left">
+                <div class="footer-record-left read-only">
                     浙ICP备18006899号 &nbsp;&nbsp; ©shiva - Made with <span class="footer-span-heart">♥</span> for the people of the internet.
                 </div>
                 <div class="footer-func-right">
@@ -48,10 +48,6 @@
         line-height: 57px;
         width: 50%;
         float: left;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
     }
     .footer-func-right{
         text-align: center;

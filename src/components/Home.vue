@@ -9,7 +9,7 @@
                     <div style="height: 100%">
                         <!--首页描述区域-->
                         <div class="discr">
-                            <div class="discr-content">
+                            <div class="discr-content read-only">
                                 做人最重要的是开心
                             </div>
                             <div class="discr-pic">
@@ -21,14 +21,14 @@
                         </div>
                         <div class="fes">
                             <div class="fe" v-for="item in fes">
-                                <div class="fe-title" >
+                                <div class="fe-title read-only" >
                                     <h2>{{item.title}}</h2>
                                     <p>{{item.content}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="show">
-                            <div class="show-content">
+                            <div class="show-content read-only">
                                 show
                             </div>
                         </div>
@@ -120,9 +120,5 @@
         font-weight: bold;
         color: deeppink;
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none;
     }
 </style>
