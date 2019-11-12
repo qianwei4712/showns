@@ -161,4 +161,13 @@
     user-select:none;
 }
 
+.markdown-body a{
+    text-decoration: none;
+    color: #3eaf7c;
+}
 
+.markdown-body a:hover{
+    text-decoration: none;
+    color: #3eaf7c;
+    font-weight: bolder;
+}
