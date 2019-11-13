@@ -14,14 +14,11 @@
                             <li v-on:click="handleChangeView($event)" class="CommonSoftwareDeploy" id="server">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='CommonSoftwareDeploy'}">常用软件安装</a>
                             </li>
+                            <li v-on:click="handleChangeView($event)" class="NginxBindPortWithDomain">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxBindPortWithDomain'}">nginx域名转发并配置SSL证书</a>
+                            </li>
                             <li v-on:click="handleChangeView($event)" class="LinuxRunJarBackground">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='LinuxRunJarBackground'}">Linux服务器后台运行jar包</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="NginxBindPortWithDomain">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxBindPortWithDomain'}">nginx将多个不同域名转发到不同端口</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="NginxAndTomcatConfigSSL">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxAndTomcatConfigSSL'}">nginx+tomcat配置项目https加密</a>
                             </li>
                         </ul>
                     </section>
@@ -78,15 +75,13 @@
     import CommonSoftwareDeploy from './server/CommonSoftwareDeploy.md';
     import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
-    import NginxAndTomcatConfigSSL from './server/NginxAndTomcatConfigSSL.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
-            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, NginxAndTomcatConfigSSL,
-            MysqldumpBackupSql, CommonSoftwareDeploy
+            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy
         },
         data(){
             return {
