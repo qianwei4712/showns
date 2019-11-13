@@ -1,6 +1,6 @@
 
-以官方示例为起点进行修改：<https://www.echartsjs.com/gallery/editor.html?c=scatter-map> 
-
+以官方示例为起点进行修改：
+<a href="https://www.echartsjs.com/gallery/editor.html?c=scatter-map" target="_blank">https://www.echartsjs.com/gallery/editor.html?c=scatter-map</a>
 
 
 若自行绘制html进行尝试，请记得引入中国地图或者世界地图js

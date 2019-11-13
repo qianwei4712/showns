@@ -1,8 +1,9 @@
 摘要：背景环境为，在一台阿里云服务器下，有多个tomcat项目，每个tomcat项目配置了不同端口号。每个项目有自己的独立域名，然而域名只能解析到ip,无法解析到端口，就需要用nginx。
 
->博主今日实现该功能，参考了以下两篇博客：<br>
-http://www.cnblogs.com/fengli9998/p/6112447.html<br>
-http://tiomg.org/blog?ti_uuid=5af77f95f08540d48e6cb83ebd94575a
+>今日实现该功能，参考了以下两篇博客：<br>
+<a href="http://www.cnblogs.com/fengli9998/p/6112447.html" target="_blank">http://www.cnblogs.com/fengli9998/p/6112447.html</a><br>
+<a href="http://tiomg.org/blog?ti_uuid=5af77f95f08540d48e6cb83ebd94575a" target="_blank">http://tiomg.org/blog?ti_uuid=5af77f95f08540d48e6cb83ebd94575a</a><br>
+
 
 # 步骤1：nginx需要的环境安装
 按顺序敲入下面四个指令：

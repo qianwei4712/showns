@@ -51,8 +51,9 @@
     * SOURCE 注解将被编译器丢弃
     * CLASS 注解在Class文件中可用，但会被VM丢弃
     * RUNTIME **<font color=#A52A2A>VM将在运行时保留注解，因此可以通过反射机制读取注解信息</font>**
-* @Documented 代表此注解会被javadoc工具提取成文档（感觉用不太到）[转到大神的测试博客:传送门](https://www.cnblogs.com/uoar/p/8036642.html)
-* @Inherited  允许子类继承父类注解，[转到大神的测试博客:传送门](https://blog.csdn.net/snow_crazy/article/details/39381695)
+* @Documented 代表此注解会被javadoc工具提取成文档（感觉用不太到）<a href="https://www.cnblogs.com/uoar/p/8036642.html" target="_blank">转到大神的测试博客:传送门</a>
+* @Inherited  允许子类继承父类注解，<a href="https://blog.csdn.net/snow_crazy/article/details/39381695" target="_blank">转到大神的测试博客:传送门</a>
+
 
 ```java
 @Target({ElementType.FIELD, ElementType.TYPE})
