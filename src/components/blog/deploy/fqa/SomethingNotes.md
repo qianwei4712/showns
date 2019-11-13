@@ -1,5 +1,8 @@
-## mysql设置用户权限
-```
-grant all privileges on *.* to 'user'@'%' identified by 'password' with grant option;
-FLUSH PRIVILEGES;
-```
+JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archive-139210.html" target="_blank_">https://www.oracle.com/technetwork/java/javase/archive-139210.html</a>
+
+Nginx下载地址：<a href="http://nginx.org/en/download.html" target="_blank_">http://nginx.org/en/download.html</a>
+
+Tomcat下载地址：<a href="http://www.apache.org/dist/tomcat/" target="_blank_">http://www.apache.org/dist/tomcat/</a>
+
+Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank_">https://nodejs.org/en/download/</a>
+

@@ -8,22 +8,13 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="sidebar-heading">
-                            <span>数据库</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="darabase">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li>
-                    <section class="sidebar-group">
-                        <p class="sidebar-heading">
                             <span>服务器</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="LinuxRunJarBackground" id="server">
+                            <li v-on:click="handleChangeView($event)" class="CommonSoftwareDeploy" id="server">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='CommonSoftwareDeploy'}">常用软件安装</a>
+                            </li>
+                            <li v-on:click="handleChangeView($event)" class="LinuxRunJarBackground">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='LinuxRunJarBackground'}">Linux服务器后台运行jar包</a>
                             </li>
                             <li v-on:click="handleChangeView($event)" class="NginxBindPortWithDomain">
@@ -38,11 +29,32 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="sidebar-heading">
+                            <span>数据库</span>
+                        </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="darabase">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <section class="sidebar-group">
+                        <p class="sidebar-heading">
+                            <span>中间件</span>
+                        </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <section class="sidebar-group">
+                        <p class="sidebar-heading">
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
                             <li v-on:click="handleChangeView($event)" class="SomethingNotes" id="fqa">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">常用软件下载链接</a>
                             </li>
                         </ul>
                     </section>
@@ -52,7 +64,7 @@
         <!-- 主页面区 -->
         <el-main>
             <div class="markdown-body main-md-body">
-                <h1 v-html="title">首页</h1>
+                <h1 v-html="title"></h1>
                 <component :is="currentView"></component>
             </div>
         </el-main>
@@ -63,6 +75,7 @@
 
     import HomePage from "./DeployHome";
     import SomethingNotes from './fqa/SomethingNotes.md';
+    import CommonSoftwareDeploy from './server/CommonSoftwareDeploy.md';
     import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import NginxAndTomcatConfigSSL from './server/NginxAndTomcatConfigSSL.md';
@@ -73,11 +86,11 @@
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, NginxAndTomcatConfigSSL,
-            MysqldumpBackupSql
+            MysqldumpBackupSql, CommonSoftwareDeploy
         },
         data(){
             return {
-                title:'首页',
+                title:'平时工作中涉及到的安装部署',
                 activeIndex: '',
                 currentView: HomePage
             }

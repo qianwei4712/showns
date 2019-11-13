@@ -61,11 +61,14 @@
                     <el-dropdown class="head-type-ele">
                             <span class="el-dropdown-link">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></span>
                         <el-dropdown-menu slot="dropdown">
-                            <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
-                                <el-dropdown-item>数据库</el-dropdown-item>
-                            </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
-                                <el-dropdown-item divided>服务器</el-dropdown-item>
+                                <el-dropdown-item >服务器</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
+                                <el-dropdown-item divided>数据库</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'middleware' }}">
+                                <el-dropdown-item divided>中间件</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'fqa' }}">
                                 <el-dropdown-item divided>FQA</el-dropdown-item>
