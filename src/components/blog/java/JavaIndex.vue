@@ -11,7 +11,10 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="OverrideEquals20180706" id="oopbase">
+                            <li v-on:click="handleChangeView($event)" class="EncapInheritPolymo" id="oopbase">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EncapInheritPolymo'}">封装、继承、多态</a>
+                            </li>
+                            <li v-on:click="handleChangeView($event)" class="OverrideEquals20180706">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideEquals20180706'}">重写equals方法</a>
                             </li>
                             <li v-on:click="handleChangeView($event)" class="OverrideHashCode20180709">
@@ -116,6 +119,7 @@
 <script>
 
     import HomePage from './JavaHome';
+    import EncapInheritPolymo from './oopbase/EncapInheritPolymo.md';
     import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
     import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
     import UseEnumReplaceIntConst from './oopbase/UseEnumReplaceIntConst.md';
@@ -135,7 +139,7 @@
             HomePage,
             OverrideEquals20180706, OverrideHashCode20180709, EclipseSVNPrevious20181104, SomethingNotes,
             SpringBootBindCustomPorps, UseEnumReplaceIntConst, ThreadInterrupt, ThreadGuard, ThreadSynchronized,
-            JavaAnnotation, HeapAndStack
+            JavaAnnotation, HeapAndStack, EncapInheritPolymo
         },
         data(){
             return {

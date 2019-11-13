@@ -44,11 +44,14 @@ yum install -y openssl openssl-devel
 下面的具体安装步骤，我使用FlashFXP和XShell。
 
 我自己在/usr/local/下建了一个文件夹nginx。然后把下载的nginx-1.12.1.tar.gz放到文件夹下面，然后
-
-`tar -zxvf nginx-1.12.1.tar.gz` <br>
+```
+tar -zxvf nginx-1.12.1.tar.gz
+``` 
 解压后进入解压出的文件夹
 
-`cd nginx-1.12.1` <br>
+```
+cd nginx-1.12.1
+```
 接下来要做的事情，就是敲指令，反正看不懂它在做什么。没报问题就行了
 
 按顺序键入
@@ -62,17 +65,22 @@ make  install
 然后进入/nginx/sbin，这个cd指令就不写了，我不知道你们生成文件的位置，找找吧，就在local应该下面
 
 启动nginx
-
-`./nginx` <br>
+```
+./nginx
+```
 不出意外的话你就能直接通过ip访问到nginx页面了。
 
 如果不行先检查nginx是否启动，再检查防火墙。
 
 #### <span id="firewall">检查防火墙是否开放80端口</span>
-`vi /etc/sysconfig/iptables`<br>
+```
+vi /etc/sysconfig/iptables
+```
 看看是否存在以下行，不存在的话加进去
 
-`A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT`<br>
+```
+A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+```
 为方便小白，多讲几句废话
 
 按一下s，进行编辑。编辑完后ctrl+c，然后敲：wq，回车保存退出
@@ -83,8 +91,10 @@ centos 6以前 `service iptables restart`<br>
 centos 7以后 `systemctl restart firewalld.service`<br>
 
 #### 检查阿里云防火墙是否开启
-阿里云端口需要自己开放，这里简单写一下<br>
-实例--管理--本实例安全组--配置规则--允许公网入方向80端口，优先级1-100<br>
+阿里云端口需要自己开放，这里简单写一下
+
+实例--管理--本实例安全组--配置规则--允许公网入方向80端口，优先级1-100
+
 到这里，应该nginx都安装完成了。
 
 <br>
@@ -94,18 +104,28 @@ centos 7以后 `systemctl restart firewalld.service`<br>
 
 然后配置nginx.conf。这里按照我的目录为例
 
-`cd  /usr/local/nginx/conf`<br>
-下面有一个nginx.conf文件。就是最后的敌人。<br>
-把#注释的去掉点，看起来清楚点。<br>
-然后，直接贴出文件好了，这里也没东西好讲的。<br>
-我只在里面加了2个upstream,和2个server，其它的一行没动。<br>
+```
+cd  /usr/local/nginx/conf
+```
+下面有一个nginx.conf文件。就是最后的敌人。
+
+把#注释的去掉点，看起来清楚点。
+
+然后，直接贴出文件好了，这里也没东西好讲的。
+
+我只在里面加了2个upstream,和2个server，其它的一行没动。
+
 编辑完之后别忘了重新进入/nginx/sbin，使新的配置文件生效
 
-`./nginx -s reload`<br>
+```
+./nginx -s reload
+```
 ok!敲完这一行，恭喜你练成了盖世武功。
+
 这里的ip我用127.0.0.1代理，2个域名分别用 百度 和 谷歌 代替。
 
-这里例如www.baidu.cn   baidu.cn空格分开表示两个访问地址都能控制。。<br>
+这里例如www.baidu.cn   baidu.cn空格分开表示两个访问地址都能控制。。
+
 百度谷歌两个项目页面分别在8081和8082两个tomcat下。
 
 ```
