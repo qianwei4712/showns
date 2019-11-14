@@ -26,7 +26,7 @@ JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archiv
 
    在末尾添加环境变量
 
-   ```shell
+   ```Properties
    export JAVA_HOME=/usr/java/jdk1.8.0_65
    export JRE_HOME=$JAVA_HOME/jre
    export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
@@ -123,7 +123,7 @@ grep "password" /var/log/mysqld.log
 
 6. 根据密码，登陆并修改密码
 
-```shell
+```SQL
 mysql -uroot -p 
 alter user 'root'@'localhost' identified by 'password;
 FLUSH PRIVILEGES;
@@ -131,7 +131,7 @@ FLUSH PRIVILEGES;
 
 7. 创建新用户，授权，并设置登陆ip
 
-```shell
+```SQL
 create user 'username'@'%' identified by 'password';
 grant all privileges on *.* to 'username'@'%'  identified by 'password' with grant option;
 FLUSH PRIVILEGES;

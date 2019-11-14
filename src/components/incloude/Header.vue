@@ -97,18 +97,44 @@
                           关于<i class="el-icon-caret-bottom el-icon--right"></i>
                         </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item>网站介绍</el-dropdown-item>
-                        <el-dropdown-item>作者简历-2019</el-dropdown-item>
+                        <el-dropdown-item v-on:click.native="openDrawer($event)" class="AboutWebsite">网站介绍</el-dropdown-item>
+                        <el-dropdown-item v-on:click.native="openDrawer($event)" class="AboutMe">作者简介</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
+
+                <el-drawer :title="title" :visible.sync="drawer" direction="rtl">
+                    <component :is="aboutView"></component>
+                </el-drawer>
+
             </div>
         </el-header>
     </div>
 </template>
 
 <script>
+
+    import AboutMe from "./AboutMe";
+    import AboutWebsite from "./AboutWebsite";
+
     export default {
-        name: "Header"
+        name: "Header",
+        components:{
+            AboutMe, AboutWebsite
+        },
+        data(){
+            return {
+                drawer: false,
+                title:'',
+                aboutView:''
+            }
+        },
+        methods:{
+            openDrawer: function($event){
+                this.title = event.currentTarget.textContent;
+                this.aboutView = event.currentTarget.className.split(" ")[1];
+                this.drawer = true;
+            }
+        }
     }
 </script>
 

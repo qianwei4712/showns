@@ -128,7 +128,7 @@ ok!敲完这一行，恭喜你练成了盖世武功。
 
 百度谷歌两个项目页面分别在8081和8082两个tomcat下。
 
-```
+```nginx
 
 #user  nobody;
 worker_processes  1;
@@ -267,7 +267,7 @@ http {
 
    最后查看配置。启动nginx
 
-   ```shell
+   ```
     ./usr/local/nginx/sbin/nginx -V
     ./usr/local/nginx/sbin/nginx -s start
    ```
@@ -334,7 +334,7 @@ http {
 
    这个监听的是https 443端口，不影响http的正常使用。
 
-   ```
+   ```nginx
    upstream httpsPro {
            server 47.121.65.85:8443;
        }
