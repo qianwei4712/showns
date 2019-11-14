@@ -102,7 +102,7 @@
                     </el-dropdown-menu>
                 </el-dropdown>
 
-                <el-drawer :title="title" :visible.sync="drawer" direction="rtl">
+                <el-drawer :title="title" :visible.sync="drawer" direction="rtl" class="read-only">
                     <component :is="aboutView"></component>
                 </el-drawer>
 
