@@ -7,6 +7,9 @@
             <ul class="sidebar-ul-padding">
                 <li>
                     <section class="sidebar-group">
+                        <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
+                            <span>总览</span>
+                        </p>
                         <p class="sidebar-heading">
                             <span>Vue.js</span>
                         </p>
@@ -63,23 +66,8 @@
                 currentView: HomePage
             }
         },
-        methods:{
-            handleChangeView:function($event){
-                const component = event.currentTarget.className;
-                this.currentView = component;
-                this.activeIndex = component;
-                this.title = event.currentTarget.firstElementChild.innerHTML;
-            }
-        },
         mounted() {
-            const typeName = this.$route.params.typeName;//获取参数params typeName
-            if (typeName !== 'HomePage'){
-                const domLi = document.getElementById(typeName);
-                const component = domLi.className;
-                this.currentView = component;
-                this.activeIndex = component;
-                this.title = domLi.firstElementChild.innerHTML;
-            }
+            this.afterMounted();
         }
     }
 </script>

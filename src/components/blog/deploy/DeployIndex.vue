@@ -7,6 +7,9 @@
             <ul class="sidebar-ul-padding">
                 <li>
                     <section class="sidebar-group">
+                        <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
+                            <span>总览</span>
+                        </p>
                         <p class="sidebar-heading">
                             <span>服务器</span>
                         </p>
@@ -29,7 +32,7 @@
                             <span>数据库</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="darabase">
+                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="database">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
                             </li>
                         </ul>
@@ -90,23 +93,8 @@
                 currentView: HomePage
             }
         },
-        methods:{
-            handleChangeView:function($event){
-                const component = event.currentTarget.className;
-                this.currentView = component;
-                this.activeIndex = component;
-                this.title = event.currentTarget.firstElementChild.innerHTML;
-            }
-        },
         mounted() {
-            const typeName = this.$route.params.typeName;//获取参数params typeName
-            if (typeName !== 'HomePage'){
-                const domLi = document.getElementById(typeName);
-                const component = domLi.className;
-                this.currentView = component;
-                this.activeIndex = component;
-                this.title = domLi.firstElementChild.innerHTML;
-            }
+            this.afterMounted();
         }
     }
 </script>
