@@ -1,12 +1,22 @@
 <template>
     <div class="frontHome">
-        前端分类的首页
+        <div style="text-align: center">
+            <el-image class="java-route" :src="src" :preview-src-list="srcList"></el-image>
+        </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "frontHome"
+        name: "frontHome",
+        data(){
+            return {
+                src:require('@/assets/blog/img/Front.png'),
+                srcList:[
+                    require('@/assets/blog/img/Front.png')
+                ]
+            }
+        }
     }
 </script>
 

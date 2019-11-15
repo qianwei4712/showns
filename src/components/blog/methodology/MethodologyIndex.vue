@@ -27,6 +27,12 @@
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='FactoryAndSingletonsMode'}">工厂模式和单例模式</a>
                             </li>
                         </ul>
+                        <p class="sidebar-heading">
+                            <span>排序算法</span>
+                        </p>
+                        <p class="sidebar-heading">
+                            <span>FQA</span>
+                        </p>
                     </section>
                 </li>
             </ul>
@@ -34,7 +40,7 @@
         <!-- 主页面区 -->
         <el-main>
             <div class="markdown-body main-md-body">
-                <h1 v-html="title">首页</h1>
+                <h1 v-html="title"></h1>
                 <component :is="currentView"></component>
             </div>
         </el-main>
@@ -58,7 +64,7 @@
         },
         data(){
             return {
-                title:'首页',
+                title:'程序员方法论',
                 activeIndex: '',
                 currentView: HomePage
             }
