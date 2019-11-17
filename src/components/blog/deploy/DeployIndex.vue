@@ -10,47 +10,15 @@
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
                             <span>总览</span>
                         </p>
-                        <p class="sidebar-heading">
-                            <span>服务器</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in servers" :class="item.class" :id="item.id">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
-                            </li>
-                        </ul>
                     </section>
                 </li>
-                <li>
+                <li v-for="artType in allArtyles">
                     <section class="sidebar-group">
                         <p class="sidebar-heading">
-                            <span>数据库</span>
+                            <span>{{artType.title}}</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in databases" :class="item.class" :id="item.id">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li>
-                    <section class="sidebar-group">
-                        <p class="sidebar-heading">
-                            <span>中间件</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in middlewares" :class="item.class" :id="item.id">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li>
-                    <section class="sidebar-group">
-                        <p class="sidebar-heading">
-                            <span>FQA</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                            <li v-on:click="handleChangeView($event)" v-for="item in artType.data" :class="item.class" :id="item.id">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
@@ -88,17 +56,28 @@
                 title:'平时工作中涉及到的安装部署',
                 activeIndex: '',
                 currentView: HomePage,
-                servers:[
-                    {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
-                    {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
-                    {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'}
-                ],
-                databases:[
-                    {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"database" }
-                ],
-                middlewares:[],
-                fqas:[
-                    {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" }
+                allArtyles:[
+                    {
+                        title:'服务器',
+                        data:[
+                            {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
+                            {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
+                            {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'}
+                        ]
+                    }, {
+                        title:'数据库',
+                        data:[
+                            {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"database" }
+                        ]
+                    }, {
+                        title:'中间件',
+                        data:[]
+                    }, {
+                        title:'FQA',
+                        data:[
+                            {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" }
+                        ]
+                    }
                 ]
             }
         },

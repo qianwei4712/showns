@@ -10,27 +10,15 @@
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
                             <span>总览</span>
                         </p>
+                    </section>
+                </li>
+                <li v-for="artType in allArtyles">
+                    <section class="sidebar-group">
                         <p class="sidebar-heading">
-                            <span>设计模式</span>
+                            <span>{{artType.title}}</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in designpatterns" :class="item.class" :id="item.id">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
-                            </li>
-                        </ul>
-                        <p class="sidebar-heading">
-                            <span>排序算法</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in sortalgorithm" :class="item.class" :id="item.id">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
-                            </li>
-                        </ul>
-                        <p class="sidebar-heading">
-                            <span>FQA</span>
-                        </p>
-                        <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                            <li v-on:click="handleChangeView($event)" v-for="item in artType.data" :class="item.class" :id="item.id">
                                 <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
@@ -68,14 +56,23 @@
                 title:'程序员方法论',
                 activeIndex: '',
                 currentView: HomePage,
-                designpatterns:[
-                    {title:'策略模式', class:'StrategyMode', id:"designpattern" },
-                    {title:'观察者模式', class:'ObserverMode' },
-                    {title:'装饰者模式', class:'DecoratorMode' },
-                    {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
-                ],
-                sortalgorithm:[],
-                fqas:[]
+                allArtyles:[
+                    {
+                        title:'设计模式',
+                        data:[
+                            {title:'策略模式', class:'StrategyMode', id:"designpattern" },
+                            {title:'观察者模式', class:'ObserverMode' },
+                            {title:'装饰者模式', class:'DecoratorMode' },
+                            {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
+                        ]
+                    }, {
+                        title:'排序算法',
+                        data:[]
+                    }, {
+                        title:'FQA',
+                        data:[]
+                    }
+                ]
             }
         },
         mounted() {
