@@ -14,23 +14,8 @@
                             <span>Java面向对象基础</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="EncapInheritPolymo" id="oopbase">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EncapInheritPolymo'}">封装、继承、多态</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="OverrideEquals20180706">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideEquals20180706'}">重写equals方法</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="OverrideHashCode20180709">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='OverrideHashCode20180709'}">重写hashCode方法</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="UseEnumReplaceIntConst">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='UseEnumReplaceIntConst'}">用enum代替int常量</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="JavaAnnotation">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='JavaAnnotation'}">Java注解学习</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="HeapAndStack">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='HeapAndStack'}">操作系统中 heap 和 stack 的区别</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in oopbases" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -41,6 +26,9 @@
                             <span>Java集合知识体系</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in collections" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -50,6 +38,9 @@
                             <span>Java I/O知识体系</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in iokonwledges" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -59,14 +50,8 @@
                             <span>Java多线程与并发</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="ThreadInterrupt" id="thread">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadInterrupt'}">Thread学习之线程中断</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="ThreadGuard">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadGuard'}">Thread学习之优先级及线程守护</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="ThreadSynchronized">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ThreadSynchronized'}">Thread学习之synchronized</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in threads" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -77,6 +62,9 @@
                             <span>Java虚拟机</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in jvms" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -86,8 +74,8 @@
                             <span>Java框架使用</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="SpringBootBindCustomPorps" id="frame">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SpringBootBindCustomPorps'}">SpringBoot配置文件自定义参数绑定失效</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in frames" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -98,11 +86,8 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="SomethingNotes" id="fqa">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">平时用到的一些细节记录</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="EclipseSVNPrevious20181104">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EclipseSVNPrevious20181104'}">SVN - Previous operation has not finished异常</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -148,7 +133,30 @@
             return {
                 title:'Java学习结构图',
                 activeIndex: '',
-                currentView: HomePage
+                currentView: HomePage,
+                oopbases:[
+                    {title:'封装、继承、多态', class:'EncapInheritPolymo', id:"oopbase" },
+                    {title:'重写equals方法', class:'OverrideEquals20180706'},
+                    {title:'重写hashCode方法', class:'OverrideHashCode20180709'},
+                    {title:'用enum代替int常量', class:'UseEnumReplaceIntConst'},
+                    {title:'Java注解学习', class:'JavaAnnotation'},
+                    {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
+                ],
+                collections:[],
+                iokonwledges:[],
+                threads:[
+                    {title:'Thread学习之线程中断', class:'ThreadInterrupt', id:"thread" },
+                    {title:'Thread学习之优先级及线程守护', class:'ThreadGuard'},
+                    {title:'Thread学习之synchronized', class:'ThreadSynchronized'}
+                ],
+                jvms:[],
+                frames:[
+                    {title:'SpringBoot配置文件自定义参数绑定失效', class:'SpringBootBindCustomPorps', id:"frame" }
+                ],
+                fqas:[
+                    {title:'平时用到的一些细节记录', class:'SomethingNotes', id:"fqa" },
+                    {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
+                ]
             }
         },
         mounted() {

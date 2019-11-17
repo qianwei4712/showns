@@ -14,6 +14,9 @@
                             <span>Vue.js</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in vuejs" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -23,8 +26,8 @@
                             <span>框架工具</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="EChartsMapFlyLine" id="frame">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='EChartsMapFlyLine'}">ECharts绘制地图飞线</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in frames" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -35,6 +38,9 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -63,7 +69,12 @@
             return {
                 title:'前端界面开发记录',
                 activeIndex: '',
-                currentView: HomePage
+                currentView: HomePage,
+                vuejs:[],
+                frames:[
+                    {title:'ECharts绘制地图飞线', class:'EChartsMapFlyLine', id:"frame" }
+                ],
+                fqas:[]
             }
         },
         mounted() {

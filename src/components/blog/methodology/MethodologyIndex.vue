@@ -14,25 +14,26 @@
                             <span>设计模式</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="StrategyMode" id="designpattern">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='StrategyMode'}">策略模式</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="ObserverMode">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='ObserverMode'}">观察者模式</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="DecoratorMode">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='DecoratorMode'}">装饰者模式</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="FactoryAndSingletonsMode">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='FactoryAndSingletonsMode'}">工厂模式和单例模式</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in designpatterns" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                         <p class="sidebar-heading">
                             <span>排序算法</span>
                         </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in sortalgorithm" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
+                        </ul>
                         <p class="sidebar-heading">
                             <span>FQA</span>
                         </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
+                        </ul>
                     </section>
                 </li>
             </ul>
@@ -66,7 +67,15 @@
             return {
                 title:'程序员方法论',
                 activeIndex: '',
-                currentView: HomePage
+                currentView: HomePage,
+                designpatterns:[
+                    {title:'策略模式', class:'StrategyMode', id:"designpattern" },
+                    {title:'观察者模式', class:'ObserverMode' },
+                    {title:'装饰者模式', class:'DecoratorMode' },
+                    {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
+                ],
+                sortalgorithm:[],
+                fqas:[]
             }
         },
         mounted() {

@@ -14,14 +14,8 @@
                             <span>服务器</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="CommonSoftwareDeploy" id="server">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='CommonSoftwareDeploy'}">常用软件安装</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="NginxBindPortWithDomain">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='NginxBindPortWithDomain'}">nginx域名转发并配置SSL证书</a>
-                            </li>
-                            <li v-on:click="handleChangeView($event)" class="LinuxRunJarBackground">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='LinuxRunJarBackground'}">Linux服务器后台运行jar包</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in servers" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -32,8 +26,8 @@
                             <span>数据库</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="MysqldumpBackupSql" id="database">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='MysqldumpBackupSql'}">使用mysqldump定时备份sql</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in databases" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -44,6 +38,9 @@
                             <span>中间件</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
+                            <li v-on:click="handleChangeView($event)" v-for="item in middlewares" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
+                            </li>
                         </ul>
                     </section>
                 </li>
@@ -53,8 +50,8 @@
                             <span>FQA</span>
                         </p>
                         <ul class="sidebar-links sidebar-group-items">
-                            <li v-on:click="handleChangeView($event)" class="SomethingNotes" id="fqa">
-                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex==='SomethingNotes'}">常用软件下载链接</a>
+                            <li v-on:click="handleChangeView($event)" v-for="item in fqas" :class="item.class" :id="item.id">
+                                <a href="javascript:void(0);" class="sidebar-link" v-bind:class="{ active:activeIndex===item.class}">{{item.title}}</a>
                             </li>
                         </ul>
                     </section>
@@ -90,7 +87,19 @@
             return {
                 title:'平时工作中涉及到的安装部署',
                 activeIndex: '',
-                currentView: HomePage
+                currentView: HomePage,
+                servers:[
+                    {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
+                    {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
+                    {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'}
+                ],
+                databases:[
+                    {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"database" }
+                ],
+                middlewares:[],
+                fqas:[
+                    {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" }
+                ]
             }
         },
         mounted() {
