@@ -40,6 +40,7 @@
 
     import HomePage from './JavaHome';
     import EncapInheritPolymo from './oopbase/EncapInheritPolymo.md';
+    import InterAbstInner from './oopbase/InterAbstInner.md';
     import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
     import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
     import UseEnumReplaceIntConst from './oopbase/UseEnumReplaceIntConst.md';
@@ -59,7 +60,7 @@
             HomePage,
             OverrideEquals20180706, OverrideHashCode20180709, EclipseSVNPrevious20181104, SomethingNotes,
             SpringBootBindCustomPorps, UseEnumReplaceIntConst, ThreadInterrupt, ThreadGuard, ThreadSynchronized,
-            JavaAnnotation, HeapAndStack, EncapInheritPolymo
+            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner
         },
         data(){
             return {
@@ -71,10 +72,11 @@
                         title:'Java面向对象基础',
                         data:[
                             {title:'封装、继承、多态', class:'EncapInheritPolymo', id:"oopbase" },
+                            {title:'接口、抽象类、内部类', class:'InterAbstInner'},
+                            {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'重写equals方法', class:'OverrideEquals20180706'},
                             {title:'重写hashCode方法', class:'OverrideHashCode20180709'},
                             {title:'用enum代替int常量', class:'UseEnumReplaceIntConst'},
-                            {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
                         ]
                     }, {
