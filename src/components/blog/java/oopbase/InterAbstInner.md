@@ -5,8 +5,6 @@
 
 <br><br>
 
-**。。。。**
-
 ##  <span id="t1">接口</span>
 
 使用 **interface** 关键字创建接口。 
@@ -61,5 +59,5 @@
 
 然而必须要了解，内部类与组合是完全不同的概念，这一点很重要。在最初，内部类看起来就像是一种代码隐藏机制：将类置于其他类的内部。但是，你将会了解到，内部类远不止如此，它了解外围类，并能与之通信，而且你用内部类写出的代码更加优雅而清晰，尽管并不总是这样（而且 Java 8 的 Lambda 表达式和方法引用减少了编写内部类的需求）。
 
-以上摘自 《On Java 8》，中文版翻译 <a href="https://lingcoder.gitee.io/onjava8/  " target="_blank_"><https://lingcoder.gitee.io/onjava8/> </a>
+以上摘自 《On Java 8》，中文版翻译 <a href="https://lingcoder.gitee.io/onjava8"  target="_blank">https://lingcoder.gitee.io/onjava8</a>
 

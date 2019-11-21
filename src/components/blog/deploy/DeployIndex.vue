@@ -43,13 +43,15 @@
     import CommonSoftwareDeploy from './server/CommonSoftwareDeploy.md';
     import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
+    import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
-            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy
+            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
+            LinuxCommonCommand
         },
         data(){
             return {
@@ -61,6 +63,7 @@
                         title:'服务器',
                         data:[
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
+                            {title:'Linux常用命令', class:'LinuxCommonCommand' },
                             {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
                             {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'}
                         ]
