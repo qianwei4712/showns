@@ -9,7 +9,7 @@
 
 <br>
 
-## <span id="#pwd">pwd </span>
+## <span id="pwd">pwd </span>
 
 **pwd命令**以绝对路径的方式显示用户当前工作目录。
 
@@ -17,17 +17,17 @@
 <br>
 
 
-## <span id="#cd">cd</span>
+## <span id="cd">cd</span>
 
-**cd命令**用来切换工作目录至[dirname](http://man.linuxde.net/dirname)。 
+**cd命令**用来切换工作目录至**dirname**。 
 
-其中dirName表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的home directory(也就是刚[login](http://man.linuxde.net/login)时所在的目录)。
+其中dirName表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的home directory(也就是刚**login**时所在的目录)。
 
 另外，`~`也表示为home directory的意思，`.`则是表示目前所在的目录，`..`则表示目前目录位置的上一层目录。 
 <br>
 
 
-## <span id="#ls">ls</span>
+## <span id="ls">ls</span>
 
 **ls命令**用来显示目标列表，在Linux中是使用率较高的命令，常用于显示当前文件下的文件列表。
 
@@ -60,7 +60,7 @@ ls命令的输出信息可以进行彩色加亮显示，以分区不同类型的
 <br>
 
 
-## <span id="#tail">tail</span>
+## <span id="tail">tail</span>
 
 **tail命令**用于输入文件中的尾部内容。
 
@@ -76,7 +76,7 @@ tail命令默认在屏幕上显示指定文件的末尾10行。如果给定的�
 
 <br>
 
-## <span id="#grep ">grep</span>
+## <span id="grep ">grep</span>
 
 **grep**（全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。 
 
@@ -84,11 +84,11 @@ tail命令默认在屏幕上显示指定文件的末尾10行。如果给定的�
 
 <br>
 
-## <span id="#ps">ps</span>
+## <span id="ps">ps</span>
 
 **ps命令**用于报告当前系统的进程状态。
 
-可以搭配[kill](http://man.linuxde.net/kill)指令随时中断、删除不必要的程序。
+可以搭配**kill**指令随时中断、删除不必要的程序。
 
 ps命令是最基本同时也是非常强大的进程查看命令，使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等，总之大部分信息都是可以通过执行该命令得到的。 
 
@@ -167,9 +167,9 @@ ps -ef搜索所有进程，并列出UID、PPIP等，grep进行正则匹配
 <br>
 
 
-## <span id="#kill">kill</span>
+## <span id="kill">kill</span>
 
-**kill命令**用来删除执行中的程序或工作。kill可将指定的信息送至程序。预设的信息为SIGTERM(15),可将指定程序终止。若仍无法终止该程序，可使用SIGKILL(9)信息尝试强制删除程序。程序或工作的编号可利用[ps](http://man.linuxde.net/ps)指令或job指令查看。 
+**kill命令**用来删除执行中的程序或工作。kill可将指定的信息送至程序。预设的信息为SIGTERM(15),可将指定程序终止。若仍无法终止该程序，可使用SIGKILL(9)信息尝试强制删除程序。程序或工作的编号可利用**ps**指令或job指令查看。 
 
 **可用选项**
 
@@ -199,7 +199,7 @@ STOP   19    暂停（同 Ctrl + Z）
 
 <br>
 
-##  <span id="#netstat">netstat</span>
+##  <span id="netstat">netstat</span>
 
 **netstat命令**用来打印Linux中网络系统的状态信息，可让你得知整个Linux系统的网络情况。
 
@@ -213,7 +213,7 @@ STOP   19    暂停（同 Ctrl + Z）
 
 <br>
 
-##  <span id="#ping">ping</span>
+##  <span id="ping">ping</span>
 
 **ping命令**用来测试主机之间网络的连通性。
 
@@ -221,11 +221,11 @@ STOP   19    暂停（同 Ctrl + Z）
 
 <br>
 
-## <span id="#telnet">telnet</span>
+## <span id="telnet">telnet</span>
 
 **telnet命令**用于登录远程主机，对远程主机进行管理。
 
-telnet因为采用明文传送报文，安全性不好，很多Linux服务器都不开放telnet服务，而改用更安全的[ssh](http://man.linuxde.net/ssh)方式了。但仍然有很多别的系统可能采用了telnet方式来提供远程登录。
+telnet因为采用明文传送报文，安全性不好，很多Linux服务器都不开放telnet服务，而改用更安全的**ssh**方式了。但仍然有很多别的系统可能采用了telnet方式来提供远程登录。
 
 常用来测试端口是否畅通：
 
@@ -233,7 +233,7 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 <br>
 
-## <span id="#history">history</span>
+## <span id="history">history</span>
 
  **history命令**单独使用输出1000条历史命令。
 
@@ -243,7 +243,7 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 <br>
 
-## <span id="#last">last</span>
+## <span id="last">last</span>
 
 **last命令**用于显示用户最近登录信息。结构为登陆用户 - 终端 - 登陆ip - 时间。 
 
@@ -253,17 +253,17 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 <br>
 
-## <span id="#cat">cat</span>
+## <span id="cat">cat</span>
 
 **cat命令**连接文件并打印到标准输出设备上，cat经常用来显示文件的内容 。
 
-注意：当文件较大时，文本在屏幕上迅速闪过（滚屏），用户往往看不清所显示的内容。因此，一般用[more](http://man.linuxde.net/more)等命令分屏显示。
+注意：当文件较大时，文本在屏幕上迅速闪过（滚屏），用户往往看不清所显示的内容。因此，一般用**more**等命令分屏显示。
 
 为了控制滚屏，可以按Ctrl+S键，停止滚屏；按Ctrl+Q键可以恢复滚屏。按Ctrl+C（中断）键可以终止该命令的执行，并且返回Shell提示符状态。 
 
 <br>
 
-## <span id="#df">df</span>
+## <span id="df">df</span>
 
 **df命令**用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。 
 
@@ -273,9 +273,9 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 <br>
 
-## <span id="#du">du</span>
+## <span id="du">du</span>
 
-**du命令**也是查看使用空间的，但是与[df](http://man.linuxde.net/df)命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。 
+**du命令**也是查看使用空间的，但是与**df**命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的。 
 
 常用命令：只显示当前目录下文件夹大小总和，不遍历子目录
 
@@ -283,7 +283,7 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 <br>
 
-## <span id="#chmod">chmod</span>
+## <span id="chmod">chmod</span>
 
 **chmod命令**用来变更文件或目录的权限。
 
@@ -320,11 +320,11 @@ telnet因为采用明文传送报文，安全性不好，很多Linux服务器都
 
 
 
-## <span id="#chown">chown</span>
+## <span id="chown">chown</span>
 
 **chown命令**改变某个文件或目录的所有者和所属的组，该命令可以向某个用户授权，使该用户变成指定文件的所有者或者改变文件所属的组。
 
-用户可以是用户或者是用户D，用户组可以是组名或组[id](http://man.linuxde.net/id)。文件名可以使由空格分开的文件列表，在文件名中可以包含通配符。 
+用户可以是用户或者是用户D，用户组可以是组名或组**id**。文件名可以使由空格分开的文件列表，在文件名中可以包含通配符。 
 
 只有文件主和超级用户才可以便用该命令。 
 

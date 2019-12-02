@@ -45,13 +45,14 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
+    import MysqlOptimization from './database/MysqlOptimization.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand
+            LinuxCommonCommand, MysqlOptimization
         },
         data(){
             return {
@@ -70,7 +71,8 @@
                     }, {
                         title:'数据库',
                         data:[
-                            {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"database" }
+                            {title:'MySQL优化原则', class:'MysqlOptimization', id:"database" },
+                            {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql'}
                         ]
                     }, {
                         title:'中间件',
