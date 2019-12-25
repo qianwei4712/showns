@@ -43,13 +43,15 @@
     import FactoryAndSingletonsMode from './designpattern/FactoryAndSingletonsMode.md';
     import ObserverMode from './designpattern/ObserverMode.md';
     import StrategyMode from './designpattern/StrategyMode.md';
+    import OpenSourceLicense from './fqa/OpenSourceLicense.md';
 
 
     export default {
         name: "methodologyIndex",
         components:{
             HomePage,
-            DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode
+            DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode,
+            OpenSourceLicense
         },
         data(){
             return {
@@ -70,7 +72,9 @@
                         data:[]
                     }, {
                         title:'FQA',
-                        data:[]
+                        data:[
+                            {title:'开源协议详解', class:'OpenSourceLicense', id:"fqa" }
+                        ]
                     }
                 ]
             }

@@ -12,7 +12,7 @@
 
 ### <span id="jdk">JDK安装</span>
 
-JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archive-139210.html" target="_blank_">https://www.oracle.com/technetwork/java/javase/archive-139210.html</a>
+JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archive-139210.html" target="_blank">https://www.oracle.com/technetwork/java/javase/archive-139210.html</a>
 
 > 个人喜欢用tar.gz解压的方式
 
@@ -52,7 +52,7 @@ JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archiv
 ### <span id="nginx">Nginx安装</span>
 
 
-Nginx下载地址：<a href="http://nginx.org/en/download.html" target="_blank_">http://nginx.org/en/download.html</a>
+Nginx下载地址：<a href="http://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html</a>
 
 > 安装Nginx，并添加SSL模块
 >

@@ -37,7 +37,7 @@ yum install -y openssl openssl-devel
 <br>
 
 ### <span id="anzhuang">nginx安装</span>
-首先下载nginx，<a href="http://nginx.org/en/download.html" target="_blank_">http://nginx.org/en/download.html</a>
+首先下载nginx，<a href="http://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html</a>
 
 我下载的版本是1.12.1。似乎是看到了Stable version，俗称稳定版，所以下载了这个版本。
 
