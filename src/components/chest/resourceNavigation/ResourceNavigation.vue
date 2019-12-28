@@ -81,6 +81,7 @@
                         name:'其他资源',
                         data:[
                             {title:'ECharts', href:'https://www.echartsjs.com/examples/zh/index.html', img:require('@/assets/chest/img/echarts.png'), desc:'百度开发的可定制的数据可视化图表, 已经捐给Apache' },
+                            {title:'脚本之家', href:'http://tools.jb51.net/', img:require('@/assets/chest/img/jiaobenzhijia.png'), desc:'脚本之家旗下的工具箱' },
                             {title:'iconfont', href:'https://www.iconfont.cn/', img:require('@/assets/chest/img/iconfont.png'), desc:'阿里妈妈MUX倾力打造的矢量图标管理、交流平台。设计师将图标上传到Iconfont平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用' },
                             {title:'智图', href:'https://zhitu.isux.us/', img:require('@/assets/chest/img/zhitu.png'), desc:'腾讯出品 在线图片压缩 支持转成 webP 处理静态图片时候很好用' }
                         ]
