@@ -14,7 +14,7 @@
         </div>
         <el-divider></el-divider>
         <div class="author-content">
-            作者的技术栈都在站里有了，也就不比比了，想要本站源码的，可以邮箱索取。
+            作者的技术栈都在站里有了，也就不比比了。本站源码已遵循 Apache LICENSE 2.0 开源协议，<a href="https://gitee.com/qianwei4712/showns" target="_blank" class="origin">Gitee仓库地址</a>。
         </div>
         <div class="text-center">
             <a href="mailto:qianwei4712@163.com" class="el-button el-button--primary">联系作者：qianwei4712@163.com</a>
@@ -38,6 +38,10 @@
 </script>
 
 <style scoped>
+    .origin{
+        text-decoration: none;
+        color: #00b0e8;
+    }
     .about-content-div{
         padding:5px 20px 0 20px;
     }

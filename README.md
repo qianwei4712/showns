@@ -1,29 +1,6 @@
-# showns
+> 这是一个由VUE开发的个人资讯发布、工具收集类站点。
 
-## Project setup
-```
-npm install
-```
+起因是工作中涉及到vue，所以自学了一段时间，顺便想找个东西练手，不知不觉中感觉成果还能令自己满意，所以就打算长期维护
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+本站绝大部分文章为原创，转载文章会在开头说明。
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
