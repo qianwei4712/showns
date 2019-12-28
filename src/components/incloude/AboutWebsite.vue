@@ -1,7 +1,13 @@
 <template>
     <div class="about-content-div">
+        <div class="website-content-div" style="padding-bottom: 0">
+            本站使用Vue cli3脚手架搭建，使用Element UI框架，文章为markdown文件，使用插件转化为html。
+        </div>
+        <div class="website-content-div" style="padding-bottom: 0">
+            本站参考自  <a href="https://www.pdai.tech/" target="_blank" class="origin">https://www.pdai.tech/</a>
+        </div>
         <div class="website-content-div">
-            本站使用Vue cli3脚手架搭建，使用Element UI框架，文章为markdown文件，使用插件转化为html。目前部署于GitHub CNAME，速度略慢，请见谅
+            目前部署于GitHub CNAME，速度略慢，请见谅
         </div>
         <div class="title-div text-center">
             本站里程碑
@@ -37,6 +43,10 @@
 </script>
 
 <style scoped>
+    .origin{
+        text-decoration: none;
+        color: #00b0e8;
+    }
     .about-content-div{
         padding:5px 20px 0 20px;
     }

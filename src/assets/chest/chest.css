@@ -1,0 +1,25 @@
+.resourceNavigation .el-card__body{
+    padding: 10px 20px;
+}
+
+.chest .el-dropdown-menu{
+    z-index: 99999;
+}
+
+.chest .el-main{
+    width: 100%;
+    display: block;
+    position:absolute;
+    top: 60px;
+    padding: 30px;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.chest a {
+    text-decoration: none;
+    color: #7e7e80;
+}
+
+
+

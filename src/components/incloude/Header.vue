@@ -97,6 +97,18 @@
                     </el-dropdown>
                 </router-link>
 
+                <!--方法论-->
+                <el-dropdown class="head-type-ele">
+                        <span class="el-dropdown-link">
+                            百宝箱<i class="el-icon-caret-bottom el-icon--right"></i>
+                        </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <router-link :to="{ name: 'resourceNavigation'}">
+                            <el-dropdown-item>资源导航</el-dropdown-item>
+                        </router-link>
+                    </el-dropdown-menu>
+                </el-dropdown>
+
                 <!--静态资源介绍-->
                 <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">
