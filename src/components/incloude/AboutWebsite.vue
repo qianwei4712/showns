@@ -14,7 +14,7 @@
         </div>
         <div>
             <el-timeline>
-                <el-timeline-item timestamp="2019/12/28" placement="top">
+                <el-timeline-item timestamp="2019/12/28" color="#e20000" placement="top">
                     <el-card>
                         遵循 <span style="color: red;font-weight: bold">Apache LICENSE 2.0</span> 协议，源码开放，<a href="https://gitee.com/qianwei4712/showns" target="_blank" class="origin">Gitee仓库地址</a>
                     </el-card>

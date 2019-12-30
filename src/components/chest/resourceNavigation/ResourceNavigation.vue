@@ -21,6 +21,7 @@
                         </el-row>
                     </div>
                 </div>
+                <el-divider><span style="color: gray">我是有底线的</span></el-divider>
             </div>
         </el-main>
     </div>
@@ -34,15 +35,15 @@
         data(){
             return {
                 allTypes:[
-
                     {
                         name:'技术社区',
                         data:[
-                            {title:'CDSN', href:'http://www.baidu.com', img:require('@/assets/chest/img/csdn.gif'), desc:'中国专业IT社区CSDN' },
+                            {title:'CDSN', href:'https://www.csdn.net/', img:require('@/assets/chest/img/csdn.gif'), desc:'中国专业IT社区CSDN' },
                             {title:'OSChina', href:'https://www.oschina.net/', img:require('@/assets/chest/img/oschina.gif'), desc:'中国最大的开源技术社区' },
                             {title:'Linux公社', href:'https://www.linuxidc.com/', img:require('@/assets/chest/img/linuxidc.jpg'), desc:'Linux系统门户网站' },
                             {title:'掘金', href:'https://juejin.im/', img:require('@/assets/chest/img/juejin.svg'), desc:'掘金是一个帮助开发者成长的社区，是一个面向互联网技术人的内容分享平台' },
-                            {title:'知否', href:'https://segmentfault.com/', img:require('@/assets/chest/img/segmentfault.png'), desc:'中国领先的开发者技术社区' }
+                            {title:'知否', href:'https://segmentfault.com/', img:require('@/assets/chest/img/segmentfault.png'), desc:'中国领先的开发者技术社区' },
+                            {title:'V2EX', href:'https://www.v2ex.com/', img:require('@/assets/chest/img/V2EX.png'), desc:'程序猿灌水社区' }
                         ]
                     },
                     {
@@ -58,7 +59,8 @@
                         data:[
                             {title:'', href:'https://www.runoob.com/', img:require('@/assets/chest/img/cainiao.png'), desc:'菜鸟教程集合' },
                             {title:'W3School', href:'https://www.w3school.com.cn/', img:require('@/assets/chest/img/w3school.png'), desc:'W3School 是因特网上最大的 WEB 开发者资源，其中包括全面的教程、完善的参考手册以及庞大的代码库' },
-                            {title:'W3Cschool', href:'https://www.w3cschool.cn/tutorial', img:require('@/assets/chest/img/w3cschool.png'), desc:'w3cschool主要为初学者技术的人员提供在线学习教程和日常技术资料查询服务' }
+                            {title:'W3Cschool', href:'https://www.w3cschool.cn/tutorial', img:require('@/assets/chest/img/w3cschool.png'), desc:'w3cschool主要为初学者技术的人员提供在线学习教程和日常技术资料查询服务' },
+                            {title:'', href:'https://www.liaoxuefeng.com/', img:require('@/assets/chest/img/miaoxuefeng.png'), desc:'精品编程教程技术大牛博客' }
                         ]
                     },
                     {
@@ -86,7 +88,10 @@
                             {title:'iconfont', href:'https://www.iconfont.cn/', img:require('@/assets/chest/img/iconfont.png'), desc:'阿里妈妈MUX倾力打造的矢量图标管理、交流平台。设计师将图标上传到Iconfont平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用' },
                             {title:'智图', href:'https://zhitu.isux.us/', img:require('@/assets/chest/img/zhitu.png'), desc:'腾讯出品在线图片压缩 支持转成 webP 处理静态图片时候很好用' },
                             {title:'processOn', href:'https://www.processon.com/', img:require('@/assets/chest/img/processOn.png'), desc:'免费在线作图、实时协作，支持流程图、思维导图、原型图、UML、网络拓扑图、组织结构图等' },
-                            {title:'On Java 8', href:'https://lingcoder.gitee.io/onjava8/', img:require('@/assets/chest/img/onjava8.jpg'), desc:'Java编程思想第五版，大神翻译中文版' }
+                            {title:'墨刀', href:'https://modao.cc/', img:require('@/assets/chest/img/modao.svg'), desc:'专业、可靠、简洁、易懂的在线产品原型设计与协作平台' },
+                            {title:'On Java 8', href:'https://lingcoder.gitee.io/onjava8/', img:require('@/assets/chest/img/onjava8.jpg'), desc:'Java编程思想第五版，大神翻译中文版' },
+                            {title:'三顿ppt', href:'https://sandunppt.com/', img:require('@/assets/chest/img/sandun.jpg'), desc:'一站式PPT导航站点' },
+                            {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' }
                         ]
                     }
                 ]
@@ -96,7 +101,9 @@
 </script>
 
 <style scoped>
-
+    .el-divider{
+        margin-bottom: 0;
+    }
     .el-col-4{
         padding-bottom: 20px;
     }
