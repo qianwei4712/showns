@@ -44,6 +44,7 @@
     import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
     import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
     import UseEnumReplaceIntConst from './oopbase/UseEnumReplaceIntConst.md';
+    import ExceptionAndSerializable from './oopbase/ExceptionAndSerializable.md';
     import JavaAnnotation from './oopbase/JavaAnnotation.md';
     import HeapAndStack from './oopbase/HeapAndStack.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
@@ -60,7 +61,7 @@
             HomePage,
             OverrideEquals20180706, OverrideHashCode20180709, EclipseSVNPrevious20181104, SomethingNotes,
             SpringBootBindCustomPorps, UseEnumReplaceIntConst, ThreadInterrupt, ThreadGuard, ThreadSynchronized,
-            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner
+            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable
         },
         data(){
             return {
@@ -74,6 +75,7 @@
                             {title:'封装、继承、多态', class:'EncapInheritPolymo', id:"oopbase" },
                             {title:'接口、抽象类、内部类', class:'InterAbstInner'},
                             {title:'Java注解学习', class:'JavaAnnotation'},
+                            {title:'异常、序列化', class:'ExceptionAndSerializable'},
                             {title:'重写equals方法', class:'OverrideEquals20180706'},
                             {title:'重写hashCode方法', class:'OverrideHashCode20180709'},
                             {title:'用enum代替int常量', class:'UseEnumReplaceIntConst'},
@@ -103,7 +105,8 @@
                     }, {
                         title:'FQA',
                         data:[
-                            {title:'平时用到的一些细节记录', class:'SomethingNotes', id:"fqa" },
+                            {title:'阿里巴巴Java开发手册', class:'AlibabaJavaDevelop', id:"fqa" },
+                            {title:'平时用到的一些细节记录', class:'SomethingNotes' },
                             {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
                         ]
                     }

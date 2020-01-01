@@ -2,7 +2,7 @@
     <div class="resourceNavigation">
         <!-- 主页面区 -->
         <el-main>
-            <div>
+            <div class="read-only">
                 <div v-for="eachType in allTypes">
                     <h2>{{eachType.name}}</h2>
                     <div>
