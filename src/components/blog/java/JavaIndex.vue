@@ -105,8 +105,7 @@
                     }, {
                         title:'FQA',
                         data:[
-                            {title:'阿里巴巴Java开发手册', class:'AlibabaJavaDevelop', id:"fqa" },
-                            {title:'平时用到的一些细节记录', class:'SomethingNotes' },
+                            {title:'平时用到的一些细节记录', class:'SomethingNotes', id:"fqa" },
                             {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
                         ]
                     }

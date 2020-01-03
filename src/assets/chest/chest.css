@@ -45,3 +45,32 @@
 .chest .sidebar-group {
     margin-bottom: 12px;
 }
+
+.chest .sidebar-group-items {
+    transition: height .1s ease-out;
+    font-size: .95em;
+    overflow: hidden;
+}
+
+.chest a.sidebar-link {
+    font-size: 1em;
+    font-weight: 400;
+    display: inline-block;
+    color: #2c3e50;
+    border-right: .25rem solid transparent;
+    padding: .35rem 1rem .35rem 1rem;
+    line-height: 1.4;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chest a.sidebar-link.active {
+    font-weight: 600;
+    color: #3eaf7c;
+    border-right-color: #3eaf7c;
+}
+
+.chest a.sidebar-link:hover{
+    color: #3eaf7c;
+    border-right-color: #3eaf7c;
+}
