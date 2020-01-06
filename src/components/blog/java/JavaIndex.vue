@@ -41,10 +41,8 @@
     import HomePage from './JavaHome';
     import EncapInheritPolymo from './oopbase/EncapInheritPolymo.md';
     import InterAbstInner from './oopbase/InterAbstInner.md';
-    import OverrideHashCode20180709 from './oopbase/OverrideHashCode20180709.md';
-    import OverrideEquals20180706 from './oopbase/OverrideEquals20180706.md';
-    import UseEnumReplaceIntConst from './oopbase/UseEnumReplaceIntConst.md';
     import ExceptionAndSerializable from './oopbase/ExceptionAndSerializable.md';
+    import CommonMethodAndEnum from './oopbase/CommonMethodAndEnum.md';
     import JavaAnnotation from './oopbase/JavaAnnotation.md';
     import HeapAndStack from './oopbase/HeapAndStack.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
@@ -59,8 +57,8 @@
         name: "javaIndex",
         components:{
             HomePage,
-            OverrideEquals20180706, OverrideHashCode20180709, EclipseSVNPrevious20181104, SomethingNotes,
-            SpringBootBindCustomPorps, UseEnumReplaceIntConst, ThreadInterrupt, ThreadGuard, ThreadSynchronized,
+            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum,
+            SpringBootBindCustomPorps,  ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable
         },
         data(){
@@ -76,9 +74,7 @@
                             {title:'接口、抽象类、内部类', class:'InterAbstInner'},
                             {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'异常、序列化', class:'ExceptionAndSerializable'},
-                            {title:'重写equals方法', class:'OverrideEquals20180706'},
-                            {title:'重写hashCode方法', class:'OverrideHashCode20180709'},
-                            {title:'用enum代替int常量', class:'UseEnumReplaceIntConst'},
+                            {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'},
                             {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
                         ]
                     }, {
