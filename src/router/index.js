@@ -10,9 +10,9 @@ const javaIndex = () => import('../components/blog/java/JavaIndex');
 const frontIndex = () => import('../components/blog/front/FrontIndex');
 const deployIndex = () => import('../components/blog/deploy/DeployIndex');
 const methodologyIndex = () => import('../components/blog/methodology/MethodologyIndex');
-const resourceNavigation = () => import('../components/chest/resourceNavigation/ResourceNavigation');
-const developeToolsHome = () => import('../components/chest/developeTools/DevelopeToolsHome');
-const alibabaJavaDevelop = () => import('../components/chest/alibabaJavaDevelop/AlibabaJavaDevelop');
+const resourceNavigation = () => import('../components/chest/ResourceNavigation');
+const developeToolsHome = () => import('../components/chest/DevelopeToolsHome');
+const alibabaJavaDevelop = () => import('../components/chest/AlibabaJavaDevelop');
 
 const router = new Router({
     mode: 'history',

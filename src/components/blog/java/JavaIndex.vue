@@ -45,6 +45,7 @@
     import CommonMethodAndEnum from './oopbase/CommonMethodAndEnum.md';
     import JavaAnnotation from './oopbase/JavaAnnotation.md';
     import HeapAndStack from './oopbase/HeapAndStack.md';
+    import RunTimeReflect from './oopbase/RunTimeReflect.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
@@ -56,7 +57,7 @@
         name: "javaIndex",
         components:{
             HomePage,
-            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum,
+            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable
         },
@@ -73,7 +74,8 @@
                             {title:'接口、抽象类、内部类', class:'InterAbstInner'},
                             {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'异常、序列化', class:'ExceptionAndSerializable'},
-                            {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'}
+                            {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'},
+                            {title:'类型信息、反射', class:'RunTimeReflect'}
                         ]
                     }, {
                         title:'Java集合知识体系',
