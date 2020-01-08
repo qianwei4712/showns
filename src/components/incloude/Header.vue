@@ -28,9 +28,6 @@
                             <router-link :to="{ name: 'JavaType', params: { typeName: 'jvm' }}">
                                 <el-dropdown-item>Java虚拟机</el-dropdown-item>
                             </router-link>
-                            <router-link :to="{ name: 'JavaType', params: { typeName: 'frame' }}">
-                                <el-dropdown-item divided>Java框架使用</el-dropdown-item>
-                            </router-link>
                             <router-link :to="{ name: 'JavaType', params: { typeName: 'fqa' }}">
                                 <el-dropdown-item divided>FQA</el-dropdown-item>
                             </router-link>
@@ -97,20 +94,22 @@
                     </el-dropdown>
                 </router-link>
 
-                <!--方法论-->
-                <el-dropdown class="head-type-ele">
-                        <span class="el-dropdown-link">
-                            百宝箱<i class="el-icon-caret-bottom el-icon--right"></i>
-                        </span>
-                    <el-dropdown-menu slot="dropdown">
-                        <router-link :to="{ name: 'resourceNavigation'}">
-                            <el-dropdown-item>资源导航</el-dropdown-item>
-                        </router-link>
-                        <router-link :to="{ name: 'developeToolsHome'}">
-                            <el-dropdown-item>开发工具</el-dropdown-item>
-                        </router-link>
-                    </el-dropdown-menu>
-                </el-dropdown>
+                <!--百宝箱-->
+                <router-link :to="{ name: 'resourceNavigation'}">
+                    <el-dropdown class="head-type-ele">
+                            <span class="el-dropdown-link">
+                                百宝箱<i class="el-icon-caret-bottom el-icon--right"></i>
+                            </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <router-link :to="{ name: 'resourceNavigation'}">
+                                <el-dropdown-item>资源导航</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'developeToolsHome'}">
+                                <el-dropdown-item>开发工具</el-dropdown-item>
+                            </router-link>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </router-link>
 
                 <!--静态资源介绍-->
                 <el-dropdown class="head-type-ele">

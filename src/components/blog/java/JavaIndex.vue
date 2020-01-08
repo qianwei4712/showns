@@ -47,7 +47,6 @@
     import HeapAndStack from './oopbase/HeapAndStack.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
-    import SpringBootBindCustomPorps from './frame/SpringBootBindCustomPorps.md';
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
     import ThreadGuard from './thread/ThreadGuard.md';
     import ThreadSynchronized from './thread/ThreadSynchronized.md';
@@ -58,7 +57,7 @@
         components:{
             HomePage,
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum,
-            SpringBootBindCustomPorps,  ThreadInterrupt, ThreadGuard, ThreadSynchronized,
+            ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable
         },
         data(){
@@ -74,8 +73,7 @@
                             {title:'接口、抽象类、内部类', class:'InterAbstInner'},
                             {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'异常、序列化', class:'ExceptionAndSerializable'},
-                            {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'},
-                            {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
+                            {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'}
                         ]
                     }, {
                         title:'Java集合知识体系',
@@ -94,14 +92,10 @@
                         title:'Java虚拟机',
                         data:[]
                     }, {
-                        title:'Java框架使用',
-                        data:[
-                            {title:'SpringBoot配置文件自定义参数绑定失效', class:'SpringBootBindCustomPorps', id:"frame" }
-                        ]
-                    }, {
                         title:'FQA',
                         data:[
                             {title:'平时用到的一些细节记录', class:'SomethingNotes', id:"fqa" },
+                            {title:'操作系统中heap和stack的区别', class:'HeapAndStack'},
                             {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
                         ]
                     }
