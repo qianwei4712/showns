@@ -4,7 +4,7 @@
             <div class="footer-div">
                 <div class="footer-record-left read-only">
                     Made with <span class="footer-span-heart">♥</span> for the people of the internet -
-                    <a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(158, 158, 158)">浙ICP备18006899号 &nbsp;&nbsp; ©shiva</a>
+                    <a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(158, 158, 158)">浙ICP备18006899号-2 &nbsp;&nbsp; ©shiva</a>
                 </div>
                 <div class="footer-func-right">
                     <a href="mailto:qianwei4712@163.com" title="Email联系作者">

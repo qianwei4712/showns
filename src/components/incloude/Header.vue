@@ -84,8 +84,11 @@
                             <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
                                 <el-dropdown-item>设计模式</el-dropdown-item>
                             </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'sort' }}">
-                                <el-dropdown-item>排序算法</el-dropdown-item>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'algorithm' }}">
+                                <el-dropdown-item>算法</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'structure' }}">
+                                <el-dropdown-item>数据结构</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'MethodologyType', params: { typeName: 'fqa' }}">
                                 <el-dropdown-item>FQA</el-dropdown-item>

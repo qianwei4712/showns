@@ -68,7 +68,10 @@
                             {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
                         ]
                     }, {
-                        title:'排序算法',
+                        title:'算法',
+                        data:[]
+                    }, {
+                        title:'数据结构',
                         data:[]
                     }, {
                         title:'FQA',
