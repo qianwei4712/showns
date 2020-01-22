@@ -44,6 +44,7 @@
     import ObserverMode from './designpattern/ObserverMode.md';
     import StrategyMode from './designpattern/StrategyMode.md';
     import OpenSourceLicense from './fqa/OpenSourceLicense.md';
+    import EbookOnline from './fqa/EbookOnline.md';
 
 
     export default {
@@ -51,7 +52,7 @@
         components:{
             HomePage,
             DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode,
-            OpenSourceLicense
+            OpenSourceLicense, EbookOnline
         },
         data(){
             return {
@@ -76,7 +77,8 @@
                     }, {
                         title:'FQA',
                         data:[
-                            {title:'开源协议详解', class:'OpenSourceLicense', id:"fqa" }
+                            {title:'开源协议详解', class:'OpenSourceLicense', id:"fqa" },
+                            {title:'在线电子书', class:'EbookOnline'}
                         ]
                     }
                 ]
