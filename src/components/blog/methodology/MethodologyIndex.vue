@@ -45,6 +45,7 @@
     import StrategyMode from './designpattern/StrategyMode.md';
     import OpenSourceLicense from './fqa/OpenSourceLicense.md';
     import EbookOnline from './fqa/EbookOnline.md';
+    import UMLClassDi from './designpattern/UMLClassDi.md';
 
 
     export default {
@@ -52,7 +53,7 @@
         components:{
             HomePage,
             DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode,
-            OpenSourceLicense, EbookOnline
+            OpenSourceLicense, EbookOnline, UMLClassDi
         },
         data(){
             return {
@@ -63,7 +64,8 @@
                     {
                         title:'设计模式',
                         data:[
-                            {title:'策略模式', class:'StrategyMode', id:"designpattern" },
+                            {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
+                            {title:'策略模式', class:'StrategyMode' },
                             {title:'观察者模式', class:'ObserverMode' },
                             {title:'装饰者模式', class:'DecoratorMode' },
                             {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
