@@ -39,21 +39,19 @@
 <script>
 
     import HomePage from './MethodologyHome'
-    import DecoratorMode from './designpattern/DecoratorMode.md';
-    import FactoryAndSingletonsMode from './designpattern/FactoryAndSingletonsMode.md';
-    import ObserverMode from './designpattern/ObserverMode.md';
-    import StrategyMode from './designpattern/StrategyMode.md';
     import OpenSourceLicense from './fqa/OpenSourceLicense.md';
     import EbookOnline from './fqa/EbookOnline.md';
     import UMLClassDi from './designpattern/UMLClassDi.md';
+    import CreationMode from './designpattern/CreationMode.md';
+    import StructuralMode from './designpattern/StructuralMode.md';
+    import BehavioralMode from './designpattern/BehavioralMode.md';
 
 
     export default {
         name: "methodologyIndex",
         components:{
             HomePage,
-            DecoratorMode, FactoryAndSingletonsMode, ObserverMode, StrategyMode,
-            OpenSourceLicense, EbookOnline, UMLClassDi
+            OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode
         },
         data(){
             return {
@@ -65,10 +63,9 @@
                         title:'设计模式',
                         data:[
                             {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
-                            {title:'策略模式', class:'StrategyMode' },
-                            {title:'观察者模式', class:'ObserverMode' },
-                            {title:'装饰者模式', class:'DecoratorMode' },
-                            {title:'工厂模式和单例模式', class:'FactoryAndSingletonsMode' }
+                            {title:'创建型模式', class:'CreationMode'},
+                            {title:'结构型模式', class:'StructuralMode' },
+                            {title:'行为型模式', class:'BehavioralMode' }
                         ]
                     }, {
                         title:'算法',

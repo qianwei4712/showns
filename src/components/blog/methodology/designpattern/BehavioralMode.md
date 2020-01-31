@@ -1,6 +1,75 @@
-## 策略模式
 
-> 节选自《Head First 设计模式》+自力更生
+- 模板方法（Template Method）模式
+- [策略（Strategy）模式](#t2)
+- 命令（Command）模式
+- 职责链（Chain of Responsibility）模式
+- 状态（State）模式
+- [观察者（Observer）模式](#t6)
+- 中介者（Mediator）模式
+- 迭代器（Iterator）模式
+- 访问者（Visitor）模式
+- 备忘录（Memento）模式
+- 解释器（Interpreter）模式
+
+<br>
+
+### <span id="t2">策略模式</span>
+
+> 策略模式定义了算法族，分别封装起来，让它们之间可以相互替换，此设计模式让算法的变化独立于使用算法的客户。    ------《Head First 设计模式》 P.24
+
+个人理解：对于某一个算法或者业务，预先实现不同的方案，通过接口，调用不同实例，来获得不同的结果。
+
+缺点也非常明显，所有的算法都是唯一确定的，都是事先已经实现的，策略模式只是在选择。
+
+<img src="@/assets/blog/img/StrategyMode1.png"/>
+
+
+简单代码实现：
+
+```java
+//---------抽象类，父类----------------------------------------------------------------
+abstract class Duck {
+	protected FlyBehavior flyBehavior;
+	
+	public void swim() {};
+	
+	public void fly() {
+		flyBehavior.fly();
+	};
+	
+	public FlyBehavior getFlyBehavior() { return flyBehavior; }
+	public void setFlyBehavior(FlyBehavior flyBehavior) { this.flyBehavior = flyBehavior; }
+	
+}
+//---------算法接口----------------------------------------------------------------------
+interface FlyBehavior {
+	void fly();
+}
+//---------算法实现----------------------------------------------------------------------
+class FlyWithRocket implements FlyBehavior {
+	@Override
+	public void fly() {
+		System.out.println("火箭飞行");
+	}
+}
+
+```
+
+
+
+```java
+class GreenHeadDuck extends Duck {
+	public static void main(String[] args) {
+		GreenHeadDuck duck = new GreenHeadDuck();
+		duck.setFlyBehavior(new FlyWithRocket());
+		duck.fly();
+	}
+}
+```
+
+<br>
+
+### <span id="t6">观察者模式</span>
 
 观察者模式定义了对象之间的一对多依赖，当一个对象状态改变时，它的依赖者都会收到通知并自动更新。
 
@@ -12,7 +81,7 @@
 
 实际关系类比 报社自动送订阅app推送。Java.util已经内置了这个设计模式，在文章后半段将会讲解。
 
-### 基本原理
+#### 基本原理
 
 <img src="@/assets/blog/img/ObserverMode1.png"/>
 
@@ -73,13 +142,13 @@ public class OneObserver implements Observer {
 }
 ```
 
-### java.util观察者模式
+#### java.util观察者模式
 
 
 
 java.util 实现的观察者模式更加安全，并实现了基本功能，并进行了拓展。
 
-#### 推模型和拉模型
+##### 推模型和拉模型
 
 - 推模型 <br>
   推模型由主题主动推送更新数据到观察者，不论观察者是否需要，主题都会强制推送。传递数据可以是全部或者部分。
@@ -155,3 +224,4 @@ class JavaSubject extends Observable{
 	            ((Observer)arrLocal[i]).update(this, arg);
 	    }
 ```
+

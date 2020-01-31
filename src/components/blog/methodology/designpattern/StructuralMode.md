@@ -1,7 +1,14 @@
-## 装饰者模式
 
-> 节选自《Head First 设计模式》+ 菜鸟教程
+- 代理（Proxy）模式
+- 适配器（Adapter）模式
+- 桥接（Bridge）模式
+- [装饰者（Decorator）模式](#t4)
+- 外观（Facade）模式
+- 享元（Flyweight）模式
+- 组合（Composite）模式
 
+
+### <span id="t4">装饰者模式</span>
 
 > 装饰者模式动态地将责任附加到对象上。若要扩展功能，装饰者提供了比继承更有弹性的替代方案。
 
@@ -77,6 +84,8 @@ class RedShapeDecorator extends ShapeDecorator {
 private static final Logger logger = LoggerFactory.getLogger(Component.class);
 logger.error(string);
 ```
+
+
 
 
 

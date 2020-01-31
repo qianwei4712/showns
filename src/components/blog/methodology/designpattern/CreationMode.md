@@ -1,49 +1,17 @@
-### 工厂模式
 
-> 节选自《Head First 设计模式》+ 菜鸟教程
-
-
-这个设计模式相对简单，所以就简略写下，毕竟不能白整理，总得留下点什么。
-
-
-> 定义了一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类。
-
-个人理解：存在生产和产品两个接口，工厂实现生产接口，重写生产方法，并返回具体产品，不同工厂返回不同的产品实现类。
-
-<img src="@/assets/blog/img/FactoryAndSingletonsMode.png"/>
-
-产品：
-
-```java
-//产品，工厂生产的产品
-abstract class Product {
-	public String name;
-}
-//实际产品，也可以直接用父类
-class ConcreteProduct extends Product{
-}
-```
-
-生产：
-
-```java
-interface Creator {
-	//生产接口，制造产品
-	Product productSomething();
-}
-//实际生产者，工厂
-class ConcreteCreator implements Creator{
-	@Override
-	public Product productSomething() {
-		Product product = new ConcreteProduct();
-		product.name = "生产一个具体产品";
-		return product;
-	}
-}
-```
+- [单例（Singleton）模式](#t1)
+- 原型（Prototype）模式
+- 工厂方法（FactoryMethod）模式
+- 抽象工厂（AbstractFactory）模式
+- 建造者（Builder）模式
 
 
-### 单例模式
+创建型模式的主要关注点是“怎样创建对象？”，它的主要特点是“将对象的创建与使用分离”。
+这样可以降低系统的耦合度，使用者不需要关注对象的创建细节，对象的创建由相关的工厂来完成。就像我们去商场购买商品时，不需要知道商品是怎么生产出来一样，因为它们由专门的厂商生产。
+
+<br>
+
+### <span id="t1">单例模式</span>
 
 > 单例模式确保了一个类只有一个实例，并提供了一个全局访问点。 
 
@@ -120,3 +88,47 @@ public class Singleton {
 
 
 
+
+
+
+<br>
+
+### 工厂模式
+
+这个设计模式相对简单，所以就简略写下，毕竟不能白整理，总得留下点什么。
+
+> 定义了一个创建对象的接口，但由子类决定要实例化的类是哪一个。工厂方法让类把实例化推迟到子类。
+
+个人理解：存在生产和产品两个接口，工厂实现生产接口，重写生产方法，并返回具体产品，不同工厂返回不同的产品实现类。
+
+<img src="@/assets/blog/img/FactoryAndSingletonsMode.png"/>
+
+产品：
+
+```java
+//产品，工厂生产的产品
+abstract class Product {
+	public String name;
+}
+//实际产品，也可以直接用父类
+class ConcreteProduct extends Product{
+}
+```
+
+生产：
+
+```java
+interface Creator {
+	//生产接口，制造产品
+	Product productSomething();
+}
+//实际生产者，工厂
+class ConcreteCreator implements Creator{
+	@Override
+	public Product productSomething() {
+		Product product = new ConcreteProduct();
+		product.name = "生产一个具体产品";
+		return product;
+	}
+}
+```
