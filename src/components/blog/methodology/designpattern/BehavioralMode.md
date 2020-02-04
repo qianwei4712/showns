@@ -21,7 +21,7 @@
 
 缺点也非常明显，所有的算法都是唯一确定的，都是事先已经实现的，策略模式只是在选择。
 
-<img src="@/assets/blog/img/StrategyMode1.png"/>
+<img src="@/assets/blog/img/designpattern/StrategyMode1.png"/>
 
 
 简单代码实现：
@@ -83,7 +83,7 @@ class GreenHeadDuck extends Duck {
 
 #### 基本原理
 
-<img src="@/assets/blog/img/ObserverMode1.png"/>
+<img src="@/assets/blog/img/designpattern/ObserverMode1.png"/>
 
 基本模型的代码实现。
 
@@ -196,7 +196,7 @@ class JavaSubject extends Observable{
 
 基本的使用方式上述main方法中都有涉及。下面讲接下`java.util`包的内部实现以及注意事项
 
-<img src="@/assets/blog/img/ObserverMode2.png"/>
+<img src="@/assets/blog/img/designpattern/ObserverMode2.png"/>
 
 主题实现类中，用于存放观察者的容器是 Vector 。Vector是线程安全的，内部通过数组实现，所以是有序的，但是由于线程安全，开销较大，因此在观察者较多情况下，效率变低。
 
