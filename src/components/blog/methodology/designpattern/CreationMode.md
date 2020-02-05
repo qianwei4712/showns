@@ -2,8 +2,8 @@
 - [单例（Singleton）模式](#t1)
 - [原型（Prototype）模式](#t2)
 - [工厂方法（FactoryMethod）模式](#t3)
-- 抽象工厂（AbstractFactory）模式
-- 建造者（Builder）模式
+- [抽象工厂（AbstractFactory）模式](#t4)
+- [建造者（Builder）模式](#t5)
 
 
 创建型模式的主要关注点是“怎样创建对象？”，它的主要特点是“将对象的创建与使用分离”。
@@ -192,7 +192,7 @@ public class PrototypeManager {
 
 <br>
 
-### <span id="t3">工厂模式</span>
+### <span id="t3">工厂方法模式</span>
 
 这个设计模式相对简单，所以就简略写下，毕竟不能白整理，总得留下点什么。
 
@@ -231,3 +231,222 @@ class ConcreteCreator implements Creator{
 	}
 }
 ```
+
+<br>
+
+### <span id="t4">抽象工厂模式</span>
+
+> 抽象工厂模式的定义：是一种为访问类提供一个创建一组相关或相互依赖对象的接口，且访问类无须指定所要产品的具体类就能得到同族的不同等级的产品的模式结构。
+
+抽象工厂模式是工厂方法模式的升级版本，工厂方法模式只生产一个等级的产品，而抽象工厂模式可生产多个等级的产品。
+
+使用抽象工厂模式一般要满足以下条件:
+ - 系统中有多个产品族，每个具体工厂创建同一族但属于不同等级结构的产品。
+ - 系统一次只可能消费其中某一族产品，即同族的产品一起使用。
+
+抽象工厂模式除了具有工厂方法模式的优点外，其他主要优点如下:
+ - 可以在类的内部对产品族中相关联的多等级产品共同管理，而不必专门引入多个新的类来进行管理。
+ - 当增加一个新的产品族时不需要修改原代码，满足开闭原则。
+
+其缺点是：当产品族中需要增加一个新的产品时，所有的工厂类都需要进行修改。
+
+
+#### 抽象工厂模式的结构
+
+抽象工厂模式的主要角色如下。
+1. 抽象工厂（Abstract Factory）：提供了创建产品的接口，它包含多个创建产品的方法 newProduct()，可以创建多个不同等级的产品。
+2. 具体工厂（Concrete Factory）：主要是实现抽象工厂中的多个抽象方法，完成具体产品的创建。
+3. 抽象产品（Product）：定义了产品的规范，描述了产品的主要特性和功能，抽象工厂模式有多个抽象产品。
+4. 具体产品（ConcreteProduct）：实现了抽象产品角色所定义的接口，由具体工厂来创建，它同具体工厂之间是多对一的关系。
+
+
+<img src="@/assets/blog/img/designpattern/creationMode2.png"/>
+
+
+抽象工厂类：
+```java
+interface CourseFactory {
+    Video getVideo();
+}
+```
+
+
+具体工厂类：
+```java
+class JavaCourseFactory implements CourseFactory {
+    @Override
+    public Video getVideo() {
+        return new JavaVideo();
+    }
+}
+class PythonCourseFactory implements CourseFactory {
+    @Override
+    public Video getVideo() {
+        return new PythonVideo();
+    }
+}
+```
+
+抽象产品类：
+```java
+abstract class Video {
+    public abstract void produce();
+}
+```
+
+具体产品类：
+```java
+class JavaVideo extends Video {
+    @Override
+    public void produce() {
+        System.out.println("录制Java课程视频");
+    }
+}
+class PythonVideo extends Video {
+    @Override
+    public void produce() {
+        System.out.println("Python课程视频");
+    }
+}
+```
+
+<br>
+
+
+### <span id="t5">建造者模式</span>
+
+
+> 建造者模式的定义：指将一个复杂对象的构造与它的表示分离，使同样的构建过程可以创建不同的表示，这样的设计模式被称为建造者模式。
+> 它是将一个复杂的对象分解为多个简单的对象，然后一步一步构建而成。它将变与不变相分离，即产品的组成部分是不变的，但每一部分是可以灵活选择的。
+
+该模式的主要优点如下：
+1. 各个具体的建造者相互独立，有利于系统的扩展。
+2. 客户端不必知道产品内部组成的细节，便于控制细节风险。
+
+其缺点如下：
+1. 产品的组成部分必须相同，这限制了其使用范围。
+2. 如果产品的内部变化复杂，该模式会增加很多的建造者类。
+
+建造者（Builder）模式和工厂模式的关注点不同：建造者模式注重零部件的组装过程，而工厂方法模式更注重零部件的创建过程，但两者可以结合使用。
+
+使用场景可以从下面代码中得知好处：
+```java
+public class Click { 
+    public static void main(String[] args) { 
+        // 非 Builder 模式 
+        Computer computer = new Computer(“cpu”, “screen”, “memory”, “mainboard”); 
+        // Builder 模式 
+        NewComputer newComputer = new NewComputer.Builder() 
+        .cpu(“cpu”) 
+        .screen(“screen”) 
+        .memory(“memory”) 
+        .mainboard(“mainboard”) 
+        .build(); 
+    } 
+} 
+```
+
+
+
+#### 建造者模式的结构
+
+建造者（Builder）模式的主要角色如下。
+1. 产品角色（Product）：它是包含多个组成部件的复杂对象，由具体建造者来创建其各个滅部件。
+2. 抽象建造者（Builder）：它是一个包含创建产品各个子部件的抽象方法的接口，通常还包含一个返回复杂产品的方法 getResult()。
+3. 具体建造者(Concrete Builder）：实现 Builder 接口，完成复杂产品的各个部件的具体创建方法。
+4. 指挥者（Director）：它调用建造者对象中的部件构造与装配方法完成复杂对象的创建，在指挥者中不涉及具体产品的信息。
+
+
+<img src="@/assets/blog/img/designpattern/creationMode3.png"/>
+
+
+产品角色：
+```java
+class Product {
+    private String partA;
+    private String partB;
+    private String partC;
+    public void setPartA(String partA){
+        this.partA=partA;
+    }
+    public void setPartB(String partB){
+        this.partB=partB;
+    }
+    public void setPartC(String partC){
+        this.partC=partC;
+    }
+    public void show(){
+        //显示产品的特性
+    }
+}
+```
+
+抽象建造者：
+```java
+abstract class Builder {
+
+    //创建产品对象
+    protected Product product = new Product();
+
+    public abstract void buildPartA();
+    public abstract void buildPartB();
+    public abstract void buildPartC();
+    //返回产品对象
+    public Product getResult(){
+        return product;
+    }
+}
+```
+
+具体建造者：
+```java
+public class ConcreteBuilder extends Builder {
+    @Override
+    public void buildPartA() {
+        product.setPartA("建造 PartA");
+    }
+
+    @Override
+    public void buildPartB() {
+        product.setPartA("建造 PartB");
+    }
+
+    @Override
+    public void buildPartC() {
+        product.setPartA("建造 PartC");
+    }
+}
+```
+
+
+指挥者：
+```java
+public class Director {
+    private Builder builder;
+    public Director(Builder builder){
+        this.builder=builder;
+    }
+    //产品构建与组装方法
+    public Product construct(){
+        builder.buildPartA();
+        builder.buildPartB();
+        builder.buildPartC();
+        return builder.getResult();
+    }
+}
+```
+
+客户端调用：
+```java
+public class Client {
+    public static void main(String[] args){
+        Builder builder=new ConcreteBuilder();
+        Director director=new Director(builder);
+        Product product=director.construct();
+        product.show();
+    }
+}
+```
+
+
+
