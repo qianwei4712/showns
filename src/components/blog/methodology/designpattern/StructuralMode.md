@@ -1,7 +1,7 @@
 
 - [代理（Proxy）模式](#t1)
-- 适配器（Adapter）模式
-- 桥接（Bridge）模式
+- [适配器（Adapter）模式](#t2)
+- [桥接（Bridge）模式](#t2)
 - [装饰者（Decorator）模式](#t4)
 - 外观（Facade）模式
 - 享元（Flyweight）模式
@@ -127,6 +127,119 @@ public static void main(String[] args) {
      subject.business();
  }
 ```
+
+
+<br>
+
+### <span id="t2">适配器模式</span>
+
+> 适配器模式的定义如下：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。
+>
+> 适配器模式分为类结构型模式和对象结构型模式两种，前者类之间的耦合度比后者高，且要求程序员了解现有组件库中的相关组件的内部结构，所以应用相对较少些。
+
+
+**适配器模式的优点**
+
+- 客户端通过适配器可以透明地调用目标接口。
+- 复用了现存的类，程序员不需要修改原有代码而重用现有的适配者类。
+- 将目标类和适配者类解耦，解决了目标类和适配者类接口不一致的问题。
+
+**适配器模式的缺点**
+
+对类适配器来说，更换适配器的实现过程比较复杂。
+
+**适配器模式的结构与实现**
+
+1. Target（目标抽象类）：目标抽象类定义客户所需接口，可以是一个抽象类或接口，也可以是具体类。
+2. Adapter（适配器类）：适配器可以调用另一个接口，作为一个转换器，对Adaptee和Target进行适配，适配器类是适配器模式的核心，在对象适配器中，它通过继承Target并关联一个Adaptee对象使二者产生联系。
+3. Adaptee（适配者类）：适配者即被适配的角色，它定义了一个已经存在的接口，这个接口需要适配，适配者类一般是一个具体类，包含了客户希望使用的业务方法，在某些情况下可能没有适配者类的源代码。
+
+
+**类结构型模式**
+
+<img src="@/assets/blog/img/designpattern/StructuralMode1.jpg"/>
+
+
+目标接口:
+```java
+interface Target {
+    public void request();
+}
+```
+
+适配者类:
+```java
+class Adaptee {
+    public void specificRequest() {
+        System.out.println("适配者中的业务代码被调用！");
+    }
+}
+```
+
+适配器类:
+```java
+class ClassAdapter extends Adaptee implements Target {
+    @Override
+    public void request() {
+        super.specificRequest();
+    }    
+}
+```
+
+客户端调用:
+```java
+public static void main(String[] args) {
+        Target target = new ClassAdapter();
+        target.request();
+    }
+```
+
+
+**对象结构型模式**
+
+<img src="@/assets/blog/img/designpattern/StructuralMode2.jpg"/>
+
+目标接口和适配者类保持不变，更改适配器如下：
+```java
+class ObjectAdapter implements Target {
+
+    private Adaptee adaptee;
+    public ObjectAdapter(Adaptee adaptee) {
+        this.adaptee=adaptee;
+    }
+
+    @Override
+    public void request() {
+        adaptee.specificRequest();
+    }
+}
+```
+
+客户端调用：
+```java
+public static void main(String[] args) {
+        Target target = new ObjectAdapter(new Adaptee());
+        target.request();
+    }
+```
+
+<br>
+
+### <span id="t3">桥接模式</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br>
