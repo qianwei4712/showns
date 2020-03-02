@@ -4,5 +4,5 @@ Nginx下载地址：<a href="http://nginx.org/en/download.html" target="_blank">
 
 Tomcat下载地址：<a href="http://www.apache.org/dist/tomcat/" target="_blank">http://www.apache.org/dist/tomcat/</a>
 
-Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a>
+Node.js下载地址：<a href="https://nodejs.org/dist/" target="_blank">https://nodejs.org/dist/</a>
 

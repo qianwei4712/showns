@@ -1,8 +1,7 @@
-[JDK安装()](#jdk)
-
-[Niginx安装()](#nginx)
-
-[MySql安装()](#mysql)
+- [JDK安装()](#jdk)
+- [Niginx安装()](#nginx)
+- [MySql安装()](#mysql)
+- [node.js安装()](#node)
 
 <br>
 
@@ -125,7 +124,7 @@ grep "password" /var/log/mysqld.log
 
 ```SQL
 mysql -uroot -p 
-alter user 'root'@'localhost' identified by 'password;
+alter user 'root'@'localhost' identified by 'password';
 FLUSH PRIVILEGES;
 ```
 
@@ -137,3 +136,26 @@ grant all privileges on *.* to 'username'@'%'  identified by 'password' with gra
 FLUSH PRIVILEGES;
 ```
 
+
+
+<br>
+
+
+### <span id="node">node.js安装</span>
+
+首先在<a target="_blank" href="https://nodejs.org/dist/">https://nodejs.org/dist/</a>下载node.js。
+
+例如：node-v12.16.1-linux-x64.tar.gz 。是已经编译好的文件，在bin文件夹中已经存在node以及npm，建立软链接，可以直接使用。
+
+1. 下载，上传到服务器解压，重命名文件夹
+```shell
+tar  xf node-v12.16.1-linux-x64.tar.gz -C /usr/local/
+cd /usr/local/
+mv node-v12.16.1-linux-x64/ nodejs
+```
+
+2. 创建软链接
+```shell
+ln -s /usr/local/nodejs/bin/node /usr/local/bin
+ln -s /usr/local/nodejs/bin/npm /usr/local/bin
+```
