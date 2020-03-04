@@ -1,5 +1,8 @@
 全文转载自：<a href="https://www.cnblogs.com/pengdai/p/9227404.html" target="_blank">https://www.cnblogs.com/pengdai/p/9227404.html</a>
 <br/>
+
+<div class="catalog">
+
 - 目录
     - [参考文章](#t1)
     - [开源协议](#t2)
@@ -13,7 +16,7 @@
             - [MPL](#t226)
     - [小结](#t3)
 
-<br/><br/>
+</div>
 
 > 开源不等于免费！为了加速我们的开发，我们会使用开源的软件和源码； 为避免商业风险，需要在使用时了解第三方如软件协议，版本，和已知CVE风险等；本文旨在从开源软件再发布过程使用权限的角度入手，总结各个常见开源协议的异同，方便理解。 -----2018年2月 @pdai
 

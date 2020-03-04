@@ -1,10 +1,13 @@
+<div class="catalog">
+
 [history](#history)、[last](#last)  、 [pwd](#pwd)  、 [cat](#cat)  、 [tail](#tail) 、  [cd](#cd)  、 [ls](#ls)
 
 [tail](#tail)、[grep ](#grep )  、 [kill](#kill)  、 [ps](#ps) 、  [ping](#ping) 、  [telnet](#telnet) 、  [netstat](#netstat)
 
 [df](#df)、[du](#du)、[chmod](#chmod)、 [chown](#chown)  
-<br>
-<br>
+
+</div>
+
 本文只列举常用参数，常用方法（就是作者用到过的命令，高级或生僻命令不介绍）
 
 <br>

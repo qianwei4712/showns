@@ -1,8 +1,10 @@
+<div class="catalog">
+
 - [封装()](#fengzhaung)
 - [继承()](#jicheng)
 - [多态()](#duotai)
 
-<br><br>
+</div>
 
 **Java 三大特性：封装、继承、多态。**
 

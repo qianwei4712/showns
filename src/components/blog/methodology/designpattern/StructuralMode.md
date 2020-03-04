@@ -1,13 +1,15 @@
+<div class="catalog">
 
-- [代理（Proxy）模式](#t1)
-- [适配器（Adapter）模式](#t2)
-- [桥接（Bridge）模式](#t2)
-- [装饰者（Decorator）模式](#t4)
-- 外观（Facade）模式
-- 享元（Flyweight）模式
-- 组合（Composite）模式
+- [代理模式](#t1)
+- [适配器模式](#t2)
+- [桥接模式](#t3)
+- [装饰者模式](#t4)
+- [外观模式](#t5)
+- [享元模式](#t6)
+- [组合模式](#t7)
 
-<br>
+</div>
+
 
 ### <span id="t1">代理模式</span>
 
@@ -227,18 +229,74 @@ public static void main(String[] args) {
 
 ### <span id="t3">桥接模式</span>
 
+> 桥接模式的定义如下：将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现，从而降低了抽象和实现这两个可变维度的耦合度。
 
+桥接模式的优点是：
+ - 由于抽象与实现分离，所以扩展能力强；
+ - 其实现细节对客户透明。
 
+缺点是：由于聚合关系建立在抽象层，要求开发者针对抽象化进行设计与编程，这增加了系统的理解与设计难度。
 
+桥接（Bridge）模式包含以下主要角色。
+1. 抽象化（Abstraction）角色：定义抽象类，并包含一个对实现化对象的引用。
+2. 扩展抽象化（Refined    Abstraction）角色：是抽象化角色的子类，实现父类中的业务方法，并通过组合关系调用实现化角色中的业务方法。
+3. 实现化（Implementor）角色：定义实现化角色的接口，供扩展抽象化角色调用。
+4. 具体实现化（Concrete Implementor）角色：给出实现化角色接口的具体实现。
 
+<img src="@/assets/blog/img/designpattern/StructuralMode3.jpg"/>
 
+实现化（Implementor）角色：
+```java
+interface Implementor {
+    public void operationImpl();
+}
+```
 
+具体实现化（Concrete Implementor）角色：
+```java
+public class ConcreteImplementor implements Implementor {
+    @Override
+    public void operationImpl() {
+        System.out.println("具体实现化(Concrete Implementor)角色被访问" );
+    }
+}
+```
 
+抽象化（Abstraction）角色：
+```java
+abstract class Abstraction {
+    protected Implementor imple;
+    protected Abstraction(Implementor imple) {
+        this.imple=imple;
+    }
+    public abstract void operation();
+}
+```
 
+扩展抽象化（Refined    Abstraction）角色：
+```java
+class RefinedAbstraction extends Abstraction{
 
+    protected RefinedAbstraction(Implementor imple) {
+        super(imple);
+    }
 
+    @Override
+    public void operation() {
+        System.out.println("扩展抽象化(Refined Abstraction)角色被访问" );
+        imple.operationImpl();
+    }
+}
+```
 
-
+客户端调用：
+```java
+public static void main(String[] args) {
+        Implementor imple = new ConcreteImplementor();
+        Abstraction abs = new RefinedAbstraction(imple);
+        abs.operation();
+    }
+```
 
 
 
@@ -319,9 +377,87 @@ private static final Logger logger = LoggerFactory.getLogger(Component.class);
 logger.error(string);
 ```
 
+<br>
+
+### <span id="t5">外观模式</span>
+
+> 外观模式的定义：是一种通过为多个复杂的子系统提供一个一致的接口，而使这些子系统更加容易被访问的模式。
+> 该模式对外有一个统一接口，外部应用程序不用关心内部子系统的具体的细节，这样会大大降低应用程序的复杂度，提高了程序的可维护性。
+
+
+外观模式是“迪米特法则”的典型应用，它有以下主要优点。
+1. 降低了子系统与客户端之间的耦合度，使得子系统的变化不会影响调用它的客户类。
+2. 对客户屏蔽了子系统组件，减少了客户处理的对象数目，并使得子系统使用起来更加容易。
+3. 降低了大型软件系统中的编译依赖性，简化了系统在不同平台之间的移植过程，因为编译一个子系统不会影响其他的子系统，也不会影响外观对象。
+
+外观模式的主要缺点如下。
+1. 不能很好地限制客户使用子系统类。
+2. 增加新的子系统可能需要修改外观类或客户端的源代码，违背了“开闭原则”。
+
+
+外观模式的结构比较简单，主要是定义了一个高层接口。它包含了对各个子系统的引用，客户端可以通过它访问各个子系统的功能。现在来分析其基本结构和实现方法。
+
+外观（Facade）模式包含以下主要角色。
+1. 外观（Facade）角色：为多个子系统对外提供一个共同的接口。
+2. 子系统（Sub System）角色：实现系统的部分功能，客户可以通过外观角色访问它。
+3. 客户（Client）角色：通过一个外观角色访问各个子系统的功能。
+
+<img src="@/assets/blog/img/designpattern/StructuralMode4.jpg"/>
+
+子系统（Sub System）角色：
+```java
+class SubSystem01 {
+    public void method1() {
+        System.out.println("子系统01的method1()被调用！");
+    }
+}
+
+class SubSystem02 {
+    public void method2() {
+        System.out.println("子系统02的method2()被调用！");
+    }
+}
+```
+
+外观（Facade）角色：
+```java
+class Facade {
+    private SubSystem01 obj1 = new SubSystem01();
+    private SubSystem02 obj2 = new SubSystem02();
+
+    public void method() {
+        obj1.method1();
+        obj2.method2();
+    }
+}
+```
+
+
+客户（Client）角色：
+```java
+public static void main(String[] args) {
+        Facade f = new Facade();
+        f.method();
+    }
+```
+
+
+<br>
+
+
+### <span id="t6">享元模式</span>
+
+> 享元模式的定义：运用共享技术来有効地支持大量细粒度对象的复用。它通过共享已经存在的又橡来大幅度减少需要创建的对象数量、避免大量相似类的开销，从而提高系统资源的利用率。
 
 
 
 
 
 
+<br>
+
+
+### <span id="t7">组合模式</span>
+
+
+<br>

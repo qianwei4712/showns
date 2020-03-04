@@ -1,9 +1,11 @@
+<div class="catalog">
+
 - [JDK安装()](#jdk)
 - [Niginx安装()](#nginx)
 - [MySql安装()](#mysql)
 - [node.js安装()](#node)
 
-<br>
+</div>
 
 > 所有涉及具体路径请自行确认
 >

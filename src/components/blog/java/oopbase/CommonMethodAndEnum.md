@@ -1,3 +1,5 @@
+<div class="catalog">
+
 - [Object基础方法](#t1)
   - [registerNatives](#t11)
   - [hashCode](#t12)
@@ -12,7 +14,7 @@
     - [用enum代替static final常量](#t21)
     - [使用EnumMap](#t22)
 - [参考文章](#t3)
-<br>
+</div>
 
 ## <span id="t1">Object基础方法</span>
 

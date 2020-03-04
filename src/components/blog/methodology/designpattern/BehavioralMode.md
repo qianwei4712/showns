@@ -1,17 +1,18 @@
+<div class="catalog">
 
-- 模板方法（Template Method）模式
-- [策略（Strategy）模式](#t2)
-- 命令（Command）模式
-- 职责链（Chain of Responsibility）模式
-- 状态（State）模式
-- [观察者（Observer）模式](#t6)
-- 中介者（Mediator）模式
-- 迭代器（Iterator）模式
-- 访问者（Visitor）模式
-- 备忘录（Memento）模式
-- 解释器（Interpreter）模式
+- 模板方法模式
+- [策略模式](#t2)
+- 命令模式
+- 职责链模式
+- 状态模式
+- [观察者模式](#t6)
+- 中介者模式
+- 迭代器模式
+- 访问者模式
+- 备忘录模式
+- 解释器模式
 
-<br>
+</div>
 
 ### <span id="t2">策略模式</span>
 
