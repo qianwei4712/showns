@@ -449,8 +449,103 @@ public static void main(String[] args) {
 
 > 享元模式的定义：运用共享技术来有効地支持大量细粒度对象的复用。它通过共享已经存在的又橡来大幅度减少需要创建的对象数量、避免大量相似类的开销，从而提高系统资源的利用率。
 
+享元模式的主要优点是：相同对象只要保存一份，这降低了系统中对象的数量，从而降低了系统中细粒度对象给内存带来的压力。
+
+其主要缺点是：
+1. 为了使对象可以共享，需要将一些不能共享的状态外部化，这将增加程序的复杂性。
+2. 读取享元模式的外部状态会使得运行时间稍微变长。
+
+享元模式中存在以下两种状态：
+**内部状态**，即不会随着环境的改变而改变的可共享部分；
+**外部状态**，指随环境改变而改变的不可以共享的部分。享元模式的实现要领就是区分应用中的这两种状态，并将外部状态外部化。下面来分析其基本结构和实现方法。
+
+享元模式的主要角色有如下。
+1. 抽象享元角色（Flyweight）:是所有的具体享元类的基类，为具体享元规范需要实现的公共接口，非享元的外部状态以参数的形式通过方法传入。
+2. 具体享元（Concrete Flyweight）角色：实现抽象享元角色中所规定的接口。
+3. 非享元（Unsharable Flyweight)角色：是不可以共享的外部状态，它以参数的形式注入具体享元的相关方法中。
+4. 享元工厂（Flyweight Factory）角色：负责创建和管理享元角色。当客户对象请求一个享元对象时，享元工厂检査系统中是否存在符合要求的享元对象，如果存在则提供给客户；如果不存在的话，则创建一个新的享元对象。
+
+<img src="@/assets/blog/img/designpattern/StructuralMode5.jpg"/>
 
 
+抽象享元角色（Flyweight）:
+```java
+interface Flyweight {
+    //定义业务操作
+    public void operation(UnsharedConcreteFlyweight state);
+}
+```
+
+具体享元（Concrete Flyweight）角色：
+```java
+class ConcreteFlyweight implements Flyweight {
+
+    private String key;
+
+    //接受外部状态
+    public ConcreteFlyweight(String key) {
+        this.key=key;
+        System.out.println("具体享元"+key+"被创建！");
+    }
+
+    public void operation(UnsharedConcreteFlyweight outState) {
+        System.out.print("具体享元"+key+"被调用，");
+        System.out.println("非享元信息是:"+outState.getInfo());
+    }
+}
+```
+
+非享元（Unsharable Flyweight)角色：
+```java
+class UnsharedConcreteFlyweight {
+    private String info;
+
+    UnsharedConcreteFlyweight(String info) {
+        this.info=info;
+    }
+    public String getInfo() {
+        return info;
+    }
+    public void setInfo(String info) {
+        this.info=info;
+    }
+}
+```
+
+
+享元工厂（Flyweight Factory）角色：
+```java
+class FlyweightFactory {
+    //定义一个池容器
+    private static HashMap<String, Flyweight> pool = new HashMap<>();
+
+    //享元工厂
+    public static Flyweight getFlyweight(String key) {
+        Flyweight flyweight = pool.get(key);
+        if(flyweight!=null) {
+            System.out.println("具体享元"+key+"已经存在，被成功获取！");
+        } else {
+            flyweight = new ConcreteFlyweight(key);
+            pool.put(key, flyweight);
+        }
+        return flyweight;
+    }
+}
+```
+
+客户端调用：
+```java
+ public static void main(String[] args) {
+        Flyweight f01 = FlyweightFactory.getFlyweight("a");
+        Flyweight f02 = FlyweightFactory.getFlyweight("a");
+        Flyweight f11 = FlyweightFactory.getFlyweight("b");
+        Flyweight f12 = FlyweightFactory.getFlyweight("b");
+        f01.operation(new UnsharedConcreteFlyweight("第1次调用a。"));
+        f02.operation(new UnsharedConcreteFlyweight("第2次调用a。"));
+        f11.operation(new UnsharedConcreteFlyweight("第1次调用b。"));
+        f12.operation(new UnsharedConcreteFlyweight("第2次调用b。"));
+    }
+```
 
 
 
@@ -459,5 +554,167 @@ public static void main(String[] args) {
 
 ### <span id="t7">组合模式</span>
 
+> 组合模式的定义：有时又叫作部分-整体模式，它是一种将对象组合成树状的层次结构的模式，用来表示“部分-整体”的关系，使用户对单个对象和组合对象具有一致的访问性。
 
-<br>
+
+组合模式的主要优点有：
+1. 组合模式使得客户端代码可以一致地处理单个对象和组合对象，无须关心自己处理的是单个对象，还是组合对象，这简化了客户端代码；
+2. 更容易在组合体内加入新的对象，客户端不会因为加入了新的对象而更改源代码，满足“开闭原则”；
+
+其主要缺点是：
+1. 设计较复杂，客户端需要花更多时间理清类之间的层次关系；
+2. 不容易限制容器中的构件；
+3. 不容易用继承的方法来增加构件的新功能；
+
+组合模式包含以下主要角色。
+1. 抽象构件（Component）角色：它的主要作用是为树叶构件和树枝构件声明公共接口，并实现它们的默认行为。在透明式的组合模式中抽象构件还声明访问和管理子类的接口；在安全式的组合模式中不声明访问和管理子类的接口，管理工作由树枝构件完成。
+2. 树叶构件（Leaf）角色：是组合中的叶节点对象，它没有子节点，用于实现抽象构件角色中 声明的公共接口。
+3. 树枝构件（Composite）角色：是组合中的分支节点对象，它有子节点。它实现了抽象构件角色中声明的接口，它的主要作用是存储和管理子部件，通常包含 Add()、Remove()、GetChild() 等方法。
+
+
+组合模式分为透明式的组合模式和安全式的组合模式。
+
+**组合模式之透明方式**
+
+<img src="@/assets/blog/img/designpattern/StructuralMode6.jpg"/>
+
+抽象构件（Component）角色：
+```java
+interface Component {
+    public void add(Component c);
+    public void remove(Component c);
+    public Component getChild(int i);
+    public void operation();
+}
+```
+
+树叶构件（Leaf）角色：
+```java
+class Leaf implements Component {
+
+    private String name;
+    public Leaf(String name) {
+        this.name=name;
+    }
+
+    @Override
+    public void add(Component c) { }
+
+    @Override
+    public void remove(Component c) { }
+
+    @Override
+    public Component getChild(int i) {
+        return null;
+    }
+
+    @Override
+    public void operation() {
+        System.out.println("树叶"+name+"：被访问！");
+    }
+}
+```
+
+树枝构件（Composite）角色：
+```java
+class Composite implements Component {
+
+    private ArrayList<Component> children = new ArrayList<>();
+
+    @Override
+    public void add(Component c) {
+        children.add(c);
+    }
+
+    @Override
+    public void remove(Component c) {
+        children.remove(c);
+    }
+
+    @Override
+    public Component getChild(int i) {
+        return children.get(i);
+    }
+
+    @Override
+    public void operation() {
+        for(Object obj : children) {
+            ((Component)obj).operation();
+        }
+    }
+}
+
+```
+
+客户端调用：
+```java
+public static void main(String[] args) {
+        Component c0=new Composite();
+        Component c1=new Composite();
+        Component leaf1=new Leaf("1");
+        Component leaf2=new Leaf("2");
+        Component leaf3=new Leaf("3");
+        c0.add(leaf1);
+        c0.add(c1);
+        c1.add(leaf2);
+        c1.add(leaf3);
+        c0.operation();
+    }
+```
+
+
+
+**组合模式之安全方式**
+
+<img src="@/assets/blog/img/designpattern/StructuralMode7.jpg"/>
+
+抽象构件（Component）角色：
+```java
+interface Component {
+    public void operation();
+}
+```
+
+树叶构件（Leaf）角色：
+```java
+class Leaf implements Component {
+
+    private String name;
+    public Leaf(String name) {
+        this.name=name;
+    }
+
+    @Override
+    public void operation() {
+        System.out.println("树叶"+name+"：被访问！");
+    }
+}
+```
+
+树枝构件（Composite）角色：
+```java
+class Composite implements Component {
+
+    private ArrayList<Component> children = new ArrayList<>();
+
+    public void add(Component c) {
+        children.add(c);
+    }
+
+    public void remove(Component c) {
+        children.remove(c);
+    }
+
+    public Component getChild(int i) {
+        return children.get(i);
+    }
+
+    @Override
+    public void operation() {
+        for(Object obj : children) {
+            ((Component)obj).operation();
+        }
+    }
+}
+
+```
