@@ -46,13 +46,14 @@
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
     import MysqlOptimization from './database/MysqlOptimization.md';
+    import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization
+            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing
         },
         data(){
             return {
@@ -76,7 +77,9 @@
                         ]
                     }, {
                         title:'中间件',
-                        data:[]
+                        data:[
+                            {title:'Ngin负载均衡', class:'NginxLoadBalancing', id:"middleware" }
+                        ]
                     }, {
                         title:'FQA',
                         data:[
