@@ -40,6 +40,7 @@
                         data:[
                             {title:'CDSN', href:'https://www.csdn.net/', img:require('@/assets/chest/img/csdn.gif'), desc:'中国专业IT社区CSDN' },
                             {title:'OSChina', href:'https://www.oschina.net/', img:require('@/assets/chest/img/oschina.gif'), desc:'中国最大的开源技术社区' },
+                            {title:'', href:'https://stackoverflow.com/', img:require('@/assets/chest/img/stackoverflow.png'), desc:'Stack Overflow是一个与程序相关的IT技术问答网站' },
                             {title:'Linux公社', href:'https://www.linuxidc.com/', img:require('@/assets/chest/img/linuxidc.jpg'), desc:'Linux系统门户网站' },
                             {title:'掘金', href:'https://juejin.im/', img:require('@/assets/chest/img/juejin.svg'), desc:'掘金是一个帮助开发者成长的社区，是一个面向互联网技术人的内容分享平台' },
                             {title:'知否', href:'https://segmentfault.com/', img:require('@/assets/chest/img/segmentfault.png'), desc:'中国领先的开发者技术社区' },
