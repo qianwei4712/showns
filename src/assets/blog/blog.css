@@ -157,9 +157,18 @@
 }
 
 .blog .catalog:hover{
-    opacity:0.9;
+    opacity:1;
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
 }
 
+.blog .catalog ul{
+    list-style: none;
+    padding: 0 32px 0 20px;
+}
+
+.blog .catalog a:hover{
+    font-weight: normal;
+}
 
 .home .el-main{
     width: 100%;
