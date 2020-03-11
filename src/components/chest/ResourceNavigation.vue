@@ -94,6 +94,7 @@
                             {title:'On Java 8', href:'https://lingcoder.gitee.io/onjava8/', img:require('@/assets/chest/img/onjava8.jpg'), desc:'Java编程思想第五版，大神翻译中文版' },
                             {title:'三顿ppt', href:'https://sandunppt.com/', img:require('@/assets/chest/img/sandun.jpg'), desc:'一站式PPT导航站点' },
                             {title:'Smartpdf', href:'https://smallpdf.com/cn', img:require('@/assets/chest/img/smartpdf.svg'), desc:'功能一应俱全、简单好用的线上PDF工具' },
+                            {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
                             {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' }
                         ]
                     }
