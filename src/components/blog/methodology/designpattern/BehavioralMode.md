@@ -6,11 +6,11 @@
 - [职责链模式](#t4)
 - [状态模式](#t5)
 - [观察者模式](#t6)
-- 中介者模式
-- 迭代器模式
-- 访问者模式
-- 备忘录模式
-- 解释器模式
+- [中介者模式](#t7)
+- [迭代器模式](#t8)
+- [访问者模式](#t9)
+- [备忘录模式](#t10)
+- [解释器模式](#t11)
 
 </div>
 
@@ -549,5 +549,496 @@ class JavaSubject extends Observable{
 	        for (int i = arrLocal.length-1; i>=0; i--)
 	            ((Observer)arrLocal[i]).update(this, arg);
 	    }
+```
+
+
+<br>
+
+### <span id="t7">中介者模式</span>
+
+> 中介者（Mediator）模式的定义：定义一个中介对象来封装一系列对象之间的交互，使原有对象之间的耦合松散，且可以独立地改变它们之间的交互。中介者模式又叫调停模式，它是迪米特法则的典型应用。
+
+中介者模式是一种对象行为型模式，其主要优点如下。
+1. 降低了对象之间的耦合性，使得对象易于独立地被复用。
+2. 将对象间的一对多关联转变为一对一的关联，提高系统的灵活性，使得系统易于维护和扩展。
+
+其主要缺点是：当同事类太多时，中介者的职责将很大，它会变得复杂而庞大，以至于系统难以维护。
+
+中介者模式包含以下主要角色。
+- 抽象中介者（Mediator）角色：它是中介者的接口，提供了同事对象注册与转发同事对象信息的抽象方法。
+- 具体中介者（ConcreteMediator）角色：实现中介者接口，定义一个 List 来管理同事对象，协调各个同事角色之间的交互关系，因此它依赖于同事角色。
+- 抽象同事类（Colleague）角色：定义同事类的接口，保存中介者对象，提供同事对象交互的抽象方法，实现所有相互影响的同事类的公共功能。
+- 具体同事类（Concrete Colleague）角色：是抽象同事类的实现者，当需要与其他同事对象交互时，由中介者对象负责后续的交互。
+
+
+<img src="@/assets/blog/img/designpattern/BehavioralMode4.gif"/>
+
+
+抽象中介者（Mediator）角色：
+```java
+abstract class Mediator{
+    public abstract void register(Colleague colleague);
+    public abstract void relay(Colleague cl); //转发
+}
+```
+
+具体中介者（ConcreteMediator）角色：
+```java
+class ConcreteMediator extends Mediator {
+    private List<Colleague> colleagues = new ArrayList<Colleague>();
+    public void register(Colleague colleague) {
+        if(!colleagues.contains(colleague)) {
+            colleagues.add(colleague);
+            colleague.setMedium(this);
+        }
+    }
+    public void relay(Colleague cl) {
+        for(Colleague ob:colleagues) {
+            if(!ob.equals(cl)) {
+                ((Colleague)ob).receive();
+            }   
+        }
+    }
+}
+```
+
+抽象同事类（Colleague）角色：
+```java
+abstract class Colleague {
+    protected Mediator mediator;
+    public void setMedium(Mediator mediator) {
+        this.mediator=mediator;
+    }   
+    public abstract void receive();   
+    public abstract void send();
+}
+```
+
+具体同事类（Concrete Colleague）角色：
+```java
+class ConcreteColleague1 extends Colleague {
+    public void receive() {
+        System.out.println("具体同事类1收到请求。");
+    }   
+    public void send() {
+        System.out.println("具体同事类1发出请求。");
+        mediator.relay(this); //请中介者转发
+    }
+}
+
+class ConcreteColleague2 extends Colleague {
+    public void receive() {
+        System.out.println("具体同事类2收到请求。");
+    }   
+    public void send() {
+        System.out.println("具体同事类2发出请求。");
+        mediator.relay(this); //请中介者转发
+    }
+}
+```
+
+客户端调用：
+```java
+public static void main(String[] args) {
+        Mediator md=new ConcreteMediator();
+        Colleague c1,c2;
+        c1=new ConcreteColleague1();
+        c2=new ConcreteColleague2();
+        md.register(c1);
+        md.register(c2);
+        c1.send();
+        System.out.println("-------------");
+        c2.send();
+    }
+```
+
+
+<br>
+
+### <span id="t8">迭代器模式</span>
+
+>迭代器（Iterator）模式的定义：提供一个对象来顺序访问聚合对象中的一系列数据，而不暴露聚合对象的内部表示。
+
+迭代器模式是一种对象行为型模式，其主要优点如下。
+1. 访问一个聚合对象的内容而无须暴露它的内部表示。
+2. 遍历任务交由迭代器完成，这简化了聚合类。
+3. 它支持以不同方式遍历一个聚合，甚至可以自定义迭代器的子类以支持新的遍历。
+4. 增加新的聚合类和迭代器类都很方便，无须修改原有代码。
+5. 封装性良好，为遍历不同的聚合结构提供一个统一的接口。
+
+其主要缺点是：增加了类的个数，这在一定程度上增加了系统的复杂性。
+
+
+**迭代器模式是通过将聚合对象的遍历行为分离出来，抽象成迭代器类来实现的，其目的是在不暴露聚合对象的内部结构的情况下，让外部代码透明地访问聚合的内部数据。现在我们来分析其基本结构与实现方法。**
+
+迭代器模式主要包含以下角色。
+- 抽象聚合（Aggregate）角色：定义存储、添加、删除聚合对象以及创建迭代器对象的接口。
+- 具体聚合（ConcreteAggregate）角色：实现抽象聚合类，返回一个具体迭代器的实例。
+- 抽象迭代器（Iterator）角色：定义访问和遍历聚合元素的接口，通常包含 hasNext()、first()、next() 等方法。
+- 具体迭代器（Concretelterator）角色：实现抽象迭代器接口中所定义的方法，完成对聚合对象的遍历，记录遍历的当前位置。
+
+<img src="@/assets/blog/img/designpattern/BehavioralMode5.gif"/>
+
+抽象聚合（Aggregate）角色：
+```java
+interface Aggregate { 
+    public void add(Object obj); 
+    public void remove(Object obj); 
+    public Iterator getIterator(); 
+}
+```
+
+
+具体聚合（ConcreteAggregate）角色：
+```java
+class ConcreteAggregate implements Aggregate { 
+    private List<Object> list=new ArrayList<Object>(); 
+    public void add(Object obj) { 
+        list.add(obj); 
+    }
+    public void remove(Object obj) { 
+        list.remove(obj); 
+    }
+    public Iterator getIterator() { 
+        return(new ConcreteIterator(list)); 
+    }     
+}
+```
+
+
+抽象迭代器（Iterator）角色：
+```java
+interface Iterator {
+    Object first();
+    Object next();
+    boolean hasNext();
+}
+```
+
+具体迭代器（Concretelterator）角色：
+```java
+class ConcreteIterator implements Iterator { 
+    private List<Object> list=null; 
+    private int index=-1; 
+    public ConcreteIterator(List<Object> list) { 
+        this.list=list; 
+    } 
+    public boolean hasNext() { 
+        if(index<list.size()-1) { 
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public Object first() {
+        index=0;
+        Object obj=list.get(index);;
+        return obj;
+    }
+    public Object next() { 
+        Object obj=null; 
+        if(this.hasNext()) { 
+            obj=list.get(++index); 
+        } 
+        return obj; 
+    }   
+}
+```
+
+客户端调用：
+```java
+public static void main(String[] args) {
+        Aggregate ag = new ConcreteAggregate(); 
+        ag.add("中山大学"); 
+        ag.add("华南理工"); 
+        ag.add("韶关学院");
+        System.out.print("聚合的内容有：");
+        Iterator it=ag.getIterator(); 
+        while(it.hasNext()) { 
+            Object ob=it.next(); 
+            System.out.print(ob.toString()+"\t"); 
+        }
+        Object ob=it.first();
+        System.out.println("\nFirst："+ob.toString());
+    }
+```
+
+
+<br>
+
+
+### <span id="t9">访问者模式</span>
+
+>访问者（Visitor）模式的定义：将作用于某种数据结构中的各元素的操作分离出来封装成独立的类，使其在不改变数据结构的前提下可以添加作用于这些元素的新的操作，为数据结构中的每个元素提供多种访问方式。
+它将对数据的操作与数据结构进行分离，是行为类模式中最复杂的一种模式。
+
+访问者（Visitor）模式是一种对象行为型模式，其主要优点如下。
+1. 扩展性好。能够在不修改对象结构中的元素的情况下，为对象结构中的元素添加新的功能。
+2. 复用性好。可以通过访问者来定义整个对象结构通用的功能，从而提高系统的复用程度。
+3. 灵活性好。访问者模式将数据结构与作用于结构上的操作解耦，使得操作集合可相对自由地演化而不影响系统的数据结构。
+4. 符合单一职责原则。访问者模式把相关的行为封装在一起，构成一个访问者，使每一个访问者的功能都比较单一。
+
+访问者（Visitor）模式的主要缺点如下。
+1. 增加新的元素类很困难。在访问者模式中，每增加一个新的元素类，都要在每一个具体访问者类中增加相应的具体操作，这违背了“开闭原则”。
+2. 破坏封装。访问者模式中具体元素对访问者公布细节，这破坏了对象的封装性。
+3. 违反了依赖倒置原则。访问者模式依赖了具体类，而没有依赖抽象类。
+
+访问者模式包含以下主要角色。
+- 抽象访问者（Visitor）角色：定义一个访问具体元素的接口，为每个具体元素类对应一个访问操作 visit() ，该操作中的参数类型标识了被访问的具体元素。
+- 具体访问者（ConcreteVisitor）角色：实现抽象访问者角色中声明的各个访问操作，确定访问者访问一个元素时该做什么。
+- 抽象元素（Element）角色：声明一个包含接受操作 accept() 的接口，被接受的访问者对象作为 accept() 方法的参数。
+- 具体元素（ConcreteElement）角色：实现抽象元素角色提供的 accept() 操作，其方法体通常都是 visitor.visit(this) ，另外具体元素中可能还包含本身业务逻辑的相关操作。
+- 对象结构（Object Structure）角色：是一个包含元素角色的容器，提供让访问者对象遍历容器中的所有元素的方法，通常由 List、Set、Map 等聚合类实现。
+
+
+<img src="@/assets/blog/img/designpattern/BehavioralMode6.gif"/>
+
+抽象访问者（Visitor）角色：
+```java
+interface Visitor {
+    void visit(ConcreteElementA element);
+    void visit(ConcreteElementB element);
+}
+```
+
+具体访问者（ConcreteVisitor）角色：
+```java
+class ConcreteVisitorA implements Visitor {
+    public void visit(ConcreteElementA element) {
+        System.out.println("具体访问者A访问-->"+element.operationA());
+    }
+    public void visit(ConcreteElementB element) {
+        System.out.println("具体访问者A访问-->"+element.operationB());
+    }
+}
+
+class ConcreteVisitorB implements Visitor {
+    public void visit(ConcreteElementA element) {
+        System.out.println("具体访问者B访问-->"+element.operationA());
+    }
+    public void visit(ConcreteElementB element) {
+        System.out.println("具体访问者B访问-->"+element.operationB());
+    }
+}
+```
+
+抽象元素（Element）角色：
+```java
+interface Element {
+    void accept(Visitor visitor);
+}
+```
+
+具体元素（ConcreteElement）角色：
+```java
+class ConcreteElementA implements Element {
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+    public String operationA() {
+        return "具体元素A的操作。";
+    }
+}
+
+class ConcreteElementB implements Element {
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+    public String operationB() {
+        return "具体元素B的操作。";
+    }
+}
+```
+
+对象结构（Object Structure）角色：
+```java
+class ObjectStructure {   
+    private List<Element> list=new ArrayList<Element>();   
+    public void accept(Visitor visitor) {
+        Iterator<Element> i=list.iterator();
+        while(i.hasNext()) {
+            ((Element) i.next()).accept(visitor);
+        }      
+    }
+    public void add(Element element) {
+        list.add(element);
+    }
+    public void remove(Element element) {
+        list.remove(element);
+    }
+}
+```
+
+客户端调用：
+```java
+ public static void main(String[] args) {
+        ObjectStructure os=new ObjectStructure();
+        os.add(new ConcreteElementA());
+        os.add(new ConcreteElementB());
+        Visitor visitor=new ConcreteVisitorA();
+        os.accept(visitor);
+        System.out.println("------------------------");
+        visitor=new ConcreteVisitorB();
+        os.accept(visitor);
+    }
+```
+
+<br>
+
+
+### <span id="t10">备忘录模式</span>
+
+>备忘录（Memento）模式的定义：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，以便以后当需要时能将该对象恢复到原先保存的状态。该模式又叫快照模式。
+
+备忘录模式是一种对象行为型模式，其主要优点如下。
+1. 提供了一种可以恢复状态的机制。当用户需要时能够比较方便地将数据恢复到某个历史的状态。
+2. 实现了内部状态的封装。除了创建它的发起人之外，其他对象都不能够访问这些状态信息。
+3. 简化了发起人类。发起人不需要管理和保存其内部状态的各个备份，所有状态信息都保存在备忘录中，并由管理者进行管理，这符合单一职责原则。
+
+其主要缺点是：资源消耗大。如果要保存的内部状态信息过多或者特别频繁，将会占用比较大的内存资源。
+
+备忘录模式的主要角色如下。
+- 发起人（Originator）角色：记录当前时刻的内部状态信息，提供创建备忘录和恢复备忘录数据的功能，实现其他业务功能，它可以访问备忘录里的所有信息。
+- 备忘录（Memento）角色：负责存储发起人的内部状态，在需要的时候提供这些内部状态给发起人。
+- 管理者（Caretaker）角色：对备忘录进行管理，提供保存与获取备忘录的功能，但其不能对备忘录的内容进行访问与修改。
+
+<img src="@/assets/blog/img/designpattern/BehavioralMode7.gif"/>
+
+发起人（Originator）角色：
+```java
+class Originator { 
+    private String state;     
+    public void setState(String state) { 
+        this.state=state; 
+    }
+    public String getState() { 
+        return state; 
+    }
+    public Memento createMemento() { 
+        return new Memento(state); 
+    } 
+    public void restoreMemento(Memento m) { 
+        this.setState(m.getState()); 
+    } 
+}
+```
+
+备忘录（Memento）角色：
+```java
+class Memento { 
+    private String state; 
+    public Memento(String state) { 
+        this.state=state; 
+    }     
+    public void setState(String state) { 
+        this.state=state; 
+    }
+    public String getState() { 
+        return state; 
+    }
+}
+```
+
+
+管理者（Caretaker）角色：
+```java
+class Caretaker { 
+    private Memento memento;       
+    public void setMemento(Memento m) { 
+        memento=m; 
+    }
+    public Memento getMemento() { 
+        return memento; 
+    }
+}
+```
+
+
+客户端调用：
+```java
+public static void main(String[] args) {
+        Originator or=new Originator();
+        Caretaker cr=new Caretaker();       
+        or.setState("S0"); 
+        System.out.println("初始状态:"+or.getState());           
+        cr.setMemento(or.createMemento()); //保存状态      
+        or.setState("S1"); 
+        System.out.println("新的状态:"+or.getState());        
+        or.restoreMemento(cr.getMemento()); //恢复状态
+        System.out.println("恢复状态:"+or.getState());
+    }
+```
+
+
+<br>
+
+
+### <span id="t11">解释器模式</span>
+
+>解释器（Interpreter）模式的定义：给分析对象定义一个语言，并定义该语言的文法表示，再设计一个解析器来解释语言中的句子。
+也就是说，用编译语言的方式来分析应用中的实例。这种模式实现了文法表达式处理的接口，该接口解释一个特定的上下文。
+
+
+这里提到的文法和句子的概念同编译原理中的描述相同，“文法”指语言的语法规则，而“句子”是语言集中的元素。例如，汉语中的句子有很多，“我是中国人”是其中的一个句子，可以用一棵语法树来直观地描述语言中的句子。
+
+解释器模式是一种类行为型模式，其主要优点如下。
+1. 扩展性好。由于在解释器模式中使用类来表示语言的文法规则，因此可以通过继承等机制来改变或扩展文法。
+2. 容易实现。在语法树中的每个表达式节点类都是相似的，所以实现其文法较为容易。
+
+解释器模式的主要缺点如下。
+1. 执行效率较低。解释器模式中通常使用大量的循环和递归调用，当要解释的句子较复杂时，其运行速度很慢，且代码的调试过程也比较麻烦。
+2. 会引起类膨胀。解释器模式中的每条规则至少需要定义一个类，当包含的文法规则很多时，类的个数将急剧增加，导致系统难以管理与维护。
+3. 可应用的场景比较少。在软件开发中，需要定义语言文法的应用实例非常少，所以这种模式很少被使用到。
+
+
+解释器模式包含以下主要角色。
+- 抽象表达式（Abstract Expression）角色：定义解释器的接口，约定解释器的解释操作，主要包含解释方法 interpret()。
+- 终结符表达式（Terminal    Expression）角色：是抽象表达式的子类，用来实现文法中与终结符相关的操作，文法中的每一个终结符都有一个具体终结表达式与之相对应。
+- 非终结符表达式（Nonterminal Expression）角色：也是抽象表达式的子类，用来实现文法中与非终结符相关的操作，文法中的每条规则都对应于一个非终结符表达式。
+- 环境（Context）角色：通常包含各个解释器需要的数据或是公共的功能，一般用来传递被所有解释器共享的数据，后面的解释器可以从这里获取这些值。
+- 客户端（Client）：主要任务是将需要分析的句子或表达式转换成使用解释器对象描述的抽象语法树，然后调用解释器的解释方法，当然也可以通过环境角色间接访问解释器的解释方法。
+
+
+<img src="@/assets/blog/img/designpattern/BehavioralMode8.gif"/>
+
+
+抽象表达式（Abstract Expression）角色：
+```java
+interface AbstractExpression {
+    public Object interpret(String info);    //解释方法
+}
+```
+
+终结符表达式（Terminal    Expression）角色：
+```java
+class TerminalExpression implements AbstractExpression {
+    public Object interpret(String info) {
+        //对终结符表达式的处理
+    }
+}
+```
+
+非终结符表达式（Nonterminal Expression）角色：
+```java
+class NonterminalExpression implements AbstractExpression {
+    private AbstractExpression exp1;
+    private AbstractExpression exp2;
+    public Object interpret(String info) {
+        //非对终结符表达式的处理
+    }
+}
+```
+
+环境（Context）角色：
+```java
+class Context {
+    private AbstractExpression exp;
+    public Context() {
+        //数据初始化
+    }
+    public void operation(String info) {
+        //调用相关表达式类的解释方法
+    }
+}
 ```
 
