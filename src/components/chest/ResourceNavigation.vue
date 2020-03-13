@@ -69,7 +69,8 @@
                         data:[
                             {title:'Spring', href:'https://spring.io/projects/spring-boot', img:require('@/assets/chest/img/spring.png'), desc:'Spring框架是一个开放源代码的J2EE应用程序框架' },
                             {title:'MyBatis', href:'http://www.mybatis.org/mybatis-3/zh/index.html', img:require('@/assets/chest/img/mybatis.png'), desc:'MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。' },
-                            {title:'Maven', href:'https://mvnrepository.com/', img:require('@/assets/chest/img/maven.png'), desc:'Maven 仓库检索, 非常常用' }
+                            {title:'Maven', href:'https://mvnrepository.com/', img:require('@/assets/chest/img/maven.png'), desc:'Maven 仓库检索, 非常常用' },
+                            {title:'Docker Hub', href:'https://hub.docker.com/', img:require('@/assets/chest/img/docker.png'), desc:'Docker源代码管理集成，也用于构建和测试工具来加速部署周期。' }
                         ]
                     },
                     {
