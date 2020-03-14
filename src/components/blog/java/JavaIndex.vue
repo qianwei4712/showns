@@ -51,6 +51,7 @@
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
     import ThreadGuard from './thread/ThreadGuard.md';
     import ThreadSynchronized from './thread/ThreadSynchronized.md';
+    import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
 
 
     export default {
@@ -59,7 +60,8 @@
             HomePage,
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
-            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable
+            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
+            CollectionRelationDiagram
         },
         data(){
             return {
@@ -79,7 +81,9 @@
                         ]
                     }, {
                         title:'Java集合知识体系',
-                        data:[]
+                        data:[
+                            {title:'Collection类关系图', class:'CollectionRelationDiagram', id:"collections" }
+                        ]
                     }, {
                         title:'Java I/O知识体系',
                         data:[]
