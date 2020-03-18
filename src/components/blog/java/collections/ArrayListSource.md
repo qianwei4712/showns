@@ -266,7 +266,7 @@ ArrayList 静态常量如下：
         // 记录变化值，简单的线程安全判断
         int expectedModCount = modCount;
 
-        // 简单的线程安全判断，并不真正有效
+        // 简单的线程安全判断，快速失败机制
         final void checkForComodification() {
             if (modCount != expectedModCount)
                 throw new ConcurrentModificationException();
@@ -431,7 +431,7 @@ ArrayList 静态常量如下：
 
 > 从上面代码可以得出，`modCount` 只能简单的判断。
 >
-> **如果排序过程中，进行了一次添加一次移除，那么 `modCount` 虽然不变，但是数组元素已经产生了变化。这是有问题的，所以 `ArrayList` 并不是线程安全的。**
+> **如果排序过程中，进行了添加或者移除的操作，那么 `modCount` 不等于 `expectedModCount` ，数组元素已经产生了变化。这是有问题的，所以 `ArrayList` 并不是线程安全的。**
 
 
 <br>
