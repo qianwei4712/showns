@@ -22,9 +22,7 @@
 
 阅读 Java 版本为 **1.8.0.25**。
 
-*ArrayList* 实现了 *List* 接口，是顺序容器，即元素存放的数据与放进去的顺序相同，允许放入 `null` 元素，底层通过**Object 数组实现**。
 
-除该类未实现同步外，其余跟 *Vector* 大致相同。每个 *ArrayList* 都有一个容量(capacity)，表示底层数组的实际大小，容器内存储元素的个数不能多于当前容量。当向容器中添加元素时，如果容量不足，容器会自动增大底层数组的大小。
 
 学习方式为，将 **ArrayList** 源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
 <a href="https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java</a>
@@ -342,7 +340,7 @@ ArrayList 静态常量如下：
     }
 ```
 
-实际上 **subList(int fromIndex, int toIndex)** 是将原 **ArrayList** 作为一个字段维护进 `SubList` 中，因为也实现了 List接口，所有其他操作不变。
+实际上 **subList(int fromIndex, int toIndex)** 是将原 **ArrayList** 作为一个字段维护进`SubList` 中，因为也实现了 List接口，所有其他操作不变。
 
 并且，所有针对返回结果的操作，都继续反映在原数组上。
 

@@ -53,6 +53,7 @@
     import ThreadSynchronized from './thread/ThreadSynchronized.md';
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
+    import LinkedListSource from './collections/LinkedListSource.md';
 
 
     export default {
@@ -62,7 +63,7 @@
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
-            CollectionRelationDiagram, ArrayListSource
+            CollectionRelationDiagram, ArrayListSource, LinkedListSource
         },
         data(){
             return {
@@ -84,7 +85,8 @@
                         title:'Java集合知识体系',
                         data:[
                             {title:'Collection类图', class:'CollectionRelationDiagram', id:"collections" },
-                            {title:'Collection - ArrayList', class:'ArrayListSource' },
+                            {title:'ArrayList 源码分析', class:'ArrayListSource' },
+                            {title:'LinkedList 源码分析', class:'LinkedListSource' }
                         ]
                     }, {
                         title:'Java I/O知识体系',

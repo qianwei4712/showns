@@ -1,19 +1,20 @@
 <div class="catalog">
 
-- [负载均衡配置](#t1)
-- [负载均衡算法](#t2)
+- [Nginx负载均衡配置](#t1)
+- [Nginx负载均衡算法](#t2)
     - [轮询法（默认）](#t21)
     - [加权轮询法](#t22)
     - [ip-hash](#t23)
     - [其他算法使用方式](#t24)
-- [负载均衡使用说明](#t3)
+- [Nginx+keepalived双机部署](#t3)
+- [Nginx负载均衡使用说明](#t4)
 - [参考文章](#te)
 
 </div>
 
 > 负载均衡的解释：将请求分摊到多个操作单元上进行执行。就是我们需要一个调度者，保证所有后端服务器都将性能充分发挥，从而保持服务器集群的整体性能最优，这就是负载均衡。
 
-### <span id="t1">负载均衡配置</span>
+### <span id="t1">Nginx负载均衡配置</span>
 
 `nginx` 中的 `upstream模块` 是来实现 `nginx` 跨越单机的限制，完成网络数据的接收、处理和转发。例如：
 ```java
@@ -36,7 +37,7 @@ upstream server参数解释如下：
 
 <br>
 
-### <span id="t2">负载均衡算法</span>
+### <span id="t2">Nginx负载均衡算法</span>
 
 首先介绍nginx支持的主要策略
 
@@ -140,7 +141,36 @@ upstream app {
 
 <br>
 
-### <span id="t3">负载均衡使用说明</span>
+### <span id="t3">Nginx+keepalived双机主从模式、互为主从模式</span>
+
+搞IT的应该都懂，只有一台 nginx 服务意味这高风险，实现 nginx 高可用的方案之一，就是使用 **nginx + keepalived** 模式。
+
+**nginx + keepalived** 分为主从模式以及互为主从模式。
+
+<img src="@/assets/blog/img/deploy/NginxLoadBalancing1.png"/>
+
+
+**环境基础：**
+
+- 使用 `docker` 创建了2个容器，两个容器分别安装了 `nginx` ， 我的安装步骤请参考 **服务器 - 常用软件安装**。
+- 简单为方便使用，只在一台 docker 容器中安装了 jdk，并启动2个服务。
+- 测试直接用 `curl` 命令进行。
+
+1. 安装keepalived
+
+因为 nginx 用的比较多，都是按以前的流程装上的，现在还需要安装 keepalived 服务，主从两个节点都需要安装，操作如下：
+
+
+
+
+
+
+
+
+<br>
+
+
+### <span id="t4">Nginx负载均衡使用说明</span>
 
 > nginx的所有负载均衡策略，实际上只是对 **HTTP请求进行重定向** ，在将请求分配到后台服务器后，无法检测到实际服务器压力。
 
@@ -161,3 +191,7 @@ upstream app {
 <a href="https://blog.csdn.net/qq_37936542/article/details/82800605" target="_blank">https://blog.csdn.net/qq_37936542/article/details/82800605</a>
 
 <a href="https://blog.csdn.net/ycc297876771/article/details/83240561" target="_blank">https://blog.csdn.net/ycc297876771/article/details/83240561</a>
+
+https://www.cnblogs.com/chimeiwangliang/p/7768438.html
+
+https://blog.csdn.net/l1028386804/article/details/80098334

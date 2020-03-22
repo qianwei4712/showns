@@ -44,6 +44,7 @@
     import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
+    import DockerInstall from './server/DockerInstall.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
     import MysqlOptimization from './database/MysqlOptimization.md';
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
@@ -53,7 +54,7 @@
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing
+            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall
         },
         data(){
             return {
@@ -67,7 +68,8 @@
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
                             {title:'Linux常用命令', class:'LinuxCommonCommand' },
                             {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
-                            {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'}
+                            {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'},
+                            {title:'docker安装及基本用法', class:'DockerInstall'}
                         ]
                     }, {
                         title:'数据库',
@@ -78,7 +80,7 @@
                     }, {
                         title:'中间件',
                         data:[
-                            {title:'Ngin负载均衡', class:'NginxLoadBalancing', id:"middleware" }
+                            {title:'Nginx负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" }
                         ]
                     }, {
                         title:'FQA',
