@@ -27,7 +27,7 @@
 除该类未实现同步外，其余跟 *Vector* 大致相同。每个 *ArrayList* 都有一个容量(capacity)，表示底层数组的实际大小，容器内存储元素的个数不能多于当前容量。当向容器中添加元素时，如果容量不足，容器会自动增大底层数组的大小。
 
 学习方式为，将 **ArrayList** 源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java</a>
+<a href="https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/arraylistsources/ArrayList.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/arraylistsources/ArrayList.java</a>
 
 知识点总结如下：
 
