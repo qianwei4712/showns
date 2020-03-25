@@ -148,7 +148,7 @@ systemctl restart docker.service
 
 | 作用       | 命令                                                         |
 | ---------- | ------------------------------------------------------------ |
-| 查看容器ip | docker inspect --format='{{IPAddress}}' 容器名 |
+| 查看容器ip | docker inspect --format='{ {.NetworkSettings.IPAddress}}' 容器名；<br> **PS：** 去掉命令双括号中的空格 |
 
 
 
@@ -173,21 +173,6 @@ systemctl restart docker.service
 <a href="https://my.oschina.net/lwenhao/blog/2086037" target="_blank">https://my.oschina.net/lwenhao/blog/2086037</a>
 
 <a href="https://www.cnblogs.com/ruanqj/p/7374544.html" target="_blank">https://www.cnblogs.com/ruanqj/p/7374544.html</a>
-
-
-
-<script>
-    export default {
-        data(){
-            return {
-                IPAddress:'{{.NetworkSettings.IPAddress}}',
-            };
-        },
-        mounted() {
-            this.afterMounted();
-        }
-    }
-</script>
 
 
 
