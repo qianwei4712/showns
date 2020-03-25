@@ -99,6 +99,11 @@ upstream app {
 这么算起来，nginx后端只能直接指向应用服务器，或者再搭一个squid，然后指向应用服务器。最好的办法是用location作一次分流，将需要session的部分请求通过ip_hash分流，剩下的走其它后端去。
 
 
+> 使用 ip-hash 模式，若其中一个服务挂了，nginx 不会将其标定为 down ,还会继续往这个服务分发请求。
+>
+> 一般的方式装载插件进行检测，例如 heath check。
+
+
 #### <span id="t24">其他算法使用方式</span>
 
 **最小连接数法**
@@ -161,7 +166,7 @@ upstream app {
 因为 nginx 用的比较多，都是按以前的流程装上的，现在还需要安装 keepalived 服务，主从两个节点都需要安装，操作如下：
 
 
-
+> TODO keepalived死活装不上，以后再弄，先搞别的去了。。。MMP
 
 
 
@@ -192,6 +197,7 @@ upstream app {
 
 <a href="https://blog.csdn.net/ycc297876771/article/details/83240561" target="_blank">https://blog.csdn.net/ycc297876771/article/details/83240561</a>
 
-https://www.cnblogs.com/chimeiwangliang/p/7768438.html
+<a href="https://www.cnblogs.com/chimeiwangliang/p/7768438.html" target="_blank">https://www.cnblogs.com/chimeiwangliang/p/7768438.html</a>
 
-https://blog.csdn.net/l1028386804/article/details/80098334
+<a href="https://blog.csdn.net/l1028386804/article/details/80098334" target="_blank">https://blog.csdn.net/l1028386804/article/details/80098334</a>
+
