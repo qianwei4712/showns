@@ -3,16 +3,12 @@
 - [概述](#t1)
 - [继承关系](#t2)
 - [构造方法](#t3)
-- [ArrayList的常用方法](#t4)
-    - [addAll](#t41)
-    - [removeAll](#t42)
-    - [iterator](#t43)
-    - [subList](#t44)
-    - [ensureCapacityInternal](#t45)
-    - [modCount简介](#t46)
-- [使用建议](#t5)
+- [LinkedList的常用方法](#t4)
+    - [add](#t41)
+    - [remove](#t42)
+    - [poll() 和 pop()](#t43)
+- [总结](#t5)
 - [参考文章](#t6)
-
 
 </div>
 
@@ -22,15 +18,17 @@
 
 阅读 Java 版本为 **1.8.0.25**。
 
+> *LinkedList* 同时实现了*List*接口和*Deque*接口，也就是说它既可以看作一个顺序容器，又可以看作一个队列(*Queue*)，同时又可以看作一个栈(*Stack*)。
 
+当你需要使用栈或者队列时，可以考虑使用 *LinkedList* ，一方面是因为Java官方已经声明不建议使用 *Stack* 类，更遗憾的是，Java里根本没有一个叫做 *Queue* 的类(只是个接口)。关于栈或队列，现在的首选是*ArrayDeque*，它有着比 *LinkedList* (当作栈或队列使用时)有着更好的性能。
 
-学习方式为，将 **ArrayList** 源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/arraylist-sources/src/main/java/arraylistsources/ArrayList.java</a>
+学习方式为，将 **LinkedList** 源码类拷贝至自定义包内，进行注释添加，代码请移步：<br>
+<a href="https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/linkedlistsources/LinkedList.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/linkedlistsources/LinkedList.java</a>
 
 知识点总结如下：
 
 
-<img src="@/assets/blog/img/collections/ArrayListSource1.png"/>
+<img src="@/assets/blog/img/collections/LinkedListSource1.png"/>
 
 
 <br>
@@ -38,79 +36,74 @@
 ### <span id="t2">继承关系</span>
 
 
-<img src="@/assets/blog/img/collections/ArrayListSource2.png"/>
+
+<img src="@/assets/blog/img/collections/LinkedListSource2.png"/>
+
 
 
 - 实现 **Serializable** 接口开启序列化功能 ----具体介绍请转 **Java面向对象基础 - 异常、序列化**
+
 - 实现 **Cloneable** 接口，允许使用 **clone()** 方法克隆 --- 具体介绍请转 **Java面向对象基础 - Object通用方法、枚举** 
-- 实现 **RandomAccess** 接口，支持快速随机访问策略（官网说明，如果是实现了这个接口的 **List**，那么使用 for 循环的方式获取数据会优于用迭代器 Iterator 获取数据） --- 具体请参考文章 
-<a href="https://www.cnblogs.com/yeya/p/9950723.html" target="_blank">https://www.cnblogs.com/yeya/p/9950723.html</a>
+
+- 实现 **Deque** 接口，**Deque** 继承自 **Queue** ，实现一个双向队列基础方法 --- 具体请参考文章 
+
+  <a href="https://blog.csdn.net/xushiyu1996818/article/details/100161326" target="_blank">https://blog.csdn.net/xushiyu1996818/article/details/100161326</a>
+
+
 
 <br>
 
 ### <span id="t3">构造方法</span>
 
-ArrayList 底层如下，经有2个字段，底层基于数组实现。
+LinkedList 底层构造仅有3个字段，LinkedList 通过 `first` 和 `last` 引用分别指向链表的第一个和最后一个元素，以此达到双向链表的功能 ：
 
 ```java
-    //底层基于 Object[] 实现，可以存储所有类型。
-    transient Object[] elementData;
-    //列表长度,并不是Object[]的长度，而是实际列表元素的个数
-    private int size;
+    //list长度，默认为0
+    transient int size = 0;
+    //第一个节点
+    transient Node<E> first;
+    //最后一个节点
+    transient Node<E> last;
 ```
 
-
-
-ArrayList 静态常量如下：
+其中 Node<E> 为内部静态类，泛型可以存放任意对象：
 
 ```java
-    //默认初始化容量
-    private static final int DEFAULT_CAPACITY = 10;
-    //默认空list，当构造方法传入长度为0时返回
-    private static final Object[] EMPTY_ELEMENTDATA = {};
-    //默认空list，无参构造器时返回的默认列表
-    private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
-    //数组最大容量，实际值为2^31-1-8，超出会爆OutOfMemoryError。
-    //数组除了存放数据外，还有一个length属性，减8为了存放数组长度
-    private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
+    private static class Node<E> {
+        // 当前节点对象
+        E item;
+        // 下一个节点对象
+        Node<E> next;
+        // 上一个节点对象
+        Node<E> prev;
+        // 构造方法为全参构造器
+        Node(Node<E> prev, E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
 ```
 
+根据 Node<E> 的特性，LinkedList 的结构图如下：
 
 
-构造方法如下：
+<img src="@/assets/blog/img/collections/LinkedListSource3.jpg"/>
+
+
+LinkedList 构造方法有2个，无参构造器什么都没有，因此默认 LinkedList 的 `first` 和 `last` 引用均为空。
 
 ```java
-    /**
-     * 指定链表长度的构造方法
-     * 当指定长度为0时，返回 static final 默认空链表 EMPTY_ELEMENTDATA
-     */
-    public ArrayList(int initialCapacity) {
-        if (initialCapacity > 0) {
-            this.elementData = new Object[initialCapacity];
-        } else if (initialCapacity == 0) {
-            this.elementData = EMPTY_ELEMENTDATA;
-        } else {
-            throw new IllegalArgumentException("Illegal Capacity: "+
-                    initialCapacity);
-        }
+    //无参构造器，所有节点默认为null
+    public LinkedList() {
     }
 
-    //无参构造方法，默认返回空列表
-    public ArrayList() {
-        this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
-    }
-    
-    //集合参数构造器，顺序初始化
-    public ArrayList(Collection<? extends E> c) {
-        elementData = c.toArray();
-        if ((size = elementData.length) != 0) {
-            if (elementData.getClass() != Object[].class)
-                // c.toArray() 返回的数组类型不是 Object[]，则利用 Arrays.copyOf()来构造一个大小为 size 的 Object[] 数组
-                elementData = Arrays.copyOf(elementData, size, Object[].class);
-        } else {
-            //集合参数长度为0，设置为默认列表
-            this.elementData = EMPTY_ELEMENTDATA;
-        }
+    // 集合参数构造器
+    public LinkedList(Collection<? extends E> c) {
+        // 调用无参构造器，先创建list
+        this();
+        // 调用批量添加
+        addAll(c);
     }
 ```
 
@@ -118,347 +111,287 @@ ArrayList 静态常量如下：
 
 <br>
 
-### <span id="t4">ArrayList的常用方法</span>
+### <span id="t4">LinkedList的常用方法</span>
 
-同一类型方法都大同小异，这里都抽一个解释一下。
+同一类型方法都大同小异，增删迭代都会选一个贴代码，几个个人认为比较特殊方法也会稍微介绍下。
 
-`indexOf(Object o)、get(int index)、contains(Object o)` 等方法虽然很常用，但是代码实现特别简单，就不贴出来了。
+其中一些知识点和 `ArrayList` 相同，例如：**modCount的作用** ，请直接转至  **ArrayList源码解析** 。
+
 
 
 <br>
 
-#### <span id="t41">addAll(int index, Collection<? extends E> c)；</span>
+#### <span id="t41">add(int index, E element)</span>
 
-添加方法共有四种：
+涉及添加方法如下：
+
+1. **List 接口方法：**
 
 - add(E e)，末尾添加一个元素
-- add(int index, E element)，在指定位置添加元素
-- addAll(Collection<? extends E> c)，顺序批量添加
-- addAll(int index, Collection<? extends E> c)，从指定位置开始批量添加
 
-内部实现比较简单，例如这里最复杂的第四个：
+- add(int index, E element)，向指定索引插入元素
+
+- addAll(Collection<? extends E> c)，顺序批量添加 
+
+- addAll(int index, Collection<? extends E> c)，从指定位置开始批量添加 
+
+  
+
+2. **Deque 接口方法：**
+
+- addFirst(E e)，在链表开头添加元素
+- addLast(E e)，在链表末尾添加元素，和 add(E e) 方法相同
+
+
+
+添加方法 **add(int index, E element)**，向指定索引插入元素，涉及的 **private** 方法比较全面，这里贴下代码：
 
 ```java
-    // 从指定位置开始批量添加
-    public boolean addAll(int index, Collection<? extends E> c) {
-        // 判断指定位置是否超出列表位置范围
-        rangeCheckForAdd(index);
-        // 将需添加集合转为数组
-        Object[] a = c.toArray();
-        // 需要添加的个数
-        int numNew = a.length;
-        //确定数组长度，长度如果添加 numNew,是否需要扩容
-        ensureCapacityInternal(size + numNew);
-        //获得开始移动的下标，使用 native 方法进行赋值移动
-        int numMoved = size - index;
-        if (numMoved > 0)
-            System.arraycopy(elementData, index, elementData, index + numNew,
-                    numMoved);
-        // 将需要添加的数组拷贝到列表数组
-        System.arraycopy(a, 0, elementData, index, numNew);
-        // 数组长度更改
-        size += numNew;
-        return numNew != 0;
+    //在指定位置添加元素
+    public void add(int index, E element) {
+        //判断索引位置是否可用
+        checkPositionIndex(index);
+        if (index == size)
+            //如果添加位置和长度相同，当前最大索引为size-1，则添加在末尾
+            linkLast(element);
+        else
+            //在原索引位置的节点前面插入新节点
+            linkBefore(element, node(index));
     }
 ```
 
-这里涉及到2个私有方法，**ensureCapacityInternal** 是个特殊方法，后面专门介绍；**rangeCheckForAdd** 比较简单，贴个代码过去了。
+这里的几个 **private** 方法 **linkLast(E e) 、node(int index)** 和 **linkBefore(E e, Node<E> succ)** 在源码中非常常用。
+
+ **linkLast(E e)** 作用是在末尾添加新节点：
 
 ```java
-    // 判断指定位置是否超出列表位置范围
-    private void rangeCheckForAdd(int index) {
-        if (index > size || index < 0)
+    // 将元素标定为最后一个节点
+    void linkLast(E e) {
+        //原本最后一个节点
+        final Node<E> l = last;
+        //以E为值，构造新节点
+        final Node<E> newNode = new Node<>(l, e, null);
+        //将新节点作为最后一个节点
+        last = newNode;
+        //若原链表为空（最后一个节点为空），将新节点设为第一个节点
+        //否则将新节点设置为，原节点的下一个节点
+        if (l == null)
+            first = newNode;
+        else
+            l.next = newNode;
+        //链表长度+1
+        size++;
+        //操作次数+1
+        modCount++;
+    }
+```
+
+画个图明了得表达下
+
+
+<img src="@/assets/blog/img/collections/LinkedListSource4.jpg"/>
+
+
+然后是 **linkBefore(E e, Node<E> succ)** ，在指定节点前插入，配合 **node(int index)** 获得指定索引的节点，可进行，按索引位置插入元素：
+
+```java
+    //返回指定索引的节点
+    Node<E> node(int index) {
+        //判断插入的位置在链表前半段或者是后半段
+        //对正数，右移1位相当于除以2，保留整数
+        if (index < (size >> 1)) {
+            // 前半段顺序遍历
+            Node<E> x = first;
+            for (int i = 0; i < index; i++)
+                x = x.next;
+            return x;
+        } else {
+            // 后半段倒序遍历
+            Node<E> x = last;
+            for (int i = size - 1; i > index; i--)
+                x = x.prev;
+            return x;
+        }
+    }
+
+    // 在指定节点前插入新节点
+    void linkBefore(E e, Node<E> succ) {
+        //获取原节点的上一个
+        final Node<E> pred = succ.prev;
+        //根据需要插入的元素，创建新节点，
+        final Node<E> newNode = new Node<>(pred, e, succ);
+        //将新节点设为原节点的前一个
+        succ.prev = newNode;
+        if (pred == null)
+            first = newNode;
+        else
+            pred.next = newNode;
+        //链表长度+1
+        size++;
+        //操作次数+1
+        modCount++;
+    }
+```
+
+**node(int index)** 采用双向遍历，而且采用了位移，讲道理，敲了几年代码还真没用过几次。。。。
+
+顺便贴个示意图，不能白画10分钟画出来。。。
+
+<img src="@/assets/blog/img/collections/LinkedListSource5.jpg"/>
+
+
+<br>
+
+#### <span id="t42">remove(int index)</span>
+
+涉及移除方法有：
+
+1. **List 接口方法：**
+
+  - remove(Object o)，移除第一个指定元素
+
+- remove(int index)，根据索引位置删除
+
+- clear()，清空链表
+
+  
+
+
+2. **Deque 接口方法：**
+
+- removeFirst()，移除链表第一个节点
+- removeLast()，移除链表最后一个节点，和 removeFirst() 方法相同
+- remove()，移除头节点，实际上是调用 removeFirst()
+- removeFirstOccurrence(Object o)，移除第一个出现的元素，内部调用了 remove(Object o)
+- removeLastOccurrence(Object o)，移除最后一个出现的元素，倒序遍历，与 remove(Object o) 相反
+
+
+内部调用都差不多，**remove(int index)** 作用是根据索引位置删除：
+
+```java
+    //根据索引位置删除
+    public E remove(int index) {
+        checkElementIndex(index);
+        return unlink(node(index));
+    }
+    
+    //判断索引节点是否可用
+    private void checkElementIndex(int index) {
+        if (!isElementIndex(index))
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
     }
 
-    // 编写异常信息
-    private String outOfBoundsMsg(int index) {
-        return "Index: "+index+", Size: "+size;
+    //判断索引节点是否可用
+    // 和 isPositionIndex 区别就是，长度超出 1 是否可用
+    private boolean isElementIndex(int index) {
+        return index >= 0 && index < size;
     }
 ```
 
-<br>
+这里可以发现，**remove(int index)** 不能取 **size** 值，而 **add** 系列方法可以。
 
-#### <span id="t42">removeAll(Collection<?> c)</span>
-
-涉及移除的方法有：
-
-- remove(int index)，根据数组下标删除
-- remove(Object o)，根据元素对象删除，只删除第一个
-- removeRange(int fromIndex, int toIndex)，根据数组下标范围删除
-- removeAll(Collection<?> c)，根据集合批量删除，移除 list 中和 c 中共有的元素
-- retainAll(Collection<?> c)，只保留 list 和 集合 c 中公有的元素：和 removeAll() 功能相反
-- removeIf(Predicate<? super E> filter)，1.8开始加入的新方法，根据条件删除
-- clear()，清空列表
-
-这里最常用的应该是 **remove(Object o)** ，不过比较简单，就不展开了。
-
-介绍一下复杂的，比如 **removeAll(Collection<?> c)** 代码如下：
+然后就是解除节点的连接：
 
 ```java
-    // 根据集合批量删除, 移除 list 中和 c 中共有的元素
-    public boolean removeAll(Collection<?> c) {
-        //判空
-        Objects.requireNonNull(c);
-        return batchRemove(c, false);
-    }
-```
-
-重点是下面的批量删除方法：
-
-```java
-    // 批量删除，true-保留并集，false-保留差集
-    private boolean batchRemove(Collection<?> c, boolean complement) {
-        // 重新创建一个数组保存原数组
-        final Object[] elementData = this.elementData;
-        int r = 0, w = 0;
-        boolean modified = false;
-        try {
-            for (; r < size; r++)
-                // 如果 c 包含原数组元素并且模式为保留并集，将该元素赋值到新数组
-                // 如果 c 不含原数组元素并且模式为差集，将该元素赋值到新数组
-                if (c.contains(elementData[r]) == complement)
-                    elementData[w++] = elementData[r];
-        } finally {
-            //这个if，官方的注释是为了保持和AbstractCollection的兼容性
-            //假如上面c.contains抛出了异常，导致for循环终止，那么必然会导致r != size
-            //所以0-w之间是需要保留的数据，同时从w索引开始将剩下没有循环的数据(也就是从r开始的)拷贝回来，也保留
-            if (r != size) {
-                System.arraycopy(elementData, r,
-                        elementData, w,
-                        size - r);
-                w += size - r;
-            }
-            //for循环完毕，检测了所有的元素，0-w之间保存了需要留下的数据，w开始以及后面的数据全部清空
-            if (w != size) {
-                for (int i = w; i < size; i++)
-                    elementData[i] = null;
-                modCount += size - w;
-                size = w;
-                modified = true;
-            }
+    // 移除指定节点
+    E unlink(Node<E> x) {
+        // 保存前后节点和当前节点元素值引用
+        final E element = x.item;
+        final Node<E> next = x.next;
+        final Node<E> prev = x.prev;
+        //前后判空，重新设置 first 和 last 引用
+        if (prev == null) {
+            first = next;
+        } else {
+            prev.next = next;
+            x.prev = null;
         }
-        return modified;
-    }
-```
-
-
-
-<br>
-
-#### <span id="t43">iterator()</span>
-
-```java
-    public Iterator<E> iterator() {
-        return new Itr();
-    }
-```
-
-迭代器用的太多了，多的也不介绍了，稍微贴几段代码得了
-
-```java
-   private class Itr implements Iterator<E> {
-        // 标记字段，达到指针效果
-        int cursor;       
-        int lastRet = -1; // index of last element returned; -1 if no such
-        // 记录变化值，简单的线程安全判断
-        int expectedModCount = modCount;
-
-        // 简单的线程安全判断，快速失败机制
-        final void checkForComodification() {
-            if (modCount != expectedModCount)
-                throw new ConcurrentModificationException();
+        if (next == null) {
+            last = prev;
+        } else {
+            next.prev = prev;
+            x.next = null;
         }
-       
-        public boolean hasNext() {  return cursor != size; }
-
-        @SuppressWarnings("unchecked")
-        public E next() {
-            checkForComodification();
-            int i = cursor;
-            if (i >= size)
-                throw new NoSuchElementException();
-            Object[] elementData = ArrayList.this.elementData;
-            if (i >= elementData.length)
-                throw new ConcurrentModificationException();
-            cursor = i + 1;
-            return (E) elementData[lastRet = i];
-        }
-
-        public void remove() {
-            if (lastRet < 0)
-                throw new IllegalStateException();
-            checkForComodification();
-
-            try {
-                ArrayList.this.remove(lastRet);
-                cursor = lastRet;
-                lastRet = -1;
-                expectedModCount = modCount;
-            } catch (IndexOutOfBoundsException ex) {
-                throw new ConcurrentModificationException();
-            }
-        }
-    }
-
-```
-
-
-<br>
-
-#### <span id="t44">subList(int fromIndex, int toIndex)</span>
-
-截取列表方法，实际上返回内部类 `SubList` ，这个内部类和 `ArrayList` 一样继承了 `AbstractList` ，截取方法如下：
-
-```java
-    // 截取list
-    public List<E> subList(int fromIndex, int toIndex) {
-        //判断下标是否符合
-        subListRangeCheck(fromIndex, toIndex, size);
-        return new SubList(this, 0, fromIndex, toIndex);
-    }
-```
-
-`SubList` 源码过长，贴一下要点：
-
-```java
-   private class SubList extends AbstractList<E> implements RandomAccess {
-        private final AbstractList<E> parent;
-        private final int parentOffset;
-        private final int offset;
-        int size;
-
-        SubList(AbstractList<E> parent,
-                int offset, int fromIndex, int toIndex) {
-            this.parent = parent;
-            this.parentOffset = fromIndex;
-            this.offset = offset + fromIndex;
-            this.size = toIndex - fromIndex;
-            this.modCount = ArrayList.this.modCount;
-        }
-      
-    }
-```
-
-实际上 **subList(int fromIndex, int toIndex)** 是将原 **ArrayList** 作为一个字段维护进`SubList` 中，因为也实现了 List接口，所有其他操作不变。
-
-并且，所有针对返回结果的操作，都继续反映在原数组上。
-
->  **`subList(int fromIndex, int toIndex)`  返回的已经不是 `ArrayList` 了，实际编码中可以观察到，代码自动补全后返回类型为 List<E>，不可向下转为 `ArrayList` 。** 以前还真没发现。。。。 
-
-
-<br>
-
-#### <span id="t45">ensureCapacityInternal(int minCapacity)</span>
-
-这是一个数组扩容方法，首先判断扩容一半是否足够，若不够则直接扩容至结果长度（原长度+添加个数），了解一下就行了，个人感觉用不太上。
-
-具体解析如下：
-
-```java
- // 扩容数组，判断是否为默认空数组
-    private void ensureCapacityInternal(int minCapacity) {
-        //如果当前数组为默认空数组，扩容数组长度，最小为10
-        if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
-            minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
-        }
-        ensureExplicitCapacity(minCapacity);
-    }
-
-    // 修改计数，判断是否需要增加数组长度
-    private void ensureExplicitCapacity(int minCapacity) {
-        // 操作计数，此参数继承自 AbstractList，用来记录列表的增删操作次数
-        // 实际作用为，在线程不安全的对象中，进行简单的线程安全判断。
+        //设置为空，帮助 GC尽快回收
+        x.item = null;
+        size--;
         modCount++;
-        // 如果需求长度大于当前数组长度，进行扩容
-        if (minCapacity - elementData.length > 0)
-            grow(minCapacity);
-    }
-
-    // 实际扩容方法，
-    private void grow(int minCapacity) {
-        int oldCapacity = elementData.length;
-        // 运算符 >> 是带符号右移. 如 oldCapacity = 10,则 newCapacity = 10 + (10 >> 1) = 10 + 5 = 15
-        int newCapacity = oldCapacity + (oldCapacity >> 1);
-        if (newCapacity - minCapacity < 0)
-            // 若 newCapacity 依旧小于 minCapacity，直接赋值
-            newCapacity = minCapacity;
-        if (newCapacity - MAX_ARRAY_SIZE > 0)
-            // 若超出最大长度，直接赋值为最大值
-            newCapacity = hugeCapacity(minCapacity);
-        // 重新创建指定长度的数组，并将原数组复制过去
-        elementData = Arrays.copyOf(elementData, newCapacity);
-    }
-
-    private static int hugeCapacity(int minCapacity) {
-        if (minCapacity < 0) // overflow
-            throw new OutOfMemoryError();
-        return (minCapacity > MAX_ARRAY_SIZE) ?
-                Integer.MAX_VALUE :
-                MAX_ARRAY_SIZE;
+        return element;
     }
 ```
 
+
+
+
+
 <br>
 
-#### <span id="t46">modCount简介</span>
+#### <span id="t43">poll() 和 pop()</span>
 
-该字段是父类  `AbstractList ` 的一个 `protected  ` 类型字段。
+除了上面提到的 **Deque 接口方法**，还有专用队列操作：
 
-在 ArrayList 的所有涉及结构变化的方法中都增加modCount的值，包括：add()、remove()、addAll()、removeRange()、clear()等方法。
+- peek()，返回第一个节点的值
+- poll()，移除第一个节点，并返回第一个节点的值
+- offer(E e)，在末尾添加节点
+- offerFirst(E e)，在队列顶部添加节点
+- offerLast(E e)，在队列底部添加节点
+- peekFirst()，返回第一个节点的元素值，不移除节点
+- peekLast()，返回最后一个节点的元素值，不移除节点
+- pollFirst()，返回第一个节点的元素值，并移除节点
+- pollLast()，返回最后一个节点的元素值，并移除节点
+- push(E e)，往队列顶部添加节点
+- pop()，从队列顶部弹出节点
 
-这些涉及到列表增删的方法每调用一次，modCount的值就加1。 
-
-这里简单介绍下 `modCount` 在 `ArrayList` 的作用，例如 sort() 方法：
+这些方法实际上都是调用了 **List接口** 的基础方法，没有特别的地方，常用的应该就是 **pash、pop、poll** 这些，就贴个代码略过了。
 
 ```java
-    //带比较器的排序方法
-    @Override
-    @SuppressWarnings("unchecked")
-    public void sort(Comparator<? super E> c) {
-        //记录原本更改次数
-        final int expectedModCount = modCount;
-        Arrays.sort((E[]) elementData, 0, size, c);
-        //如果在排序过程中，其他线程对list进行了增删操作，导致 modCount 会发生变化， 然后丢出异常
-        if (modCount != expectedModCount) {
-            throw new ConcurrentModificationException();
-        }
-        modCount++;
+    //移除第一个节点，并返回第一个节点的值
+    public E poll() {
+        final Node<E> f = first;
+        return (f == null) ? null : unlinkFirst(f);
+    }
+    
+   // 往队列顶部添加节点
+    public void push(E e) {
+        addFirst(e);
+    }
+
+    // 从队列顶部弹出节点
+    public E pop() {
+        return removeFirst();
     }
 ```
 
-> 从上面代码可以得出，`modCount` 只能简单的判断。
->
-> **如果排序过程中，进行了添加或者移除的操作，那么 `modCount` 不等于 `expectedModCount` ，数组元素已经产生了变化。这是有问题的，所以 `ArrayList` 并不是线程安全的。**
+**poll()** 和 **pop()** 方法其实基本相同，根据 **removeFirst()** 可以知道，**poll()** 在空链表时返回空，**pop()** 则会抛出异常
+
+```java
+    //移除链表第一个节点
+    public E removeFirst() {
+        final Node<E> f = first;
+        if (f == null)
+            throw new NoSuchElementException();
+        return unlinkFirst(f);
+    }
+```
+
 
 
 <br>
 
-### <span id="t5">使用建议</span>
+### <span id="t5">总结</span>
 
-其实也没啥可建议的，也就是：
+1. 对于随机访问，查询读取操作， ArrayList 优于 LinkedList，因为 LinkedList 需要移动指针。
+2. 大量的增删操作使用 LinkedList，因为 ArrayList 需要创建复制数组。
+3. 平时 coding 中，使用完的对象要置空，帮助 GC 回收。
 
-- 根据数组的特点，对于增删操作少的情况下建议使用
-- 根据扩容的原理，粗略估计有多少元素，构造时确定长度，以免扩容操作重新复制
 
 
 <br>
 
 ### <span id="t6">参考文章</span>
 
+<a href="https://www.pdai.tech/md/java/collection/java-collection-LinkedList.html" target="_blank">https://www.pdai.tech/md/java/collection/java-collection-LinkedList.html</a>
 
-<a href="https://blog.csdn.net/GuLu_GuLu_jp/article/details/51456969" target="_blank">https://blog.csdn.net/GuLu_GuLu_jp/article/details/51456969</a>
-
-<a href="https://www.pdai.tech/md/java/collection/java-collection-ArrayList.html" target="_blank">https://www.pdai.tech/md/java/collection/java-collection-ArrayList.html</a>
-
-<a href="https://www.cnblogs.com/yeya/p/9950723.html" target="_blank">https://www.cnblogs.com/yeya/p/9950723.html</a>
-
-<a href="https://blog.csdn.net/Kate_sicheng/article/details/77616204" target="_blank">https://blog.csdn.net/Kate_sicheng/article/details/77616204</a>
-
-<a href="https://blog.csdn.net/liuzhaomin/article/details/83917923" target="_blank">https://blog.csdn.net/liuzhaomin/article/details/83917923</a>
-
-<a href="https://blog.csdn.net/eson_15/article/details/51121833" target="_blank">https://blog.csdn.net/eson_15/article/details/51121833</a>
-
-<a href="https://www.cnblogs.com/zt007/p/11080811.html" target="_blank">https://www.cnblogs.com/zt007/p/11080811.html</a>
+<a href="https://blog.csdn.net/m0_37884977/article/details/80467658" target="_blank">https://blog.csdn.net/m0_37884977/article/details/80467658</a>
 
 
