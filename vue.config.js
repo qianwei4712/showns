@@ -13,5 +13,6 @@ module.exports = {
             .options({
                 raw: true
             })
+            .end()
     }
 };

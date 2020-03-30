@@ -54,6 +54,8 @@
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
     import LinkedListSource from './collections/LinkedListSource.md';
+    import CollectionComparison from './collections/CollectionComparison.md';
+    import VectorSource from './collections/VectorSource.md';
 
 
     export default {
@@ -63,7 +65,7 @@
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
-            CollectionRelationDiagram, ArrayListSource, LinkedListSource
+            CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource
         },
         data(){
             return {
@@ -86,7 +88,9 @@
                         data:[
                             {title:'Collection类图', class:'CollectionRelationDiagram', id:"collections" },
                             {title:'ArrayList 源码分析', class:'ArrayListSource' },
-                            {title:'LinkedList 源码分析', class:'LinkedListSource' }
+                            {title:'LinkedList 源码分析', class:'LinkedListSource' },
+                            {title:'Vector 源码分析', class:'VectorSource' },
+                            {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
                         title:'Java I/O知识体系',
