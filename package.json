@@ -9,7 +9,7 @@
   "dependencies": {
     "acorn": "^7.1.1",
     "core-js": "^3.3.2",
-    "element-ui": "^2.13.0",
+    "element-ui": "^2.12.0",
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
     "minimist": "^1.2.5",

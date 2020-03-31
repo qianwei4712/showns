@@ -98,6 +98,12 @@
                             {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
                             {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' }
                         ]
+                    },
+                    {
+                        name:'友情链接',
+                        data:[
+                            {title:'Java 全栈知识体系', href:'https://www.pdai.tech/', img:require('@/assets/chest/img/pdai.jpg'), desc:'pdai 的个人博客，本站也是受此启发和激励才建立' }
+                        ]
                     }
                 ]
             }
