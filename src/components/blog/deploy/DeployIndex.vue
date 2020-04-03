@@ -45,16 +45,18 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
+    import MysqlPrinciple from './database/MysqlPrinciple.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
     import MysqlOptimization from './database/MysqlOptimization.md';
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
+    import TomcatOptimize from './middleware/TomcatOptimize.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall
+            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize, MysqlPrinciple
         },
         data(){
             return {
@@ -66,21 +68,23 @@
                         title:'服务器',
                         data:[
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
-                            {title:'Linux常用命令', class:'LinuxCommonCommand' },
-                            {title:'nginx域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
-                            {title:'Linux服务器后台运行jar包', class:'LinuxRunJarBackground'},
-                            {title:'docker安装及基本用法', class:'DockerInstall'}
+                            {title:'Linux 常用命令', class:'LinuxCommonCommand' },
+                            {title:'nginx 域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
+                            {title:'Linux 服务器后台运行jar包', class:'LinuxRunJarBackground'},
+                            {title:'docker 安装及基本用法', class:'DockerInstall'}
                         ]
                     }, {
                         title:'数据库',
                         data:[
-                            {title:'MySQL优化原则', class:'MysqlOptimization', id:"database" },
+                            {title:'sql 在 MySQL 中执行底层原理', class:'MysqlPrinciple', id:"database" },
+                            {title:'MySQL 优化原则', class:'MysqlOptimization'},
                             {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql'}
                         ]
                     }, {
                         title:'中间件',
                         data:[
-                            {title:'Nginx负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" }
+                            {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
+                            {title:'Tomcat 企业级优化方案', class:'TomcatOptimize' }
                         ]
                     }, {
                         title:'FQA',
