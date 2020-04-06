@@ -86,7 +86,7 @@
                     }, {
                         title:'Java集合知识体系',
                         data:[
-                            {title:'Collection类图', class:'CollectionRelationDiagram', id:"collections" },
+                            {title:'集合类的关系图', class:'CollectionRelationDiagram', id:"collections" },
                             {title:'ArrayList 源码分析', class:'ArrayListSource' },
                             {title:'LinkedList 源码分析', class:'LinkedListSource' },
                             {title:'Vector 源码分析', class:'VectorSource' },
