@@ -56,6 +56,7 @@
     import LinkedListSource from './collections/LinkedListSource.md';
     import CollectionComparison from './collections/CollectionComparison.md';
     import VectorSource from './collections/VectorSource.md';
+    import StackAndQueue from './collections/StackAndQueue.md';
 
 
     export default {
@@ -65,7 +66,8 @@
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
-            CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource
+            CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
+            StackAndQueue
         },
         data(){
             return {
@@ -90,6 +92,7 @@
                             {title:'ArrayList 源码分析', class:'ArrayListSource' },
                             {title:'LinkedList 源码分析', class:'LinkedListSource' },
                             {title:'Vector 源码分析', class:'VectorSource' },
+                            {title:'ArrayDeque 栈和队列的首选对象', class:'StackAndQueue' },
                             {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
