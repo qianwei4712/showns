@@ -6,14 +6,13 @@
 
 #### 作者的部署方式
 
-> 作者部署在阿里云，tomcat容器下
-> vue路由使用了history模式，需要使用nginx代理
+> 作者部署在阿里云，vue路由使用了history模式，需要使用nginx代理，静态资源访问
 
-1.  `npm run build` 打包，将 **dist** 目录下文件上传到 **tomcat的webapps/ROOT** 目录下
+1.  `npm run build` 打包，将 **dist** 目录下文件上传到 **/opt/shiva** 目录下
 2. nginx配置如下：
 ```shell script
       location / {
-          root /tomcat路径/webapps/ROOT/;   
+          root /opt/shiva/;   
           index index.html;
           try_files $uri $uri/ /index.html;
       }
