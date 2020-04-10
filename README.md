@@ -17,7 +17,7 @@
           access_log /usr/local/logs/nginx/nginx-access.log main;
   
           location / {
-            root /opt/uploadfile/shiva/;   
+            root /opt/shiva/;   
             index index.html;
             try_files $uri $uri/ /index.html;
           }
