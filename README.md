@@ -11,10 +11,16 @@
 1.  `npm run build` 打包，将 **dist** 目录下文件上传到 **/opt/shiva** 目录下
 2. nginx配置如下：
 ```shell script
-      location / {
-          root /opt/shiva/;   
-          index index.html;
-          try_files $uri $uri/ /index.html;
+      server {
+          listen       80;
+          server_name  www.shiva.show shiva.show;
+          access_log /usr/local/logs/nginx/nginx-access.log main;
+  
+          location / {
+            root /opt/uploadfile/shiva/;   
+            index index.html;
+            try_files $uri $uri/ /index.html;
+          }
       }
 ```
 
