@@ -45,13 +45,15 @@
     import CreationMode from './designpattern/CreationMode.md';
     import StructuralMode from './designpattern/StructuralMode.md';
     import BehavioralMode from './designpattern/BehavioralMode.md';
+    import SortingAlgorithm from './algorithm/SortingAlgorithm.md';
 
 
     export default {
         name: "methodologyIndex",
         components:{
             HomePage,
-            OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode
+            OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
+            SortingAlgorithm
         },
         data(){
             return {
@@ -69,7 +71,9 @@
                         ]
                     }, {
                         title:'算法',
-                        data:[]
+                        data:[
+                            {title:'排序算法', class:'SortingAlgorithm', id:"algorithm" }
+                        ]
                     }, {
                         title:'数据结构',
                         data:[]
