@@ -154,6 +154,12 @@
     background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
     border-radius: 25px;
     opacity:0.3;
+    max-height: 70%;
+    overflow-y: scroll;
+}
+
+.blog .catalog::-webkit-scrollbar {
+    display: none;
 }
 
 .blog .catalog:hover{
