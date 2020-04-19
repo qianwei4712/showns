@@ -127,9 +127,6 @@
                             <router-link :to="{ name: 'resourceNavigation'}">
                                 <el-dropdown-item>资源导航</el-dropdown-item>
                             </router-link>
-                            <router-link :to="{ name: 'developeToolsHome'}">
-                                <el-dropdown-item>开发工具</el-dropdown-item>
-                            </router-link>
                         </el-dropdown-menu>
                     </el-dropdown>
                 </router-link>

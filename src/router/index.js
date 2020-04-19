@@ -11,7 +11,6 @@ const frontIndex = () => import('../components/blog/front/FrontIndex');
 const deployIndex = () => import('../components/blog/deploy/DeployIndex');
 const methodologyIndex = () => import('../components/blog/methodology/MethodologyIndex');
 const resourceNavigation = () => import('../components/chest/ResourceNavigation');
-const developeToolsHome = () => import('../components/chest/DevelopeToolsHome');
 const alibabaJavaDevelop = () => import('../components/chest/AlibabaJavaDevelop');
 
 const router = new Router({
@@ -49,10 +48,6 @@ const router = new Router({
                 path: 'resourceNavigation',
                 name: 'resourceNavigation',
                 components: {default: resourceNavigation}
-            }, {
-                path: 'developeToolsHome',
-                name: 'developeToolsHome',
-                components: {default: developeToolsHome}
             },{
                 path: 'alibabaJavaDevelop',
                 components: {default: alibabaJavaDevelop}
