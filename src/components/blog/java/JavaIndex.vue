@@ -57,6 +57,7 @@
     import CollectionComparison from './collections/CollectionComparison.md';
     import VectorSource from './collections/VectorSource.md';
     import StackAndQueue from './collections/StackAndQueue.md';
+    import PriorityQueueSource from './collections/PriorityQueueSource.md';
 
 
     export default {
@@ -67,7 +68,7 @@
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
-            StackAndQueue
+            StackAndQueue, PriorityQueueSource
         },
         data(){
             return {
@@ -89,10 +90,11 @@
                         title:'Java集合知识体系',
                         data:[
                             {title:'集合类的关系图', class:'CollectionRelationDiagram', id:"collections" },
-                            {title:'ArrayList 源码分析', class:'ArrayListSource' },
-                            {title:'LinkedList 源码分析', class:'LinkedListSource' },
-                            {title:'Vector 源码分析', class:'VectorSource' },
-                            {title:'ArrayDeque 栈和队列的首选对象', class:'StackAndQueue' },
+                            {title:'Collection - ArrayList 源码分析', class:'ArrayListSource' },
+                            {title:'Collection - LinkedList 源码分析', class:'LinkedListSource' },
+                            {title:'Collection - Vector 源码分析', class:'VectorSource' },
+                            {title:'Collection - ArrayDeque 栈和队列的首选对象', class:'StackAndQueue' },
+                            {title:'Collection - PriorityQueue 源码分析', class:'PriorityQueueSource' },
                             {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
@@ -101,7 +103,8 @@
                     }, {
                         title:'Java多线程与并发',
                         data:[
-                            {title:'Thread学习之线程中断', class:'ThreadInterrupt', id:"thread" },
+                            {title:'线程理论基础', class:'ThreadBasis', id:"thread" },
+                            {title:'Thread学习之线程中断', class:'ThreadInterrupt'},
                             {title:'Thread学习之优先级及线程守护', class:'ThreadGuard'},
                             {title:'Thread学习之synchronized', class:'ThreadSynchronized'}
                         ]
