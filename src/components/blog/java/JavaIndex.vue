@@ -46,11 +46,13 @@
     import JavaAnnotation from './oopbase/JavaAnnotation.md';
     import HeapAndStack from './oopbase/HeapAndStack.md';
     import RunTimeReflect from './oopbase/RunTimeReflect.md';
+    import Java8NewChara from './oopbase/Java8NewChara.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
     import ThreadGuard from './thread/ThreadGuard.md';
     import ThreadSynchronized from './thread/ThreadSynchronized.md';
+    import ThreadTheoryBase from './thread/ThreadTheoryBase.md';
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
     import LinkedListSource from './collections/LinkedListSource.md';
@@ -64,11 +66,11 @@
         name: "javaIndex",
         components:{
             HomePage,
-            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect,
+            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect, Java8NewChara,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized,
             JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
-            StackAndQueue, PriorityQueueSource
+            StackAndQueue, PriorityQueueSource, ThreadTheoryBase
         },
         data(){
             return {
@@ -84,7 +86,8 @@
                             {title:'Java注解学习', class:'JavaAnnotation'},
                             {title:'异常、序列化', class:'ExceptionAndSerializable'},
                             {title:'Object通用方法、枚举', class:'CommonMethodAndEnum'},
-                            {title:'类型信息、反射', class:'RunTimeReflect'}
+                            {title:'类型信息、反射', class:'RunTimeReflect'},
+                            {title:'Java 8 新特性', class:'Java8NewChara'}
                         ]
                     }, {
                         title:'Java集合知识体系',
@@ -103,7 +106,7 @@
                     }, {
                         title:'Java多线程与并发',
                         data:[
-                            {title:'线程理论基础', class:'ThreadBasis', id:"thread" },
+                            {title:'线程理论基础', class:'ThreadTheoryBase', id:"thread" },
                             {title:'Thread学习之线程中断', class:'ThreadInterrupt'},
                             {title:'Thread学习之优先级及线程守护', class:'ThreadGuard'},
                             {title:'Thread学习之synchronized', class:'ThreadSynchronized'}
