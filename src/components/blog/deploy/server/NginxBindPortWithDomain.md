@@ -225,7 +225,7 @@ http {
 
    结果如下图，若`configure arguments`已配置ssl，则跳过下面的步骤。
 
-<img src="@/assets/blog/img/NginxAndTomcatConfigSSL2.png"/>
+<img src="@/assets/blog/img/others/NginxAndTomcatConfigSSL2.png"/>
    
 
 2. **configure配置，重新编译**
@@ -281,7 +281,7 @@ http {
 
    在阿里云直接搜索 SSL证书 ，购买证书，如下图。直接付款购买。
 
-<img src="@/assets/blog/img/NginxAndTomcatConfigSSL1.png"/>
+<img src="@/assets/blog/img/others/NginxAndTomcatConfigSSL1.png"/>
    
 
 2. **申请证书，添加DNS解析**
@@ -292,8 +292,8 @@ http {
 
    解析方式如下图
 
-<img src="@/assets/blog/img/NginxAndTomcatConfigSSL3.png"/>
-<img src="@/assets/blog/img/NginxAndTomcatConfigSSL4.png"/>
+<img src="@/assets/blog/img/others/NginxAndTomcatConfigSSL3.png"/>
+<img src="@/assets/blog/img/others/NginxAndTomcatConfigSSL4.png"/>
 
 3. **下载证书**
 

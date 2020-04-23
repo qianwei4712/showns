@@ -52,7 +52,7 @@
 > 最流行的六种----GPL、BSD、MIT、Mozilla、Apache和LGPL。
 
 乌克兰程序员Paul Bagwell，画了一张分析图，说明应该怎么选择，只用两分钟，你就能搞清楚这六种许可证之间的最大区别。 下面是阮一峰中文翻译版本: 
-<img src="@/assets/blog/img/dev_opensource_1.png"/>
+<img src="@/assets/blog/img/others/dev_opensource_1.png"/>
 
 ##### <span id="t221">Apache 许可协议</span>
 

@@ -41,7 +41,7 @@ Java 使用 `Class` 对象来实现 RTTI，即便是类型转换这样的操�
 类加载器首先会检查这个类的 `Class` 对象是否已经加载，如果尚未加载，默认的类加载器就会根据类名查找 `.class` 文件。这个类的字节码被加载后，JVM 会对其进行验证，确保它没有损坏，并且不包含不良的 Java 代码(这是 Java 安全防范的一种措施)。 
 
 
-<img src="@/assets/blog/img/ClassLoader1.png"/>
+<img src="@/assets/blog/img/others/ClassLoader1.png"/>
 
 <br>
 

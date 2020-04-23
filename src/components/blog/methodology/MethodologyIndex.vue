@@ -46,6 +46,7 @@
     import StructuralMode from './designpattern/StructuralMode.md';
     import BehavioralMode from './designpattern/BehavioralMode.md';
     import SortingAlgorithm from './algorithm/SortingAlgorithm.md';
+    import WhatisHash from './structure/WhatisHash.md';
 
 
     export default {
@@ -53,7 +54,7 @@
         components:{
             HomePage,
             OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
-            SortingAlgorithm
+            SortingAlgorithm, WhatisHash
         },
         data(){
             return {
@@ -76,7 +77,9 @@
                         ]
                     }, {
                         title:'数据结构',
-                        data:[]
+                        data:[
+                            {title:'到底什么是 Hash', class:'WhatisHash', id:"structure" }
+                        ]
                     }, {
                         title:'FQA',
                         data:[

@@ -75,7 +75,7 @@ series: [
 
 这里绘制了三条线，效果如下图
 
-<img src="@/assets/blog/img/EChartsMapFlyLine1.png"/>
+<img src="@/assets/blog/img/front/EChartsMapFlyLine1.png"/>
 
 为飞线添加轨迹，只需在加一个 `series`  图形
 
