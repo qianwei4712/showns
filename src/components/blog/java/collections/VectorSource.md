@@ -23,7 +23,7 @@
 *Vector* 与 *ArrayList* 基本相同，不过 *Vector* 一定程度上实现了同步。所以这篇源码介绍会比较简略，大致代码请转至 **ArrayList 源码解析** 。
 
 学习方式为，将 **Vector** 源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/vectorsources/Vector.java" target="_blank">https://github.com/qianwei4712/test-demos/blob/master/collection-sources/src/main/java/vectorsources/Vector.java</a>
+<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Vector.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Vector.java</a>
 
 知识点总结如下：
 
