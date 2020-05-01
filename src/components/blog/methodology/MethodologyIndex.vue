@@ -47,6 +47,7 @@
     import BehavioralMode from './designpattern/BehavioralMode.md';
     import SortingAlgorithm from './algorithm/SortingAlgorithm.md';
     import WhatisHash from './structure/WhatisHash.md';
+    import TreeAndCommons from './structure/TreeAndCommons.md';
 
 
     export default {
@@ -54,7 +55,7 @@
         components:{
             HomePage,
             OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
-            SortingAlgorithm, WhatisHash
+            SortingAlgorithm, WhatisHash, TreeAndCommons
         },
         data(){
             return {
@@ -78,7 +79,8 @@
                     }, {
                         title:'数据结构',
                         data:[
-                            {title:'到底什么是 Hash', class:'WhatisHash', id:"structure" }
+                            {title:'到底什么是 Hash', class:'WhatisHash', id:"structure" },
+                            {title:'各类常用树的介绍', class:'TreeAndCommons' }
                         ]
                     }, {
                         title:'FQA',
