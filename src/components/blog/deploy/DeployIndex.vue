@@ -84,7 +84,7 @@
                         title:'中间件',
                         data:[
                             {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
-                            {title:'Tomcat 企业级优化方案', class:'TomcatOptimize' }
+                            {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' }
                         ]
                     }, {
                         title:'FQA',
