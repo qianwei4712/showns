@@ -44,9 +44,9 @@
     import ExceptionAndSerializable from './oopbase/ExceptionAndSerializable.md';
     import CommonMethodAndEnum from './oopbase/CommonMethodAndEnum.md';
     import JavaAnnotation from './oopbase/JavaAnnotation.md';
-    import HeapAndStack from './oopbase/HeapAndStack.md';
     import RunTimeReflect from './oopbase/RunTimeReflect.md';
     import Java8NewChara from './oopbase/Java8NewChara.md';
+    import OldBoysThoughts from './fqa/OldBoysThoughts.md';
     import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
@@ -60,6 +60,7 @@
     import VectorSource from './collections/VectorSource.md';
     import StackAndQueue from './collections/StackAndQueue.md';
     import PriorityQueueSource from './collections/PriorityQueueSource.md';
+    import HashMapSource from './collections/HashMapSource.md';
 
 
     export default {
@@ -67,10 +68,10 @@
         components:{
             HomePage,
             EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect, Java8NewChara,
-            ThreadInterrupt, ThreadGuard, ThreadSynchronized,
-            JavaAnnotation, HeapAndStack, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
+            ThreadInterrupt, ThreadGuard, ThreadSynchronized, OldBoysThoughts,
+            JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
-            StackAndQueue, PriorityQueueSource, ThreadTheoryBase
+            StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource
         },
         data(){
             return {
@@ -98,6 +99,7 @@
                             {title:'Collection - Vector 源码分析', class:'VectorSource' },
                             {title:'Collection - ArrayDeque 栈和队列的首选对象', class:'StackAndQueue' },
                             {title:'Collection - PriorityQueue 源码分析', class:'PriorityQueueSource' },
+                            {title:'Map - 侃晕面试官的HashMap源码', class:'HashMapSource' },
                             {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
@@ -117,8 +119,8 @@
                     }, {
                         title:'FQA',
                         data:[
-                            {title:'平时用到的一些细节记录', class:'SomethingNotes', id:"fqa" },
-                            {title:'操作系统中heap和stack的区别', class:'HeapAndStack'},
+                            {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" },
+                            {title:'平时用到的一些细节记录', class:'SomethingNotes'},
                             {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
                         ]
                     }

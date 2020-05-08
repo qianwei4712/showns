@@ -49,6 +49,7 @@
     import WhatisHash from './structure/WhatisHash.md';
     import TreeAndCommons from './structure/TreeAndCommons.md';
     import WhatisHeap from './structure/WhatisHeap.md';
+    import HeapAndStack from './structure/HeapAndStack.md';
 
 
     export default {
@@ -56,7 +57,7 @@
         components:{
             HomePage,
             OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
-            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap
+            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack
         },
         data(){
             return {
@@ -82,7 +83,8 @@
                         data:[
                             {title:'到底什么是 Hash', class:'WhatisHash', id:"structure" },
                             {title:'各类常用树的介绍', class:'TreeAndCommons' },
-                            {title:'数据结构 - 堆（Heap）', class:'WhatisHeap' }
+                            {title:'数据结构 - 堆（Heap）', class:'WhatisHeap' },
+                            {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
                         ]
                     }, {
                         title:'FQA',
