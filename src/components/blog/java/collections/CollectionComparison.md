@@ -1,11 +1,11 @@
 <div class="catalog">
 
-- [ArrayList、LinkedList、Vector](#t1)
-- [栈（Stack）和队列（Queue）](#t2)
+- [ArrayList、LinkedList、Vector](#t0)
+- [栈（Stack）和队列（Queue）](#t1)
 
 </div>
 
-### <span id="t1">ArrayList、LinkedList、Vector 比较</span>
+### <span id="t0">ArrayList、LinkedList、Vector 比较</span>
 
 **相同点：**
 
@@ -28,7 +28,7 @@
 
 <br>
 
-### <span id="t2">栈（Stack）和队列（Queue）</span>
+### <span id="t1">栈（Stack）和队列（Queue）</span>
 
 1. 都是 Collection 容器，栈是先进后出，队列是先进先出。他们的实现方式有 数组和链表 两种。
 2. 在 Java 中，栈有一个实现类，继承自 Vector 容器，底层用数组实现。Vector 在方法上加了 synchronized锁，基本情况下线程安全，不过效率非常低，JDK 已经不推荐使用。
@@ -37,4 +37,14 @@
 4. 线程安全的通用栈和队列可以用 ConcurrentLinkedDeque，和更高级的阻塞队列 BlockingDeque 实现类。
 
 
+<br>
+
+### <span id="t2">List、Set、Map 比较</span>
+
+
+|      List      |        Set         |               Map                |
+| :------------: | :----------------: | :------------------------------: |
+|      有序      |        无序        |               无序               |
+| 可以有重复对象 | 不允许存在重复对象 | 键对象不可以重复，值对象可以重复 |
+|    单列数据    |      单列数据      |         键值对，双列数据         |
 
