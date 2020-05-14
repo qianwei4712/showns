@@ -66,17 +66,13 @@
                 currentView: HomePage,
                 allArtyles:[
                     {
-                        title:'设计模式',
+                        title:'操作系统及协议',
                         data:[
-                            {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
-                            {title:'创建型模式', class:'CreationMode'},
-                            {title:'结构型模式', class:'StructuralMode' },
-                            {title:'行为型模式', class:'BehavioralMode' }
+                            {title:'TCP/IP 协议详解', class:'tcpip', id:"systemAndAgreement" }
                         ]
-                    }, {
-                        title:'算法',
+                    },  {
+                        title:'架构设计',
                         data:[
-                            {title:'排序算法', class:'SortingAlgorithm', id:"algorithm" }
                         ]
                     }, {
                         title:'数据结构',
@@ -85,6 +81,19 @@
                             {title:'各类常用树的介绍', class:'TreeAndCommons' },
                             {title:'数据结构 - 堆（Heap）', class:'WhatisHeap' },
                             {title:'操作系统中heap和stack的区别', class:'HeapAndStack'}
+                        ]
+                    }, {
+                        title:'算法',
+                        data:[
+                            {title:'排序算法', class:'SortingAlgorithm', id:"algorithm" }
+                        ]
+                    }, {
+                        title:'设计模式',
+                        data:[
+                            {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
+                            {title:'创建型模式', class:'CreationMode'},
+                            {title:'结构型模式', class:'StructuralMode' },
+                            {title:'行为型模式', class:'BehavioralMode' }
                         ]
                     }, {
                         title:'FQA',

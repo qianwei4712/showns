@@ -101,14 +101,20 @@
                                 方法论<i class="el-icon-caret-bottom el-icon--right"></i>
                             </span>
                         <el-dropdown-menu slot="dropdown">
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
-                                <el-dropdown-item>设计模式</el-dropdown-item>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'systemAndAgreement' }}">
+                                <el-dropdown-item>操作系统及协议</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'architecture' }}">
+                                <el-dropdown-item>架构设计</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'structure' }}">
+                                <el-dropdown-item>数据结构</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'MethodologyType', params: { typeName: 'algorithm' }}">
                                 <el-dropdown-item>算法</el-dropdown-item>
                             </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'structure' }}">
-                                <el-dropdown-item>数据结构</el-dropdown-item>
+                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
+                                <el-dropdown-item>设计模式</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'MethodologyType', params: { typeName: 'fqa' }}">
                                 <el-dropdown-item>FQA</el-dropdown-item>
