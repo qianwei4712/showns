@@ -36,24 +36,25 @@
                 </router-link>
 
                 <!--Spring全家桶-->
-               <!-- <router-link :to="{ name: 'Spring', params: { typeName: 'HomePage' }}">-->
+                <router-link :to="{ name: 'Spring', params: { typeName: 'HomePage' }}">
                     <el-dropdown class="head-type-ele">
                         <span class="el-dropdown-link">Spring<i class="el-icon-caret-bottom el-icon--right"></i></span>
                         <el-dropdown-menu slot="dropdown">
-                            <!--<router-link :to="{ name: 'JavaType', params: { typeName: 'springbase' }}">-->
+                            <router-link :to="{ name: 'Spring', params: { typeName: 'base' }}">
                                 <el-dropdown-item>Spring 基础</el-dropdown-item>
-                            <!--</router-link>
-                            <router-link :to="{ name: 'JavaType', params: { typeName: 'springboot' }}">-->
+                            </router-link>
+                            <router-link :to="{ name: 'Spring', params: { typeName: 'boot' }}">
                                 <el-dropdown-item>Spring Boot</el-dropdown-item>
-                            <!--</router-link>
-                            <router-link :to="{ name: 'JavaType', params: { typeName: 'springcloud' }}">-->
+                            </router-link>
+                            <router-link :to="{ name: 'Spring', params: { typeName: 'cloud' }}">
                                 <el-dropdown-item>Spring cloud</el-dropdown-item>
-                            <!--</router-link>-->
-                                <el-dropdown-item divided>Spring 全家桶</el-dropdown-item>
-                                <el-dropdown-item >敬请期待</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'Spring', params: { typeName: 'fqa' }}">
+                                <el-dropdown-item divided>Spring FQA</el-dropdown-item>
+                            </router-link>
                         </el-dropdown-menu>
                     </el-dropdown>
-                <!--</router-link>-->
+                </router-link>
 
                 <!--前端知识分类-->
                 <router-link :to="{ name: 'FrontType', params: { typeName: 'HomePage' }}">
