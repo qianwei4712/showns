@@ -103,7 +103,8 @@
                     {
                         name:'友情链接',
                         data:[
-                            {title:'Java 全栈知识体系', href:'https://www.pdai.tech/', img:require('@/assets/chest/img/pdai.jpg'), desc:'pdai 的个人博客，本站也是受此启发和激励才建立' }
+                            {title:'Java 全栈知识体系', href:'https://www.pdai.tech/', img:require('@/assets/chest/img/pdai.jpg'), desc:'pdai 的个人博客，本站也是受此启发和激励才建立' },
+                            {title:'技术驿站', href:'http://cmsblogs.com?vip=1', img:require('@/assets/chest/img/logo-cmsblogs.png'), desc:'死磕 Java 全系列，优质博客集中' }
                         ]
                     }
                 ]

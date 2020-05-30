@@ -61,6 +61,8 @@
     import StackAndQueue from './collections/StackAndQueue.md';
     import PriorityQueueSource from './collections/PriorityQueueSource.md';
     import HashMapSource from './collections/HashMapSource.md';
+    import AboutUtilSet from './collections/AboutUtilSet.md';
+    import TreeMapSource from './collections/TreeMapSource.md';
 
 
     export default {
@@ -71,7 +73,8 @@
             ThreadInterrupt, ThreadGuard, ThreadSynchronized, OldBoysThoughts,
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
-            StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource
+            StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
+            TreeMapSource
         },
         data(){
             return {
@@ -100,6 +103,8 @@
                             {title:'Collection - ArrayDeque 栈和队列的首选对象', class:'StackAndQueue' },
                             {title:'Collection - PriorityQueue 源码分析', class:'PriorityQueueSource' },
                             {title:'Map - 侃晕面试官的HashMap源码', class:'HashMapSource' },
+                            {title:'Map - TreeMap 源码解读', class:'TreeMapSource' },
+                            {title:'Collection - HashSet & TreeSet', class:'AboutUtilSet' },
                             {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
