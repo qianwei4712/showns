@@ -11,9 +11,9 @@
         name: "springHome",
         data(){
             return {
-                src:require('@/assets/blog/img/Methodology.png'),
+                src:require('@/assets/blog/img/Spring.png'),
                 srcList:[
-                    require('@/assets/blog/img/Methodology.png')
+                    require('@/assets/blog/img/Spring.png')
                 ]
             }
         }
