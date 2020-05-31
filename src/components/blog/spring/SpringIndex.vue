@@ -39,11 +39,14 @@
 <script>
 
     import HomePage from './SpringHome'
+    import DataSummary from './base/DataSummary.md'
+    import ArchitectureIntro from './base/ArchitectureIntro.md'
 
     export default {
         name: "springIndex",
         components:{
-            HomePage
+            HomePage,
+            DataSummary, ArchitectureIntro
         },
         data(){
             return {
@@ -53,7 +56,10 @@
                 allArtyles:[
                     {
                         title:'Spring 基础',
-                        data:[]
+                        data:[
+                            {title:'Spring 资料汇总', class:'DataSummary', id:"base" },
+                            {title:'Spring 架构介绍及本地搭建', class:'ArchitectureIntro' }
+                        ]
                     },  {
                         title:'Spring Boot',
                         data:[]
