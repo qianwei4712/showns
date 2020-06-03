@@ -18,3 +18,4 @@
 
 - <a href="https://www.w3cschool.cn/wkspring/pesy1icl.html" target="_blank">W3Cschool Spring系列</a>
 - <a href="https://potoyang.gitbook.io/spring-in-action-v5/" target="_blank">Spring 实战 5 （中文版电子，大佬制作在线版）</a>
+- <a href="https://www.bilibili.com/video/BV1RE411N7xk" target="_blank">B站 Spring 全套视频教程（较基础）</a>

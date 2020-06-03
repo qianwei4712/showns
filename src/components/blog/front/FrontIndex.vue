@@ -39,11 +39,12 @@
 <script>
     import HomePage from "./FrontHome";
     import EChartsMapFlyLine from './frame/EChartsMapFlyLine.md';
+    import OldBoysThoughts from './fqa/OldBoysThoughts.md';
 
     export default {
         name: "frontIndex",
         components:{
-            HomePage, EChartsMapFlyLine
+            HomePage, EChartsMapFlyLine, OldBoysThoughts
         },
         data(){
             return {
@@ -58,11 +59,12 @@
                         title:'框架工具',
                         data:[
                             {title:'ECharts绘制地图飞线', class:'EChartsMapFlyLine', id:"frame" }
-
                         ]
                     }, {
                         title:'FQA',
-                        data:[]
+                        data:[
+                            {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" }
+                        ]
                     }
                 ]
             }
