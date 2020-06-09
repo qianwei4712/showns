@@ -29,7 +29,7 @@
                                 <el-dropdown-item>Java虚拟机</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'JavaType', params: { typeName: 'fqa' }}">
-                                <el-dropdown-item divided>FQA</el-dropdown-item>
+                                <el-dropdown-item divided>散记</el-dropdown-item>
                             </router-link>
                         </el-dropdown-menu>
                     </el-dropdown>

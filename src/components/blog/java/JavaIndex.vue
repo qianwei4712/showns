@@ -63,6 +63,7 @@
     import HashMapSource from './collections/HashMapSource.md';
     import AboutUtilSet from './collections/AboutUtilSet.md';
     import TreeMapSource from './collections/TreeMapSource.md';
+    import JudgeThreadPoolDone from './fqa/JudgeThreadPoolDone.md';
 
 
     export default {
@@ -74,7 +75,7 @@
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
-            TreeMapSource
+            TreeMapSource, JudgeThreadPoolDone
         },
         data(){
             return {
@@ -122,9 +123,10 @@
                         title:'Java虚拟机',
                         data:[]
                     }, {
-                        title:'FQA',
+                        title:'散记',
                         data:[
                             {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" },
+                            {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'},
                             {title:'平时用到的一些细节记录', class:'SomethingNotes'},
                             {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
                         ]
