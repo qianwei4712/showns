@@ -79,6 +79,7 @@
                             {title:'Layui', href:'https://www.layui.com/doc/', img:require('@/assets/chest/img/layui.png'), desc:'一款采用自身模块规范编写的前端 UI 框架' },
                             {title:'VUE', href:'https://cn.vuejs.org/', img:require('@/assets/chest/img/vuejs.png'), desc:'渐进式JavaScript 框架' },
                             {title:'Element-UI', href:'https://element.eleme.cn/#/zh-CN', img:require('@/assets/chest/img/element.png'), desc:'Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库' },
+                            {title:'Vant Weapp', href:'https://vant-contrib.gitee.io/vant-weapp/#/intro', img:require('@/assets/chest/img/vant weapp.png'), desc:'有赞出品移动端 Vue 组件库 Vant 的小程序版本，两者基于相同的视觉规范，提供一致的 API 接口，助力开发者快速搭建小程序应用' },
                             {title:'JQuery API', href:'http://jquery.cuishifeng.cn/', img:require('@/assets/chest/img/jquery.png'), desc:'一个快速、简洁的JavaScript框架' },
                             {title:'ECharts', href:'https://www.echartsjs.com/examples/zh/index.html', img:require('@/assets/chest/img/echarts.png'), desc:'百度开发的可定制的数据可视化图表, 已经捐给Apache' }
                         ]
@@ -89,12 +90,10 @@
                             {title:'Java规约', href:'/chest/alibabaJavaDevelop', img:require('@/assets/chest/img/alibabajava.jpg'), desc:'Java 开发手册-华山版，阿里巴巴以及社区开发者共同完成' },
                             {title:'脚本之家', href:'http://tools.jb51.net/', img:require('@/assets/chest/img/jiaobenzhijia.png'), desc:'脚本之家旗下的工具箱' },
                             {title:'iconfont', href:'https://www.iconfont.cn/', img:require('@/assets/chest/img/iconfont.png'), desc:'阿里妈妈MUX倾力打造的矢量图标管理、交流平台。设计师将图标上传到Iconfont平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用' },
-                            {title:'智图', href:'https://zhitu.isux.us/', img:require('@/assets/chest/img/zhitu.png'), desc:'腾讯出品在线图片压缩 支持转成 webP 处理静态图片时候很好用' },
                             {title:'processOn', href:'https://www.processon.com/', img:require('@/assets/chest/img/processOn.png'), desc:'免费在线作图、实时协作，支持流程图、思维导图、原型图、UML、网络拓扑图、组织结构图等' },
                             {title:'墨刀', href:'https://modao.cc/', img:require('@/assets/chest/img/modao.svg'), desc:'专业、可靠、简洁、易懂的在线产品原型设计与协作平台' },
                             {title:'On Java 8', href:'https://lingcoder.gitee.io/onjava8/', img:require('@/assets/chest/img/onjava8.jpg'), desc:'Java编程思想第五版，大神翻译中文版' },
                             {title:'三顿ppt', href:'https://sandunppt.com/', img:require('@/assets/chest/img/sandun.jpg'), desc:'一站式PPT导航站点' },
-                            {title:'Smartpdf', href:'https://smallpdf.com/cn', img:require('@/assets/chest/img/smartpdf.svg'), desc:'功能一应俱全、简单好用的线上PDF工具' },
                             {title:'源码阅读', href:'http://www.coderead.cn/', img:require('@/assets/chest/img/coderead.png'), desc:'在线图形化源码阅读，作者在逐步完善各类源码内容' },
                             {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
                             {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' }
