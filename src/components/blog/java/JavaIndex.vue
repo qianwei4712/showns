@@ -47,7 +47,6 @@
     import RunTimeReflect from './oopbase/RunTimeReflect.md';
     import Java8NewChara from './oopbase/Java8NewChara.md';
     import OldBoysThoughts from './fqa/OldBoysThoughts.md';
-    import EclipseSVNPrevious20181104 from './fqa/EclipseSVNPrevious20181104.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadInterrupt from './thread/ThreadInterrupt.md';
     import ThreadGuard from './thread/ThreadGuard.md';
@@ -70,7 +69,7 @@
         name: "javaIndex",
         components:{
             HomePage,
-            EclipseSVNPrevious20181104, SomethingNotes, CommonMethodAndEnum, RunTimeReflect, Java8NewChara,
+            SomethingNotes, CommonMethodAndEnum, RunTimeReflect, Java8NewChara,
             ThreadInterrupt, ThreadGuard, ThreadSynchronized, OldBoysThoughts,
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
@@ -126,9 +125,8 @@
                         title:'散记',
                         data:[
                             {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" },
-                            {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'},
-                            {title:'平时用到的一些细节记录', class:'SomethingNotes'},
-                            {title:'SVN - Previous operation has not finished异常', class:'EclipseSVNPrevious20181104' }
+                            {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes'},
+                            {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'}
                         ]
                     }
                 ]

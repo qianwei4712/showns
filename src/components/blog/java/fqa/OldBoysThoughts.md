@@ -4,3 +4,4 @@
 
 - <a href="https://blog.csdn.net/ramostear/article/details/105804645" target="_blank">别让Lombok成为你代码“亚健康”状态的帮凶</a>
 
+- <a href="https://mp.weixin.qq.com/s/bh5UJqN60MBW8VWk7OpaHA" target="_blank">RESTful API 设计规范，看这篇就够了！</a>
