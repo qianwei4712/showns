@@ -63,6 +63,7 @@
     import AboutUtilSet from './collections/AboutUtilSet.md';
     import TreeMapSource from './collections/TreeMapSource.md';
     import JudgeThreadPoolDone from './fqa/JudgeThreadPoolDone.md';
+    import CookieAndSession from './fqa/CookieAndSession.md';
 
 
     export default {
@@ -74,7 +75,7 @@
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
-            TreeMapSource, JudgeThreadPoolDone
+            TreeMapSource, JudgeThreadPoolDone, CookieAndSession
         },
         data(){
             return {
@@ -126,7 +127,8 @@
                         data:[
                             {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" },
                             {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes'},
-                            {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'}
+                            {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'},
+                            {title:'cookie 和 session的解读', class:'CookieAndSession'}
                         ]
                     }
                 ]
