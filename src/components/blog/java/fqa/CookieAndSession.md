@@ -203,7 +203,7 @@ public class Cookie implements Cloneable, Serializable {
 
 其他一些细节，很多都是从文档上看到的，看一眼就行，也没啥实际作用：
 
-- 如果没有对 Path 进行设置，默认路径为 `/` ，是当前域名端口下的所有路径
+- 如果没有对 Path 进行设置，默认路径为项目名
 - 浏览器应该支持每台 Web 服务器有 20 个 cookie，总共有 300 个 cookie
 - 每个 cookie 大小不超过 4KB
 - 关闭会话，就是关闭整个浏览器，就可以清楚临时 cookie（ `maxAge = -1` ），临时 cookie 保存在浏览器缓存，并没有保存到文件中

@@ -128,7 +128,7 @@
                             {title:'大佬们的思想 - 博客汇总', class:'OldBoysThoughts', id:"fqa" },
                             {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes'},
                             {title:'判断线程池任务全部完成的姿势', class:'JudgeThreadPoolDone'},
-                            {title:'cookie 和 session的解读', class:'CookieAndSession'}
+                            {title:'cookie 和 session 解读', class:'CookieAndSession'}
                         ]
                     }
                 ]
