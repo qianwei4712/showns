@@ -41,6 +41,7 @@
     overflow-y: scroll;
     border-right: 1px solid #eaecef;
     box-shadow: 1px 0 5px #888888;
+    padding-bottom: 30px;
 }
 
 .blog .el-aside::-webkit-scrollbar {
@@ -130,6 +131,11 @@
 .blog a {
     text-decoration: none;
     color: #7e7e80;
+}
+
+.blog img{
+    display: block;
+    margin: auto;
 }
 
 .home a {
