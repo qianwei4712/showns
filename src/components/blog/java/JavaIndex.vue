@@ -48,10 +48,8 @@
     import Java8NewChara from './oopbase/Java8NewChara.md';
     import OldBoysThoughts from './fqa/OldBoysThoughts.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
-    import ThreadInterrupt from './thread/ThreadInterrupt.md';
-    import ThreadGuard from './thread/ThreadGuard.md';
-    import ThreadSynchronized from './thread/ThreadSynchronized.md';
     import ThreadTheoryBase from './thread/ThreadTheoryBase.md';
+    import ThreadBaseConcept from './thread/ThreadBaseConcept.md';
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
     import LinkedListSource from './collections/LinkedListSource.md';
@@ -71,7 +69,7 @@
         components:{
             HomePage,
             SomethingNotes, CommonMethodAndEnum, RunTimeReflect, Java8NewChara,
-            ThreadInterrupt, ThreadGuard, ThreadSynchronized, OldBoysThoughts,
+            OldBoysThoughts, ThreadBaseConcept,
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
@@ -114,10 +112,8 @@
                     }, {
                         title:'Java多线程与并发',
                         data:[
-                            {title:'线程理论基础', class:'ThreadTheoryBase', id:"thread" },
-                            {title:'Thread学习之线程中断', class:'ThreadInterrupt'},
-                            {title:'Thread学习之优先级及线程守护', class:'ThreadGuard'},
-                            {title:'Thread学习之synchronized', class:'ThreadSynchronized'}
+                            {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
+                            {title:'Java 线程基础概念', class:'ThreadBaseConcept' }
                         ]
                     }, {
                         title:'Java虚拟机',
