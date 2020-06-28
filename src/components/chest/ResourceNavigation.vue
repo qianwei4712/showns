@@ -92,7 +92,6 @@
                             {title:'iconfont', href:'https://www.iconfont.cn/', img:require('@/assets/chest/img/iconfont.png'), desc:'阿里妈妈MUX倾力打造的矢量图标管理、交流平台。设计师将图标上传到Iconfont平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用' },
                             {title:'processOn', href:'https://www.processon.com/', img:require('@/assets/chest/img/processOn.png'), desc:'免费在线作图、实时协作，支持流程图、思维导图、原型图、UML、网络拓扑图、组织结构图等' },
                             {title:'墨刀', href:'https://modao.cc/', img:require('@/assets/chest/img/modao.svg'), desc:'专业、可靠、简洁、易懂的在线产品原型设计与协作平台' },
-                            {title:'On Java 8', href:'https://lingcoder.gitee.io/onjava8/', img:require('@/assets/chest/img/onjava8.jpg'), desc:'Java编程思想第五版，大神翻译中文版' },
                             {title:'三顿ppt', href:'https://sandunppt.com/', img:require('@/assets/chest/img/sandun.jpg'), desc:'一站式PPT导航站点' },
                             {title:'源码阅读', href:'http://www.coderead.cn/', img:require('@/assets/chest/img/coderead.png'), desc:'在线图形化源码阅读，作者在逐步完善各类源码内容' },
                             {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
