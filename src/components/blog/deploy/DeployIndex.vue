@@ -50,13 +50,15 @@
     import MysqlOptimization from './database/MysqlOptimization.md';
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
     import TomcatOptimize from './middleware/TomcatOptimize.md';
+    import MqCompare from './middleware/MqCompare.md';
 
     export default {
         name: "deployIndex",
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize, MysqlPrinciple
+            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize, MysqlPrinciple,
+            MqCompare
         },
         data(){
             return {
@@ -84,7 +86,8 @@
                         title:'中间件',
                         data:[
                             {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
-                            {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' }
+                            {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' },
+                            {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' }
                         ]
                     }, {
                         title:'FQA',
