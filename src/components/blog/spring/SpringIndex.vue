@@ -42,12 +42,13 @@
     import DataSummary from './base/DataSummary.md'
     import ArchitectureIntro from './base/ArchitectureIntro.md'
     import IoCAndDI from './base/IoCAndDI.md'
+    import BeanConfigoure from './base/BeanConfigoure.md'
 
     export default {
         name: "springIndex",
         components:{
             HomePage,
-            DataSummary, ArchitectureIntro, IoCAndDI
+            DataSummary, ArchitectureIntro, IoCAndDI, BeanConfigoure
         },
         data(){
             return {
@@ -60,7 +61,8 @@
                         data:[
                             {title:'Spring 资料汇总', class:'DataSummary', id:"base" },
                             {title:'Spring 架构介绍及本地搭建', class:'ArchitectureIntro' },
-                            {title:'Spring 控制反转、依赖注入', class:'IoCAndDI' }
+                            {title:'控制反转（IoC）、依赖注入（DI）', class:'IoCAndDI' },
+                            {title:'Bean 管理，创建、注入方式', class:'BeanConfigoure' }
                         ]
                     },  {
                         title:'Spring Boot',
