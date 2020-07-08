@@ -51,6 +51,7 @@
     import WhatisHeap from './structure/WhatisHeap.md';
     import HeapAndStack from './structure/HeapAndStack.md';
     import TcpIp from './systemAndAgreement/TcpIp.md';
+    import Http from './systemAndAgreement/Http.md';
 
 
     export default {
@@ -58,7 +59,7 @@
         components:{
             HomePage,
             OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
-            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp
+            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http
         },
         data(){
             return {
@@ -69,7 +70,8 @@
                     {
                         title:'操作系统及协议',
                         data:[
-                            {title:'TCP/IP 协议详解', class:'TcpIp', id:"systemAndAgreement" }
+                            {title:'TCP/IP 协议详解', class:'TcpIp', id:"systemAndAgreement" },
+                            {title:'HTTP 协议详解', class:'Http',  }
                         ]
                     },  {
                         title:'架构设计',
