@@ -19,7 +19,7 @@
 >
 > 一般用来解决应用解耦，异步消息，流量削锋等问题，实现高性能，高可用，可伸缩和最终一致性架构。
 
-<img src="@/assets/blog/img/deploy/mqCompare.png"/>
+![MQ 使用模型图](http://shiva.oss-cn-hangzhou.aliyuncs.com/data/deploy/mqCompare.png)
 
 
 主要的MQ产品包括：RabbitMQ、RocketMQ、ZeroMQ、Kafka、IBM WebSphere 等。
