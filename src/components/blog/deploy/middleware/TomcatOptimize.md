@@ -66,7 +66,8 @@
 
 ### <span id="t2">Tomcat 状态解读</span>
 
-<img src="@/assets/blog/img/deploy/TomcatOptimize1.png"/>
+![Tomcat 控制台](http://shiva.oss-cn-hangzhou.aliyuncs.com/data/deploy/TomcatOptimize1.png)
+
 
 <br>
 
@@ -110,7 +111,8 @@
 
 然后看看它的工作原理：
 
-<img src="@/assets/blog/img/deploy/TomcatOptimize2.png"/>
+![Tomcat AJP 服务](http://shiva.oss-cn-hangzhou.aliyuncs.com/data/deploy/TomcatOptimize2.png)
+
 
 注意上图是否使用 AJP服务的区别。但是现实的生产环境使用的都是：
 
