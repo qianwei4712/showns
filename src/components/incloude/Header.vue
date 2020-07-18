@@ -56,24 +56,6 @@
                     </el-dropdown>
                 </router-link>
 
-                <!--前端知识分类-->
-                <router-link :to="{ name: 'FrontType', params: { typeName: 'HomePage' }}">
-                    <el-dropdown class="head-type-ele">
-                            <span class="el-dropdown-link">前端<i class="el-icon-caret-bottom el-icon--right"></i></span>
-                        <el-dropdown-menu slot="dropdown">
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'vuejs' }}">
-                                <el-dropdown-item>Vue.js</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'frame' }}">
-                                <el-dropdown-item divided>框架工具</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'FrontType', params: { typeName: 'fqa' }}">
-                                <el-dropdown-item divided>FQA</el-dropdown-item>
-                            </router-link>
-                        </el-dropdown-menu>
-                    </el-dropdown>
-                </router-link>
-
                 <!--安装部署类-->
                 <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">
                     <el-dropdown class="head-type-ele">

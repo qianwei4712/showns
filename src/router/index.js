@@ -7,7 +7,6 @@ const home = () => import('../components/Home');
 const blog = () => import('../components/blog/Blog');
 const chest = () => import('../components/chest/Chest');
 const javaIndex = () => import('../components/blog/java/JavaIndex');
-const frontIndex = () => import('../components/blog/front/FrontIndex');
 const deployIndex = () => import('../components/blog/deploy/DeployIndex');
 const methodologyIndex = () => import('../components/blog/methodology/MethodologyIndex');
 const springIndex = () => import('../components/blog/spring/SpringIndex');
@@ -28,10 +27,6 @@ const router = new Router({
                 path: 'java/:typeName',
                 name: 'JavaType',
                 components: {default: javaIndex}
-            }, {
-                path: 'front/:typeName',
-                name: 'FrontType',
-                components: {default: frontIndex}
             }, {
                 path: 'deploy/:typeName',
                 name: 'DeployType',
