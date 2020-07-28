@@ -13,6 +13,7 @@
 
 ### <span id="t0">服务端代码</span>
 
+- <a href="https://blog.csdn.net/m0_46144826/article/details/107611359" target="_blank">SpringBoot 配置SSL证书，同时支持 http 与 https</a>
 
 
 ### <span id="t1">前端代码</span>

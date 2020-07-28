@@ -13,6 +13,7 @@
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
     "kind-of": "^6.0.3",
+    "lodash": "^4.17.19",
     "minimist": "^1.2.5",
     "serialize-javascript": "^2.1.1",
     "vue": "^2.6.10",
