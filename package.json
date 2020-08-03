@@ -9,7 +9,9 @@
   "dependencies": {
     "acorn": "^7.1.1",
     "core-js": "^3.3.2",
+    "dot-prop": "^5.2.0",
     "element-ui": "^2.12.0",
+    "elliptic": "^6.5.3",
     "github-markdown-css": "^3.0.1",
     "highlight.js": "^9.16.2",
     "kind-of": "^6.0.3",
