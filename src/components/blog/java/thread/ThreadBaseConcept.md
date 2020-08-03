@@ -13,6 +13,7 @@
 - [线程之间的协作方式](#t4)
   - [wait、notify 机制](#t41)
   - [join](#t42)
+  - [await、signal](#t43)
 - [线程中断机制](#t5)
   - [协作式和抢占式](#t51)
   - [isInterrupted()](#t52)
@@ -1006,7 +1007,7 @@ join 线程的 run 方法
 
 <br>
 
-### await、signal
+### <span id="t43">await、signal</span>
 
 java.util.concurrent 类库中提供了 Condition 类来实现线程之间的协调，可以在 Condition 上调用 await() 方法使线程等待，其它线程调用 signal() 或 signalAll() 方法唤醒等待的线程。
 
