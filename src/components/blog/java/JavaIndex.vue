@@ -62,6 +62,8 @@
     import TreeMapSource from './collections/TreeMapSource.md';
     import JudgeThreadPoolDone from './fqa/JudgeThreadPoolDone.md';
     import CookieAndSession from './fqa/CookieAndSession.md';
+    import LinkedHashMap from './collections/LinkedHashMap.md';
+    import WeakHashMap from './collections/WeakHashMap.md';
 
 
     export default {
@@ -73,7 +75,7 @@
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
-            TreeMapSource, JudgeThreadPoolDone, CookieAndSession
+            TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap
         },
         data(){
             return {
@@ -104,6 +106,8 @@
                             {title:'Map - 侃晕面试官的HashMap源码', class:'HashMapSource' },
                             {title:'Map - TreeMap 源码解读', class:'TreeMapSource' },
                             {title:'Collection - HashSet & TreeSet', class:'AboutUtilSet' },
+                            {title:'Map - LinkedHashMap 源码解读', class:'LinkedHashMap' },
+                            {title:'Map - WeakHashMap 源码解读', class:'WeakHashMap' },
                             {title:'集合类常见比较', class:'CollectionComparison' }
                         ]
                     }, {
