@@ -14,6 +14,7 @@
 ### <span id="t0">服务端代码</span>
 
 - <a href="https://blog.csdn.net/m0_46144826/article/details/107611359" target="_blank">SpringBoot 配置SSL证书，同时支持 http 与 https</a>
+- <a href="https://shiva.blog.csdn.net/article/details/108246718" target="_blank">弱引用是什么，和其他引用有啥区别？</a>
 
 
 ### <span id="t1">前端代码</span>
@@ -22,6 +23,7 @@
 
 
 ### <span id="t2">错误调试</span>
+
 
 
 ### <span id="t3">其他</span>
