@@ -38,8 +38,8 @@
 
 先把源码的注释放上，想看的请自取：
 
-- Map 接口源码：<a target="_blank" href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Map.java">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Map.java</a>
-- HashMap 源码：<a target="_blank" href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashMap.java">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashMap.java</a>
+- Map 接口源码：<a target="_blank" href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Map.java">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Map.java</a>
+- HashMap 源码：<a target="_blank" href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashMap.java">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashMap.java</a>
 
 
 
@@ -801,7 +801,7 @@ if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
         }
 ```
 
-顺便贴下平衡操作的代码，要更细节的代码，可以到github上看类的注释：
+顺便贴下平衡操作的代码，要更细节的代码，可以到 Gitee 上看类的注释：
 
 ```java
         /**

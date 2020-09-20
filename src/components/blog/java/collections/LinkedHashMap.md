@@ -27,7 +27,7 @@
 
 不过昨天在别人的博客中看到了 LinkedHashMap 这个类。我发现我居然从来没见过，那就抽一天看下源码。
 
-LinkedHashMap  源码：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedHashMap.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedHashMap.java</a>
+LinkedHashMap  源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedHashMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedHashMap.java</a>
 
 ![](http://shiva.oss-cn-hangzhou.aliyuncs.com/emo/XIKOEQKFKLOO3UE00.jpg)
 

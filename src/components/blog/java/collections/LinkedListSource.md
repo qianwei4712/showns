@@ -23,7 +23,7 @@
 当你需要使用栈或者队列时，可以考虑使用 *LinkedList* ，一方面是因为Java官方已经声明不建议使用 *Stack* 类，更遗憾的是，Java里根本没有一个叫做 *Queue* 的类(只是个接口)。关于栈或队列，现在的首选是*ArrayDeque*，它有着比 *LinkedList* (当作栈或队列使用时)有着更好的性能。
 
 学习方式为，将 **LinkedList** 源码类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedList.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedList.java</a>
+<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedList.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/LinkedList.java</a>
 
 知识点总结如下：
 

@@ -24,7 +24,7 @@
 
 因为最后是要上线部署的，所以我下载了 Linux 版本，而且最后成品也是 Linux 版的。
 
-最后的成品我也给放上，不过是直接本地压缩的 RAR 包：<a href="https://github.com/qianwei4712/static-resources/blob/master/showns/software/apache-tomcat-8.5.49.rar" target="_blank">https://github.com/qianwei4712/static-resources/blob/master/showns/software/apache-tomcat-8.5.49.rar</a>
+最后的成品我也给放上，不过是直接本地压缩的 RAR 包：<a href="https://gitee.com/qianwei4712/static-resources/blob/master/showns/software/apache-tomcat-8.5.49.rar" target="_blank">https://gitee.com/qianwei4712/static-resources/blob/master/showns/software/apache-tomcat-8.5.49.rar</a>
 
 <br>
 

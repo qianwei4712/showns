@@ -16,7 +16,7 @@
             <el-timeline>
                 <el-timeline-item timestamp="2019/12/28" color="#e20000" placement="top">
                     <el-card>
-                        遵循 <span style="color: red;font-weight: bold">Apache LICENSE 2.0</span> 协议，源码开放，<a href="https://github.com/qianwei4712/showns" target="_blank" class="origin">GitHub仓库地址</a>
+                        遵循 <span style="color: red;font-weight: bold">Apache LICENSE 2.0</span> 协议，源码开放，<a href="https://gitee.com/qianwei4712/showns" target="_blank" class="origin">Gitee仓库地址</a>
                     </el-card>
                 </el-timeline-item>
                 <el-timeline-item timestamp="2019/11/14" placement="top">

@@ -52,8 +52,8 @@ private native void start0();
 
 开始之前老规矩，把源码放上：
 
-- Thread 源码解读注释：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Thread.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Thread.java</a>
-- Object 源码解读注释：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Object.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Object.java</a>
+- Thread 源码解读注释：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Thread.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Thread.java</a>
+- Object 源码解读注释：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Object.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/lang/Object.java</a>
 
 
 

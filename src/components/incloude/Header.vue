@@ -59,7 +59,7 @@
                 <!--安装部署类-->
                 <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">
                     <el-dropdown class="head-type-ele">
-                            <span class="el-dropdown-link">安装/部署<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                            <span class="el-dropdown-link">运维/部署<i class="el-icon-caret-bottom el-icon--right"></i></span>
                         <el-dropdown-menu slot="dropdown">
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
                                 <el-dropdown-item >服务器</el-dropdown-item>

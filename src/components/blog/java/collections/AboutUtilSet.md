@@ -22,9 +22,9 @@ Set 的实现类重要的不多，而且源码也不复杂，甚至觉得没啥�
 
 还是老规矩，先把源码放上：
 
-- Set 接口源码：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Set.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Set.java</a>
-- HashSet 源码：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashSet.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashSet.java</a>
-- TreeSet 源码：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeSet.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeSet.java</a>
+- Set 接口源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Set.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/Set.java</a>
+- HashSet 源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashSet.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/HashSet.java</a>
+- TreeSet 源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeSet.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeSet.java</a>
 
 
 <br>
@@ -338,9 +338,9 @@ public class HashSet<E>
 
 先把代码注释放上：
 
-- SortedSet 接口源码 ：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedSet.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedSet.java</a>
+- SortedSet 接口源码 ：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedSet.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedSet.java</a>
 
-- NavigableSet 接口源码 ：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableSet.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableSet.java</a>
+- NavigableSet 接口源码 ：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableSet.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableSet.java</a>
 
 **SortedSet** 是 **NavigableSet** 的父类。 
 

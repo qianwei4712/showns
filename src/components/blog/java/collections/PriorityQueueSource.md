@@ -26,7 +26,7 @@
 然后说下，在排序算法中，有一个高效并且消耗内存少的排序方法 -- 堆排序。堆排序算法应该是网上到处都是，可以自行百度。
 
 还是和以前一样，将 **PriorityQueue** 源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/PriorityQueue.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/PriorityQueue.java</a>
+<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/PriorityQueue.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/PriorityQueue.java</a>
 
 知识点总结如下：
 

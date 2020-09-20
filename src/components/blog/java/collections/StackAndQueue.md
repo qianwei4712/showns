@@ -52,7 +52,7 @@ Java 中有 **栈（Stack）** 的具体类， **队列（Queue）** 只定义�
 
 
 学习方式为，将源码以及相关类拷贝至自定义包内，进行注释添加，代码请移步：<br>
-<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/ArrayDeque.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/ArrayDeque.java</a>
+<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/ArrayDeque.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/ArrayDeque.java</a>
 
 其中包含了 *Stack、Queue、Deque、ArrayDeque* 类或接口的注释。
 

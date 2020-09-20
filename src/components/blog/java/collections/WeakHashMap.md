@@ -27,7 +27,7 @@
 
 源码位置先放上，因为这个类和 HashMap 其实类似，所有我觉得没必要特别仔细，知道特性就可以了：
 
-- WeakHashMap  源码：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java</a>
+- WeakHashMap  源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java</a>
 
 
 关于什么是弱引用，特地去查了点资料，可以看看：<a href="https://shiva.blog.csdn.net/article/details/108246718" target="_blank">弱引用是什么，和其他引用有啥区别？</a>

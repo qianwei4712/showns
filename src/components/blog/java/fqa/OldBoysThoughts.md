@@ -19,6 +19,7 @@
 
 - <a href="https://www.zcfy.cc/article/never-use-the-word-user-in-your-code" target="_blank">永远不要在代码中使用“User”这个单词</a>
 - <a href="https://mp.weixin.qq.com/s/bh5UJqN60MBW8VWk7OpaHA" target="_blank">RESTful API 设计规范，看这篇就够了！</a>
+- <a href="https://www.cnblogs.com/jurendage/p/12653865.html" target="_blank">四连问：API 接口应该如何设计？如何保证安全？如何签名？如何防重？</a>
 
 
 ### <span id="t2">工具技能</span>

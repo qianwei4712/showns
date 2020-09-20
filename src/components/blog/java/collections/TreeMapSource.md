@@ -22,7 +22,7 @@
 
 **TreeMap底层通过红黑树(Red-Black tree)实现** ，也就意味着 `containsKey()` ,  `get()` ,  `put()` ,  `remove()` 都有着 `log(n)` 的时间复杂度。
 
-先把 **TreeMap** 源码放上：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeMap.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeMap.java</a>
+先把 **TreeMap** 源码放上：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/TreeMap.java</a>
 
 关于红黑树，在以前写过的 HashMap 中有简单介绍，可以参考：<a href="https://blog.csdn.net/m0_46144826/article/details/106300438" target="_blank">https://blog.csdn.net/m0_46144826/article/details/106300438</a>
 
@@ -50,9 +50,9 @@
 
 先把代码注释放上：
 
-- SortedMap 接口源码 ：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedMap.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedMap.java</a>
+- SortedMap 接口源码 ：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/SortedMap.java</a>
 
-- NavigableMap 接口源码 ：<a href="https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableMap.java" target="_blank">https://github.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableMap.java</a>
+- NavigableMap 接口源码 ：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/NavigableMap.java</a>
 
 **SortedMap** 是 **NavigableMap** 的父类。 
 
