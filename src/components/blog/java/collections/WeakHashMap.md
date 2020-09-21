@@ -30,7 +30,7 @@
 - WeakHashMap  源码：<a href="https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java" target="_blank">https://gitee.com/qianwei4712/JDK1.8.0.25-read/blob/master/src/main/java/java/util/WeakHashMap.java</a>
 
 
-关于什么是弱引用，特地去查了点资料，可以看看：<a href="https://shiva.blog.csdn.net/article/details/108246718" target="_blank">弱引用是什么，和其他引用有啥区别？</a>
+关于什么是弱引用，特地去查了点资料，可以看看：<a href="https://blog.csdn.net/m0_46144826/article/details/108246718" target="_blank">弱引用是什么，和其他引用有啥区别？</a>
 
 内部实现的话，不会讲很细，和 HashMap 非常类似，可以看看：  <a href="https://blog.csdn.net/m0_46144826/article/details/106300438" target="_blank">侃晕面试官的 HashMap 源码分析 - 这真不是我吹</a>
 
