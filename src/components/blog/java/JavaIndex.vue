@@ -64,6 +64,7 @@
     import CookieAndSession from './fqa/CookieAndSession.md';
     import LinkedHashMap from './collections/LinkedHashMap.md';
     import WeakHashMap from './collections/WeakHashMap.md';
+    import JvmTotalSee from './jvm/JvmTotalSee.md';
 
 
     export default {
@@ -75,7 +76,8 @@
             JavaAnnotation, EncapInheritPolymo, InterAbstInner, ExceptionAndSerializable,
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
-            TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap
+            TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
+            JvmTotalSee
         },
         data(){
             return {
@@ -121,7 +123,9 @@
                         ]
                     }, {
                         title:'Java虚拟机',
-                        data:[]
+                        data:[
+                            {title:'JVM 资料汇总', class:'JvmTotalSee', id:"jvm" }
+                        ]
                     }, {
                         title:'散记',
                         data:[
