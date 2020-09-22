@@ -5,6 +5,7 @@ JVM 这部分内容已经计划很久了，最近忙了好几个月，都没时�
 <img src="@/assets/blog/img/others/jvm-total.png"/>
 
 
+![jdk-jre-jvm.png](http://shiva.oss-cn-hangzhou.aliyuncs.com/data/java/jdk-jre-jvm.png)
 
 
 <br>
