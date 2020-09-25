@@ -3,8 +3,8 @@
         <el-footer>
             <div class="footer-div">
                 <div class="footer-record-left read-only">
-                    Made with <span class="footer-span-heart">♥</span> for the people of the internet - ©shiva |
-                    <a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(158, 158, 158)">浙ICP备18006899号-2 </a> &nbsp;|&nbsp;
+                    Made with <span class="footer-span-heart">♥</span> for the people of the internet
+                    <a href="http://beian.miit.gov.cn/" target="_blank" style="color: rgb(158, 158, 158);margin-left: 40px">浙ICP备18006899号-2 </a> &nbsp;|&nbsp;
                     <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33028302000356" style="color: rgb(158, 158, 158);display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img :src="gaba" style="float:left;"/>浙公网安备 33028302000356号</a>
                 </div>
                 <div class="footer-func-right">
