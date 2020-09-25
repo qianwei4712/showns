@@ -66,6 +66,7 @@
     import WeakHashMap from './collections/WeakHashMap.md';
     import JvmTotalSee from './jvm/JvmTotalSee.md';
     import ByteCodeFile from './jvm/ByteCodeFile.md';
+    import ClassLoader from './jvm/ClassLoader.md';
 
 
     export default {
@@ -78,7 +79,7 @@
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
-            JvmTotalSee, ByteCodeFile
+            JvmTotalSee, ByteCodeFile, ClassLoader
         },
         data(){
             return {
@@ -126,7 +127,8 @@
                         title:'Java虚拟机',
                         data:[
                             {title:'JVM 资料汇总', class:'JvmTotalSee', id:"jvm" },
-                            {title:'虚拟机及字节码文件简介', class:'ByteCodeFile' }
+                            {title:'虚拟机及字节码文件简介', class:'ByteCodeFile' },
+                            {title:'类加载机制', class:'ClassLoader' }
                         ]
                     }, {
                         title:'散记',
