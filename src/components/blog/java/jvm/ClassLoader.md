@@ -4,7 +4,7 @@
 
 - [类加载机制概述](#t0)
 - [class 文件生命周期](#t1)
-- [Loading：加载阶段](#t11)
+  - [Loading：加载阶段](#t11)
   - [Linking：链接阶段](#t12)
   - [Initialization：初始化阶段](#t13)
   - [使用和卸载](#t14)
