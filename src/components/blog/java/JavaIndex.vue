@@ -68,6 +68,7 @@
     import ByteCodeFile from './jvm/ByteCodeFile.md';
     import ClassLoader from './jvm/ClassLoader.md';
     import RuntimeStruc from './jvm/RuntimeStruc.md';
+    import ExecutionEngine from './jvm/ExecutionEngine.md';
 
 
     export default {
@@ -80,7 +81,7 @@
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
-            JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc
+            JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine
         },
         data(){
             return {
@@ -131,7 +132,7 @@
                             {title:'JVM 基础：虚拟机及字节码文件', class:'ByteCodeFile' },
                             {title:'JVM 基础：类加载机制介绍', class:'ClassLoader' },
                             {title:'JVM 基础：运行时数据区模型解读', class:'RuntimeStruc' },
-                            {title:'JVM 基础：执行引擎工作原理', class:'' },
+                            {title:'JVM 基础：执行引擎工作原理', class:'ExecutionEngine' },
                             {title:'JVM 基础：垃圾收集器', class:'' },
                             {title:'调优排错：JVM监控、故障处理', class:'' },
                             {title:'调优排错：编译优化、代码优化', class:'' },
