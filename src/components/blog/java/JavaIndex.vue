@@ -67,6 +67,7 @@
     import JvmTotalSee from './jvm/JvmTotalSee.md';
     import ByteCodeFile from './jvm/ByteCodeFile.md';
     import ClassLoader from './jvm/ClassLoader.md';
+    import RuntimeStruc from './jvm/RuntimeStruc.md';
 
 
     export default {
@@ -79,7 +80,7 @@
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
-            JvmTotalSee, ByteCodeFile, ClassLoader
+            JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc
         },
         data(){
             return {
@@ -127,8 +128,14 @@
                         title:'Java虚拟机',
                         data:[
                             {title:'JVM 资料汇总', class:'JvmTotalSee', id:"jvm" },
-                            {title:'虚拟机及字节码文件简介', class:'ByteCodeFile' },
-                            {title:'类加载机制', class:'ClassLoader' }
+                            {title:'JVM 基础：虚拟机及字节码文件', class:'ByteCodeFile' },
+                            {title:'JVM 基础：类加载机制介绍', class:'ClassLoader' },
+                            {title:'JVM 基础：运行时数据区模型解读', class:'RuntimeStruc' },
+                            {title:'JVM 基础：执行引擎工作原理', class:'' },
+                            {title:'JVM 基础：垃圾收集器', class:'' },
+                            {title:'调优排错：JVM监控、故障处理', class:'' },
+                            {title:'调优排错：编译优化、代码优化', class:'' },
+                            {title:'调优排错：高效并发', class:'' },
                         ]
                     }, {
                         title:'散记',
