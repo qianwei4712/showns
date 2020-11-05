@@ -9,6 +9,7 @@ const chest = () => import('../components/chest/Chest');
 const javaIndex = () => import('../components/blog/java/JavaIndex');
 const deployIndex = () => import('../components/blog/deploy/DeployIndex');
 const methodologyIndex = () => import('../components/blog/methodology/MethodologyIndex');
+const productIndex = () => import('../components/blog/product/ProductIndex');
 const springIndex = () => import('../components/blog/spring/SpringIndex');
 const resourceNavigation = () => import('../components/chest/ResourceNavigation');
 const alibabaJavaDevelop = () => import('../components/chest/AlibabaJavaDevelop');
@@ -39,6 +40,10 @@ const router = new Router({
                 path: 'spring/:typeName',
                 name: 'Spring',
                 components: {default: springIndex}
+            }, {
+                path: 'product/:typeName',
+                name: 'Product',
+                components: {default: productIndex}
             }]
         }, {
             path: '/chest',
