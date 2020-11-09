@@ -136,10 +136,7 @@
                             {title:'JVM 基础：运行时数据区模型解读', class:'RuntimeStruc' },
                             {title:'JVM 基础：执行引擎工作原理', class:'ExecutionEngine' },
                             {title:'JVM 基础：垃圾回收算法和概念', class:'GcAlgorithmn' },
-                            {title:'JVM 基础：垃圾收集器', class:'GarbageCollection' },
-                            {title:'调优排错：JVM监控、故障处理', class:'' },
-                            {title:'调优排错：编译优化、代码优化', class:'' },
-                            {title:'调优排错：高效并发', class:'' },
+                            {title:'JVM 基础：垃圾收集器', class:'GarbageCollection' }
                         ]
                     }, {
                         title:'散记',
