@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>总览</span>
+                            <span>产品资源导航</span>
                         </p>
                     </section>
                 </li>
@@ -47,7 +47,7 @@
         },
         data(){
             return {
-                title:'项目管理及产品思维',
+                title:'项目管理、产品规划资源导航',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
