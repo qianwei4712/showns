@@ -50,6 +50,7 @@
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadTheoryBase from './thread/ThreadTheoryBase.md';
     import ThreadBaseConcept from './thread/ThreadBaseConcept.md';
+    import SyncVolatileFinal from './thread/SyncVolatileFinal.md';
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
     import LinkedListSource from './collections/LinkedListSource.md';
@@ -83,7 +84,8 @@
             CollectionRelationDiagram, ArrayListSource, LinkedListSource, CollectionComparison, VectorSource,
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
-            JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn
+            JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
+            SyncVolatileFinal
         },
         data(){
             return {
@@ -125,7 +127,8 @@
                         title:'Java多线程与并发',
                         data:[
                             {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
-                            {title:'Java 线程基础概念', class:'ThreadBaseConcept' }
+                            {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
+                            {title:'关键字:synchronized voliate final', class:'SyncVolatileFinal' }
                         ]
                     }, {
                         title:'Java虚拟机',
