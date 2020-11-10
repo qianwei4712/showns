@@ -26,6 +26,8 @@
                     {title:'三顿PPT', href:'http://sandunppt.com/', desc:'一站式搞定 PPT 设计' },
                     {title:'PMCAFF', href:'https://coffee.pmcaff.com/', desc:'提供众多产品干货、资料及工具下载' },
                     {title:'36氪', href:'https://36kr.com/', desc:'上 36Kr，让一部分人先看到未来' },
+                    {title:'墨刀', href:'https://www.modao.cc/', desc:'一款在线原型设计和远程协作平台' },
+                    {title:'processOn', href:'https://www.processon.com/', desc:'免费在线作图、实时协作，支持流程图、思维导图、原型图、UML、网络拓扑图、组织结构图等' },
                 ]
             }
         }
