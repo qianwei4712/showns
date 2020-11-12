@@ -72,6 +72,7 @@
     import ExecutionEngine from './jvm/ExecutionEngine.md';
     import GarbageCollection from './jvm/GarbageCollection.md';
     import GcAlgorithmn from './jvm/GcAlgorithmn.md';
+    import MonitorTools from './jvm/MonitorTools.md';
 
 
     export default {
@@ -85,7 +86,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            SyncVolatileFinal
+            SyncVolatileFinal, MonitorTools
         },
         data(){
             return {
@@ -128,7 +129,7 @@
                         data:[
                             {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
                             {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
-                            {title:'关键字:synchronized voliate final', class:'SyncVolatileFinal' }
+                            {title:'关键字：synchronized、voliate', class:'SyncVolatileFinal' }
                         ]
                     }, {
                         title:'Java虚拟机',
@@ -139,7 +140,8 @@
                             {title:'JVM 基础：运行时数据区模型解读', class:'RuntimeStruc' },
                             {title:'JVM 基础：执行引擎工作原理', class:'ExecutionEngine' },
                             {title:'JVM 基础：垃圾回收算法和概念', class:'GcAlgorithmn' },
-                            {title:'JVM 基础：垃圾收集器', class:'GarbageCollection' }
+                            {title:'JVM 基础：垃圾收集器', class:'GarbageCollection' },
+                            {title:'调优排错：性能监控命令及工具', class:'MonitorTools' }
                         ]
                     }, {
                         title:'散记',
