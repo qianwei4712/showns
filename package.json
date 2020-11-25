@@ -13,7 +13,7 @@
     "element-ui": "^2.12.0",
     "elliptic": "^6.5.3",
     "github-markdown-css": "^3.0.1",
-    "highlight.js": "^9.16.2",
+    "highlight.js": "^10.1.2",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
     "minimist": "^1.2.5",
