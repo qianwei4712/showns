@@ -59,8 +59,11 @@
                 <!--安装部署类-->
                 <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">
                     <el-dropdown class="head-type-ele">
-                            <span class="el-dropdown-link">运维/部署<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                            <span class="el-dropdown-link">攻城狮<i class="el-icon-caret-bottom el-icon--right"></i></span>
                         <el-dropdown-menu slot="dropdown">
+                          <router-link :to="{ name: 'DeployType', params: { typeName: 'netbase' }}">
+                            <el-dropdown-item >网络基础</el-dropdown-item>
+                          </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
                                 <el-dropdown-item >服务器</el-dropdown-item>
                             </router-link>
@@ -70,37 +73,14 @@
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'middleware' }}">
                                 <el-dropdown-item>中间件</el-dropdown-item>
                             </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'designpattern' }}">
+                                <el-dropdown-item>设计与方法论</el-dropdown-item>
+                            </router-link>
+                            <router-link :to="{ name: 'DeployType', params: { typeName: 'structure' }}">
+                              <el-dropdown-item>算法与数据结构</el-dropdown-item>
+                            </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'fqa' }}">
-                                <el-dropdown-item>FQA</el-dropdown-item>
-                            </router-link>
-                        </el-dropdown-menu>
-                    </el-dropdown>
-                </router-link>
-
-                <!--方法论-->
-                <router-link :to="{ name: 'MethodologyType', params: { typeName: 'HomePage' }}">
-                    <el-dropdown class="head-type-ele">
-                            <span class="el-dropdown-link">
-                                方法论<i class="el-icon-caret-bottom el-icon--right"></i>
-                            </span>
-                        <el-dropdown-menu slot="dropdown">
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'systemAndAgreement' }}">
-                                <el-dropdown-item>操作系统及协议</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'architecture' }}">
-                                <el-dropdown-item>架构设计</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'structure' }}">
-                                <el-dropdown-item>数据结构</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'algorithm' }}">
-                                <el-dropdown-item>算法</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'designpattern' }}">
-                                <el-dropdown-item>设计模式</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'MethodologyType', params: { typeName: 'fqa' }}">
-                                <el-dropdown-item>FQA</el-dropdown-item>
+                              <el-dropdown-item>散记</el-dropdown-item>
                             </router-link>
                         </el-dropdown-menu>
                     </el-dropdown>

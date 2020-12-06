@@ -51,6 +51,20 @@
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
     import TomcatOptimize from './middleware/TomcatOptimize.md';
     import MqCompare from './middleware/MqCompare.md';
+    import TcpIp from './netbase/TcpIp.md';
+    import Http from './netbase/Http.md';
+    import CompareGetPsot from './netbase/CompareGetPsot.md';
+    import UMLClassDi from './designpattern/UMLClassDi.md';
+    import CreationMode from './designpattern/CreationMode.md';
+    import StructuralMode from './designpattern/StructuralMode.md';
+    import BehavioralMode from './designpattern/BehavioralMode.md';
+    import SortingAlgorithm from './designpattern/SortingAlgorithm.md';
+    import WhatisHash from './structure/WhatisHash.md';
+    import TreeAndCommons from './structure/TreeAndCommons.md';
+    import WhatisHeap from './structure/WhatisHeap.md';
+    import HeapAndStack from './structure/HeapAndStack.md';
+    import OpenSourceLicense from './fqa/OpenSourceLicense.md';
+    import EbookOnline from './fqa/EbookOnline.md';
 
     export default {
         name: "deployIndex",
@@ -58,15 +72,24 @@
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
             LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize, MysqlPrinciple,
-            MqCompare
+            MqCompare,OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
+            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
+            CompareGetPsot
         },
         data(){
             return {
-                title:'平时工作中涉及到的安装部署',
+                title:'软件开发需要会的东西',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
                     {
+                       title:'网络基础',
+                       data:[
+                         {title:'TCP/IP 协议详解', class:'TcpIp', id:"netbase" },
+                         {title:'HTTP 协议详解', class:'Http' },
+                         {title:'GET 和 POST 的真正区别', class:'CompareGetPsot' }
+                       ]
+                    },{
                         title:'服务器',
                         data:[
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
@@ -90,9 +113,28 @@
                             {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' }
                         ]
                     }, {
-                        title:'FQA',
+                        title:'设计与方法论',
                         data:[
-                            {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" }
+                          {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
+                          {title:'创建型模式', class:'CreationMode'},
+                          {title:'结构型模式', class:'StructuralMode' },
+                          {title:'行为型模式', class:'BehavioralMode' }
+                        ]
+                    }, {
+                        title:'算法与数据结构',
+                        data:[
+                          {title:'到底什么是 Hash', class:'WhatisHash', id:"structure" },
+                          {title:'各类常用树的介绍', class:'TreeAndCommons' },
+                          {title:'数据结构 - 堆（Heap）', class:'WhatisHeap' },
+                          {title:'操作系统中heap和stack的区别', class:'HeapAndStack'},
+                          {title:'排序算法', class:'SortingAlgorithm' }
+                        ]
+                      }, {
+                        title:'散记',
+                        data:[
+                            {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" },
+                            {title:'开源协议详解', class:'OpenSourceLicense'},
+                            {title:'在线电子书', class:'EbookOnline'}
                         ]
                     }
                 ]
