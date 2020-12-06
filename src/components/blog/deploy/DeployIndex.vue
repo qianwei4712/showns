@@ -45,7 +45,6 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
-    import MysqlPrinciple from './database/MysqlPrinciple.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
     import MysqlOptimization from './database/MysqlOptimization.md';
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
@@ -71,7 +70,7 @@
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize, MysqlPrinciple,
+            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize,
             MqCompare,OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
             SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
             CompareGetPsot
@@ -101,8 +100,7 @@
                     }, {
                         title:'数据库',
                         data:[
-                            {title:'sql 在 MySQL 中执行底层原理', class:'MysqlPrinciple', id:"database" },
-                            {title:'MySQL 优化原则', class:'MysqlOptimization'},
+                            {title:'MySQL 优化原则', class:'MysqlOptimization', id:"database"},
                             {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql'}
                         ]
                     }, {
