@@ -1,9 +1,10 @@
 <div class="catalog">
 
-- [JDK安装()](#jdk)
-- [Niginx安装()](#nginx)
-- [MySql安装()](#mysql)
-- [node.js安装()](#node)
+- [JDK 安装](#jdk)
+- [Niginx 安装](#nginx)
+- [MySql 安装](#mysql)
+- [node.js 安装](#node)
+- [redis 安装](#redis)
 
 </div>
 
@@ -50,7 +51,7 @@ JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archiv
 
 <br>
 
-### <span id="nginx">Nginx安装</span>
+### <span id="nginx">Nginx 安装</span>
 
 
 Nginx下载地址：<a href="http://nginx.org/en/download.html" target="_blank">http://nginx.org/en/download.html</a>
@@ -87,7 +88,7 @@ make  install
 
 <br>
 
-### <span id="mysql">MySql安装</span>
+### <span id="mysql">MySql 安装</span>
 
 > 直接用命令行安装 MySql 5.7 
 
@@ -143,7 +144,7 @@ FLUSH PRIVILEGES;
 <br>
 
 
-### <span id="node">node.js安装</span>
+### <span id="node">node.js 安装</span>
 
 首先在<a target="_blank" href="https://nodejs.org/dist/">https://nodejs.org/dist/</a>下载node.js。
 
@@ -161,3 +162,39 @@ mv node-v12.16.1-linux-x64/ nodejs
 ln -s /usr/local/nodejs/bin/node /usr/local/bin
 ln -s /usr/local/nodejs/bin/npm /usr/local/bin
 ```
+
+<br>
+
+### <span id="redis">redis 安装</span>
+
+首先，在 <a target="_blank" href="https://download.redis.io/releases/">https://download.redis.io/releases/</a> 下载需要的版本。
+
+然后，上传到服务器，解压，进入目录编译
+
+```shell
+make install PREFIX=/usr/local/redis
+```
+
+如果出现 GCC 版本问题，可以更新到 9.1 ,使用以下命令
+
+```shell
+gcc -v
+yum -y install centos-release-scl
+yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils
+scl enable devtoolset-9 bash
+echo "source /opt/rh/devtoolset-9/enable" >>/etc/profile
+```
+
+编译后， src 下 redis-server 启动，最好指定配置文件启动。
+
+```shell
+./redis-server ../redis.conf
+```
+
+一般情况下，需要改些配置如下：
+
+- 默认端口 port，容易被攻击
+
+- `bind 127.0.0.1` 需要注释掉，需要远程连接
+
+- `requirepass foobared` 打开注释，把密码改得复杂点
