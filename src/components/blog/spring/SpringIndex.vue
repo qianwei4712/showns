@@ -43,12 +43,13 @@
     import ArchitectureIntro from './base/ArchitectureIntro.md'
     import IoCAndDI from './base/IoCAndDI.md'
     import BeanConfigoure from './base/BeanConfigoure.md'
+    import VersionSelect from './fqa/VersionSelect.md'
 
     export default {
         name: "springIndex",
         components:{
             HomePage,
-            DataSummary, ArchitectureIntro, IoCAndDI, BeanConfigoure
+            DataSummary, ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect
         },
         data(){
             return {
@@ -72,7 +73,9 @@
                         data:[]
                     }, {
                         title:'FQA',
-                        data:[]
+                        data:[
+                          {title:'SpringCloud 版本及对应关系', class:'VersionSelect', id:"fqa" }
+                        ]
                     }
                 ]
             }
