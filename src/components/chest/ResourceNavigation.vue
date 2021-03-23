@@ -47,6 +47,16 @@
                         ]
                     },
                     {
+                        name:'项目产品',
+                        data:[
+                          {title:'人人都是产品经理', href:'http://www.woshipm.com/', img:require('@/assets/chest/img/rrdscp.png'), desc:'产品爱好者学习交流平台' },
+                          {title:'阿猫阿狗导航', href:'https://dh.woshipm.com/', img:require('@/assets/chest/img/amagdh.png'), desc:'产品汪、运营喵必备' },
+                          {title:'三顿PPT', href:'http://sandunppt.com/', img:require('@/assets/chest/img/sdppt.png'), desc:'一站式搞定 PPT 设计' },
+                          {title:'', href:'https://coffee.pmcaff.com/', img:require('@/assets/chest/img/pmcaff.png'), desc:'提供众多产品干货、资料及工具下载' },
+                          {title:'36氪', href:'https://36kr.com/', img:require('@/assets/chest/img/36kr.png'), desc:'上 36Kr，让一部分人先看到未来' }
+                        ]
+                    },
+                    {
                         name:'源码练习',
                         data:[
                             {title:'Gitee', href:'https://gitee.com/', img:require('@/assets/chest/img/gitee.png'), desc:'开源中国旗下的代码托管平台：码云' },

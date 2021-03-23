@@ -86,20 +86,6 @@
                     </el-dropdown>
                 </router-link>
 
-                <!--项目管理和产品-->
-                <router-link :to="{ name: 'Product', params: { typeName: 'HomePage' }}">
-                    <el-dropdown class="head-type-ele">
-                            <span class="el-dropdown-link">
-                                项目/产品<i class="el-icon-caret-bottom el-icon--right"></i>
-                            </span>
-                        <el-dropdown-menu slot="dropdown">
-                            <router-link :to="{ name: 'Product', params: { typeName: 'fqa' }}">
-                                <el-dropdown-item>散记</el-dropdown-item>
-                            </router-link>
-                        </el-dropdown-menu>
-                    </el-dropdown>
-                </router-link>
-
                 <!--百宝箱-->
                 <router-link :to="{ name: 'resourceNavigation'}">
                     <el-dropdown class="head-type-ele">
