@@ -110,13 +110,11 @@
                         <el-dropdown-item v-on:click.native="openDrawer($event)" class="AboutMe">作者简介</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
-
-                <el-drawer :title="title" :visible.sync="drawer" direction="rtl" class="read-only">
-                    <component :is="aboutView"></component>
-                </el-drawer>
-
             </div>
         </el-header>
+        <el-drawer :title="title" :visible.sync="drawer" direction="rtl" class="read-only">
+          <component :is="aboutView"></component>
+        </el-drawer>
     </div>
 </template>
 
