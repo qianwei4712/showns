@@ -13,7 +13,6 @@
 
 ### <span id="t0">服务端代码</span>
 
-- <a href="https://blog.csdn.net/m0_46144826/article/details/107611359" target="_blank">SpringBoot 配置SSL证书，同时支持 http 与 https</a>
 - <a href="https://blog.csdn.net/m0_46144826/article/details/108246718" target="_blank">弱引用是什么，和其他引用有啥区别？</a>
 - <a href="https://blog.csdn.net/m0_46144826/article/details/108437629" target="_blank">StringBuffer 和 StringBuilder 的区别 - 源码解析、内容扩展</a>
 

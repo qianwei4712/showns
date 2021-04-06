@@ -44,16 +44,17 @@
     import IoCAndDI from './base/IoCAndDI.md'
     import BeanConfigoure from './base/BeanConfigoure.md'
     import VersionSelect from './fqa/VersionSelect.md'
+    import SomethingNotes from './fqa/SomethingNotes.md'
 
     export default {
         name: "springIndex",
         components:{
             HomePage,
-            DataSummary, ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect
+            DataSummary, ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes
         },
         data(){
             return {
-                title:'Spring全家桶',
+                title:'Spring 全家桶',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
@@ -74,7 +75,8 @@
                     }, {
                         title:'FQA',
                         data:[
-                          {title:'SpringCloud 版本及对应关系', class:'VersionSelect', id:"fqa" }
+                          {title:'SpringCloud 版本及对应关系', class:'VersionSelect', id:"fqa" },
+                          {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes'}
                         ]
                     }
                 ]
