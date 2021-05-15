@@ -17,7 +17,7 @@
             作者的技术栈都在站里有了，也就不比比了。本站源码已遵循 Apache LICENSE 2.0 开源协议，<a href="https://gitee.com/qianwei4712/showns" target="_blank" class="origin">Gitee仓库地址</a>。
         </div>
         <div class="text-center">
-            <a href="mailto:qianwei4712@163.com" class="el-button el-button--primary">联系作者：qianwei4712@163.com</a>
+            <a href="mailto:qianwei4712@163.com" class="el-button el-button--primary" style="color: white">联系作者：qianwei4712@163.com</a>
         </div>
         <div class="copy-font">
             © 2019 shiva 版权所有
