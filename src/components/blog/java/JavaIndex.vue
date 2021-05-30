@@ -50,7 +50,7 @@
     import SomethingNotes from './fqa/SomethingNotes.md';
     import ThreadTheoryBase from './thread/ThreadTheoryBase.md';
     import ThreadBaseConcept from './thread/ThreadBaseConcept.md';
-    import SyncVolatileFinal from './thread/SyncVolatileFinal.md';
+    import Synchronized from './thread/Synchronized.md';
     import CollectionRelationDiagram from './collections/CollectionRelationDiagram.md';
     import ArrayListSource from './collections/ArrayListSource.md';
     import LinkedListSource from './collections/LinkedListSource.md';
@@ -86,7 +86,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            SyncVolatileFinal, MonitorTools
+            Synchronized, MonitorTools
         },
         data(){
             return {
@@ -129,7 +129,7 @@
                         data:[
                             {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
                             {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
-                            {title:'关键字：synchronized、voliate', class:'SyncVolatileFinal' }
+                            {title:'关键字 synchronized 介绍', class:'Synchronized' }
                         ]
                     }, {
                         title:'Java虚拟机',
