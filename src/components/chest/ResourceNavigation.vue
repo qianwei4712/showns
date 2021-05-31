@@ -100,7 +100,7 @@
                             {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
                             {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' },
                             {title:'', href:'https://www.json.cn/', img:require('@/assets/chest/img/Json.png'), desc:'Json 在线格式化' },
-                            {title:'时间戳', href:'https://www.iamwawa.cn/timestamp.html', img:require('@/assets/chest/img/wawa.png'), desc:'在线时间戳转化工具' }
+                            {title:'时间戳', href:'http://www.metools.info/code/c31.html', img:require('@/assets/chest/img/metools.png'), desc:'在线时间戳转化工具' }
                         ]
                     },
                     {
