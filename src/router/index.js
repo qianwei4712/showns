@@ -10,7 +10,6 @@ const javaIndex = () => import('../components/blog/java/JavaIndex');
 const deployIndex = () => import('../components/blog/deploy/DeployIndex');
 const springIndex = () => import('../components/blog/spring/SpringIndex');
 const resourceNavigation = () => import('../components/chest/ResourceNavigation');
-const alibabaJavaDevelop = () => import('../components/chest/AlibabaJavaDevelop');
 
 const router = new Router({
     mode: 'history',
@@ -43,11 +42,7 @@ const router = new Router({
                 path: 'resourceNavigation',
                 name: 'resourceNavigation',
                 components: {default: resourceNavigation}
-            },{
-                path: 'alibabaJavaDevelop',
-                components: {default: alibabaJavaDevelop}
-            }
-            ]
+            }]
         }, {
             path: '*',
             redirect: ''

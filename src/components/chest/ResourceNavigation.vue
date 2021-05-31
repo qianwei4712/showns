@@ -42,8 +42,7 @@
                             {title:'OSChina', href:'https://www.oschina.net/', img:require('@/assets/chest/img/oschina.gif'), desc:'中国最大的开源技术社区' },
                             {title:'', href:'https://stackoverflow.com/', img:require('@/assets/chest/img/stackoverflow.png'), desc:'Stack Overflow是一个与程序相关的IT技术问答网站' },
                             {title:'掘金', href:'https://juejin.im/', img:require('@/assets/chest/img/juejin.svg'), desc:'掘金是一个帮助开发者成长的社区，是一个面向互联网技术人的内容分享平台' },
-                            {title:'知否', href:'https://segmentfault.com/', img:require('@/assets/chest/img/segmentfault.png'), desc:'中国领先的开发者技术社区' },
-                            {title:'V2EX', href:'https://www.v2ex.com/', img:require('@/assets/chest/img/V2EX.png'), desc:'程序猿灌水社区' }
+                            {title:'知否', href:'https://segmentfault.com/', img:require('@/assets/chest/img/segmentfault.png'), desc:'中国领先的开发者技术社区' }
                         ]
                     },
                     {
@@ -96,12 +95,12 @@
                     {
                         name:'其他资源',
                         data:[
-                            {title:'Java规约', href:'/chest/alibabaJavaDevelop', img:require('@/assets/chest/img/alibabajava.jpg'), desc:'Java 开发手册-华山版，阿里巴巴以及社区开发者共同完成' },
                             {title:'脚本之家', href:'http://tools.jb51.net/', img:require('@/assets/chest/img/jiaobenzhijia.png'), desc:'脚本之家旗下的工具箱' },
                             {title:'iconfont', href:'https://www.iconfont.cn/', img:require('@/assets/chest/img/iconfont.png'), desc:'阿里妈妈MUX倾力打造的矢量图标管理、交流平台。设计师将图标上传到Iconfont平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用' },
-                            {title:'源码阅读', href:'http://www.coderead.cn/', img:require('@/assets/chest/img/coderead.png'), desc:'在线图形化源码阅读，作者在逐步完善各类源码内容' },
                             {title:'微信公众平台', href:'https://mp.weixin.qq.com/', img:require('@/assets/chest/img/wechat.png'), desc:'微信公众平台入口，小程序还是很好用的' },
-                            {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' }
+                            {title:'百度翻译', href:'https://fanyi.baidu.com/', img:require('@/assets/chest/img/baidufanyi.svg'), desc:'英语渣的无地自容' },
+                            {title:'', href:'https://www.json.cn/', img:require('@/assets/chest/img/Json.png'), desc:'Json 在线格式化' },
+                            {title:'时间戳', href:'https://www.iamwawa.cn/timestamp.html', img:require('@/assets/chest/img/wawa.png'), desc:'在线时间戳转化工具' }
                         ]
                     },
                     {
