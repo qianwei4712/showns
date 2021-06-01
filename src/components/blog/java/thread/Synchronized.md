@@ -17,7 +17,7 @@
 
 ## <span id="t0">本文概述</span>
 
-讲解下 Java 中和并发相关的个关键字：`synchronized` 、`volatile` 。
+讲解下 Java 中和并发相关的个关键字：`synchronized`  。
 
 因为关键字已经是除了 JVM 外最底层的应用了。。。
 
