@@ -64,6 +64,7 @@
     import HeapAndStack from './structure/HeapAndStack.md';
     import OpenSourceLicense from './fqa/OpenSourceLicense.md';
     import EbookOnline from './fqa/EbookOnline.md';
+    import RegularExpression from './designpattern/RegularExpression.md';
 
     export default {
         name: "deployIndex",
@@ -73,7 +74,7 @@
             LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize,
             MqCompare,OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
             SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
-            CompareGetPsot
+            CompareGetPsot, RegularExpression
         },
         data(){
             return {
@@ -116,7 +117,8 @@
                           {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
                           {title:'创建型模式', class:'CreationMode'},
                           {title:'结构型模式', class:'StructuralMode' },
-                          {title:'行为型模式', class:'BehavioralMode' }
+                          {title:'行为型模式', class:'BehavioralMode' },
+                          {title:'常用详解：正则表达式', class:'RegularExpression' }
                         ]
                     }, {
                         title:'算法与数据结构',
