@@ -73,6 +73,7 @@
     import GarbageCollection from './jvm/GarbageCollection.md';
     import GcAlgorithmn from './jvm/GcAlgorithmn.md';
     import MonitorTools from './jvm/MonitorTools.md';
+    import Volatile from './thread/Volatile.md';
 
 
     export default {
@@ -86,7 +87,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            Synchronized, MonitorTools
+            Synchronized, MonitorTools, Volatile
         },
         data(){
             return {
@@ -129,7 +130,8 @@
                         data:[
                             {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
                             {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
-                            {title:'关键字 synchronized 介绍', class:'Synchronized' }
+                            {title:'关键字 synchronized 介绍', class:'Synchronized' },
+                            {title:'关键字 volatile 介绍', class:'Volatile' }
                         ]
                     }, {
                         title:'Java虚拟机',
