@@ -74,6 +74,7 @@
     import GcAlgorithmn from './jvm/GcAlgorithmn.md';
     import MonitorTools from './jvm/MonitorTools.md';
     import Volatile from './thread/Volatile.md';
+    import AtomicCasUnSafe from './thread/AtomicCasUnSafe.md';
 
 
     export default {
@@ -87,7 +88,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            Synchronized, MonitorTools, Volatile
+            Synchronized, MonitorTools, Volatile, AtomicCasUnSafe
         },
         data(){
             return {
@@ -131,7 +132,8 @@
                             {title:'并发理论基础', class:'ThreadTheoryBase', id:"thread" },
                             {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
                             {title:'关键字 synchronized 介绍', class:'Synchronized' },
-                            {title:'关键字 volatile 介绍', class:'Volatile' }
+                            {title:'关键字 volatile 介绍', class:'Volatile' },
+                            {title:'JUC原子类: CAS、Unsafe、原子类详解', class:'AtomicCasUnSafe' }
                         ]
                     }, {
                         title:'Java虚拟机',
