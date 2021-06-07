@@ -167,7 +167,7 @@ UnSafe 的所有方法都是 native 方法。
 
 ## <span id="t3">AtomicInteger</span>
 
-基本所有的原子类都相似，下面用 **AtomicInteger **类来举例说明。
+基本所有的原子类都相似，下面用 **AtomicInteger** 类来举例说明。
 
 <br/>
 
