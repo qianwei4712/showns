@@ -358,7 +358,7 @@ public static void main(String[] args) {
 
 #### AtomicStampedReference
 
-剩下就是最后的， **AtomicStampedReference ** 类了。
+剩下就是最后的， **AtomicStampedReference** 类了。
 
 `AtomicStampedReference` 主要维护包含一个对象引用以及一个可以自动更新的整数"stamp"的 pair 对象来解决ABA问题。
 
