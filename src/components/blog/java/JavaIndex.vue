@@ -75,6 +75,8 @@
     import MonitorTools from './jvm/MonitorTools.md';
     import Volatile from './thread/Volatile.md';
     import AtomicCasUnSafe from './thread/AtomicCasUnSafe.md';
+    import CountDownLatch from './thread/CountDownLatch.md';
+    import LockSupport from './thread/LockSupport.md';
 
 
     export default {
@@ -88,7 +90,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            Synchronized, MonitorTools, Volatile, AtomicCasUnSafe
+            Synchronized, MonitorTools, Volatile, AtomicCasUnSafe, CountDownLatch, LockSupport
         },
         data(){
             return {
@@ -133,7 +135,9 @@
                             {title:'Java 线程基础概念', class:'ThreadBaseConcept' },
                             {title:'关键字 synchronized 介绍', class:'Synchronized' },
                             {title:'关键字 volatile 介绍', class:'Volatile' },
-                            {title:'JUC原子类: CAS、Unsafe、原子类详解', class:'AtomicCasUnSafe' }
+                            {title:'CAS、Unsafe、原子类详解', class:'AtomicCasUnSafe' },
+                            {title:'JUC工具类: LockSupport 简介', class:'LockSupport' },
+                            {title:'JUC工具类: CountDownLatch 详解', class:'CountDownLatch' }
                         ]
                     }, {
                         title:'Java虚拟机',
