@@ -136,7 +136,7 @@
                             {title:'关键字 synchronized 介绍', class:'Synchronized' },
                             {title:'关键字 volatile 介绍', class:'Volatile' },
                             {title:'CAS、Unsafe、原子类详解', class:'AtomicCasUnSafe' },
-                            {title:'JUC工具类: LockSupport 简介', class:'LockSupport' },
+                            {title:'JUC锁: LockSupport 简介', class:'LockSupport' },
                             {title:'JUC工具类: CountDownLatch 详解', class:'CountDownLatch' }
                         ]
                     }, {
