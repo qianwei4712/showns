@@ -12,6 +12,7 @@
 - <a href="https://www.docs4dev.com/docs/zh/spring-security/4.2.10.RELEASE/reference" target="_blank">Spring Security 中文文档</a>
 - <a href="https://www.docs4dev.com/docs/zh/spring-session/1.3.4.RELEASE/reference" target="_blank">Spring Session 中文文档</a>
 - <a href="https://www.docs4dev.com/docs/zh/spring-data-jpa/2.1.5.RELEASE/reference" target="_blank">Spring Data JPA 中文文档</a>
+- <a href="https://docs.spring.io/spring-boot/docs/2.3.9.RELEASE/reference/html/appendix-application-properties.html" target="_blank">SpringBoot 配置文件参数详解</a>
 
 
 ### 大佬们的解读
