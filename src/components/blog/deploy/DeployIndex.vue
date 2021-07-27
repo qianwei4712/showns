@@ -64,6 +64,7 @@
     import HeapAndStack from './structure/HeapAndStack.md';
     import OpenSourceLicense from './fqa/OpenSourceLicense.md';
     import EbookOnline from './fqa/EbookOnline.md';
+    import CommonlyUsedVocabulary from './fqa/CommonlyUsedVocabulary.md';
     import RegularExpression from './designpattern/RegularExpression.md';
 
     export default {
@@ -74,7 +75,7 @@
             LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize,
             MqCompare,OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
             SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
-            CompareGetPsot, RegularExpression
+            CompareGetPsot, RegularExpression, CommonlyUsedVocabulary
         },
         data(){
             return {
@@ -134,6 +135,7 @@
                         data:[
                             {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" },
                             {title:'开源协议详解', class:'OpenSourceLicense'},
+                            {title:'常见词汇和简写说明', class:'CommonlyUsedVocabulary'},
                             {title:'在线电子书', class:'EbookOnline'}
                         ]
                     }
