@@ -67,6 +67,9 @@
                       <router-link :to="{ name: 'ApplyType', params: { typeName: 'middleware' }}">
                         <el-dropdown-item >中间件</el-dropdown-item>
                       </router-link>
+                      <router-link :to="{ name: 'ApplyType', params: { typeName: 'tool' }}">
+                        <el-dropdown-item >工具</el-dropdown-item>
+                      </router-link>
                       <router-link :to="{ name: 'ApplyType', params: { typeName: 'fqa' }}">
                         <el-dropdown-item>散记</el-dropdown-item>
                       </router-link>
