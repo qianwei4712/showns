@@ -56,6 +56,24 @@
                     </el-dropdown>
                 </router-link>
 
+                <!-- 应用架构 -->
+                <router-link :to="{ name: 'ApplyType', params: { typeName: 'HomePage' }}">
+                  <el-dropdown class="head-type-ele">
+                    <span class="el-dropdown-link">应用<i class="el-icon-caret-bottom el-icon--right"></i></span>
+                    <el-dropdown-menu slot="dropdown">
+                      <router-link :to="{ name: 'ApplyType', params: { typeName: 'frame' }}">
+                        <el-dropdown-item >框架</el-dropdown-item>
+                      </router-link>
+                      <router-link :to="{ name: 'ApplyType', params: { typeName: 'middleware' }}">
+                        <el-dropdown-item >中间件</el-dropdown-item>
+                      </router-link>
+                      <router-link :to="{ name: 'ApplyType', params: { typeName: 'fqa' }}">
+                        <el-dropdown-item>散记</el-dropdown-item>
+                      </router-link>
+                    </el-dropdown-menu>
+                  </el-dropdown>
+                </router-link>
+
                 <!--安装部署类-->
                 <router-link :to="{ name: 'DeployType', params: { typeName: 'HomePage' }}">
                     <el-dropdown class="head-type-ele">
@@ -69,9 +87,6 @@
                             </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
                                 <el-dropdown-item>数据库</el-dropdown-item>
-                            </router-link>
-                            <router-link :to="{ name: 'DeployType', params: { typeName: 'middleware' }}">
-                                <el-dropdown-item>中间件</el-dropdown-item>
                             </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'designpattern' }}">
                                 <el-dropdown-item>设计与方法论</el-dropdown-item>

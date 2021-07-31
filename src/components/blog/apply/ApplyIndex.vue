@@ -1,5 +1,5 @@
 <template>
-    <div class="springIndex">
+    <div class="ApplyIndex">
         <el-aside width="330px">
             <div style="height: 20px;">
                 <!-- 空出一部分位置 -->
@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>Spring 资料汇总</span>
+                            <span>总览</span>
                         </p>
                     </section>
                 </li>
@@ -38,43 +38,37 @@
 
 <script>
 
-    import HomePage from './SpringHome'
-    import ArchitectureIntro from './base/ArchitectureIntro.md'
-    import IoCAndDI from './base/IoCAndDI.md'
-    import BeanConfigoure from './base/BeanConfigoure.md'
-    import VersionSelect from './fqa/VersionSelect.md'
-    import SomethingNotes from './fqa/SomethingNotes.md'
+    import HomePage from "./ApplyHome";
+    import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
+    import TomcatOptimize from './middleware/TomcatOptimize.md';
+    import MqCompare from './middleware/MqCompare.md';
 
     export default {
-        name: "springIndex",
+        name: "applyIndex",
         components:{
             HomePage,
-            ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes
+            NginxLoadBalancing, TomcatOptimize, MqCompare
         },
         data(){
             return {
-                title:'Spring 全家桶',
+                title:'项目常见工具应用',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
                     {
-                        title:'Spring 基础',
+                       title:'框架',
+                       data:[
+                       ]
+                    }, {
+                        title:'中间件',
                         data:[
-                            {title:'Spring 架构介绍及本地搭建', class:'ArchitectureIntro', id:"base"  },
-                            {title:'控制反转（IoC）、依赖注入（DI）', class:'IoCAndDI' },
-                            {title:'Bean 管理，创建、注入方式', class:'BeanConfigoure' }
+                            {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
+                            {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' },
+                            {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' }
                         ]
-                    },  {
-                        title:'Spring Boot',
-                        data:[]
                     }, {
-                        title:'Spring cloud',
-                        data:[]
-                    }, {
-                        title:'FQA',
+                        title:'散记',
                         data:[
-                          {title:'SpringCloud 版本及对应关系', class:'VersionSelect', id:"fqa" },
-                          {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes'}
                         ]
                     }
                 ]

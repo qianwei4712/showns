@@ -47,9 +47,6 @@
     import DockerInstall from './server/DockerInstall.md';
     import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
     import MysqlOptimization from './database/MysqlOptimization.md';
-    import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
-    import TomcatOptimize from './middleware/TomcatOptimize.md';
-    import MqCompare from './middleware/MqCompare.md';
     import TcpIp from './netbase/TcpIp.md';
     import Http from './netbase/Http.md';
     import CompareGetPsot from './netbase/CompareGetPsot.md';
@@ -72,9 +69,8 @@
         components:{
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, NginxLoadBalancing, DockerInstall, TomcatOptimize,
-            MqCompare,OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode, StructuralMode, BehavioralMode,
-            SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
+            LinuxCommonCommand, MysqlOptimization, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
+            StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
             CompareGetPsot, RegularExpression, CommonlyUsedVocabulary
         },
         data(){
@@ -104,13 +100,6 @@
                         data:[
                             {title:'MySQL 优化原则', class:'MysqlOptimization', id:"database"},
                             {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql'}
-                        ]
-                    }, {
-                        title:'中间件',
-                        data:[
-                            {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
-                            {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' },
-                            {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' }
                         ]
                     }, {
                         title:'设计与方法论',
