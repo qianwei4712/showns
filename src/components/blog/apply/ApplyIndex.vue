@@ -42,12 +42,13 @@
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
     import TomcatOptimize from './middleware/TomcatOptimize.md';
     import MqCompare from './middleware/MqCompare.md';
+    import MybatisPlusDbs from './tool/MybatisPlusDbs.md';
 
     export default {
         name: "applyIndex",
         components:{
             HomePage,
-            NginxLoadBalancing, TomcatOptimize, MqCompare
+            NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs
         },
         data(){
             return {
@@ -69,6 +70,7 @@
                     },{
                         title:'工具',
                         data:[
+                          {title:'Mybatis-Plus 多数据源', class:'MybatisPlusDbs', id:"tool" }
                         ]
                     }, {
                         title:'散记',
