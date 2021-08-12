@@ -29,3 +29,4 @@
 ### <span id="t3">其他</span>
 
 - <a href="https://blog.csdn.net/m0_46144826/article/details/106825426" target="_blank">widnows 安装 redis，快捷启动、后台运行</a>
+- <a href="https://blog.csdn.net/m0_46144826/article/details/119653718" target="_blank">阿里云OSS上传图片、PDF设置链接预览</a>
