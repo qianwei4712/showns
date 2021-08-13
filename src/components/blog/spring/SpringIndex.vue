@@ -44,12 +44,13 @@
     import BeanConfigoure from './base/BeanConfigoure.md'
     import VersionSelect from './fqa/VersionSelect.md'
     import SomethingNotes from './fqa/SomethingNotes.md'
+    import LogbackIntegre from './boot/LogbackIntegre.md'
 
     export default {
         name: "springIndex",
         components:{
             HomePage,
-            ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes
+            ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes, LogbackIntegre
         },
         data(){
             return {
@@ -66,7 +67,9 @@
                         ]
                     },  {
                         title:'Spring Boot',
-                        data:[]
+                        data:[
+                          {title:'SpringBoot - logback 日志配置', class:'LogbackIntegre', id:"boot"  },
+                        ]
                     }, {
                         title:'Spring cloud',
                         data:[]
