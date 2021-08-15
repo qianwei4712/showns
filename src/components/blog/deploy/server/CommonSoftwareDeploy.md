@@ -5,6 +5,7 @@
 - [MySql 安装](#mysql)
 - [node.js 安装](#node)
 - [redis 安装](#redis)
+- [activeMQ 安装](#activeMQ)
 
 </div>
 
@@ -22,30 +23,30 @@ JDK下载地址：<a href="https://www.oracle.com/technetwork/java/javase/archiv
 
 2. 配置 profile 环境变量
 
-   ```shell
-   vi /etc/profile
-   ```
+```shell
+vi /etc/profile
+```
 
    在末尾添加环境变量
 
-   ```Properties
-   export JAVA_HOME=/usr/java/jdk1.8.0_65
-   export JRE_HOME=$JAVA_HOME/jre
-   export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
-   export PATH=$JAVA_HOME/bin:$PATH
-   ```
+```Properties
+export JAVA_HOME=/usr/java/jdk1.8.0_65
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+export PATH=$JAVA_HOME/bin:$PATH
+```
 
 3. 使文件生效 
 
-   ```shell
-   source /etc/profile 
-   ```
+```shell
+source /etc/profile 
+```
 
 4. 查看是否成功
 
-   ```shell
-   java -version
-   ```
+```shell
+java -version
+```
 
 
 
@@ -74,7 +75,7 @@ yum install -y openssl openssl-devel
 ```
 ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module
 make
-make  install
+make install
 ```
 
 3. 启动
@@ -198,3 +199,56 @@ echo "source /opt/rh/devtoolset-9/enable" >>/etc/profile
 - `bind 127.0.0.1` 需要注释掉，需要远程连接
 
 - `requirepass foobared` 打开注释，把密码改得复杂点
+
+<br>
+
+### <span id="activeMQ">activeMQ 安装</span>
+
+activemq 需要JDK环境，这个提前装。activemq 对 JDK 有版本要求，也许需要修改 env 文件指定jdk，用以下参数指定：
+
+> JAVA_HOME="/opt/jdk1.8"
+
+然后下载 <a target="_blank" href="https://activemq.apache.org/components/classic/download/">https://activemq.apache.org/components/classic/download/</a> 
+
+上传到服务器，解压，然后可以进入 bin 目录下直接启动：
+
+```shell
+./activemq start
+```
+
+默认端口 **61616** ，在 `conf/activemq.xml` 文件内，可以修改端口：
+
+```xml
+<transportConnector name="openwire" uri="tcp://0.0.0.0:61616?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+```
+
+默认控制台端口 **8161** ，在 `conf/jetty.xml` 文件内，可以修改：
+
+```xml
+<bean id="jettyPort" class="org.apache.activemq.web.WebConsolePort" init-method="start">
+         <!-- the default port number for the web console -->
+    <property name="host" value="0.0.0.0"/>
+    <property name="port" value="8161"/>
+</bean>
+```
+
+默认管理员密码为 **admin/admin** ,分别在 `conf/jetty.xml` 、`conf/jetty-realm.properties` 文件内，可以修改：
+
+```xml
+ <bean id="securityConstraint" class="org.eclipse.jetty.util.security.Constraint">
+    <property name="name" value="BASIC" />
+    <!-- 默认 admin、user 两种角色 -->
+    <property name="roles" value="user,admin" />
+    <!-- true 开启，false 关闭 -->
+    <property name="authenticate" value="true" />
+</bean>
+```
+
+```yaml
+# username: password [,rolename ...]
+admin: admin, admin
+user: user, user
+```
+
+注意结构是  `用户名 ： 密码， 角色数组`
+
