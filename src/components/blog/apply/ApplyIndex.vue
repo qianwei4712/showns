@@ -42,13 +42,16 @@
     import NginxLoadBalancing from './middleware/NginxLoadBalancing.md';
     import TomcatOptimize from './middleware/TomcatOptimize.md';
     import MqCompare from './middleware/MqCompare.md';
-    import MybatisPlusDbs from './tool/MybatisPlusDbs.md';
+    import MybatisPlusDbs from './frame/MybatisPlusDbs.md';
+    import MysqldumpBackupSql from './tool/MysqldumpBackupSql.md';
+    import MysqlOptimization from './fqa/MysqlOptimization.md';
 
     export default {
         name: "applyIndex",
         components:{
             HomePage,
-            NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs
+            NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
+            MysqlOptimization
         },
         data(){
             return {
@@ -59,6 +62,7 @@
                     {
                        title:'框架',
                        data:[
+                         {title:'Mybatis-Plus 多数据源', class:'MybatisPlusDbs', id:"frame" }
                        ]
                     }, {
                         title:'中间件',
@@ -70,11 +74,12 @@
                     },{
                         title:'工具',
                         data:[
-                          {title:'Mybatis-Plus 多数据源', class:'MybatisPlusDbs', id:"tool" }
+                          {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"tool" }
                         ]
                     }, {
                         title:'散记',
                         data:[
+                          {title:'MySQL 优化原则', class:'MysqlOptimization', id:"fqa"}
                         ]
                     }
                 ]

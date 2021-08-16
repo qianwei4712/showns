@@ -45,12 +45,14 @@
     import VersionSelect from './fqa/VersionSelect.md'
     import SomethingNotes from './fqa/SomethingNotes.md'
     import LogbackIntegre from './boot/LogbackIntegre.md'
+    import ActiveMqIntegre from './boot/ActiveMqIntegre.md'
 
     export default {
         name: "springIndex",
         components:{
             HomePage,
-            ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes, LogbackIntegre
+            ArchitectureIntro, IoCAndDI, BeanConfigoure, VersionSelect, SomethingNotes,
+            LogbackIntegre, ActiveMqIntegre
         },
         data(){
             return {
@@ -69,6 +71,7 @@
                         title:'Spring Boot',
                         data:[
                           {title:'SpringBoot - logback 日志配置', class:'LogbackIntegre', id:"boot"  },
+                          {title:'SpringBoot - activeMQ 消息队列', class:'ActiveMqIntegre'}
                         ]
                     }, {
                         title:'Spring cloud',

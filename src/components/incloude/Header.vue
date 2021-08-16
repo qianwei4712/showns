@@ -88,9 +88,6 @@
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
                                 <el-dropdown-item >服务器</el-dropdown-item>
                             </router-link>
-                            <router-link :to="{ name: 'DeployType', params: { typeName: 'database' }}">
-                                <el-dropdown-item>数据库</el-dropdown-item>
-                            </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'designpattern' }}">
                                 <el-dropdown-item>设计与方法论</el-dropdown-item>
                             </router-link>

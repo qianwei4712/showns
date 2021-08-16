@@ -45,8 +45,6 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
-    import MysqldumpBackupSql from './database/MysqldumpBackupSql.md';
-    import MysqlOptimization from './database/MysqlOptimization.md';
     import TcpIp from './netbase/TcpIp.md';
     import Http from './netbase/Http.md';
     import CompareGetPsot from './netbase/CompareGetPsot.md';
@@ -68,8 +66,8 @@
         name: "deployIndex",
         components:{
             HomePage,
-            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, MysqldumpBackupSql, CommonSoftwareDeploy,
-            LinuxCommonCommand, MysqlOptimization, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
+            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, CommonSoftwareDeploy,
+            LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
             StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
             CompareGetPsot, RegularExpression, CommonlyUsedVocabulary
         },
@@ -94,12 +92,6 @@
                             {title:'nginx 域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
                             {title:'Linux 服务器后台运行jar包', class:'LinuxRunJarBackground'},
                             {title:'docker 安装及基本用法', class:'DockerInstall'}
-                        ]
-                    }, {
-                        title:'数据库',
-                        data:[
-                            {title:'MySQL 优化原则', class:'MysqlOptimization', id:"database"},
-                            {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql'}
                         ]
                     }, {
                         title:'设计与方法论',
