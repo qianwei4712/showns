@@ -77,6 +77,7 @@
     import AtomicCasUnSafe from './thread/AtomicCasUnSafe.md';
     import CountDownLatch from './thread/CountDownLatch.md';
     import LockSupport from './thread/LockSupport.md';
+    import CyclicBarrier from './thread/CyclicBarrier.md';
 
 
     export default {
@@ -90,7 +91,7 @@
             StackAndQueue, PriorityQueueSource, ThreadTheoryBase, HashMapSource, AboutUtilSet,
             TreeMapSource, JudgeThreadPoolDone, CookieAndSession, LinkedHashMap, WeakHashMap,
             JvmTotalSee, ByteCodeFile, ClassLoader, RuntimeStruc, ExecutionEngine, GarbageCollection, GcAlgorithmn,
-            Synchronized, MonitorTools, Volatile, AtomicCasUnSafe, CountDownLatch, LockSupport
+            Synchronized, MonitorTools, Volatile, AtomicCasUnSafe, CountDownLatch, LockSupport, CyclicBarrier
         },
         data(){
             return {
@@ -137,7 +138,8 @@
                             {title:'关键字 volatile 介绍', class:'Volatile' },
                             {title:'CAS、Unsafe、原子类详解', class:'AtomicCasUnSafe' },
                             {title:'JUC锁: LockSupport 简介', class:'LockSupport' },
-                            {title:'JUC工具类: CountDownLatch 详解', class:'CountDownLatch' }
+                            {title:'JUC工具类: CountDownLatch 详解', class:'CountDownLatch' },
+                            {title:'JUC工具类: CyclicBarrier 简介', class:'CyclicBarrier' }
                         ]
                     }, {
                         title:'Java虚拟机',
