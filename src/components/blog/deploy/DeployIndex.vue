@@ -45,9 +45,7 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
-    import TcpIp from './netbase/TcpIp.md';
-    import Http from './netbase/Http.md';
-    import CompareGetPsot from './netbase/CompareGetPsot.md';
+    import CompareGetPsot from './fqa/CompareGetPsot.md';
     import UMLClassDi from './designpattern/UMLClassDi.md';
     import CreationMode from './designpattern/CreationMode.md';
     import StructuralMode from './designpattern/StructuralMode.md';
@@ -68,7 +66,7 @@
             HomePage,
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, CommonSoftwareDeploy,
             LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
-            StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack, TcpIp, Http,
+            StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack,
             CompareGetPsot, RegularExpression, CommonlyUsedVocabulary
         },
         data(){
@@ -78,13 +76,6 @@
                 currentView: HomePage,
                 allArtyles:[
                     {
-                       title:'网络基础',
-                       data:[
-                         {title:'TCP/IP 协议详解', class:'TcpIp', id:"netbase" },
-                         {title:'HTTP 协议详解', class:'Http' },
-                         {title:'GET 和 POST 的真正区别', class:'CompareGetPsot' }
-                       ]
-                    },{
                         title:'服务器',
                         data:[
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
@@ -115,6 +106,7 @@
                         title:'散记',
                         data:[
                             {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" },
+                            {title:'GET 和 POST 的真正区别', class:'CompareGetPsot' },
                             {title:'开源协议详解', class:'OpenSourceLicense'},
                             {title:'常见词汇和简写说明', class:'CommonlyUsedVocabulary'},
                             {title:'在线电子书', class:'EbookOnline'}

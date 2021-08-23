@@ -32,6 +32,11 @@
 ### <span id="t3">思想意识</span>
 
 - <a href="https://zhuanlan.zhihu.com/p/28615617" target="_blank">什么才是java的基础知识？</a>
+- <a href="https://www.jianshu.com/p/6e9e4156ece3" target="_blank">一篇文章带你详解 HTTP 协议</a>
+- <a target="_blank" href="https://www.jianshu.com/p/9f3e879a4c9c">一篇文章带你熟悉 TCP/IP 协议</a>
+
+
+
 
 
 

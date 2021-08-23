@@ -82,9 +82,6 @@
                     <el-dropdown class="head-type-ele">
                             <span class="el-dropdown-link">攻城狮<i class="el-icon-caret-bottom el-icon--right"></i></span>
                         <el-dropdown-menu slot="dropdown">
-                          <router-link :to="{ name: 'DeployType', params: { typeName: 'netbase' }}">
-                            <el-dropdown-item >网络基础</el-dropdown-item>
-                          </router-link>
                             <router-link :to="{ name: 'DeployType', params: { typeName: 'server' }}">
                                 <el-dropdown-item >服务器</el-dropdown-item>
                             </router-link>
