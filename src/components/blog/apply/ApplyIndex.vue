@@ -45,13 +45,14 @@
     import MybatisPlusDbs from './frame/MybatisPlusDbs.md';
     import MysqldumpBackupSql from './tool/MysqldumpBackupSql.md';
     import MysqlOptimization from './fqa/MysqlOptimization.md';
+    import DockerGiteaMysql from './fqa/DockerGiteaMysql.md';
 
     export default {
         name: "applyIndex",
         components:{
             HomePage,
             NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
-            MysqlOptimization
+            MysqlOptimization, DockerGiteaMysql
         },
         data(){
             return {
@@ -79,7 +80,8 @@
                     }, {
                         title:'散记',
                         data:[
-                          {title:'MySQL 优化原则', class:'MysqlOptimization', id:"fqa"}
+                          {title:'Docker-Gitea-Mysql 企业仓库', class:'DockerGiteaMysql', id:"fqa"},
+                          {title:'MySQL 优化原则', class:'MysqlOptimization'}
                         ]
                     }
                 ]
