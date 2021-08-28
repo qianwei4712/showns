@@ -46,13 +46,14 @@
     import MysqldumpBackupSql from './tool/MysqldumpBackupSql.md';
     import MysqlOptimization from './fqa/MysqlOptimization.md';
     import DockerGiteaMysql from './fqa/DockerGiteaMysql.md';
+    import JenkinsGiteeNpmBuild from './tool/JenkinsGiteeNpmBuild.md';
 
     export default {
         name: "applyIndex",
         components:{
             HomePage,
             NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
-            MysqlOptimization, DockerGiteaMysql
+            MysqlOptimization, DockerGiteaMysql, JenkinsGiteeNpmBuild
         },
         data(){
             return {
@@ -75,12 +76,13 @@
                     },{
                         title:'工具',
                         data:[
-                          {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"tool" }
+                          {title:'使用mysqldump定时备份sql', class:'MysqldumpBackupSql', id:"tool" },
+                          {title:'Jenkins、Gitee 自动化部署', class:'JenkinsGiteeNpmBuild' }
                         ]
                     }, {
                         title:'散记',
                         data:[
-                          {title:'Docker-Gitea-Mysql 企业仓库', class:'DockerGiteaMysql', id:"fqa"},
+                          {title:'Docker、Gitea、Mysql 企业仓库', class:'DockerGiteaMysql', id:"fqa"},
                           {title:'MySQL 优化原则', class:'MysqlOptimization'}
                         ]
                     }
