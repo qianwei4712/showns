@@ -1,11 +1,12 @@
 <div class="catalog">
 
-- [JDK 安装](#jdk)
-- [Niginx 安装](#nginx)
-- [MySql 安装](#mysql)
-- [node.js 安装](#node)
-- [redis 安装](#redis)
-- [activeMQ 安装](#activeMQ)
+- [JDK](#jdk)
+- [Niginx](#nginx)
+- [MySql](#mysql)
+- [node.js](#node)
+- [redis](#redis)
+- [activeMQ](#activeMQ)
+- [maven](#maven)
 
 </div>
 
@@ -251,4 +252,24 @@ user: user, user
 ```
 
 注意结构是  `用户名 ： 密码， 角色数组`
+
+
+<br/>
+
+### <span id="maven">maven 安装</span>
+
+下载、上传、解压。下载地址：<a target="_blank" href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a>
+
+配置 profile 环境变量，在末尾添加环境变量，使文件生效 ，查看是否成功
+
+```shell
+vi /etc/profile
+
+M2_HOME=/usr/local/apache-maven-3.6.0
+export PATH=${M2_HOME}/bin:${PATH}
+
+source /etc/profile 
+
+mvn -v
+```
 
