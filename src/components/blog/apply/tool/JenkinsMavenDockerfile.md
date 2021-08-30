@@ -122,10 +122,10 @@ docker run -itd --name=testDemo -p 8081:8080 test/demo:1.0
 
 build 常用参数如下：
 
-- **--build-arg=[] :**设置镜像创建时的变量；
-- **-f :**指定要使用的Dockerfile路径；
+- **--build-arg=[] :** 设置镜像创建时的变量；
+- **-f :** 指定要使用的Dockerfile路径；
 - **--tag, -t:** 镜像的名字及标签，通常 name:tag 或者 name 格式；可以在一次构建中为一个镜像设置多个标签。
-- **--rm :**设置镜像成功后删除中间容器；
+- **--rm :** 设置镜像成功后删除中间容器；
 
 <br>
 
