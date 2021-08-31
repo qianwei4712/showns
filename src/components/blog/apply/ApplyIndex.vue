@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>总览</span>
+                            <span>开发常见技术应用</span>
                         </p>
                     </section>
                 </li>
@@ -58,7 +58,7 @@
         },
         data(){
             return {
-                title:'项目常见工具应用',
+                title:'开发常见技术应用',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[

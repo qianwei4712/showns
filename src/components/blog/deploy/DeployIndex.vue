@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>总览</span>
+                            <span>后续学习清单 💀</span>
                         </p>
                     </section>
                 </li>
@@ -71,7 +71,7 @@
         },
         data(){
             return {
-                title:'软件开发需要会的东西',
+                title:'Java 从入门到入土👻',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[

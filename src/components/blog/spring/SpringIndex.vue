@@ -56,7 +56,7 @@
         },
         data(){
             return {
-                title:'Spring 全家桶',
+                title:'Spring 资料汇总',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
