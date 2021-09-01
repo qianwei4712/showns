@@ -184,10 +184,43 @@ ENTRYPOINT ["java","-jar","/opt/demo-0.1.jar"]
 
 构建后 shell 命令也根据实际情况写：
 
-```shell
+```powershell
 docker build -f dockerfile -t test/demo:1.0 .
 docker run -itd --name=testDemo -p 8081:8080 test/demo:1.0
 ```
+
+考虑到会多次构建，重复生成镜像，重复创建容器。对命令进行改进：
+
+```powershell
+
+# 先定义镜像和版本信息
+DOCKERNAME='demoTest'
+REPOSITORIES='demo/test'
+TAG=`date +%Y%m%d-%H%M%S`
+
+# 删除原来的容器
+CONTAINER_ID=`docker ps | grep "${DOCKERNAME}" | awk '{print $1}'`
+if [ -n "$CONTAINER_ID" ]; then
+    docker stop $CONTAINER_ID
+    docker rm $CONTAINER_ID
+else #如果容器启动时失败了，就需要docker ps -a才能找到那个容器
+    CONTAINER_ID=`docker ps -a | grep "godseye_web" | awk '{print $1}'`
+    if [ -n "$CONTAINER_ID" ]; then  # 如果是第一次在这台机器上拉取运行容器，那么docker ps -a也是找不到这个容器的
+        docker rm $CONTAINER_ID
+    fi
+fi
+
+# 删除原来的镜像
+IMAGE_ID=`sudo docker images | grep ${REPOSITORIES} | awk '{print $3}'`
+if [ -n "${IMAGE_ID}" ];then
+    docker rmi ${IMAGE_ID}
+fi
+
+docker build -f dockerfile -t ${REPOSITORIES}:${TAG} .
+docker run -itd --name=${DOCKERNAME} -p 8081:8080 ${REPOSITORIES}:${TAG}
+
+```
+
 
 最后测试，一切顺利。
 
@@ -214,3 +247,5 @@ docker run -itd --name=testDemo -p 8081:8080 test/demo:1.0
 [jenkins实现maven项目自动化部署tomcat - 夜枫林 - 博客园 (cnblogs.com)](https://www.cnblogs.com/likaileek/p/9295878.html)
 
 [Maven中-DskipTests和-Dmaven.test.skip=true的区别 - 飘飘雪 - 博客园 (cnblogs.com)](https://www.cnblogs.com/wangcp-2014/p/6211439.html)
+
+[Jenkins+Docker持续集成_artaganan8的博客-CSDN博客](https://blog.csdn.net/artaganan8/article/details/93386196)
