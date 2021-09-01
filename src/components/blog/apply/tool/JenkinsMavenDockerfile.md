@@ -204,7 +204,7 @@ if [ -n "$CONTAINER_ID" ]; then
     docker stop $CONTAINER_ID
     docker rm $CONTAINER_ID
 else #如果容器启动时失败了，就需要docker ps -a才能找到那个容器
-    CONTAINER_ID=`docker ps -a | grep "godseye_web" | awk '{print $1}'`
+    CONTAINER_ID=`docker ps -a | grep "${DOCKERNAME}" | awk '{print $1}'`
     if [ -n "$CONTAINER_ID" ]; then  # 如果是第一次在这台机器上拉取运行容器，那么docker ps -a也是找不到这个容器的
         docker rm $CONTAINER_ID
     fi
