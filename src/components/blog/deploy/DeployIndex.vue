@@ -105,11 +105,11 @@
                       }, {
                         title:'散记',
                         data:[
-                            {title:'常用软件下载链接', class:'SomethingNotes', id:"fqa" },
+                            {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes', id:"fqa" },
                             {title:'GET 和 POST 的真正区别', class:'CompareGetPsot' },
                             {title:'开源协议详解', class:'OpenSourceLicense'},
                             {title:'常见词汇和简写说明', class:'CommonlyUsedVocabulary'},
-                            {title:'在线电子书', class:'EbookOnline'}
+                            {title:'在线电子书、下载链接', class:'EbookOnline'}
                         ]
                     }
                 ]
