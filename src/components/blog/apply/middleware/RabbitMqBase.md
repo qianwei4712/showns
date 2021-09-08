@@ -608,6 +608,9 @@ channel.basicPublish(message.getMessageProperties().getReceivedExchange(),
                     JSON.toJSONBytes(msg));
 ```
 
+**其他**
+
+- 等待 `ack` 的消息，在断开链接后，会重新入队进行分配。
 
 
 <br/>
