@@ -7,7 +7,7 @@
       <div class="margin-buttom">
         <el-checkbox border checked="checked" disabled>jenkins、docker</el-checkbox>
         <el-checkbox border checked="checked" disabled>gitlab</el-checkbox>
-        <el-checkbox border>rabbit MQ</el-checkbox>
+        <el-checkbox border checked="checked" disabled>rabbit MQ</el-checkbox>
         <el-checkbox border>docker compose</el-checkbox>
         <el-checkbox border>activiti 工作流</el-checkbox>
         <el-checkbox border>JUC锁: 锁核心类 AQS</el-checkbox>

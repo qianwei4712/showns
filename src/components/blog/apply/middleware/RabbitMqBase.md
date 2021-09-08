@@ -188,7 +188,7 @@ spring:
   rabbitmq:
     listener:
       simple:
-        # 多消费者轮询模式
+        # 多消费者轮询模式，其实不是轮询，这是不公平分发
         prefetch: 1  # 每个消费者都能收到的未被消费的最大消息数量
 ```
 
