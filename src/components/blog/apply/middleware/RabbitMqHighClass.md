@@ -346,8 +346,7 @@ public CustomExchange delayedExchange() {
     Map<String, Object> args = new HashMap<>();
     args.put("x-delayed-type", "direct");
     //交换机名称，交换机类型，持久化，自动删除，参数
-    return new CustomExchange("delayed.exchange", "x-delayed-message", true, false,
-args);
+    return new CustomExchange("delayed.exchange", "x-delayed-message", true, false, args);
 }
 ```
 
