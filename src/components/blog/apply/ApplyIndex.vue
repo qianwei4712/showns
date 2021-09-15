@@ -43,6 +43,7 @@
     import TomcatOptimize from './middleware/TomcatOptimize.md';
     import MqCompare from './middleware/MqCompare.md';
     import RabbitMqBase from './middleware/RabbitMqBase.md';
+    import RabbitMqHighClass from './middleware/RabbitMqHighClass.md';
     import MybatisPlusDbs from './frame/MybatisPlusDbs.md';
     import MysqldumpBackupSql from './tool/MysqldumpBackupSql.md';
     import MysqlOptimization from './fqa/MysqlOptimization.md';
@@ -57,7 +58,7 @@
             HomePage,
             NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
             MysqlOptimization, DockerGiteaMysql, JenkinsGiteeNpmBuild, JenkinsMavenDockerfile, SomethingNotes,
-            RabbitMqBase
+            RabbitMqBase, RabbitMqHighClass
         },
         data(){
             return {
@@ -76,7 +77,8 @@
                             {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
                             {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' },
                             {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' },
-                            {title:'RabbitMQ 安装及基础使用', class:'RabbitMqBase' }
+                            {title:'RabbitMQ 安装及基础使用', class:'RabbitMqBase' },
+                            {title:'RabbitMQ 死信队列、延迟队列', class:'RabbitMqHighClass' }
                         ]
                     },{
                         title:'工具',
