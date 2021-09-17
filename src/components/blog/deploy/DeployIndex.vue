@@ -45,6 +45,7 @@
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
+    import DockerCompose from './server/DockerCompose.md';
     import CompareGetPsot from './fqa/CompareGetPsot.md';
     import UMLClassDi from './designpattern/UMLClassDi.md';
     import CreationMode from './designpattern/CreationMode.md';
@@ -67,7 +68,7 @@
             SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, CommonSoftwareDeploy,
             LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
             StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack,
-            CompareGetPsot, RegularExpression, CommonlyUsedVocabulary
+            CompareGetPsot, RegularExpression, CommonlyUsedVocabulary, DockerCompose
         },
         data(){
             return {
@@ -82,7 +83,8 @@
                             {title:'Linux 常用命令', class:'LinuxCommonCommand' },
                             {title:'nginx 域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
                             {title:'Linux 服务器后台运行jar包', class:'LinuxRunJarBackground'},
-                            {title:'docker 安装及基本用法', class:'DockerInstall'}
+                            {title:'docker 安装及基本用法', class:'DockerInstall'},
+                            {title:'docker-compose 使用方法', class:'DockerCompose'}
                         ]
                     }, {
                         title:'设计与方法论',
