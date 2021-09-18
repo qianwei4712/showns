@@ -23,13 +23,14 @@ export default {
   data() {
     return {
       items: [
-        {label: '银行卡号获得卡Bin信息', type: 'success', effect: 'dark', href: 'http://shiva.show'}
+        // success/info/warning/danger
+        {label: '修改内容前后变动日志', type: 'success', effect: 'dark'}
       ]
     }
   },
   methods: {
     openTab(item) {
-      window.open(item.href, '_blank');
+      window.open("https://gitee.com/qianwei4712/showns/solutions/" + item.label + ".md", '_blank');
     }
   }
 }
