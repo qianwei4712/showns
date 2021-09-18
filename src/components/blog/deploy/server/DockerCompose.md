@@ -31,7 +31,7 @@ chmod +x /usr/local/bin/docker-compose
 但是因为实在下载太慢，可以去 GitHub 上下载：[Releases · docker/compose (github.com)](https://github.com/docker/compose/releases) 安装。
 
 1. **下载文件名为 `docker-compose-Linux-x86_64`** 
-2. **上传 `/usr/local/bin` ，重命名为  `docker-compose**`
+2. **上传 `/usr/local/bin` ，重命名为  `docker-compose`**
 3. 添加权限
 
 检测安装成功：
