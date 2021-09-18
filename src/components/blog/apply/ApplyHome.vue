@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     openTab(item) {
-      window.open("https://gitee.com/qianwei4712/showns/solutions/" + item.label + ".md", '_blank');
+      window.open("https://gitee.com/qianwei4712/showns/blob/master/solutions/" + item.label + ".md", '_blank');
     }
   }
 }
