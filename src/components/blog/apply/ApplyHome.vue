@@ -8,6 +8,7 @@
           v-for="item in items"
           :key="item.label"
           :effect="item.effect"
+          :color="item.color"
           :type="item.type"
           @click="openTab(item)">
         {{ item.label }}
@@ -23,7 +24,8 @@ export default {
   data() {
     return {
       items: [
-        // success/info/warning/danger
+        // type: success / info / warning / danger
+        // effect: dark / light / plain
         {label: '修改内容前后变动日志', type: 'success', effect: 'dark'}
       ]
     }
