@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>开发常见技术应用</span>
+                            <span>遇到过的解决方案🔥</span>
                         </p>
                     </section>
                 </li>
@@ -62,7 +62,7 @@
         },
         data(){
             return {
-                title:'开发常见技术应用',
+                title:'不 996，住进 ICU 哪有钱看病❤',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
