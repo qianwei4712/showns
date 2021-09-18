@@ -79,7 +79,7 @@ docker-compose up -d
 
 访问地址，可以看到容器正常启动
 
-![image-20210917221206037](https://gitee.com/qianwei4712/picture/raw/master/images/image-20210917221206037.png)
+![image-20210917221206037](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/image-20210917221206037.png)
 
 <br>
 
@@ -90,7 +90,7 @@ docker-compose up -d
 - 定义版本号，一般 `3.0` 到 `4.0` 都行，可以在官网查看对应关系：[Compose file | Docker Documentation](https://docs.docker.com/compose/compose-file/)
 - 一个 `service` 代表一个容器，`services` 下可以有多个容器
 - 常用的模板文件用法如下，文档可以参考：[Compose 模板文件 | Docker 从入门到实践](https://vuepress.mirror.docker-practice.com/compose/compose_file/)
-- [模板文件备用链接，长图](https://gitee.com/qianwei4712/picture/blob/master/images/网页捕获_17-9-2021_23632_vuepress.mirror.docker-practice.com.jpeg)
+- [模板文件备用链接，长图](https://gitee.com/pic_bed_of_shiva/picture/blob/master/images/%E7%BD%91%E9%A1%B5%E6%8D%95%E8%8E%B7_17-9-2021_23632_vuepress.mirror.docker-practice.com.jpeg)
 
 <br>
 
@@ -329,7 +329,7 @@ MYSQL_ROOT_PASSWORD=root
 语法可以参考：
 
 - [Compose 模板文件 | Docker 从入门到实践 (docker-practice.com)](https://vuepress.mirror.docker-practice.com/compose/compose_file/)
-- [备用链接，长图](https://gitee.com/qianwei4712/picture/blob/7ca034831673bc2c769f31515f3dd566f2d701e7/images/网页捕获_17-9-2021_2363_vuepress.mirror.docker-practice.com.jpeg)
+- [备用链接，长图](https://gitee.com/pic_bed_of_shiva/picture/blob/master/images/%E7%BD%91%E9%A1%B5%E6%8D%95%E8%8E%B7_17-9-2021_2363_vuepress.mirror.docker-practice.com.jpeg)
 
 
 
