@@ -400,4 +400,4 @@ args.put("x-queue-mode", "lazy");
 
 [尚硅谷2021最新版RabbitMQ教程丨快速掌握MQ消息中间件_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1cb4y1o7zz)
 
-[尚硅谷_消息中间件RabbitMQ_课件.pdf](https://gitee.com/qianwei4712/static-resources/blob/master/showns/file/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6RabbitMQ_%E8%AF%BE%E4%BB%B6.pdf)
+[尚硅谷_消息中间件RabbitMQ_课件.pdf](https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/file/%E5%B0%9A%E7%A1%85%E8%B0%B7_%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6RabbitMQ_%E8%AF%BE%E4%BB%B6.pdf)

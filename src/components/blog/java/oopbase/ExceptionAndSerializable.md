@@ -269,7 +269,7 @@ Java 7 引入了 try-with-resources 语法，它可以非常清楚地简化 。�
 
 底层原理移步大神的文章：<a href="https://blog.csdn.net/weixin_39723544/article/details/80527550" target="_blank">https://blog.csdn.net/weixin_39723544/article/details/80527550</a>
 
-若无法访问，还留有截图：<a href="https://gitee.com/qianwei4712/static-resources/blob/master/showns/images/SerializablePrinciple.png" target="_blank">https://gitee.com/qianwei4712/static-resources/blob/master/showns/images/SerializablePrinciple.png</a>
+若无法访问，还留有截图：<a href="https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/images/SerializablePrinciple.png" target="_blank">https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/images/SerializablePrinciple.png</a>
 
 <br>
 

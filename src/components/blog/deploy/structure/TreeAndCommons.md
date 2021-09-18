@@ -303,7 +303,7 @@ B树和B+树的介绍可以参考：
 
 ### <span id="te">参考文章</span>
 
-<a target="_blank" href="https://gitee.com/qianwei4712/static-resources/blob/master/showns/file/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20C%E8%AF%AD%E8%A8%80%E7%89%88.pdf">《数据结构 - C语言版》 严蔚敏，111页起</a>
+<a target="_blank" href="https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/file/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%20C%E8%AF%AD%E8%A8%80%E7%89%88.pdf">《数据结构 - C语言版》 严蔚敏，111页起</a>
 
 <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzI3NzcwNjY3NQ==&mid=100000279&idx=1&sn=24cfb5bdce1420e435cb579dd75c6715&chksm=6b6360cb5c14e9ddcabd859c5559d5cec562f8b82a2ff48ffc0f544e28cf4ec2816cf6f435c1#rd">拜托，别问我什么各种Tree了，干就完事！</a>
 

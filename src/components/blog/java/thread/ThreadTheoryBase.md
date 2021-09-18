@@ -82,7 +82,7 @@ public class ThreadUnSaveTest {
 找到一篇具体的介绍，这一部分的很多都取自以下博客：
 
 - 传送门：<a href="https://blog.csdn.net/qq_33565047/article/details/103184562" target="_blank">https://blog.csdn.net/qq_33565047/article/details/103184562</a>
-- 备用截图：<a href="https://gitee.com/qianwei4712/static-resources/blob/master/showns/images/blog-csdn-net-qq-33565047-article1.png" target="_blank">https://gitee.com/qianwei4712/static-resources/blob/master/showns/images/blog-csdn-net-qq-33565047-article1.png</a>
+- 备用截图：<a href="https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/images/blog-csdn-net-qq-33565047-article1.png" target="_blank">https://gitee.com/pic_bed_of_shiva/static-resources/blob/master/showns/images/blog-csdn-net-qq-33565047-article1.png</a>
 
 <br>
 

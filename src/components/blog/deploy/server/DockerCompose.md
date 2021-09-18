@@ -399,6 +399,6 @@ docker-compose [-f=<arg>...] [options] [COMMAND] [ARGS...]
 
 [Docker容器技术&Docker-Compose实战教程](https://www.bilibili.com/video/BV1VA411A7ka?p=24)
 
-[docker&docker-compose实战教程.zip](https://gitee.com/qianwei4712/static-resources/blob/9d6703845d7e661e11307f53f11743cb3910bd7d/showns/file/docker&docker-compose实战教程.zip)
+[docker&docker-compose实战教程.zip](https://gitee.com/pic_bed_of_shiva/static-resources/blob/9d6703845d7e661e11307f53f11743cb3910bd7d/showns/file/docker&docker-compose实战教程.zip)
 
 [Docker Compose 项目 | Docker 从入门到实践 (docker-practice.com)](https://vuepress.mirror.docker-practice.com/compose/)
