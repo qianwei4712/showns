@@ -152,7 +152,7 @@ upstream app {
 
 **nginx + keepalived** 分为主从模式以及互为主从模式。
 
-<img src="@/assets/blog/img/deploy/NginxLoadBalancing1.png"/>
+![NginxLoadBalancing1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/NginxLoadBalancing1.png)
 
 
 **环境基础：**

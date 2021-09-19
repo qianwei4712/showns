@@ -101,10 +101,7 @@
 - **后序遍历：对于所有节点，顺序为左子树->右子树->根节点**
 - **层序遍历：将二叉树看作一栋楼，每层有不同数目的房间，按照从上到下、从左到右的顺序依次访问节点。实现程序不再使用递归，而是使用了“先进先出”的queue容器。**
 
-
-<img src="@/assets/blog/img/others/TreeAndCommons1.png"/>
-
-
+![TreeAndCommons1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeAndCommons1.png)
 
 二叉树最常用的存储结构是链式结构；顺序存储更适用于完全二叉树，在堆排序时有奇效。
 
@@ -133,7 +130,7 @@
 3. 若节点 P 的下标为 i，则父节点的下标为 (i-1)/2
 
 
-<img src="@/assets/blog/img/others/TreeAndCommons2.png"/>
+![TreeAndCommons2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeAndCommons2.png)
 
 <br>
 
@@ -163,7 +160,7 @@ BST 构建和插入的顺序有很大关系。
 
 随便放了几个数字，可以参照图比较一下以上性质。
 
-<img src="@/assets/blog/img/others/TreeAndCommons3.png"/>
+![TreeAndCommons3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeAndCommons3.png)
 
 > BST 的查找顺序：
 >
@@ -202,7 +199,7 @@ AVL 树是一种特殊的二叉搜索树 (BST树), 相对于数据极端情况�
 
 大概的思路就是：选出最小的，然后相加，再循环。
 
-<img src="@/assets/blog/img/others/TreeAndCommons4.png"/>
+![TreeAndCommons4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeAndCommons4.png)
 
 <br>
 
@@ -218,7 +215,7 @@ AVL 树是一种特殊的二叉搜索树 (BST树), 相对于数据极端情况�
 4. 每个红色节点必须有两个黑色的子节点。(从每个叶子到根的所有路径上不能有两个连续的红色节点)
 5. 从任一节点到其每个叶子的所有简单路径都包含相同数目的黑色节点。
 
-<img src="@/assets/blog/img/others/TreeAndCommons5.png"/>
+![TreeAndCommons5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeAndCommons5.png)
 
 
 这些约束确保了红黑树的关键特性: **从根到叶子的最长的可能路径不多于最短的可能路径的两倍长**。

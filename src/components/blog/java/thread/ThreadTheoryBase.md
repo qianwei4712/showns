@@ -22,7 +22,7 @@
  
  多线程整部分，应该会有很多引用其他大佬，毕竟看懂容易整理根本无从下手。
 
-<img src="@/assets/blog/img/thread/ThreadTheoryBase1.png"/>
+![ThreadTheoryBase1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/ThreadTheoryBase1.png)
 
 
 <br>

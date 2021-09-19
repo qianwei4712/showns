@@ -43,7 +43,7 @@
 - **内部排序：** 数据记录在内存中进行排序
 - **外部排序：** 因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存
 
-<img src="@/assets/blog/img/algorithm/SortingAlgorithm1.jpg"/>
+![SortingAlgorithm1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/SortingAlgorithm1.jpg)
 
 
 
@@ -53,7 +53,7 @@
 
 - **线性时间非比较类排序：** 不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此称为线性时间非比较类排序。
 
-<img src="@/assets/blog/img/algorithm/SortingAlgorithm2.jpg"/>
+![SortingAlgorithm2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/SortingAlgorithm2.jpg)
 
 
 
@@ -72,11 +72,11 @@
 
 各数组排序算法复杂度比较如下：
 
-<img src="@/assets/blog/img/algorithm/SortingAlgorithm3.png"/>
+![SortingAlgorithm3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/SortingAlgorithm3.png)
 
 菜鸟教程摘的另一张图：
 
-<img src="@/assets/blog/img/algorithm/SortingAlgorithm4.png"/>
+![SortingAlgorithm4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/SortingAlgorithm4.png)
 
 
 
