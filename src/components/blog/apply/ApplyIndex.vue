@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>遇到过的解决方案🔥</span>
+                            <span>遇到过的问题解决方案🔥</span>
                         </p>
                     </section>
                 </li>

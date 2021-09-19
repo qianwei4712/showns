@@ -26,7 +26,9 @@ export default {
       items: [
         // type: success / info / warning / danger
         // effect: dark / light / plain
-        {label: '修改内容前后变动日志', type: 'success', effect: 'dark'}
+        {label: '修改内容前后变动日志', type: 'success', effect: 'dark'},
+        {label: '银行卡号获得Bin信息', type: 'info', effect: 'light'}
+
       ]
     }
   },
@@ -43,7 +45,8 @@ export default {
   margin-top: 20px;
 }
 .el-tag {
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 </style>
