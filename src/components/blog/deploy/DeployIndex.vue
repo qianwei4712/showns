@@ -41,7 +41,6 @@
     import HomePage from "./DeployHome";
     import SomethingNotes from './fqa/SomethingNotes.md';
     import CommonSoftwareDeploy from './server/CommonSoftwareDeploy.md';
-    import LinuxRunJarBackground from './server/LinuxRunJarBackground.md';
     import NginxBindPortWithDomain from './server/NginxBindPortWithDomain.md';
     import LinuxCommonCommand from './server/LinuxCommonCommand.md';
     import DockerInstall from './server/DockerInstall.md';
@@ -65,7 +64,7 @@
         name: "deployIndex",
         components:{
             HomePage,
-            SomethingNotes, LinuxRunJarBackground, NginxBindPortWithDomain, CommonSoftwareDeploy,
+            SomethingNotes, NginxBindPortWithDomain, CommonSoftwareDeploy,
             LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
             StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack,
             CompareGetPsot, RegularExpression, CommonlyUsedVocabulary, DockerCompose
@@ -82,7 +81,6 @@
                             {title:'常用软件安装', class:'CommonSoftwareDeploy', id:"server" },
                             {title:'Linux 常用命令', class:'LinuxCommonCommand' },
                             {title:'nginx 域名转发并配置SSL证书', class:'NginxBindPortWithDomain' },
-                            {title:'Linux 服务器后台运行jar包', class:'LinuxRunJarBackground'},
                             {title:'docker 安装及基本用法', class:'DockerInstall'},
                             {title:'docker-compose 使用方法', class:'DockerCompose'}
                         ]
