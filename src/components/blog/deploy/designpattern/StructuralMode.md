@@ -45,7 +45,7 @@
 
 **静态代理**
 
-<img src="@/assets/blog/img/designpattern/StrategyMode2.jpg"/>
+![StrategyMode2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StrategyMode2.jpg)
 
 抽象主题类:
 ```java
@@ -159,7 +159,7 @@ public static void main(String[] args) {
 
 **类结构型模式**
 
-<img src="@/assets/blog/img/designpattern/StructuralMode1.jpg"/>
+![StructuralMode1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode1.jpg)
 
 
 目标接口:
@@ -199,7 +199,7 @@ public static void main(String[] args) {
 
 **对象结构型模式**
 
-<img src="@/assets/blog/img/designpattern/StructuralMode2.jpg"/>
+![StructuralMode2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode2.jpg)
 
 目标接口和适配者类保持不变，更改适配器如下：
 ```java
@@ -243,7 +243,7 @@ public static void main(String[] args) {
 3. 实现化（Implementor）角色：定义实现化角色的接口，供扩展抽象化角色调用。
 4. 具体实现化（Concrete Implementor）角色：给出实现化角色接口的具体实现。
 
-<img src="@/assets/blog/img/designpattern/StructuralMode3.jpg"/>
+![StructuralMode3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode3.jpg)
 
 实现化（Implementor）角色：
 ```java
@@ -322,7 +322,7 @@ java.io 流是典型的装饰模式。
 - Decorator  是**装饰类**，实现了Component 接口，**通常用抽象类实现**。同时内部维护了一个ConcreteComponent 实例，一般通过构造函数初始化。最后的产品继承Decorator  ，并真正得到装饰产品。
 - ConcreteDecorator 是具体的**装饰产品类**，也就是装饰后的结果。重写Component 的方法，作为装饰添加功能。
 
-<img src="@/assets/blog/img/designpattern/DecoratorMode.png"/>
+![DecoratorMode](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/DecoratorMode.png)
 
 下面是摘自菜鸟教程的例子
 
@@ -402,7 +402,7 @@ logger.error(string);
 2. 子系统（Sub System）角色：实现系统的部分功能，客户可以通过外观角色访问它。
 3. 客户（Client）角色：通过一个外观角色访问各个子系统的功能。
 
-<img src="@/assets/blog/img/designpattern/StructuralMode4.jpg"/>
+![StructuralMode4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode4.jpg)
 
 子系统（Sub System）角色：
 ```java
@@ -465,7 +465,7 @@ public static void main(String[] args) {
 3. 非享元（Unsharable Flyweight)角色：是不可以共享的外部状态，它以参数的形式注入具体享元的相关方法中。
 4. 享元工厂（Flyweight Factory）角色：负责创建和管理享元角色。当客户对象请求一个享元对象时，享元工厂检査系统中是否存在符合要求的享元对象，如果存在则提供给客户；如果不存在的话，则创建一个新的享元对象。
 
-<img src="@/assets/blog/img/designpattern/StructuralMode5.jpg"/>
+![StructuralMode5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode5.jpg)
 
 
 抽象享元角色（Flyweight）:
@@ -576,7 +576,7 @@ class FlyweightFactory {
 
 **组合模式之透明方式**
 
-<img src="@/assets/blog/img/designpattern/StructuralMode6.jpg"/>
+![StructuralMode6](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode6.jpg)
 
 抽象构件（Component）角色：
 ```java
@@ -666,7 +666,7 @@ public static void main(String[] args) {
 
 **组合模式之安全方式**
 
-<img src="@/assets/blog/img/designpattern/StructuralMode7.jpg"/>
+![StructuralMode7](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StructuralMode7.jpg)
 
 抽象构件（Component）角色：
 ```java

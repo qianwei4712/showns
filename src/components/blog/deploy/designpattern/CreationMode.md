@@ -118,8 +118,7 @@ public class Singleton {
 
 简单来说，就是实现 `Cloneable` 接口，然后调用 `clone()` 方法。下面类图中使用了浅拷贝，深拷贝参考本站: Java - Java面向对象基础 - Object通用方法、枚举。
 
-<img src="@/assets/blog/img/designpattern/creationMod1.png"/>
-
+![creationMod1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/creationMod1.png)
 
 首先创建基础原型类 `Prototype` :
 
@@ -202,7 +201,7 @@ public class PrototypeManager {
 
 个人理解：存在生产和产品两个接口，工厂实现生产接口，重写生产方法，并返回具体产品，不同工厂返回不同的产品实现类。
 
-<img src="@/assets/blog/img/designpattern/FactoryAndSingletonsMode.png"/>
+![FactoryAndSingletonsMode](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/FactoryAndSingletonsMode.png)
 
 产品：
 
@@ -262,7 +261,7 @@ class ConcreteCreator implements Creator{
 4. 具体产品（ConcreteProduct）：实现了抽象产品角色所定义的接口，由具体工厂来创建，它同具体工厂之间是多对一的关系。
 
 
-<img src="@/assets/blog/img/designpattern/creationMode2.png"/>
+![creationMode2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/creationMode2.png)
 
 
 抽象工厂类：
@@ -359,7 +358,7 @@ public class Click {
 4. 指挥者（Director）：它调用建造者对象中的部件构造与装配方法完成复杂对象的创建，在指挥者中不涉及具体产品的信息。
 
 
-<img src="@/assets/blog/img/designpattern/creationMode3.png"/>
+![creationMode3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/creationMode3.png)
 
 
 产品角色：

@@ -85,7 +85,7 @@ public static void main(String[] args) {
 
 缺点也非常明显，所有的算法都是唯一确定的，都是事先已经实现的，策略模式只是在选择。
 
-<img src="@/assets/blog/img/designpattern/StrategyMode1.png"/>
+![StrategyMode1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StrategyMode1.png)
 
 
 简单代码实现：
@@ -152,8 +152,7 @@ class GreenHeadDuck extends Duck {
 - 调用者/请求者（Invoker）角色：是请求的发送者，它通常拥有很多的命令对象，并通过访问命令对象来执行相关请求，它不直接访问接收者。
 
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode1.jpg"/>
-
+![BehavioralMode1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode1.jpg)
 
 抽象命令类（Command）角色：
 ```java
@@ -246,7 +245,7 @@ public static void main(String[] args) {
 - 客户类（Client）角色：创建处理链，并向链头的具体处理者对象提交请求，它不关心处理细节和请求的传递过程。
 
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode2.png"/>
+![BehavioralMode2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode2.png)
 
 抽象处理者（Handler）角色：
 ```java
@@ -330,7 +329,7 @@ public static void main(String[] args) {
 2. 抽象状态（State）角色：定义一个接口，用以封装环境对象中的特定状态所对应的行为。
 3. 具体状态（Concrete State）角色：实现抽象状态所对应的行为。
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode3.png"/>
+![BehavioralMode3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode3.png)
 
 环境（Context）角色：
 ```java
@@ -409,7 +408,7 @@ class ConcreteStateB extends State {
 
 #### 基本原理
 
-<img src="@/assets/blog/img/designpattern/ObserverMode1.png"/>
+![ObserverMode1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/ObserverMode1.png)
 
 基本模型的代码实现。
 
@@ -522,7 +521,7 @@ class JavaSubject extends Observable{
 
 基本的使用方式上述main方法中都有涉及。下面讲接下`java.util`包的内部实现以及注意事项
 
-<img src="@/assets/blog/img/designpattern/ObserverMode2.png"/>
+![ObserverMode2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/ObserverMode2.png)
 
 主题实现类中，用于存放观察者的容器是 Vector 。Vector是线程安全的，内部通过数组实现，所以是有序的，但是由于线程安全，开销较大，因此在观察者较多情况下，效率变低。
 
@@ -571,7 +570,7 @@ class JavaSubject extends Observable{
 - 具体同事类（Concrete Colleague）角色：是抽象同事类的实现者，当需要与其他同事对象交互时，由中介者对象负责后续的交互。
 
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode4.gif"/>
+![BehavioralMode4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode4.gif)
 
 
 抽象中介者（Mediator）角色：
@@ -677,7 +676,7 @@ public static void main(String[] args) {
 - 抽象迭代器（Iterator）角色：定义访问和遍历聚合元素的接口，通常包含 hasNext()、first()、next() 等方法。
 - 具体迭代器（Concretelterator）角色：实现抽象迭代器接口中所定义的方法，完成对聚合对象的遍历，记录遍历的当前位置。
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode5.gif"/>
+![BehavioralMode5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode5.gif)
 
 抽象聚合（Aggregate）角色：
 ```java
@@ -791,7 +790,7 @@ public static void main(String[] args) {
 - 对象结构（Object Structure）角色：是一个包含元素角色的容器，提供让访问者对象遍历容器中的所有元素的方法，通常由 List、Set、Map 等聚合类实现。
 
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode6.gif"/>
+![BehavioralMode6](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode6.gif)
 
 抽象访问者（Visitor）角色：
 ```java
@@ -902,7 +901,7 @@ class ObjectStructure {
 - 备忘录（Memento）角色：负责存储发起人的内部状态，在需要的时候提供这些内部状态给发起人。
 - 管理者（Caretaker）角色：对备忘录进行管理，提供保存与获取备忘录的功能，但其不能对备忘录的内容进行访问与修改。
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode7.gif"/>
+![BehavioralMode7](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode7.gif)
 
 发起人（Originator）角色：
 ```java
@@ -999,7 +998,7 @@ public static void main(String[] args) {
 - 客户端（Client）：主要任务是将需要分析的句子或表达式转换成使用解释器对象描述的抽象语法树，然后调用解释器的解释方法，当然也可以通过环境角色间接访问解释器的解释方法。
 
 
-<img src="@/assets/blog/img/designpattern/BehavioralMode8.gif"/>
+![BehavioralMode8](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BehavioralMode8.gif)
 
 
 抽象表达式（Abstract Expression）角色：
