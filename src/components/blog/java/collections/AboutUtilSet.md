@@ -320,7 +320,7 @@ public class HashSet<E>
 
 #### <span id="t30">TreeSet 继承关系</span>
 
-<img src="@/assets/blog/img/collections/AboutUtilSet1.png"/>
+![AboutUtilSet1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/AboutUtilSet1.png)
 
 老规矩，稍微说下继承的几个类有啥作用：
 

@@ -289,7 +289,7 @@ clone() 在 Object 中是 **protected** 方法，在别的类中调用需要重�
 
 在Java中，clone() 方法有两种不同的模式，即浅复制和深复制（也被称为浅拷贝和深拷贝）。
 
-<img src="@/assets/blog/img/others/CommonMethodAndEnum1.png"/>
+![CommonMethodAndEnum1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/CommonMethodAndEnum1.png)
 
 > 对于浅复制，只是对象的引用得到的复制；如果对象中存在其他对象的引用，使用浅复制后，源对象和复制后的对象中对其他对象的引用会指向同一个内存地址。如果要完全把两个对象在内存中分开，必须使用深复制。 
 
@@ -359,7 +359,7 @@ GC可以回收大部分的对象（凡是new出来的对象，gc都能搞定，�
 
 ## <span id="t2">枚举</span>
 
-<img src="@/assets/blog/img/others/CommonMethodAndEnum2.png"/>
+![CommonMethodAndEnum2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/CommonMethodAndEnum2.png)
 
 ### <span id="t21">用enum代替static final常量</span>
 此部分参考自《Effective Java》

@@ -25,7 +25,7 @@
 
 Bean 由 Spring容器初始化、装配及管理的对象，除此之外，bean 就与应用程序中的其他对象没有什么区别了。
 
-<img src="@/assets/blog/img/spring/BeanConfigoure0.png"/>
+![BeanConfigoure0](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BeanConfigoure0.png)
 
 
 <br>
@@ -49,7 +49,7 @@ BeanDefinition 继承了 `BeanMetadataElement` 和 `AttributeAccessor` 接口，
 
 **BeanDefinition** 只是一个接口，实际产生作用的实现类有很多，比如下面的继承关系图：
 
-<img src="@/assets/blog/img/spring/BeanConfigoure1.png"/>
+![BeanConfigoure1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BeanConfigoure1.png)
 
 
 首先，先介绍下 **BeanDefinition** ，源码是看不懂的，这辈子都不可能了；只能大致介绍下它的功能，这个接口的设计包含了一个 Bean 最基础的特征，**AbstractBeanDefinition** 包含以下字段，以下列了一些个人认为重要的；
@@ -72,7 +72,7 @@ BeanDefinition 继承了 `BeanMetadataElement` 和 `AttributeAccessor` 接口，
 
 **所以只需要拿到 BeanDefinition， Spring IoC 容器就可以根据这些信息反射创建对象。**
 
-<img src="@/assets/blog/img/spring/BeanConfigoure2.png"/>
+![BeanConfigoure2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/BeanConfigoure2.png)
 
 
 然后它的几个实现类分别具有不同的分工：

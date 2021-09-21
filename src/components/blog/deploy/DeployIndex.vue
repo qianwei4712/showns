@@ -46,7 +46,6 @@
     import DockerInstall from './server/DockerInstall.md';
     import DockerCompose from './server/DockerCompose.md';
     import CompareGetPsot from './fqa/CompareGetPsot.md';
-    import UMLClassDi from './designpattern/UMLClassDi.md';
     import CreationMode from './designpattern/CreationMode.md';
     import StructuralMode from './designpattern/StructuralMode.md';
     import BehavioralMode from './designpattern/BehavioralMode.md';
@@ -65,7 +64,7 @@
         components:{
             HomePage,
             SomethingNotes, NginxBindPortWithDomain, CommonSoftwareDeploy,
-            LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, UMLClassDi, CreationMode,
+            LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, CreationMode,
             StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack,
             CompareGetPsot, RegularExpression, CommonlyUsedVocabulary, DockerCompose
         },
@@ -87,11 +86,11 @@
                     }, {
                         title:'设计与方法论',
                         data:[
-                          {title:'UML类图', class:'UMLClassDi', id:"designpattern" },
+                          {title:'常用详解：正则表达式', class:'RegularExpression', id:"designpattern" },
                           {title:'创建型模式', class:'CreationMode'},
                           {title:'结构型模式', class:'StructuralMode' },
-                          {title:'行为型模式', class:'BehavioralMode' },
-                          {title:'常用详解：正则表达式', class:'RegularExpression' }
+                          {title:'行为型模式', class:'BehavioralMode' }
+
                         ]
                     }, {
                         title:'算法与数据结构',

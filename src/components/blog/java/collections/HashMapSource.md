@@ -54,7 +54,7 @@ JDK 1.7 之前，HashMap是使用 **数组+链表** 的存储方式。
 先放个思维导图，后面详细讲解
 
 
-<img src="@/assets/blog/img/collections/HashMapSource0.png"/>
+![HashMapSource0](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource0.png)
 
 
 
@@ -62,7 +62,7 @@ JDK 1.7 之前，HashMap是使用 **数组+链表** 的存储方式。
 
 ### <span id="t1">Map 接口</span>
 
-<img src="@/assets/blog/img/collections/HashMapSource1.png"/>
+![HashMapSource1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource1.png)
 
 
 作者按照 JDK自带的分类，将 Map 接口所有的方法进行了整理。
@@ -77,7 +77,7 @@ JDK 1.7 之前，HashMap是使用 **数组+链表** 的存储方式。
 
 ### <span id="t2">HashMap 继承关系</span>
 
-<img src="@/assets/blog/img/collections/HashMapSource2.png"/>
+![HashMapSource2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource2.png)
 
 
 - **Map** 接口定义了 **HashMap** 最基础的设计约束和需要实现的基础功能
@@ -328,7 +328,7 @@ i = (n - 1) & hash
 
 而且，resize 扩容也是一串非常长的代码，下面我会拆分来进行讲解。先看下我读源码过程中绘制的流程图：
 
-<img src="@/assets/blog/img/collections/HashMapSource3.jpg"/>
+![HashMapSource3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource3.jpg)
 
 
 上面流程图中，节点拆分没有细化出来，后面再详细介绍。是不是很迷茫？
@@ -478,7 +478,7 @@ i = (n - 1) & hash
 
 重复代码就不贴了，在上面的方法中最底下部分。
 
-<img src="@/assets/blog/img/collections/HashMapSource4.jpg"/>
+![HashMapSource4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource4.jpg)
 
 这个栗子举得还行吧。。。计算方式在上面的 hash算法章节已经介绍过了。
 
@@ -627,7 +627,7 @@ i = (n - 1) & hash
 
 putVal 方法还通用了 JDK8 新增 `putIfAbsent` 方法，所以这里多了一个是否覆盖的判断。
 
-<img src="@/assets/blog/img/collections/HashMapSource5.jpg"/>
+![HashMapSource5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource5.jpg)
 
 
 这里面有关于红黑树的两个方法没有细讲，请继续往后面看。。。
@@ -693,7 +693,7 @@ if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
 
 这是一个在线动态测试网页： <a href="https://rbtree.phpisfuture.com/" target="_blank">https://rbtree.phpisfuture.com/</a>
 
-<img src="@/assets/blog/img/collections/HashMapSource6.jpg"/>
+![HashMapSource6](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource6.jpg)
 
 
 
@@ -943,7 +943,7 @@ if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
 
 汇总下讲，`get(Object key)` 方法的流程是：
 
-<img src="@/assets/blog/img/collections/HashMapSource7.jpg"/>
+![HashMapSource7](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource7.jpg)
 
 <br>
 
@@ -1045,7 +1045,7 @@ if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
 
 在符合该条件的情况下，最大的红黑树节点为 10，再添加任何一个都会再平衡从而填补空位。
 
-<img src="@/assets/blog/img/collections/HashMapSource8.png"/>
+![HashMapSource8](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/HashMapSource8.png)
 
 
 **而 JDK 官方注释表示，这个范围大致是 2到6。**

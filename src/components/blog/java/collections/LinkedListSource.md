@@ -28,7 +28,7 @@
 知识点总结如下：
 
 
-<img src="@/assets/blog/img/collections/LinkedListSource1.png"/>
+![LinkedListSource1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/LinkedListSource1.png)
 
 
 <br>
@@ -37,7 +37,7 @@
 
 
 
-<img src="@/assets/blog/img/collections/LinkedListSource2.png"/>
+![LinkedListSource2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/LinkedListSource2.png)
 
 
 
@@ -88,7 +88,7 @@ LinkedList 底层构造仅有3个字段，LinkedList 通过 `first` 和 `last` �
 根据 Node<E> 的特性，LinkedList 的结构图如下：
 
 
-<img src="@/assets/blog/img/collections/LinkedListSource3.jpg"/>
+![LinkedListSource3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/LinkedListSource3.jpg)
 
 
 LinkedList 构造方法有2个，无参构造器什么都没有，因此默认 LinkedList 的 `first` 和 `last` 引用均为空。
@@ -189,7 +189,7 @@ LinkedList 构造方法有2个，无参构造器什么都没有，因此默认 L
 画个图明了得表达下
 
 
-<img src="@/assets/blog/img/collections/LinkedListSource4.jpg"/>
+![LinkedListSource4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/LinkedListSource4.jpg)
 
 
 然后是 **linkBefore(E e, Node<E> succ)** ，在指定节点前插入，配合 **node(int index)** 获得指定索引的节点，可进行，按索引位置插入元素：
@@ -237,7 +237,7 @@ LinkedList 构造方法有2个，无参构造器什么都没有，因此默认 L
 
 顺便贴个示意图，不能白画10分钟画出来。。。
 
-<img src="@/assets/blog/img/collections/LinkedListSource5.jpg"/>
+![LinkedListSource5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/LinkedListSource5.jpg)
 
 
 <br>

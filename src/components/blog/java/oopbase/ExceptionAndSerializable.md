@@ -27,7 +27,7 @@
 
 实际上异常出现后，异常处理器接管程序运行，类同于抛出异常。
 
-<img src="@/assets/blog/img/others/Throwable.png"/>
+![Throwable](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/Throwable.png)
 
 
 ### <span id="t11">ERROR（错误）</span>

@@ -83,7 +83,7 @@ Stack 的方法：
 
 
 
-<img src="@/assets/blog/img/collections/StackAndQueue1.png"/>
+![StackAndQueue1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue1.png)
 
 
 
@@ -103,7 +103,7 @@ java中最常见的队列是 LinkedList ，底层用链表实现，顺便打个�
 可以参考本站 **Java集合知识体系 - LinkedList 源码分析** 。
 
 
-<img src="@/assets/blog/img/collections/StackAndQueue2.png"/>
+![StackAndQueue2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue2.png)
 
 
 
@@ -160,12 +160,12 @@ JDK 1.8 官方注释第一段写了：
 
 所以这个类就是这么好用。。。。
 
-<img src="@/assets/blog/img/collections/StackAndQueue3.png"/>
+![StackAndQueue3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue3.png)
 
 
 从继承关系图，发现 ArrayDeque 没有实现 List 接口。
 
-<img src="@/assets/blog/img/collections/StackAndQueue4.png"/>
+![StackAndQueue4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue4.png)
 
 
 
@@ -305,7 +305,7 @@ tail 和 head 相同，所以实际上这两个索引是相互靠近的
 
 
 
-<img src="@/assets/blog/img/collections/StackAndQueue5.png"/>
+![StackAndQueue5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue5.png)
 
 
 
@@ -359,7 +359,7 @@ tail 和 head 相同，所以实际上这两个索引是相互靠近的
 扩容前后的数组如下图：
 
 
-<img src="@/assets/blog/img/collections/StackAndQueue6.png"/>
+![StackAndQueue6](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/StackAndQueue6.png)
 
 
 **若新数组又在队列头加元素，就和初始化数组相同，head 指向数组尾。**

@@ -12,8 +12,7 @@
 </div>
 
 
-<img src="@/assets/blog/img/spring/Spring IoC.png"/>
-
+![Spring IoC](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/Spring%20IoC.png)
 
 ### <span id="t0">IOC 概念</span>
 

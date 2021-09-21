@@ -83,7 +83,7 @@ Hash 一般称为散列，音译是“哈希”，以下就成之为哈希，毕
 
 最后看下 HashMap 的内部结构图，具体分析在以后在 HashMap源码阅读里写。
 
-<img src="@/assets/blog/img/others/WhatisHash.png"/>
+![WhatisHash](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/WhatisHash.png)
 
 
 

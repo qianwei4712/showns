@@ -35,7 +35,7 @@
 ### <span id="t1">2 TreeMap 继承关系</span>
 
 
-<img src="@/assets/blog/img/collections/TreeMapSource1.png"/>
+![TreeMapSource1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/TreeMapSource1.png)
 
 
 - 实现 **Serializable** 接口开启序列化功能 ----具体介绍请转 <a href="https://blog.csdn.net/m0_46144826/article/details/105055432" target="_blank">**Java面向对象基础 - 异常、序列化**</a> 

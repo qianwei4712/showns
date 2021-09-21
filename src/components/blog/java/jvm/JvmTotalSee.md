@@ -2,7 +2,7 @@ JVM 这部分内容已经计划很久了，最近忙了好几个月，都没时�
 
 从大佬那抄了一个思维导图，装装样子，学习肯定是看着书和视频的，肯定不会看这个图
 
-<img src="@/assets/blog/img/others/jvm-total.png"/>
+![jvm-total](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/jvm-total.png)
 
 
 ![jdk-jre-jvm.png](http://shiva.oss-cn-hangzhou.aliyuncs.com/data/java/jdk-jre-jvm.png)

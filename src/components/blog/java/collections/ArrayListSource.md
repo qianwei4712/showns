@@ -32,7 +32,7 @@
 知识点总结如下：
 
 
-<img src="@/assets/blog/img/collections/ArrayListSource1.png"/>
+![ArrayListSource1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/ArrayListSource1.png)
 
 
 <br>
@@ -40,7 +40,7 @@
 ### <span id="t2">继承关系</span>
 
 
-<img src="@/assets/blog/img/collections/ArrayListSource2.png"/>
+![ArrayListSource2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/ArrayListSource2.png)
 
 
 - 实现 **Serializable** 接口开启序列化功能 ----具体介绍请转 **Java面向对象基础 - 异常、序列化**

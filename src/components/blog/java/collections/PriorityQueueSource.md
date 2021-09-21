@@ -30,9 +30,9 @@
 
 知识点总结如下：
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource1.png"/>
+![PriorityQueueSource1](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource1.png)
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource2.png"/>
+![PriorityQueueSource2](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource2.png)
 
 <br>
 
@@ -54,7 +54,7 @@ Java 中 *PriorityQueue* 通过堆实现，具体说是通过完全二叉树(*co
 
 堆是一个典型的，<span style="color:red;">**用物理上线性表示逻辑上非线性的数据结构**</span> ，例如下面这个例子的下标排列顺序
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource3.png"/>
+![PriorityQueueSource3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource3.png)
 
 <br>
 
@@ -264,7 +264,7 @@ siftUpUsingComparator 使用优先队列的比较器也是相同原理，就不�
 
 。。。。哦，然后再把刚刚插入元素的图解放一哈
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource4.png"/>
+![PriorityQueueSource4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource4.png)
 
 
 <br>
@@ -353,7 +353,7 @@ siftUpUsingComparator 使用优先队列的比较器也是相同原理，就不�
 
 基本逻辑和添加方法是一样的，只是添加方法是将元素从最底层往上移动，弹出方法是将指定元素从最上层往下移动。
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource5.png"/>
+![PriorityQueueSource5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource5.png)
 
 
 

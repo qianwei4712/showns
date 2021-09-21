@@ -27,7 +27,7 @@
 ### <span id="t2">工具技能</span>
 
 - <a href="https://blog.csdn.net/alitech2017/article/details/106760557" target="_blank">如何画好一张架构图？</a>
-
+- <a href="https://github.com/SouthBegonia/Computer-Course/tree/master/UML" target="_blank">UML类图绘制</a>
 
 ### <span id="t3">思想意识</span>
 
