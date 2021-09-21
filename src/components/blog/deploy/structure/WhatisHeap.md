@@ -21,7 +21,7 @@
 例如下面这个例子的下标排列顺序，数组顺序请注意结点下标：
 
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource3.png" />
+![PriorityQueueSource3](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource3.png)
 
 
 
@@ -56,7 +56,7 @@
 思想都是一样的，只是在实现中会有语法不同。
 
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource4.png" />
+![PriorityQueueSource4](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource4.png)
 
 
 如上图，是在一个小顶堆中，插入一个新元素。PriorityQueue的实现过程中定义了几个中间变量，具体思路为：
@@ -80,7 +80,7 @@
 
 
 
-<img src="@/assets/blog/img/collections/PriorityQueueSource5.png" />
+![PriorityQueueSource5](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/PriorityQueueSource5.png)
 
 
 和添加元素类似，思路为：
