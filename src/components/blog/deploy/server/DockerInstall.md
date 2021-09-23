@@ -4,7 +4,8 @@
 - [更改国内镜像源](#t2)
 - [镜像操作](#t3)
 - [容器操作](#t4)
-- [docker其他操作](#t5)
+- [docker hub](#t5)
+- [常用命令](#t6)
 - [参考文章](#te)
 
 </div>
@@ -138,17 +139,37 @@ systemctl restart docker.service
 
 <br>
 
+### <span id="t5">docker hub</span>
+
+创建一个仓库，因为我这里只是上传一些基础镜像，弄个基础 public 的仓库就行。
+
+![image-20210923192909298](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/image-20210923192909298.png)
 
 
-### <span id="t5">docker其他操作</span>
+```shell script
+# 登陆，输入账号密码
+docker login
+# 先将容器提交成镜像，格式为：docker commit <exiting-Container> <hub-user>/<repo-name>[:<tag>]
+docker commit -a "shiva<qianwei4712@163.com>" 58ee1d5fb9aa openjdk8-yz:latest
+# 重新打 tag，可以重命名，格式为：docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+docker tag openjdk8-yz:latest shivashow/yz:jdk8
+# 将打完 tag 的镜像上传，格式：docker push <hub-user>/<repo-name>:<tag>
+docker push shivashow/yz:jdk8
+# 上传成功的镜像可以拉去了
+docker pull shivashow/yz:jdk8
+```
 
-以下都是个人的一些记录，可以选择性浏览
 
-#### 其他操作
+![image-20210923194352816](https://gitee.com/pic_bed_of_shiva/picture/raw/master/images/image-20210923194352816.png)
 
-| 作用       | 命令                                                         |
-| ---------- | ------------------------------------------------------------ |
-| 查看容器ip | docker inspect --format='{ {.NetworkSettings.IPAddress}}' 容器名；<br> **PS：** 去掉命令双括号中的空格 |
+
+
+
+<br>
+
+### <span id="t6">常用命令</span>
+
+- 批量删除 none 镜像 ： `docker images | grep none | awk '{print $3}' | xargs docker rmi`
 
 
 
