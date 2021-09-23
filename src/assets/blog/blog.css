@@ -257,3 +257,7 @@
     color: #b5302e;
 }
 
+/* 注释不要斜体 */
+.markdown-body .hljs-comment {
+    font-style: normal;
+}
