@@ -20,7 +20,7 @@
       <el-checkbox border>JUC线程池: ScheduledThreadPoolExecutor</el-checkbox>
       <el-checkbox border>JUC工具类: Exchanger详解</el-checkbox>
       <el-checkbox border>Java并发: ThreadLocal详解</el-checkbox>
-      <el-checkbox border>开发安全 - 注入攻击详解</el-checkbox>
+      <el-checkbox border checked="checked" disabled>开发安全 - 注入攻击详解</el-checkbox>
       <el-checkbox border>开发安全 - 渗透性测试</el-checkbox>
       <el-checkbox border>redis 全套</el-checkbox>
       <el-checkbox border>分库分表</el-checkbox>

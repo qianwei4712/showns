@@ -58,6 +58,7 @@
     import EbookOnline from './fqa/EbookOnline.md';
     import CommonlyUsedVocabulary from './fqa/CommonlyUsedVocabulary.md';
     import RegularExpression from './designpattern/RegularExpression.md';
+    import WebAttackSafe from './designpattern/WebAttackSafe.md';
 
     export default {
         name: "deployIndex",
@@ -66,7 +67,7 @@
             SomethingNotes, NginxBindPortWithDomain, CommonSoftwareDeploy,
             LinuxCommonCommand, DockerInstall, OpenSourceLicense, EbookOnline, CreationMode,
             StructuralMode, BehavioralMode, SortingAlgorithm, WhatisHash, TreeAndCommons, WhatisHeap, HeapAndStack,
-            CompareGetPsot, RegularExpression, CommonlyUsedVocabulary, DockerCompose
+            CompareGetPsot, RegularExpression, CommonlyUsedVocabulary, DockerCompose, WebAttackSafe
         },
         data(){
             return {
@@ -87,6 +88,7 @@
                         title:'设计与方法论',
                         data:[
                           {title:'常用详解：正则表达式', class:'RegularExpression', id:"designpattern" },
+                          {title:'开发安全：Web 常见攻击详解', class:'WebAttackSafe' },
                           {title:'创建型模式', class:'CreationMode'},
                           {title:'结构型模式', class:'StructuralMode' },
                           {title:'行为型模式', class:'BehavioralMode' }
