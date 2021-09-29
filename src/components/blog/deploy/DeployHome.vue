@@ -24,6 +24,8 @@
       <el-checkbox border>开发安全 - 渗透性测试</el-checkbox>
       <el-checkbox border>redis 全套</el-checkbox>
       <el-checkbox border>分库分表</el-checkbox>
+      <el-checkbox border>mysql 基础</el-checkbox>
+      <el-checkbox border>scheduler quartz</el-checkbox>
 
     </div>
 </template>

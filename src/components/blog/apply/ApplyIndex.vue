@@ -46,7 +46,6 @@
     import RabbitMqHighClass from './middleware/RabbitMqHighClass.md';
     import MybatisPlusDbs from './frame/MybatisPlusDbs.md';
     import MysqldumpBackupSql from './tool/MysqldumpBackupSql.md';
-    import MysqlOptimization from './fqa/MysqlOptimization.md';
     import DockerGiteaMysql from './fqa/DockerGiteaMysql.md';
     import SomethingNotes from './fqa/SomethingNotes.md';
     import JenkinsGiteeNpmBuild from './tool/JenkinsGiteeNpmBuild.md';
@@ -57,7 +56,7 @@
         components:{
             HomePage,
             NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
-            MysqlOptimization, DockerGiteaMysql, JenkinsGiteeNpmBuild, JenkinsMavenDockerfile, SomethingNotes,
+            DockerGiteaMysql, JenkinsGiteeNpmBuild, JenkinsMavenDockerfile, SomethingNotes,
             RabbitMqBase, RabbitMqHighClass
         },
         data(){
@@ -91,8 +90,7 @@
                         title:'散记',
                         data:[
                           {title:'发在 CSDN 不配单独提出来', class:'SomethingNotes', id:"fqa"},
-                          {title:'Docker、Gitea、Mysql 企业仓库', class:'DockerGiteaMysql'},
-                          {title:'MySQL 优化原则', class:'MysqlOptimization'}
+                          {title:'Docker、Gitea、Mysql 企业仓库', class:'DockerGiteaMysql'}
                         ]
                     }
                 ]

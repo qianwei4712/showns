@@ -15,6 +15,7 @@
 - <a href="https://blog.csdn.net/ramostear/article/details/105804645" target="_blank">别让Lombok成为你代码“亚健康”状态的帮凶</a>
 - <a href="https://blog.csdn.net/qq449245884/article/details/105304391" target="_blank">不要再到处使用 === 了</a>
 - <a href="https://www.pdai.tech/md/develop/refactor/dev-refactor-if-else.html" target="_blank">常见重构技巧 - 去除多余的if else</a>
+- <a href="https://blog.csdn.net/jiao_fuyou/article/details/26346173" target="_blank">MySQL 优化原则</a>
 
 ### <span id="t1">设计架构</span>
 
