@@ -26,6 +26,12 @@
       <el-checkbox border>分库分表</el-checkbox>
       <el-checkbox border>mysql 基础</el-checkbox>
       <el-checkbox border>scheduler quartz</el-checkbox>
+      <el-checkbox border>Elasticsearch </el-checkbox>
+      <el-checkbox border>Logstash</el-checkbox>
+      <el-checkbox border>Kibana</el-checkbox>
+      <el-checkbox border>SpringBoot Test</el-checkbox>
+      <el-checkbox border>Java IO</el-checkbox>
+      <el-checkbox border>Netty</el-checkbox>
 
     </div>
 </template>
