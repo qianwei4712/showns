@@ -25,7 +25,7 @@
       <el-checkbox border>redis 全套</el-checkbox>
       <el-checkbox border>分库分表</el-checkbox>
       <el-checkbox border>mysql 基础</el-checkbox>
-      <el-checkbox border>scheduler quartz</el-checkbox>
+      <el-checkbox border checked="checked" disabled>scheduler quartz</el-checkbox>
       <el-checkbox border>Elasticsearch </el-checkbox>
       <el-checkbox border>Logstash</el-checkbox>
       <el-checkbox border>Kibana</el-checkbox>

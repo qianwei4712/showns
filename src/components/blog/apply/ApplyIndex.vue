@@ -50,6 +50,7 @@
     import SomethingNotes from './fqa/SomethingNotes.md';
     import JenkinsGiteeNpmBuild from './tool/JenkinsGiteeNpmBuild.md';
     import JenkinsMavenDockerfile from './tool/JenkinsMavenDockerfile.md';
+    import QuartzBaseApply from './frame/QuartzBaseApply.md';
 
     export default {
         name: "applyIndex",
@@ -57,7 +58,7 @@
             HomePage,
             NginxLoadBalancing, TomcatOptimize, MqCompare, MybatisPlusDbs, MysqldumpBackupSql,
             DockerGiteaMysql, JenkinsGiteeNpmBuild, JenkinsMavenDockerfile, SomethingNotes,
-            RabbitMqBase, RabbitMqHighClass
+            RabbitMqBase, RabbitMqHighClass, QuartzBaseApply
         },
         data(){
             return {
@@ -68,7 +69,9 @@
                     {
                        title:'框架',
                        data:[
-                         {title:'Mybatis-Plus 多数据源', class:'MybatisPlusDbs', id:"frame" }
+                         {title:'Mybatis-Plus 多数据源', class:'MybatisPlusDbs', id:"frame" },
+                         {title:'Quartz - 任务调度框架整合使用', class:'QuartzBaseApply' }
+                         // {title:'Quartz - 源码分析、实现原理', class:'' }
                        ]
                     }, {
                         title:'中间件',
@@ -76,8 +79,8 @@
                             {title:'Nginx 负载均衡及双机主从模式', class:'NginxLoadBalancing', id:"middleware" },
                             {title:'Tomcat 8 参数配置性能优化', class:'TomcatOptimize' },
                             {title:'MQ 的作用及主流 MQ 对比', class:'MqCompare' },
-                            {title:'RabbitMQ 安装及基础使用', class:'RabbitMqBase' },
-                            {title:'RabbitMQ 死信队列、延迟队列', class:'RabbitMqHighClass' }
+                            {title:'RabbitMQ - 安装及基础使用', class:'RabbitMqBase' },
+                            {title:'RabbitMQ - 死信队列、延迟队列', class:'RabbitMqHighClass' }
                         ]
                     },{
                         title:'工具',
