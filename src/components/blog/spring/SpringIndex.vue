@@ -8,7 +8,7 @@
                 <li>
                     <section class="sidebar-group">
                         <p class="HomePage sidebar-heading" v-on:click="handleChangeView($event)" >
-                            <span>Spring 资料汇总</span>
+                            <span>Spring 总览</span>
                         </p>
                     </section>
                 </li>
@@ -56,7 +56,7 @@
         },
         data(){
             return {
-                title:'Spring 资料汇总',
+                title:'Spring 大仙，法力无边',
                 activeIndex: '',
                 currentView: HomePage,
                 allArtyles:[
