@@ -32,6 +32,15 @@
       <el-checkbox border>SpringBoot Test</el-checkbox>
       <el-checkbox border>Java IO</el-checkbox>
       <el-checkbox border>Netty</el-checkbox>
+      <el-checkbox border>Eureka</el-checkbox>
+      <el-checkbox border>zookeeper</el-checkbox>
+      <el-checkbox border>Nacos</el-checkbox>
+      <el-checkbox border>Ribbon</el-checkbox>
+      <el-checkbox border>OpenFeign</el-checkbox>
+      <el-checkbox border>Sentinel</el-checkbox>
+      <el-checkbox border>gateway</el-checkbox>
+      <el-checkbox border>cloud config</el-checkbox>
+      <el-checkbox border>cloud bus</el-checkbox>
 
     </div>
 </template>
