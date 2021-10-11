@@ -7,6 +7,7 @@
 - [redis](#redis)
 - [activeMQ](#activeMQ)
 - [maven](#maven)
+- [MongoDB](#MongoDB)
 
 </div>
 
@@ -273,3 +274,72 @@ source /etc/profile
 mvn -v
 ```
 
+<br/>
+
+### <span id="MongoDB">MongoDB 安装</span>
+
+修改 repo 信息，指定下载源：
+
+```shell script
+vi /etc/yum.repos.d/mongodb-org-3.4.repo
+```
+
+```
+[mongodb-org-3.4]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+```
+
+安装，修改配置文件：
+
+```shell script
+yum install -y mongodb-org
+vi /etc/mongod.conf
+```
+
+```yaml
+systemLog:
+  destination: file
+  logAppend: true
+  # 日志位置
+  path: /var/log/mongodb/mongod.log
+
+# Where and how to store data.
+storage:
+  # 数据存储位置
+  dbPath: /var/lib/mongo
+  journal:
+    enabled: true
+#  engine:
+#  mmapv1:
+#  wiredTiger:
+
+# how the process runs
+processManagement:
+  # 后台运行
+  fork: true
+  # pid 文件位置
+  pidFilePath: /var/run/mongodb/mongod.pid
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0  # Listen to local interface only, comment to listen on all interfaces.
+
+```
+
+启动，设置开机启动
+
+```
+systemctl start mongod.service
+systemctl enable mongod.service
+```
+
+卸载：
+
+```
+yum erase $(rpm -qa | grep mongodb-org)
+```
