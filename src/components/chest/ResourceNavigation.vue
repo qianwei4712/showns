@@ -84,11 +84,11 @@
                     {
                         name:'前端开发',
                         data:[
-                            {title:'Layui', href:'https://www.layui.com/doc/', img:require('@/assets/chest/img/layui.png'), desc:'一款采用自身模块规范编写的前端 UI 框架' },
                             {title:'VUE', href:'https://cn.vuejs.org/', img:require('@/assets/chest/img/vuejs.png'), desc:'渐进式JavaScript 框架' },
                             {title:'Element-UI', href:'https://element.eleme.cn/#/zh-CN', img:require('@/assets/chest/img/element.png'), desc:'Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库' },
                             {title:'Vant Weapp', href:'https://vant-contrib.gitee.io/vant-weapp/#/intro', img:require('@/assets/chest/img/vant weapp.png'), desc:'有赞出品移动端 Vue 组件库 Vant 的小程序版本，两者基于相同的视觉规范，提供一致的 API 接口，助力开发者快速搭建小程序应用' },
                             {title:'JQuery API', href:'http://jquery.cuishifeng.cn/', img:require('@/assets/chest/img/jquery.png'), desc:'一个快速、简洁的JavaScript框架' },
+                            {title:'Layui', href:'https://learning-use-cases.gitee.io/layui-2.5.8-doc/', img:require('@/assets/chest/img/layui.png'), desc:'一款采用自身模块规范编写的前端 UI 框架' },
                             {title:'ECharts', href:'https://echarts.apache.org/zh/index.html', img:require('@/assets/chest/img/echarts.png'), desc:'百度开发的可定制的数据可视化图表, 已经捐给Apache' }
                         ]
                     },
